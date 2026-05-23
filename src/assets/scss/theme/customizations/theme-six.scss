@@ -1,0 +1,14 @@
+.uc-navbar-container:not(.uc-navbar-transparent) {
+    background: transparent !important;
+}
+
+.uc-navbar-dropdown-nav > li > a:where(.uc-dark),
+:where(.uc-dark) .uc-navbar-dropdown-nav > li > a {
+    color: var(--color-tertiary-200);
+}
+
+.uc-table-light.uc-table-divider>:first-child>tr:not(:first-child),
+.uc-table-light.uc-table-divider>:not(:first-child)>tr,
+.uc-table-light.uc-table-divider>tr:not(:first-child) {
+    border-color: #dccdcb !important;
+}

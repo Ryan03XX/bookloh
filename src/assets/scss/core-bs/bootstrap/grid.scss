@@ -1,0 +1,378 @@
+@mixin make-col($size: false, $columns: $grid-columns) {
+    @if $size {
+        --grid-total: #{$columns};
+        --grid-count: #{$size};
+        flex: 0 0 auto;
+        width: percentage(divide($size, $columns));
+    } @else {
+        --grid-total: #{$columns};
+        --grid-count: #{$size};
+        flex: 1 1 0;
+        max-width: 100%;
+    }
+}
+  
+  // https://github.dev/twbs/bootstrap/blob/f6476508c2d63d1f5d970ae941d04d5338c790f9/scss/mixins/_grid.scss#L67-L151
+@mixin make-grid-columns-with-prefix($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
+    @each $breakpoint in map-keys($breakpoints) {
+        $infix: breakpoint-infix($breakpoint, $breakpoints);
+        $prefix-class: breakpoint-prefix($breakpoint, $breakpoints);
+
+        @if ($prefix-class !="") {
+            @include media-breakpoint-up($breakpoint, $breakpoints) {
+
+                // Provide basic `.col-{bp}` classes for equal-width flexbox columns
+                .#{$prefix-class}col {
+                    flex: 1 0 0%; // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
+                }
+
+                .#{$prefix-class}row-cols-auto>* {
+                    @include make-col-auto();
+                }
+
+                @if $grid-row-columns>0 {
+                    @for $i from 1 through $grid-row-columns {
+                        .#{$prefix-class}row-cols-#{$i} {
+                            @include row-cols($i);
+                        }
+                    }
+                }
+
+                .#{$prefix-class}col-auto {
+                    @include make-col-auto();
+                }
+
+                @if $columns>0 {
+                    @for $i from 1 through $columns {
+                        .#{$prefix-class}col-#{$i} {
+                            @include make-col($i, $columns);
+                        }
+                    }
+
+                    // `$columns - 1` because offsetting by the width of an entire row isn't possible
+                    @for $i from 0 through ($columns - 1) {
+                        @if not ($prefix-class==""and $i==0) {
+                            // Avoid emitting useless .offset-0
+                            .#{$prefix-class}offset-#{$i} {
+                                @include make-col-offset($i, $columns);
+                            }
+                        }
+                    }
+                }
+
+                // Gutters
+                //
+                // Make use of `.g-*`, `.gx-*` or `.gy-*` utilities to change spacing between the columns.
+                @each $key,
+                $value in $gutters {
+
+                    .#{$prefix-class}g-#{$key},
+                    .#{$prefix-class}gx-#{$key} {
+                        --#{$prefix}gutter-x: #{$value};
+                    }
+
+                    .#{$prefix-class}g-#{$key},
+                    .#{$prefix-class}gy-#{$key} {
+                        --#{$prefix}gutter-y: #{$value};
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin make-cssgrid-with-prefix($columns: $grid-columns, $breakpoints: $grid-breakpoints) {
+    @each $breakpoint in map-keys($breakpoints) {
+        $infix: breakpoint-infix($breakpoint, $breakpoints);
+        $prefix-class: breakpoint-prefix($breakpoint, $breakpoints);
+
+        @if ($prefix-class !="") {
+            @include media-breakpoint-up($breakpoint, $breakpoints) {
+                @if $columns>0 {
+                    @for $i from 1 through $columns {
+                        .#{$prefix-class}g-col-#{$i} {
+                            grid-column: auto / span $i;
+                        }
+                    }
+
+                    // Start with `1` because `0` is and invalid value.
+                    // Ends with `$columns - 1` because offsetting by the width of an entire row isn't possible.
+                    @for $i from 1 through ($columns - 1) {
+                        .#{$prefix-class}g-start-#{$i} {
+                            grid-column-start: $i;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// https://github.dev/twbs/bootstrap/blob/f6476508c2d63d1f5d970ae941d04d5338c790f9/scss/mixins/_grid.scss#L67-L151
+@mixin make-grid-child-columns-with-prefix($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
+    @each $breakpoint in map-keys($breakpoints) {
+        $infix: breakpoint-infix($breakpoint, $breakpoints);
+        $prefix-class: breakpoint-prefix($breakpoint, $breakpoints);
+
+        @include media-breakpoint-up($breakpoint, $breakpoints) {
+
+            // Provide basic `.col-{bp}` classes for equal-width flexbox columns
+            .child-cols#{$infix}>* {
+                // flex: 1 0 0%; // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
+                flex: 1;
+                // min-width: 1px;
+            }
+
+            @if $grid-row-columns>0 {
+                @for $i from 1 through $grid-row-columns {
+                    .child-row-cols#{$infix}-#{$i}>* {
+                        @include row-cols($i);
+                    }
+                }
+            }
+
+            .child-cols#{$infix}-auto>* {
+                @include make-col-auto();
+            }
+
+            @if $columns>0 {
+                @for $i from 1 through $columns {
+                    .child-cols#{$infix}-#{$i}>* {
+                        @include make-col($i, $columns);
+                    }
+                }
+            }
+        }
+
+        @if ($prefix-class !="") {
+            @include media-breakpoint-up($breakpoint, $breakpoints) {
+
+                // Provide basic `.col-{bp}` classes for equal-width flexbox columns
+                .#{$prefix-class}child-cols>* {
+                    flex: 1 0 0%; // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
+                }
+
+                @if $grid-row-columns>0 {
+                    @for $i from 1 through $grid-row-columns {
+                        .#{$prefix-class}child-row-cols-#{$i}>* {
+                            @include row-cols($i);
+                        }
+                    }
+                }
+
+                .#{$prefix-class}child-cols-auto>* {
+                    @include make-col-auto();
+                }
+
+                @if $columns>0 {
+                    @for $i from 1 through $columns {
+                        .#{$prefix-class}child-cols-#{$i}>* {
+                            @include make-col($i, $columns);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin make-cssgrid-child-with-prefix($columns: $grid-columns, $breakpoints: $grid-breakpoints) {
+    @each $breakpoint in map-keys($breakpoints) {
+        $infix: breakpoint-infix($breakpoint, $breakpoints);
+        $prefix-class: breakpoint-prefix($breakpoint, $breakpoints);
+
+        @include media-breakpoint-up($breakpoint, $breakpoints) {
+            @if $columns>0 {
+                @for $i from 1 through $columns {
+                    &.g-child-cols#{$infix}-#{$i}>* {
+                        grid-column: auto / span $i;
+                    }
+                }
+            }
+
+            @if $grid-row-columns>0 {
+                @for $i from 1 through $grid-row-columns {
+                    &.g-child-rows-#{$i} {
+                        grid-template-rows: repeat($i, minmax(0, 1fr));
+                    }
+                }
+            }
+        }
+
+        @if ($prefix-class !="") {
+            @include media-breakpoint-up($breakpoint, $breakpoints) {
+                @if $columns>0 {
+                    @for $i from 1 through $columns {
+                        &.#{$prefix-class}g-child-cols-#{$i}>* {
+                            grid-column: auto / span $i;
+                        }
+                    }
+                }
+
+                @if $grid-row-columns>0 {
+                    @for $i from 1 through $grid-row-columns {
+                        .#{$prefix-class}g-child-rows-#{$i} {
+                            grid-template-rows: repeat($i, minmax(0, 1fr));
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// https://github.dev/twbs/bootstrap/blob/f6476508c2d63d1f5d970ae941d04d5338c790f9/scss/_grid.scss#L1-L34
+
+// Row
+//
+// Rows contain your columns.
+
+@if $enable-grid-classes {
+    .row {
+        @include make-row();
+
+        >* {
+            @include make-col-ready();
+        }
+        
+        &.col-match {
+            flex-wrap: wrap;
+            > [class*='col-'],
+            > * {
+                display: flex;
+                flex-direction: column;
+                > * {
+                    flex: 1;
+                }
+            }
+        }
+        
+        &.uc-grid {
+            &:not(.uc-flex-wrap-top),
+            >:not(.uc-grid-margin) {
+                margin-top: 0;
+            }
+            &.gap-guideline::before {
+                top: 0;
+            }
+            &.uc-flex {
+                &-top {
+                    align-items: flex-start;
+                }
+                &-wrap-top {
+                    align-content: flex-start;
+                }
+            }
+        }
+    }
+    @include make-responsive('.expand-container') {
+        --grid-gap: var(--bs-gutter-x);
+        --scroll-width: var(--body-scroll-width, 17px);
+        --container-width: calc((100% + var(--grid-gap)) * var(--grid-total) / var(--grid-count) - var(--grid-gap));
+        --expand-size: calc((100vw - var(--scroll-width) - var(--container-width)) / -2);
+        margin-right: var(--expand-size);
+        margin-left: var(--expand-size);
+    }
+    .g-0, .gx-0 {
+        @include make-responsive('.expand-container') {
+            --grid-gap: 0rem;
+        }
+    }
+}
+
+
+// https://github.dev/twbs/bootstrap/blob/f6476508c2d63d1f5d970ae941d04d5338c790f9/scss/_grid.scss#L15-L24
+@if $enable-cssgrid {
+    .grid {
+        @include make-cssgrid-child-with-prefix();
+    }
+}
+
+// https://github.dev/twbs/bootstrap/blob/f6476508c2d63d1f5d970ae941d04d5338c790f9/scss/_grid.scss#L27-L34
+@if $enable-grid-classes {
+    @include make-grid-child-columns-with-prefix();
+}
+
+@if $enable-cssgrid {
+    .grid {
+        display: grid;
+        grid-template-rows: repeat(var(--#{$prefix}rows, 1), 1fr);
+        grid-template-columns: repeat(var(--#{$prefix}columns, #{$grid-columns}), 1fr);
+        gap: var(--#{$prefix}gap, #{$grid-gutter-width});
+
+        @include make-cssgrid();
+    }
+}
+
+// Columns
+//
+// Common styles for small and large grid columns
+
+@if $enable-grid-classes {
+    @include make-grid-columns();
+}
+
+// https://github.dev/twbs/bootstrap/blob/f6476508c2d63d1f5d970ae941d04d5338c790f9/scss/_grid.scss#L15-L24
+@if $enable-cssgrid {
+    .grid {
+        @include make-cssgrid-with-prefix();
+    }
+}
+
+// https://github.dev/twbs/bootstrap/blob/f6476508c2d63d1f5d970ae941d04d5338c790f9/scss/_grid.scss#L27-L34
+@if $enable-grid-classes {
+    @include make-grid-columns-with-prefix();
+}
+
+// Grid divider
+.sep {
+    > * {
+        position: relative;
+    }
+
+    >:not(.uc-first-column)::before {
+        content: "";
+        position: absolute;
+        @include rtl-prop('left', -0.20px, auto);
+        top: 0;
+        bottom: 0;
+        @include rtl-prop('border-left', 1px solid var(--border-color));
+    }
+
+    >.uc-grid-margin::after {
+        content: "";
+        position: absolute;
+        top: calc(var(--#{$prefix}gutter-y) / 2 * -1);
+        left: calc(var(--#{$prefix}gutter-y) / 2);
+        right: calc(var(--#{$prefix}gutter-y) / 2);
+        border-top: 1px solid rgba(155, 155, 155, 0.20);
+        transform: translateY(-50%);
+    }
+
+    &-x>:not(:first-child) {
+        position: relative;
+    
+        &::before {
+            content: "";
+            position: absolute;
+            top: calc(var(--#{$prefix}gutter-y) / 2 * -1);
+            left: 15px;
+            right: 15px;
+            border-top: 1px solid rgba(155, 155, 155, 0.20);
+            transform: translateY(-50%);
+        }
+    }
+
+    &-y>:not(.uc-first-column) {
+        position: relative;
+    
+        &::before {
+            content: "";
+            position: absolute;
+            @include rtl-prop('left', -0.20px, auto);
+            top: 0;
+            bottom: 0;
+            @include rtl-prop('border-left', 1px solid var(--border-color));
+        }
+    }
+}

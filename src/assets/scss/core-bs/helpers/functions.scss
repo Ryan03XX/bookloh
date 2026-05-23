@@ -1,0 +1,83 @@
+@use 'sass:math';
+@use 'sass:map';
+
+// ==================================================
+// Functions
+// ==================================================
+
+// Calculate line height based on font size
+@function -line-height($size, $line-height: 1.618, $offset: 0) {
+    @return calc((#{$line-height} * #{$size} - #{$offset}) * 1px);
+}
+
+// Calculate height based on element ratio
+@function -ratio($x: 1, $y: 1) {
+    @return calc(#{$y} / #{$x} * 100%);
+}
+
+// PX to REM converter
+@function -pixToRem($size, $root: var(--root-size)) {
+    @return calc(#{$size} / #{$root} * 1rem);
+}
+
+// Color Config
+@function create-color-config($color-base, $name: '') {
+    $config-color: ();
+    @if type-of($color-base) != 'map' {
+        $color: $color-base;
+        $color-10: tint-color($color, 97%);
+        $color-25: tint-color($color, 95%);
+        $color-50: tint-color($color, 90%);
+        $color-100: tint-color($color, 80%);
+        $color-200: tint-color($color, 60%);
+        $color-300: tint-color($color, 40%);
+        $color-400: tint-color($color, 20%);
+        $color-500: $color;
+        $color-600: shade-color($color, 20%);
+        $color-700: shade-color($color, 40%);
+        $color-800: shade-color($color, 60%);
+        $color-900: shade-color($color, 80%);
+        $config-color: map-merge($config-color, (
+            '': $color,
+            10: $color-10,
+            25: $color-25,
+            50: $color-50,
+            100: $color-100,
+            200: $color-200,
+            300: $color-300,
+            400: $color-400,
+            500: $color-500,
+            600: $color-600,
+            700: $color-700,
+            800: $color-800,
+            900: $color-900,
+        ));
+    } @else {
+        $config-color: $color-base;
+    }
+    @return $config-color;
+}
+@function create-color-config-multiple($object) {
+    @each $key, $value in $object {
+        $object: map-merge($object, ( $key: create-color-config($value, $key) ));
+    }
+    @return $object;
+}
+
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map.get($map, $key);
+    }
+    @return $map;
+}
+
+// Returns a blank string if smallest breakpoint, otherwise returns the name with a ':' in the end.
+// Useful for making responsive utilities.
+//
+//    >> breakpoint-infix(xs, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px))
+//    ""  (Returns a blank string)
+//    >> breakpoint-infix(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px))
+//    "sm:"
+@function breakpoint-prefix($name, $breakpoints: $grid-breakpoints) {
+    @return if(breakpoint-min($name, $breakpoints) == null, "", "#{$name}\\:");
+}

@@ -1,0 +1,136 @@
+@import "bs-prefix-breakpoints";
+
+// Text muted high priority
+.text-muted {
+    --bs-text-opacity: 0.7;
+    @include dark-prop('color', rgba(var(--bs-dark-rgb), var(--bs-text-opacity)) !important, rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important);
+}
+
+// Gradient
+$gradient-colors-map: (
+    inherit: ( value: inherit, color: rgb(255 255 255) ),
+    current: ( value: currentColor, color: rgb(255 255 255) ),
+    "transparent": ( value: transparent, color: rgb(255 255 255) ),
+    "black": ( value: #000, color: rgb(0 0 0) ),
+    "white": ( value: #fff, color: rgb(255 255 255) ),
+);
+@each $color, $value in $theme-colors {
+    $gradient-colors-map: map-merge($gradient-colors-map, ( $color: (
+        value: $value,
+        color: $value,
+    ) ));
+}
+.bg-gradient-to-t {
+    background-image: linear-gradient(to top,var(--uc-gradient-stops)) !important;
+}
+.bg-gradient-to-r {
+    background-image: linear-gradient(to right,var(--uc-gradient-stops)) !important;
+}
+.bg-gradient-to-b {
+    background-image: linear-gradient(to bottom,var(--uc-gradient-stops)) !important;
+}
+.bg-gradient-to-l {
+    background-image: linear-gradient(to left,var(--uc-gradient-stops)) !important;
+}
+.bg-gradient-45 {
+    background-image: linear-gradient(45deg,var(--uc-gradient-stops)) !important;
+}
+.bg-gradient-45n {
+    background-image: linear-gradient(-45deg,var(--uc-gradient-stops)) !important;
+}
+:where(.uc-dark) .dark\:bg-gradient-to-t {
+    background-image: linear-gradient(to top,var(--uc-gradient-stops)) !important;
+}
+:where(.uc-dark) .dark\:bg-gradient-to-r {
+    background-image: linear-gradient(to right,var(--uc-gradient-stops)) !important;
+}
+:where(.uc-dark) .dark\:bg-gradient-to-b {
+    background-image: linear-gradient(to bottom,var(--uc-gradient-stops)) !important;
+}
+:where(.uc-dark) .dark\:bg-gradient-to-l {
+    background-image: linear-gradient(to left,var(--uc-gradient-stops)) !important;
+}
+:where(.uc-dark) .dark\:bg-gradient-45 {
+    background-image: linear-gradient(45deg,var(--uc-gradient-stops)) !important;
+}
+:where(.uc-dark) .dark\:bg-gradient-45n {
+    background-image: linear-gradient(-45deg,var(--uc-gradient-stops)) !important;
+}
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+        @each $color, $item in $gradient-colors-map {
+            .to#{$infix}-#{$color} {
+                @if $color == 'transparent' {
+                    --uc-gradient-to: #{rgba(map-get($item, 'color'), 0)};
+                } @else {
+                    --uc-gradient-to: #{rgba(map-get($item, 'color'), 100)};
+                }
+            }
+            .from#{$infix}-#{$color} {
+                --uc-gradient-from: #{map-get($item, 'value')};
+                --uc-gradient-stops: var(--uc-gradient-from), var(--uc-gradient-to);
+            }
+            .via#{$infix}-#{$color} {
+                --uc-gradient-stops: var(--uc-gradient-from), #{map-get($item, 'value')}, var(--uc-gradient-to) !important;
+            }
+        }
+        $prefix-class: breakpoint-prefix($breakpoint, $grid-breakpoints);
+        @if ($prefix-class != "") {
+            @each $color, $item in $gradient-colors-map {
+                .#{$prefix-class}to-#{$color} {
+                    @if $color == 'transparent' {
+                        --uc-gradient-to: #{rgba(map-get($item, 'color'), 0)};
+                    } @else {
+                        --uc-gradient-to: #{rgba(map-get($item, 'color'), 100)};
+                    }
+                }
+                .#{$prefix-class}from-#{$color} {
+                    --uc-gradient-from: #{map-get($item, 'value')};
+                    --uc-gradient-stops: var(--uc-gradient-from), var(--uc-gradient-to);
+                }
+                .#{$prefix-class}via-#{$color} {
+                    --uc-gradient-stops: var(--uc-gradient-from), #{map-get($item, 'value')}, var(--uc-gradient-to) !important;
+                }
+            }
+        }
+    }
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+        @each $color, $item in $gradient-colors-map {
+            :where(.uc-dark) .dark\:to#{$infix}-#{$color} {
+                @if $color == 'transparent' {
+                    --uc-gradient-to: #{rgba(map-get($item, 'color'), 0)};
+                } @else {
+                    --uc-gradient-to: #{rgba(map-get($item, 'color'), 100)};
+                }
+            }
+            :where(.uc-dark) .dark\:from#{$infix}-#{$color} {
+                --uc-gradient-from: #{map-get($item, 'value')};
+                --uc-gradient-stops: var(--uc-gradient-from), var(--uc-gradient-to);
+            }
+            :where(.uc-dark) .dark\:via#{$infix}-#{$color} {
+                --uc-gradient-stops: var(--uc-gradient-from), #{map-get($item, 'value')}, var(--uc-gradient-to) !important;
+            }
+        }
+        $prefix-class: breakpoint-prefix($breakpoint, $grid-breakpoints);
+        @if ($prefix-class != "") {
+            @each $color, $item in $gradient-colors-map {
+                :where(.uc-dark) .dark\:#{$prefix-class}to-#{$color} {
+                    @if $color == 'transparent' {
+                        --uc-gradient-to: #{rgba(map-get($item, 'color'), 0)};
+                    } @else {
+                        --uc-gradient-to: #{rgba(map-get($item, 'color'), 100)};
+                    }
+                }
+                :where(.uc-dark) .dark\:#{$prefix-class}from-#{$color} {
+                    --uc-gradient-from: #{map-get($item, 'value')};
+                    --uc-gradient-stops: var(--uc-gradient-from), var(--uc-gradient-to);
+                }
+                :where(.uc-dark) .dark\:#{$prefix-class}via-#{$color} {
+                    --uc-gradient-stops: var(--uc-gradient-from), #{map-get($item, 'value')}, var(--uc-gradient-to) !important;
+                }
+            }
+        }
+    }
+}

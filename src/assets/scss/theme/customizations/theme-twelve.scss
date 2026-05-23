@@ -1,0 +1,113 @@
+.swiper-pagination-bullet-active {
+    width: 32px !important;
+    transition: all 100ms;
+}
+.swiper-pagination {
+    gap: 16px;
+}
+
+.uc-subnav > .uc-active > a {
+    color: white !important;
+}
+
+
+// Scroll Spy
+.products {
+    .custom-scrollspy {
+        > li {
+            > a {
+                @include dark-prop( 'color', black, white );
+            }
+            &.uc-active {
+                @include dark-prop( 'background-color', var(--color-gray-800), white );
+                border: none;
+                > a {
+                    @include dark-prop( 'color', white, var(--color-gray-900) );
+                }
+            }
+        }
+    }
+}
+
+// Main solutions switcher nav
+.solutions {
+    .main-solutions-nav {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        > li {
+            position: relative;
+            width: 100%;
+            transition: all 250ms;
+            > a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                line-height: 80px !important;
+                padding: 0 16px;
+            }
+            &.uc-active {
+                @include dark-prop( 'background-color', var(--color-gray-800), white );
+                border: none;
+                > a {
+                    @include dark-prop( 'color', white, var(--color-gray-900) );
+                }
+            }
+        }
+    }
+}
+
+// Header Navigation
+.uc-navbar-nav > li > a {
+    padding: 0 1rem !important;
+    border-radius: 0.75rem;
+    opacity: 1 !important;
+}
+.uc-navbar-nav > li > a[aria-expanded=true],
+.uc-navbar-nav > li > a:hover {
+    box-shadow: none;
+    @include dark-prop('background-color', var(--color-primary-50), var(--color-gray-800));
+}
+
+// Accrodion Switcher
+.uc-accordion-switcher-nav li:nth-child(1).uc-active {
+    @include dark-prop('background-color', var(--color-warning-100) !important, var(--color-warning-600) !important);
+}
+.uc-accordion-switcher-nav li:nth-child(2).uc-active {
+    @include dark-prop('background-color', var(--color-red-100) !important, var(--color-red-400) !important);
+}
+.uc-accordion-switcher-nav li:nth-child(3).uc-active {
+    @include dark-prop('background-color', var(--color-primary-100) !important, var(--color-primary-400) !important);
+}
+.uc-accordion-switcher-nav li:nth-child(4).uc-active {
+    @include dark-prop('background-color', var(--color-purple-100) !important, var(--color-purple-400) !important);
+}
+.uc-accordion-switcher-nav li:nth-child(5).uc-active {
+    @include dark-prop('background-color', var(--color-yellow-100) !important, var(--color-yellow-600) !important);
+}
+
+
+.uc-accordion-switcher-nav-2 .uc-active {
+    @include dark-prop('background-color', var(--color-gray-25) !important, var(--color-gray-800) !important);
+}
+
+// Swiper Slider Progress
+@include lg {
+    .swiper {
+        &.content-visibility-toggle {
+            .swiper-slide .content {
+                display: none !important;
+                opacity: 0;
+                transition: opacity 250ms ease;
+            }
+            .swiper-slide.swiper-slide-thumb-active {
+                .content {
+                    display: block !important;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

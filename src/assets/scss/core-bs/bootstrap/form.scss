@@ -1,0 +1,132 @@
+.form-icon-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+
+    .form-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        height: 100%;
+        background: none;
+        border: 0;
+        outline: 0;
+        text-decoration: none;
+        user-select: none;
+    }
+
+    .form-control,
+    .form-control-plaintext {
+        + .form-icon {
+            width: 3rem !important;
+        }
+        &.form-control-lg {
+            + .form-icon {
+                width: 3.5rem !important;
+            }
+        }
+        &.form-control-sm {
+            + .form-icon {
+                width: 2.5rem !important;
+            }
+        }
+        &.form-control-xs {
+            + .form-icon {
+                width: 2rem !important;
+            }
+        }
+    }
+    
+    &:not(.form-icon-flip) {
+        .form-control,
+        .form-control-plaintext {
+            @include rtl-prop('padding-left', calc(3rem - 0.25rem));
+            &.form-control-lg {
+                @include rtl-prop('padding-left', calc(3.5rem - 0.25rem));
+            }
+            &.form-control-sm {
+                @include rtl-prop('padding-left', calc(2.5rem - 0.25rem));
+            }
+            &.form-control-xs {
+                @include rtl-prop('padding-left', calc(2rem - 0.25rem));
+            }
+        }
+    }
+
+    &.form-icon-flip {
+        .form-icon {
+            right: 0;
+        }
+        .form-control,
+        .form-control-plaintext {
+            @include rtl-prop('padding-right', calc(3rem - 0.25rem));
+            &.form-control-lg {
+                @include rtl-prop('padding-right', calc(3.5rem - 0.25rem));
+            }
+            &.form-control-sm {
+                @include rtl-prop('padding-right', calc(2.5rem - 0.25rem));
+            }
+            &.form-control-xs {
+                @include rtl-prop('padding-right', calc(2rem - 0.25rem));
+            }
+        }
+    }
+}
+
+@each $name, $array in map-deep-get($config, 'sizes', 'form') {
+    $height: map-deep-get($array, 'height');
+    $px: map-deep-get($array, 'px');
+    $text: map-deep-get($array, 'text');
+
+    @include make-responsive('.form-control-#{$name}') {
+        padding: 0 #{$px} !important;
+        min-height: #{$height} !important;
+        font-size: #{$text} !important;
+    }
+}
+
+.form-control {
+    @include dark-prop('background-color', white !important, transparent !important);
+    @include dark-prop('color', var(--color-gray-900) !important, white !important);
+    border-color: var(--border-color) !important;
+}
+
+.form-check-input:focus,
+.form-control:focus {
+    @include dark-prop('--shadow-color', rgb( 0 0 0 / 5% ), rgb( 255 255 255 / 10% ) );
+    border-color: var(--color-primary) !important;
+    box-shadow: 0 0 0 0.25rem var(--shadow-color) !important;
+}
+
+.form-check-input {
+    &:checked {
+        background-color: var(--color-primary) !important;
+        border-color: var(--color-primary) !important;
+    }
+}
+
+[dir=rtl] .form-check {
+    padding-left: 0;
+    padding-right: 1.5em;
+    .form-check-input {
+        float: right;
+        margin-left: 0;
+        margin-right: -1.5em;
+    }
+}
+
+[dir=rtl] .form-select {
+    background-position: left 0.75rem center;
+}
+ 
+input,
+select,
+textarea {
+    &::placeholder {
+        color: inherit !important;
+    }
+    @include dark-prop('opacity', .65 !important, .45 !important, '&', '::placeholder');
+}

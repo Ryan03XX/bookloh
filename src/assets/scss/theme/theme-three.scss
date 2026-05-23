@@ -1,0 +1,32 @@
+/*!
+ * Theme three
+ */
+
+// =================================
+// STEP 1: Bootstrap basics first
+// =================================
+@import '../../../../node_modules/bootstrap/scss/functions';
+@import '../../../../node_modules/bootstrap/scss/variables';
+
+// =================================
+// STEP 2: Theme config (defines $config variable)
+// =================================
+@import 'common/config';
+@import 'common/config-theme-three';
+@import 'custom/user-config';
+
+// =================================
+// STEP 3: Uni-JS-Framework helpers (now $config is available)
+// =================================
+@import '../core-bs/helpers/init';
+@import '../core-bs/helpers/variables';
+@import '../core-bs/helpers/functions';
+@import '../core-bs/helpers/mixin';
+@import '../core-bs/helpers/config';
+@import '../core-bs/helpers/overrides';
+
+
+// =================================
+// STEP 4: Your existing customizations (dark-prop will work now!)
+// =================================
+@import 'customizations/theme-three';

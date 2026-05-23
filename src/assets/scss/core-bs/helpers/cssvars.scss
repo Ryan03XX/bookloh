@@ -1,0 +1,28 @@
+@use 'sass:math';
+
+// ==================================================
+// Config To CSS Variables
+// ==================================================
+@mixin config_to_cssvars($object: $config, $prefix: '-') {
+    @if type-of($object) == 'map' {
+        @if $prefix != '-' {
+            /*
+             * Css vars #{str-slice($prefix, 3)}
+             */
+        }
+        @each $key, $value in $object {
+            @if $key != '' {
+                @include config_to_cssvars($value, $prefix + '-' + $key);
+            } @else {
+                @include config_to_cssvars($value, $prefix);
+            }
+        }
+    }
+    @else if type-of($object) != 'list' or length($object) != 0 {
+        #{$prefix}: $object;
+    }
+}
+
+:root {
+    @include config_to_cssvars;
+}

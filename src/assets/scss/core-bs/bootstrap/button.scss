@@ -1,0 +1,81 @@
+.btn {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    height: var(--bs-btn-height);
+    text-transform: var(--button-font-transform);
+    border-radius: var(--bs-btn-border-radius);
+
+    &.btn-text {
+        position: relative;
+        padding: 0 0 8px 0;
+        border: 0;
+        border-radius: 0;
+        margin: 0;
+        line-height: 1;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            height: 1px;
+            width: 0%;
+            background-color: var(--color-primary);
+            transition: 350ms width cubic-bezier(0.38, 0.01, 0.43, 0.16);
+        }
+        &:hover::after {
+            width: 100%;
+        }
+    }
+}
+
+@each $name, $array in map-deep-get($config, 'sizes', 'button') {
+    $height: map-deep-get($array, 'height');
+    $py: 0px;
+    $px: map-deep-get($array, 'px');
+    $text: map-deep-get($array, 'text');
+
+    @include make-responsive('.btn-#{$name}') {
+        --bs-btn-height: #{$height} !important;
+        --bs-btn-padding-y: #{$py} !important;
+        --bs-btn-padding-x: #{$px} !important;
+        --bs-btn-font-size: #{$text} !important;
+    }
+}
+
+@each $color, $value in $theme-colors {
+    .btn-alt-#{$color} {
+        @if $color != 'light' {
+            background: white !important;
+            color: $value !important;
+            &:hover,
+            &:focus {
+                background: $value !important;
+                color: white !important;
+            }
+        } @else {
+            background: var(--color-gray-25) !important;
+        }
+    }
+}
+
+@each $color, $value in $theme-colors {
+    .btn-ghost-#{$color} {
+        @if $color != 'light' {
+            background: tint-color($value, 90%) !important;
+            color: $value !important;
+            &:hover,
+            &:focus {
+                background: tint-color($value, 80%) !important;
+            }
+        } @else {
+            background-color: var(--color-gray-25) !important;
+            &:hover,
+            &:focus {
+                background: var(--color-gray-50) !important;
+            }
+        }
+    }
+}

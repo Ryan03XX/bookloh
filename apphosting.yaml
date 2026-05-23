@@ -1,0 +1,12 @@
+# Firebase App Hosting: static build (dist/) served by Node on Cloud Run.
+# https://firebase.google.com/docs/app-hosting/configure
+
+scripts:
+  buildCommand: npm ci && npm run build
+  runCommand: node server.cjs
+
+outputFiles:
+  serverApp:
+    include:
+      - dist
+      - server.cjs

@@ -1,0 +1,47 @@
+.fs-1 {
+    letter-spacing: map-deep-get($config, 'sizes', 'text', '2xl', 'lp');;
+}
+.fs-2 {
+    letter-spacing: map-deep-get($config, 'sizes', 'text', 'xl', 'lp');;
+}
+.fs-3 {
+    letter-spacing: map-deep-get($config, 'sizes', 'text', 'lg', 'lp');;
+}
+.fs-4 {
+    letter-spacing: map-deep-get($config, 'sizes', 'text', 'md', 'lp');;
+}
+.fs-5 {
+    letter-spacing: map-deep-get($config, 'sizes', 'text', 'sm', 'lp');;
+}
+.fs-6 {
+    letter-spacing: map-deep-get($config, 'sizes', 'text', 'xs', 'lp');;
+}
+.fs-7 {
+    letter-spacing: map-deep-get($config, 'sizes', 'text', '2xs', 'lp');;
+}
+.fs-8 {
+    letter-spacing: map-deep-get($config, 'sizes', 'text', '3xs', 'lp');;
+}
+
+.text-unset {
+    text-transform: none !important;
+}
+
+.text-inherit {
+    color: currentColor !important;
+}
+
+.text-stroke {
+    @supports (-webkit-text-stroke: 2px black) {
+        @include dark-prop( '-webkit-text-stroke', 2px black, 2px white );
+        @include dark-prop( '-webkit-text-fill-color', white, black );
+    }
+}
+
+[class*="text-truncate"] {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    white-space: unset !important;
+}

@@ -1,0 +1,160 @@
+/* Slider: Swiper */
+
+// Content Visibility
+.swiper-hide-wrap .swiper-slide {
+    .swiper-hide {
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0.3s, opacity 0.3s;
+    }
+    &:not(.swiper-slide-active) .swiper-hide {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+// Swiper: Opacity
+.swiper-opacity {
+    .swiper-slide {
+        opacity: .4;
+        //&.swiper-slide-active,
+        &.swiper-slide-thumb-active {
+            opacity: 1;
+        }
+    }
+}
+
+// Swiper: Triangle
+.swiper-triangle {
+    .swiper-slide.swiper-slide-thumb-active::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 0;
+        height: 0;
+        border-width: 10px 12px 0 12px;
+        border-style: solid;
+        border-color: var(--color-gray-100) transparent transparent transparent;
+        transform: translateX(-50%);
+    }
+}
+
+// Fix bug in thumbnails.
+.swiper-wrapper {
+    will-change: transform;
+}
+
+// Navigation
+.swiper-nav-hide {
+    opacity: .2;
+    cursor: default !important;
+}
+
+// Pagination
+.swiper {
+    &.swiper-match {
+        .swiper-slide {
+            height: auto !important;
+        }
+    }
+    &-thumbs .swiper-slide {
+        cursor: pointer;
+    }
+    &-pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        &-bullet {
+            width: 10px;
+            height: 10px;
+            background-color: rgb(150 150 150 / 100%);
+            opacity: .25;
+            &-active {
+                background-color: currentColor;
+                opacity: 1;
+            }
+        }
+    }
+    &-slide-thumb-active {
+        color: currentColor;
+    }
+}
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal > .swiper-pagination-bullets {
+    bottom: 0 !important;
+}
+
+// Progress
+.swiper-progress-bar {
+    position: relative;
+    width: 100%;
+    display: block;
+    z-index: 1;
+    height: 3px;
+    .slide_progress-bar {
+        position: absolute;
+        height: 3px;
+        background: var(--color-gray-200);
+        width: auto;
+        clear: both;
+        opacity: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: 5px;
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: var(--color-primary);
+            width: 0;
+            height: 100%;
+            border-radius: 5px;
+        }
+    }
+    &.active {
+        .slide_progress-bar {
+            opacity: 1;
+        }
+    }
+    &.animate {
+        .slide_progress-bar {
+            &:after {
+            width: 100%;
+            transition: width linear;
+            transition-delay: unset;
+            transition-duration: 5s;
+            }
+        }
+    }
+}
+
+// Dark
+:where(.uc-dark) .swiper {
+    .swiper-pagination-bullet {
+        background-color: white;
+        opacity: .2;
+    }
+    .swiper-pagination-bullet-active {
+        background-color: currentColor;
+        opacity: 1;
+    }
+    .swiper-slide-thumb-active {
+        color: currentColor;
+    }
+    &::before {
+        border-bottom-color: rgba(255, 255, 255, 0.05);
+    }
+    &.swiper-triangle .swiper-slide.swiper-slide-thumb-active::before {
+        border-top-color: rgba(255, 255, 255, 0.05);
+    }
+    .slide_progress-bar {
+        background-color: rgba(255, 255, 255, 0.05);
+        &:after {
+            background-color: white;
+        }
+    }
+}

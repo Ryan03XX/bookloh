@@ -1,0 +1,10 @@
+// @use "sass:map";
+
+// // Background
+// .bg {
+//     @each $name, $color in map.get($config, 'color') {
+//         &-#{$name} {
+//             background-color: var(--color-#{$name});
+//         }
+//     }
+// }

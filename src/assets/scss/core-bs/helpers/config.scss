@@ -1,0 +1,404 @@
+// ==================================================
+// Default config for CSS Variables
+// ==================================================
+@use 'sass:map';
+
+// Enable/Disable Importance
+$enable-important-utilities: true !default;
+
+// Base font size by default is : 16px
+$base-font: 1rem !default;
+$fallback-font:                 'IBM Plex Sans Arabic', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' !default;
+$font-primary:                  'Colfax', $fallback-font !default;
+$font-secondary:                'Colfax', $fallback-font !default;
+$font-tertiary:                 'Colfax', $fallback-font !default;
+$font-serif:                    serif, $fallback-font !default;
+$font-script:                   Segoe Script, $fallback-font !default;
+$font-mono:                     monospace, $fallback-font !default;
+
+// Base letter spacing multiplier
+$text-font-spacing:             0 !default;
+$heading-font-spacing:          0 !default;
+
+// Base spacer size by default is : 16px
+$base-spacer:                   1rem !default;
+
+// Enable/Disable Prefix
+$enable-prefix-only:            false !default;
+
+// Enable/Disable Dark mode
+$enable-dark-mode:              true !default;
+
+// Layout
+$enable-grid-classes:           true !default;
+$enable-cssgrid:                true !default;
+$grid-row-columns:              12 !default;
+$container-padding-x:           32px !default;
+
+// Design system config map
+$default-config: (
+    'font': (
+        'family': (
+            'primary': $font-primary,
+            'secondary': $font-secondary,
+            'tertiary': $font-tertiary,
+            'serif': $font-serif,
+            'script': $font-script,
+            'mono': $font-mono,
+        ),
+        'weight': (
+            'ultralight': 100,
+            'lighter': 200,
+            'light': 300,
+            'normal': 400,
+            'medium': 500,
+            'semibold': 600,
+            'bold': 700,
+            'bolder': 800,
+            'ultrabold': 900,
+        ),
+        'text': (
+            'family': var(--font-family-primary),
+            'weight': 400,
+        ),
+        'heading': (
+            'family': var(--font-family-secondary),
+            'weight': 700,
+        ),
+        'display': (
+            'family': var(--font-family-secondary),
+            'weight': 700,
+        ),
+        'code': (
+            'family': var(--font-family-code),
+            'weight': 400,
+        ),
+    ),
+    'root-size': $base-font,
+    'radius': 8px,
+    'border-size': 2px,
+    'border-color': rgb(135 135 135 / 15%),
+    'shadow-color': rgb(0 0 0 / 15%),
+    'contrast-ratio': 2,
+    'breakpoints': (
+        'xs': 0,
+        'sm': 576px,
+        'md': 768px,
+        'lg': 992px,
+        'xl': 1200px,
+        'xxl': 1400px,
+    ),
+    'color': (
+        'gray': #525252,
+        'slate': #6b7280,
+        'primary': #553cdf,
+        'secondary': #d946ef,
+        'info': #0099cc,
+        'success': #4CAF50,
+        'warning': #ffb307,
+        'danger': #e44b4b,
+        'blue': #078af3,
+        'indigo': #553cdf,
+        'purple': #8921e4,
+        'red': #ea4335,
+        'rose': #d20e4f,
+        'pink': #f06b9d,
+        'orange': #fb6b1e,
+        'yellow': #fcbc05,
+        'green': #34a853,
+        'lime': #aef359,
+        'teal': #06f6c6,
+        'cyan': #38e1ff,
+    ),
+    'colors': map.merge((
+        'accent': get_accent(),
+    ), $elements-accents),
+    'sizes': (
+        'text': (
+            '3xs':   ('size': $base-font * 0.75, 'lh': 1.5, 'lp': calc($base-font * 0.75 * $text-font-spacing / 100)),
+            '2xs':   ('size': $base-font * 0.875, 'lh': 1.5, 'lp': calc($base-font * 0.75 * $text-font-spacing / 100)),
+            'xs':   ('size': $base-font, 'lh': 1.5, 'lp': calc($base-font * 0.875 * $text-font-spacing / 100)),
+            'sm':    ('size': $base-font * 1.125, 'lh': 1.5, 'lp': calc($base-font * $text-font-spacing / 100)),
+            'md':   ('size': $base-font * 1.25, 'lh': 1.5, 'lp': calc($base-font * 1.25 * $text-font-spacing / 100)),
+            'lg':    ('size': $base-font * 1.5, 'lh': 1.5, 'lp': calc($base-font * 1.5 * $text-font-spacing / 100)),
+            'xl':   ('size': $base-font * 1.75, 'lh': 1.5, 'lp': calc($base-font * 1.75 * $text-font-spacing / 100)),
+            '2xl':  ('size': $base-font * 2, 'lh': 1.5, 'lp': calc($base-font * 2.25 * $text-font-spacing / 100)),
+        ),
+        'heading': (
+            'display-1':  ('size': $base-font * 8, 'lh': 1, 'lp': calc($base-font * 8 * $heading-font-spacing / 100)),
+            'display-2':  ('size': $base-font * 6, 'lh': 1, 'lp': calc($base-font * 6 * $heading-font-spacing / 100)),
+            'display-3':  ('size': $base-font * 5, 'lh': 1, 'lp': calc($base-font * 5 * $heading-font-spacing / 100)),
+            'display-4':  ('size': $base-font * 4.5, 'lh': 1, 'lp': calc($base-font * 4.5 * $heading-font-spacing / 100)),
+            'display-5':  ('size': $base-font * 4, 'lh': 1, 'lp': calc($base-font * 4 * $heading-font-spacing / 100)),
+            'display-6':  ('size': $base-font * 3.5, 'lh': 1, 'lp': calc($base-font * 3.5 * $heading-font-spacing / 100)),
+            'h1':       ('size': $base-font * 3, 'lh':  1.2, 'lp': calc($base-font * 3 * $heading-font-spacing / 100)),
+            'h2':       ('size': $base-font * 2, 'lh':  1.2, 'lp': calc($base-font * 2 * $heading-font-spacing / 100)),
+            'h3':       ('size': $base-font * 1.75, 'lh':  1.2, 'lp': calc($base-font * 1.75 * $heading-font-spacing / 100)),
+            'h4':       ('size': $base-font * 1.5, 'lh':  1.2, 'lp': calc($base-font * 1.5 * $heading-font-spacing / 100)),
+            'h5':       ('size': $base-font * 1.25, 'lh':  1.2, 'lp': calc($base-font * 1.25 * $heading-font-spacing / 100)),
+            'h6':       ('size': $base-font, 'lh':  1.2, 'lp': calc($base-font * $heading-font-spacing / 1000) ),
+        ),
+        'container': (
+            'xs': 784px,
+            'sm': 992px,
+            'md': 1200px,
+            'lg': 1376px,
+            'xl': 1600px,
+        ),
+        'grid': (
+            'narrow': $base-spacer * .25,
+            '2xs': $base-spacer * .5,
+            'xs': $base-spacer,
+            'sm': $base-spacer * 1.5,
+            'md': $base-spacer * 2,
+            'lg': $base-spacer * 2.5,
+            'xl': $base-spacer * 3,
+            '2xl': $base-spacer * 3.5,
+            '3xl': $base-spacer * 4,
+            '4xl': $base-spacer * 5,
+            '5xl': $base-spacer * 8,
+        ),
+        'spacing': (
+            'narrow': $base-spacer * .25,
+            '2xs': $base-spacer * .5,
+            'xs': $base-spacer,
+            'sm': $base-spacer * 1.5,
+            'md': $base-spacer * 2,
+            'lg': $base-spacer * 2.5,
+            'xl': $base-spacer * 3,
+            '2xl': $base-spacer * 3.5,
+            '3xl': $base-spacer * 4,
+            '4xl': $base-spacer * 5,
+            '5xl': $base-spacer * 8,
+        ),
+        'button': (
+            '': ('height': 48px, 'px': 1rem, 'text': 1rem, 'radius': var(--radius)),
+            '2xs': ('height': 24px, 'px': 0.25rem, 'text': .8rem, 'radius': var(--radius)),
+            'xs': ('height': 32px, 'px': 0.5rem, 'text': .825rem, 'radius': var(--radius)),
+            'sm': ('height': 40px, 'px': 0.75rem, 'text': 1rem, 'radius': var(--radius)),
+            'md': ('height': 48px, 'px': 1rem, 'text': 1rem, 'radius': var(--radius)),
+            'lg': ('height': 56px, 'px': 1.5rem, 'text': 1.125rem, 'radius': var(--radius)),
+            'xl': ('height': 64px, 'px': 2rem, 'text': 1.25rem, 'radius': var(--radius)),
+            '2xl': ('height': 80px, 'px': 3rem, 'text': 1.5rem, 'radius': var(--radius)),
+        ),
+        'form': (
+            '': ('height': 48px, 'px': 1rem, 'text': 1rem),
+            '2xs': ('height': 24px, 'px': 0.5rem, 'text': .75rem),
+            'xs': ('height': 32px, 'px': 0.5rem, 'text': .875rem),
+            'sm': ('height': 40px, 'px': 0.75rem, 'text': 1rem),
+            'md': ('height': 48px, 'px': 1rem, 'text': 1rem),
+            'lg': ('height': 56px, 'px': 1.5rem, 'text': 1.125rem),
+            'xl': ('height': 64px, 'px': 1.25rem, 'text': 1.25rem),
+            '2xl': ('height': 80px, 'px': 1.5rem, 'text': 1.5rem),
+        ),
+        'icon': (
+            '2xs': 16px,
+            'xs': 20px,
+            'sm': 24px,
+            'md': 32px,
+            'lg': 48px,
+            'xl': 64px,
+            '2xl': 80px,
+        ),
+        'rouneded': (
+            null: var(--radius), // default
+            1: 4px,
+            2: 16px,
+            3: 24px,
+            4: 32px,
+            5: 40px,
+            6: 48px,
+            7: 56px,
+            8: 64px,
+        ),
+        'blur': (
+            1: 4px,
+            2: 8px,
+            3: 16px,
+            4: 24px,
+            5: 32px,
+            6: 48px,
+            7: 64px,
+            8: 80px,
+            9: 96px,
+            10: 128px,
+        ),
+        'shadow': (
+            'xs': 0 .125rem .25rem -0.1rem var(--shadow-color),
+            'sm': 0 .25rem .5rem -0.1rem var(--shadow-color),
+            '' : 0 .5rem 1rem -0.1rem var(--shadow-color),
+            'lg': 0 1rem 1.5rem -0.1rem var(--shadow-color),
+            'xl': 0 1.5rem 2rem -0.1rem var(--shadow-color),
+            '2xl': 0 2rem 2.5rem -0.1rem var(--shadow-color),
+        ),
+        'table': (
+            'xs': $base-spacer * .5,
+            'sm': $base-spacer * .75,
+            '': $base-spacer * 1,
+            'md': $base-spacer * 1.25,
+            'lg': $base-spacer * 1.5,
+        ),
+    ),
+    'body': (
+        'font': (
+            'typeface': var(--font-text-family),
+            'size': var(--root-size),
+            'weight': var(--font-text-weight),
+            'spacing': normal,
+        ),
+        'color': (
+            'background': transparent,
+            'text': var(--color-gray-900)
+        ),
+    ),
+    'heading': (
+        'font': (
+            'typeface': var(--font-heading-family),
+            'weight': var(--font-heading-weight),
+            'style': normal,
+            'spacing': normal,
+            'transform': initial,
+        ),
+        'color': (
+            'text': inherit
+        ),
+    ),
+    'link': (
+        'color': (
+            'text': var(--color-primary),
+            'text-hover': var(--color-primary-60)
+        ),
+    ),
+    'button': (
+        'font': (
+            'typeface': var(--font-family-secondary),
+            'weight': 500,
+            'line-height': initial,
+            'spacing': normal,
+            'transform': initial,
+        ),
+        'border': (
+            'width': 2px,
+            'radius': var(--radius),
+        ),
+        'color': (
+            'text': white,
+        ),
+    ),
+    'form': (
+        'font': (
+            'typeface': var(--font-text-family),
+            'size': var(--sizes-form-medium-text),
+            'weight': 400,
+            'line-height': 1.25rem,
+            'spacing': normal,
+            'transform': initial,
+        ),
+        'color': (
+            'text': var(--color-gray-900),
+            'background': rgba(155, 155, 155, .15),
+            'background-hover': rgba(155, 155, 155, .20),
+            'background-disable': rgba(155, 155, 155, .40),
+            'background-primary': var(--color-primary),
+            'background-primary-hover': var(--color-primary-60),
+            'placeholder': rgba(155, 155, 155, .70),
+        ),
+        'border': (
+            'width': 0,
+            'color': var(--border-color),
+            'radius': var(--radius),
+        ),
+        'shadow': (
+            'default': 0 0 0 1px var(--border-color),
+            'hover': 0 0 0 1px var(--border-color),
+            'focus': 0 0 0 2px var(--color-primary),
+        ),
+        'height': var(--sizes-form-medium-height),
+        'dark': (
+            'color': (
+                'text': var(--color-white),
+                'background': rgba(155, 155, 155, .15),
+                'background-hover': rgba(155, 155, 155, .20),
+                'background-disable': rgba(155, 155, 155, .40),
+                'background-primary': var(--color-primary),
+                'background-primary-hover': var(--color-primary-60),
+                'placeholder': rgba(155, 155, 155, .50),
+            ),
+        )
+    ),
+    'tab': (
+        'font': (
+            'size': var(--sizes-form-medium-text),
+            'weight': 700,
+            'spacing': normal,
+            'transform': initial,
+        ),
+        'color': (
+            'text': var(--color-gray-700),
+            'text-hover': var(--color-gray-800),
+            'text-active': var(--color-gray-900),
+        ),
+        'border': (
+            'width': 4px,
+            'color': var(--color-primary),
+            'radius': var(--radius),
+        ),
+        'display': inline-flex,
+        'align-text': center,
+        'margin': 0,
+        'padding': 5px,
+    ),
+    'accordion': (
+        'font': (
+            'size': var(--sizes-form-large-text),
+            'weight': 700,
+            'spacing': normal,
+            'transform': initial,
+        ),
+        'color': (
+            'text': var(--color-gray-900),
+            'text-active': var(--color-primary),
+        ),
+        'border': (
+            'width': 1px,
+            'color': var(--border-color)
+        ),
+        'margin': 20px,
+        'padding': 20px,
+    ),
+    'alert': (
+        'font': (
+            'size': var(--sizes-form-medium-text),
+            'weight': 400,
+            'style': normal,
+            'spacing': normal,
+            'transform': initial,
+        ),
+        'color': (
+            'background': var(--color-gray-100),
+            'text': var(--color-gray-900)
+        ),
+        'border': (
+            'width': 0,
+            'radius': var(--radius)
+        ),
+        'padding': 15px,
+    ),
+);
+
+$demo-config: () !default;
+$demo-user-config: () !default;
+
+$tmp-config: ();
+
+$tmp-config: map.deep-merge($tmp-config, $default-config);
+$tmp-config: map.deep-merge($tmp-config, $config);
+$tmp-config: map.deep-merge($tmp-config, $demo-config);
+$tmp-config: map.deep-merge($tmp-config, $user-config);
+$tmp-config: map.deep-merge($tmp-config, $demo-user-config);
+
+$config: $tmp-config;
+
+$config: map-merge($config, (
+    'color': create-color-config-multiple(map-get($config, 'color'))
+));

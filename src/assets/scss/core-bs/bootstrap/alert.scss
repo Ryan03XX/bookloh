@@ -1,0 +1,29 @@
+// Alerts
+//
+// Define alert colors, border radius, and padding.
+
+$alert-border-color:            var(--bs-alert-border-color);
+$alert-padding-y:               1rem;
+$alert-padding-x:               1rem;
+$alert-margin-bottom:           1rem;
+$alert-border-radius:           0;
+$alert-link-font-weight:        bold;
+$alert-border-width:            2px;
+$alert-bg-scale:                -90%;
+$alert-border-scale:            -20%;
+$alert-color-scale:             30%;
+$alert-shadow-color:            var(--shadow-color);
+$alert-dismissible-padding-r:   $alert-padding-x * 3; // 3x covers width of x plus default padding on either side
+
+.alert {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border: 0 !important;
+    border-left: $alert-border-width solid $alert-border-color !important;
+    box-shadow: 0 0.125rem 0.25rem -0.1rem $alert-shadow-color !important;
+    :not(pre) > code,
+    code{
+        background: rgb(0 0 0 / 8%) !important;
+    }
+}

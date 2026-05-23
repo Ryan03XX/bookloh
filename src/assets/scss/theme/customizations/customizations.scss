@@ -1,0 +1,159 @@
+:root {
+    @include dark-prop('--bs-link-color-rgb', var(--color-gray-900) !important, white !important);
+}
+
+.hero-five-contries {
+    @include rtl-prop('left', -18.5%, auto);
+}
+.hero-five-account {
+    @include rtl-prop('right', -12%, auto);
+}
+
+.hero-ten-01 {
+    @include rtl-prop('left', -14%, auto);
+}
+.hero-ten-02 {
+    @include rtl-prop('right', -12%, auto);
+}
+.hero-ten-03 {
+    @include rtl-prop('right', -8%, auto);
+}
+
+// Swiper pagination bullet
+.swiper .swiper-pagination-bullet,
+.swiper-pagination-bullet {
+    --swiper-pagination-bullet-horizontal-gap: 0;
+    height: 8px !important;
+    width: 8px !important;
+    border-radius: 8px !important
+}
+
+// About section swiper slider timeline
+.swiper-timeline {
+    .swiper-slide:first-child .timeline-box {
+        @include rtl-prop('left', 50%, 0%, '&', '::before');
+    }
+    .swiper-slide:last-child .timeline-box {
+        @include rtl-prop('right', 50%, 0%, '&', '::before');
+    }
+    .swiper-slide.swiper-slide-active {
+        .timeline-box {
+            .image {
+                transform: scale(1);
+                opacity: 1;
+            }
+            .title,
+            .content {
+                opacity: 1;
+            }
+            &::after {
+                transform: scale(1);
+            }
+        }
+    }
+}
+
+// Timeline boxes
+.timeline-box {
+    --image-box-height: 200px;
+    --half-gap: 40px;
+
+    position: relative;
+    transition: all 250ms ease-in-out;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        @include dark-prop( 'background', var(--color-gray-900), white );
+        transition: all 250ms ease-in-out;
+    }
+    &::before {
+        top: calc( var(--image-box-height) + var(--half-gap) );
+        right: 0;
+        left: 0;
+        width: auto;
+        height: 1px;
+        opacity: .15;
+    }
+    &::after {
+        top: calc( var(--image-box-height) + var(--half-gap) - 10px );
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        transform: scale(.5);
+        transition: transform .25s;
+    }
+    @include rtl-prop('left', auto, calc(50% - 10px), '&', '::after');
+    .image {
+        opacity: .6;
+        transform: scale(0.9);
+        transition: all 250ms ease-in-out;
+    }
+    .title,
+    .content {
+        opacity: .6;
+        transition: all 250ms ease-in-out;
+    }
+}
+
+// Main features switcher nav
+.main-features-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    > li {
+        position: relative;
+        width: 100%;
+        > a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            line-height: 80px !important;
+            padding: 0 16px;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border-bottom: 3px solid transparent;
+            width: 0%;
+            transition: 0ms cubic-bezier(1, 0, 0, 1);
+        }
+        &.uc-active::before {
+            border-color: var(--color-primary);
+            width: 100%;
+            transition-duration: 500ms;
+        }
+    }
+}
+
+// Global
+.uc-link {
+    font-weight: 500;
+}
+.uc-navbar-nav > li > a[aria-expanded="true"] {
+    box-shadow: inset 0px 3px var(--color-primary);
+}
+.uc-switcher-nav > li > a {
+    border-radius: 12px;
+}
+
+// Subnav Outline Pill
+.uc-subnav-outline-pill > li {
+    > a {
+        border: 1px solid var(--border-color);
+        border-radius: 50rem;
+        padding: 8px 24px;
+        @include dark-prop('color', var(--color-gray-900) !important, white !important);
+    }
+    &.uc-active > a {
+        @include dark-prop('background-color', var(--color-tertiary-300), var(--color-primary));
+        @include dark-prop('border-color', var(--color-gray-900), var(--color-primary-400));
+    }
+}

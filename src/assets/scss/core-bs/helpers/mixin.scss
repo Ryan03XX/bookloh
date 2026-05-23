@@ -1,0 +1,971 @@
+// ==================================================
+// Common Mixin
+// ==================================================
+
+@use "sass:map";
+@use "sass:list";
+@use 'sass:math';
+
+// Font Properties
+@mixin font-props($name) {
+    font-size: var(--sizes-#{$name}-size) !important;
+    line-height: var(--sizes-#{$name}-lh) !important;
+    letter-spacing: var(--sizes-#{$name}-lp) !important;
+}
+
+// Media Queries
+@mixin wrap-media {
+    @content('');
+    @each $bp, $width in map.get($config, 'breakpoints') {
+        html.bp-#{$bp} #{if(&, &, '')} {
+            @content('-' + $bp);
+        }
+    }
+}
+@mixin xs {
+    html.bp-xs {
+        @content;
+    }
+}
+@mixin sm {
+    html.bp-sm {
+        @content;
+    }
+}
+@mixin md {
+    html.bp-md {
+        @content;
+    }
+}
+@mixin lg {
+    html.bp-lg {
+        @content;
+    }
+}
+@mixin xl {
+    html.bp-xl {
+        @content;
+    }
+}
+@mixin xxl {
+    html.bp-xxl {
+        @content;
+    }
+}
+
+// Responsive bp
+@mixin make-responsive($selector: '&', $type: 'min') {
+    $breakpoints: map.get($config, 'breakpoints');
+    $selectors: ( $selector );
+    $selector_class: $selector;
+    @if str-slice($selector_class, 0, 1) == '.' {
+        $selector_class: str-slice($selector_class, 2);
+    } @else {
+        $selector_class: '';
+    }
+    @each $bp, $bp-value in $breakpoints {
+        $bp-main-selector: 'html.bp-' + $bp + if($type == 'max', '-max', '') + ' ' + if(&, &, '');
+        $bp-selector: $bp-main-selector + $selector + '-' + $bp;
+        $selectors: append($selectors, $bp-selector, comma);
+        @if $selector_class != '' {
+            $bp-selector: $bp-main-selector + ' .' + $bp + '\\:' + $selector_class;
+            $selectors: append($selectors, $bp-selector, comma);
+        }
+    }
+    #{$selectors} {
+        @content;
+    }
+}
+
+// Dark mode
+@mixin dark($selector: '&', $pseudo: '') {
+    @if index(('::before', ':before', '::after', ':after'), $selector) and $pseudo == '' {
+        $pseudo: $selector;
+        $selector: '&';
+    }
+    #{$selector}:where(.uc-dark)#{$pseudo}, :where(.uc-dark) #{$selector}#{$pseudo} {
+        @content;
+    }
+}
+@mixin dark-prop($prop, $value, $dark-value, $selector: '&', $pseudo: '', $selector-parent: '') {
+    @if index(('::before', ':before', '::after', ':after'), $selector) and $pseudo == '' {
+        $pseudo: $selector;
+        $selector: '&';
+    }
+    @if $selector-parent != '' {
+        #{$selector-parent} #{$selector}#{$pseudo} {
+            #{$prop}: $value;
+        }
+        #{$selector-parent} #{$selector}:where(.uc-dark)#{$pseudo}, #{$selector-parent}:where(.uc-dark) #{$selector}#{$pseudo}, #{$selector-parent} :where(.uc-dark) #{$selector}#{$pseudo} {
+            #{$prop}: $dark-value;
+        }
+    } @else {
+        #{$selector}#{$pseudo} {
+            #{$prop}: $value;
+        }
+        #{$selector}:where(.uc-dark)#{$pseudo}, :where(.uc-dark) #{$selector}#{$pseudo} {
+            #{$prop}: $dark-value;
+        }
+    }
+}
+@mixin dark-props($props, $selector: '&', $pseudo: '') {
+    @if index(('::before', ':before', '::after', ':after'), $selector) and $pseudo == '' {
+        $pseudo: $selector;
+        $selector: '&';
+    }
+    #{$selector}#{$pseudo} {
+        @content;
+        @each $prop, $value in $props {
+            #{$prop}: list.nth($value, 1) !important;
+        }
+    }
+    #{$selector}:where(.uc-dark)#{$pseudo}, :where(.uc-dark) #{$selector}#{$pseudo} {
+        @each $prop, $value in $props {
+            #{$prop}: list.nth($value, 2) !important;
+        }
+    }
+}
+
+// Generate color palette based on origin
+@mixin create-color($name, $is-dark: false) {
+    @each $type in ('text', 'background', 'border') {
+        @each $level in $colors-levels {
+            $name-suffix: '-' + $level;
+            @if ($name != 'gray' and $name != 'light') {
+                $name-suffix: '';
+            }
+            $full-name: $name + $name-suffix;
+            $value: var(--color-#{$full-name});
+            $selector-prefix: if($is-dark, ':where(.uc-dark) .dark\\:', '.');
+            $selector-suffix: 'uk-' + $type + '-' + $full-name;
+            $selectors: ( $selector-prefix + $selector-suffix );
+            @if $is-dark {
+                $selector-prefix: ':where(.uc-dark).dark\\:';
+                $selector: $selector-prefix + $selector-suffix;
+                $selectors: append($selectors, $selector, comma);
+            }
+            #{$selectors} {
+                #{if($type == 'text', '', $type + '-') + 'color'}: $value !important;
+            }
+        }
+    }
+    @each $type in ('text', 'background', 'border') {
+        @each $level in $colors-levels {
+            $name-suffix: '-' + $level;
+            @if ($name != 'gray' and $name != 'light') {
+                $name-suffix: '';
+            }
+            $full-name: $name + $name-suffix;
+            $value: var(--color-#{$full-name});
+            $selector-prefix: if($is-dark, ':where(.uc-dark) .dark\\:hover\\:', '.hover\\:');
+            $selector-suffix: 'uk-' + $type + '-' + $full-name + ':hover';
+            $selectors: ( $selector-prefix + $selector-suffix );
+            @if $is-dark {
+                $selector-prefix: ':where(.uc-dark).dark\\:hover\\:';
+                $selector: $selector-prefix + $selector-suffix;
+                $selectors: append($selectors, $selector, comma);
+            }
+            #{$selectors} {
+                #{if($type == 'text', '', $type + '-') + 'color'}: $value !important;
+                transition: .1s ease-in-out;
+                transition-property: color, background-color, border-color;
+            }
+        }
+    }
+}
+
+// Generate rgba palette based on origin
+@mixin generate-rgba {
+    @each $color in ('white', 'black') {
+        @each $rule in ('text', 'background', 'border') {
+            .uk-#{$rule}-#{$color},
+            :where(.uc-dark).dark\:uk-#{$rule}-#{$color},
+            :where(.uc-dark) .dark\:uk-#{$rule}-#{$color} {
+                @for $step from 1 through 20 {
+                    &#{if(5 * $step != 100, '-' + 5 * $step, '')} {
+                        #{if($rule == 'text', 'color', $rule + '-color')}: #{if($color == 'white', rgba(255, 255, 255, math.div($step, 20)), rgba(0, 0, 0, math.div($step, 20)))} !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Gradient
+@mixin gradient {
+    background-color: var(--gradient-first);
+    background-image: linear-gradient(var(--gradient-angle), var(--gradient-first), var(--gradient-second));
+}
+
+// Function to generate color shades
+@function generate-color-shades($base-color) {
+    $shades: (
+        '': $base-color, // Original color
+        10: mix(white, $base-color, 97%),
+        25: mix(white, $base-color, 95%),
+        50: mix(white, $base-color, 90%),
+        100: mix(white, $base-color, 80%),
+        200: mix(white, $base-color, 60%),
+        300: mix(white, $base-color, 40%),
+        400: mix(white, $base-color, 20%),
+        500: $base-color, // Original color
+        600: mix(black, $base-color, 20%),
+        700: mix(black, $base-color, 40%),
+        800: mix(black, $base-color, 60%),
+        900: mix(black, $base-color, 80%),
+        950: mix(black, $base-color, 90%)
+    );
+    @return $shades;
+}
+
+// Generate CSS Color Vars for Demos
+@mixin theme-color-vars($color-map, $prefix: '', $filter-colors: null) {
+    @each $name, $value in $color-map {
+        // If filter is provided, only process colors in the filter list
+        @if $filter-colors == null or index($filter-colors, $name) {
+            @if type-of($value) == 'color' {
+                --color-#{$prefix}#{$name}: #{$value};
+                --bs-#{$prefix}#{$name}-rgb: #{red($value)}, #{green($value)}, #{blue($value)};
+            } @else if type-of($value) == 'map' {
+                @each $shade, $shade-value in $value {
+                    $var-name: if($shade == '', $prefix + $name, $prefix + $name + '-' + $shade);
+                    --color-#{$var-name}: #{$shade-value};
+                    --bs-#{$var-name}-rgb: #{red($shade-value)}, #{green($shade-value)}, #{blue($shade-value)};
+                }
+            }
+        }
+    }
+}
+
+// Enhanced mixin with shade generation
+@mixin theme-color-vars-with-shades($color-map, $prefix: '', $filter: null) {
+    @each $name, $value in $color-map {
+        // Only process if no filter specified OR name is in filter list
+        @if $filter == null or index($filter, $name) {
+            @if type-of($value) == 'color' {
+                // Base color variables
+                --color-#{$prefix}#{$name}: #{$value};
+                --bs-#{$prefix}#{$name}-rgb: #{red($value)}, #{green($value)}, #{blue($value)};
+                
+                // Generate shade variables
+                $shades: generate-color-shades($value);
+                @each $shade, $shade-color in $shades {
+                    --color-#{$prefix}#{$name}-#{$shade}: #{$shade-color};
+                    --bs-#{$prefix}#{$name}-#{$shade}-rgb: #{red($shade-color)}, #{green($shade-color)}, #{blue($shade-color)};
+                }
+                
+            } @else if type-of($value) == 'map' {
+                // Handle existing map structure (if you already have predefined shades)
+                @each $shade, $shade-value in $value {
+                    $var-name: if($shade == '', $prefix + $name, $prefix + $name + '-' + $shade);
+                    --color-#{$var-name}: #{$shade-value};
+                    --bs-#{$var-name}-rgb: #{red($shade-value)}, #{green($shade-value)}, #{blue($shade-value)};
+                }
+            }
+        }
+    }
+}
+
+// Mixin for Gradient Utilities
+@mixin generate-gradient-utilities-with-shades($color-map, $filter: null) {
+    @each $name, $value in $color-map {
+        @if ($filter == null or index($filter, $name)) and type-of($value) == 'color' {
+            
+            // Base color gradients
+            .to-#{$name} {
+                --uc-gradient-to: #{$value};
+            }
+            .from-#{$name} {
+                --uc-gradient-from: #{$value};
+                --uc-gradient-stops: var(--uc-gradient-from), var(--uc-gradient-to);
+            }
+            .via-#{$name} {
+                --uc-gradient-stops: var(--uc-gradient-from), #{$value}, var(--uc-gradient-to) !important;
+            }
+            
+            $shades: generate-color-shades($value);
+            @each $shade, $shade-color in $shades {
+                .to-#{$name}-#{$shade} {
+                    --uc-gradient-to: #{$shade-color};
+                }
+                .from-#{$name}-#{$shade} {
+                    --uc-gradient-from: #{$shade-color};
+                    --uc-gradient-stops: var(--uc-gradient-from), var(--uc-gradient-to);
+                }
+                .via-#{$name}-#{$shade} {
+                    --uc-gradient-stops: var(--uc-gradient-from), #{$shade-color}, var(--uc-gradient-to) !important;
+                }
+            }
+
+            // Base color gradients
+            :where(.uc-dark) .dark\:to-#{$name},
+            :where(.uc-dark) .dark\:to-#{$name} {
+                --uc-gradient-to: #{$value} !important;
+            }
+            :where(.uc-dark) .dark\:from-#{$name},
+            :where(.uc-dark) .dark\:from-#{$name} {
+                --uc-gradient-from: #{$value} !important;
+                --uc-gradient-stops: var(--uc-gradient-from), var(--uc-gradient-to);
+            }
+            :where(.uc-dark) .dark\:via-#{$name},
+            :where(.uc-dark) .dark\:via-#{$name} {
+                --uc-gradient-stops: var(--uc-gradient-from), #{$value}, var(--uc-gradient-to);
+            }
+            
+            $shades: generate-color-shades($value);
+            @each $shade, $shade-color in $shades {
+                *:where(.uc-dark) .dark\:to-#{$name}-#{$shade},
+                :where(.uc-dark) .dark\:to-#{$name}-#{$shade} {
+                    --uc-gradient-to: #{$shade-color} !important;
+                }
+                *:where(.uc-dark) .dark\:from-#{$name}-#{$shade},
+                :where(.uc-dark) .dark\:from-#{$name}-#{$shade} {
+                    --uc-gradient-from: #{$shade-color} !important;
+                    --uc-gradient-stops: var(--uc-gradient-from), var(--uc-gradient-to);
+                }
+                *:where(.uc-dark) .dark\:via-#{$name}-#{$shade},
+                :where(.uc-dark) .dark\:via-#{$name}-#{$shade} {
+                    --uc-gradient-stops: var(--uc-gradient-from), #{$shade-color}, var(--uc-gradient-to) !important;
+                }
+            }
+        }
+    }
+}
+
+// Enhanced contrast function specifically for button variants
+@function get-button-contrast-color($accent-color, $bg-color: white, $min-contrast: 3) {
+    // First check if the accent color has sufficient contrast against the background
+    $accent-lightness: lightness($accent-color);
+    $bg-lightness: lightness($bg-color);
+    
+    // Calculate rough contrast based on lightness difference
+    $lightness-diff: math.abs($accent-lightness - $bg-lightness);
+    
+    // If the difference is too small, use high contrast fallback
+    @if $lightness-diff < 40% {
+        @return get-contrast-color($bg-color);
+    }
+    
+    // If accent color is very light on light background, use dark fallback
+    @if $accent-lightness > 70% and $bg-lightness > 70% {
+        @return #000;
+    }
+    
+    // If accent color is very dark on dark background, use light fallback  
+    @if $accent-lightness < 30% and $bg-lightness < 30% {
+        @return #fff;
+    }
+    
+    // Otherwise, the accent color should have sufficient contrast
+    @return $accent-color;
+}
+
+// Simplified function using lightness instead of full luminance calculation
+@function get-contrast-color($bg-color, $min-contrast-ratio: null) {
+    // Get contrast ratio from config if not provided
+    $contrast-threshold: if($min-contrast-ratio, $min-contrast-ratio, 2.5);
+
+    // Default to 50% lightness threshold if contrast-ratio is 2 or less
+    // For higher contrast ratios, use more strict thresholds
+    $lightness-threshold: 50%;
+    @if $contrast-threshold {
+        @if $contrast-threshold <= 2 {
+            $lightness-threshold: 50%;
+        } @else if $contrast-threshold <= 3 {
+            $lightness-threshold: 60%;
+        } @else {
+            $lightness-threshold: 70%;
+        }
+    }
+    
+    // Use lightness to determine contrast
+    @return if(lightness($bg-color) > $lightness-threshold, #000, #fff);
+}
+
+// Enhanced mixin to generate all button variant types
+@mixin generate-all-button-variants($color-map, $variants: ('solid', 'outline', 'alt', 'ghost'), $filter: null) {
+    @each $name, $value in $color-map {
+        @if ($filter == null or index($filter, $name)) and type-of($value) == 'color' {
+            
+            // Generate shades for hover/active states
+            $shades: generate-color-shades($value);
+            $base-color: $value;
+            $hover-color: map-get($shades, 600);
+            $active-color: map-get($shades, 700);
+            $focus-color: map-get($shades, 400);
+            
+            // Determine text color based on contrast ratio
+            $text-color: get-contrast-color($base-color);
+            $hover-text-color: get-contrast-color($hover-color);
+            $active-text-color: get-contrast-color($active-color);
+            
+            // Solid/Default Button (.btn-{color})
+            @if index($variants, 'solid') or index($variants, 'default') {
+                // Base color button (.btn-primary, .btn-secondary, etc.)
+                .btn-#{$name} {
+                    --bs-btn-color: #{$text-color};
+                    --bs-btn-bg: #{$base-color};
+                    --bs-btn-border-color: #{$base-color};
+                    --bs-btn-hover-color: #{$hover-text-color};
+                    --bs-btn-hover-bg: #{$hover-color};
+                    --bs-btn-hover-border-color: #{$hover-color};
+                    --bs-btn-focus-shadow-rgb: #{red($focus-color)}, #{green($focus-color)}, #{blue($focus-color)};
+                    --bs-btn-active-color: #{$active-text-color};
+                    --bs-btn-active-bg: #{$active-color};
+                    --bs-btn-active-border-color: #{$active-color};
+                    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+                    --bs-btn-disabled-color: #{$text-color};
+                    --bs-btn-disabled-bg: #{$base-color};
+                    --bs-btn-disabled-border-color: #{$base-color};
+                }
+                
+                // Generate shade-based buttons (.btn-primary-400, .btn-secondary-200, etc.)
+                @each $shade, $shade-color in $shades {
+                    @if $shade != '' and $shade != null {
+                        // Generate hover/active colors for this shade
+                        $shade-hover-color: map-get($shades, if($shade + 100 <= 900, $shade + 100, 900));
+                        $shade-active-color: map-get($shades, if($shade + 200 <= 900, $shade + 200, 900));
+                        $shade-focus-color: map-get($shades, if($shade - 100 >= 100, $shade - 100, 100));
+                        
+                        // Fall back to current shade if hover/active shades don't exist
+                        $shade-hover-color: if($shade-hover-color, $shade-hover-color, $shade-color);
+                        $shade-active-color: if($shade-active-color, $shade-active-color, $shade-color);
+                        $shade-focus-color: if($shade-focus-color, $shade-focus-color, $shade-color);
+                        
+                        // Calculate appropriate text colors for each state
+                        $shade-text-color: get-contrast-color($shade-color);
+                        $shade-hover-text-color: get-contrast-color($shade-hover-color);
+                        $shade-active-text-color: get-contrast-color($shade-active-color);
+                        
+                        .btn-#{$name}-#{$shade} {
+                            --bs-btn-color: #{$shade-text-color};
+                            --bs-btn-bg: #{$shade-color};
+                            --bs-btn-border-color: #{$shade-color};
+                            --bs-btn-hover-color: #{$shade-hover-text-color};
+                            --bs-btn-hover-bg: #{$shade-hover-color};
+                            --bs-btn-hover-border-color: #{$shade-hover-color};
+                            --bs-btn-focus-shadow-rgb: #{red($shade-focus-color)}, #{green($shade-focus-color)}, #{blue($shade-focus-color)};
+                            --bs-btn-active-color: #{$shade-active-text-color};
+                            --bs-btn-active-bg: #{$shade-active-color};
+                            --bs-btn-active-border-color: #{$shade-active-color};
+                            --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+                            --bs-btn-disabled-color: #{$shade-text-color};
+                            --bs-btn-disabled-bg: #{$shade-color};
+                            --bs-btn-disabled-border-color: #{$shade-color};
+                        }
+                    }
+                }
+            }
+            
+            // Outline Button (.btn-outline-{color})
+            @if index($variants, 'outline') {
+                // For outline buttons, check contrast against transparent/white background
+                $outline-bg-color: white;
+                $outline-text-color: get-button-contrast-color($base-color, $outline-bg-color);
+                
+                .btn-outline-#{$name} {
+                    --bs-btn-color: #{$outline-text-color};
+                    --bs-btn-border-color: #{$base-color};
+                    --bs-btn-hover-color: #{get-contrast-color($base-color)};
+                    --bs-btn-hover-bg: #{$base-color};
+                    --bs-btn-hover-border-color: #{$base-color};
+                    --bs-btn-focus-shadow-rgb: #{red($base-color)}, #{green($base-color)}, #{blue($base-color)};
+                    --bs-btn-active-color: #{get-contrast-color($active-color)};
+                    --bs-btn-active-bg: #{$active-color};
+                    --bs-btn-active-border-color: #{$active-color};
+                    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+                    --bs-btn-disabled-color: #{$outline-text-color};
+                    --bs-btn-disabled-bg: transparent;
+                    --bs-btn-disabled-border-color: #{$base-color};
+                    --bs-gradient: none;
+                }
+            }
+            
+            // Alt/Alternative Button (.btn-alt-{color})
+            @if index($variants, 'alt') or index($variants, 'alternative') {
+                @if $name != 'light' {
+                    // Check contrast between accent color and white background
+                    $alt-bg-color: white;
+                    $alt-text-color: get-button-contrast-color($base-color, $alt-bg-color);
+                    
+                    .btn-alt-#{$name} {
+                        background: #{$alt-bg-color} !important;
+                        color: #{$alt-text-color} !important;
+                        &:hover,
+                        &:focus {
+                            background: #{$base-color} !important;
+                            color: #{get-contrast-color($base-color)} !important;
+                        }
+                    }
+                } @else {
+                    // Special handling for light color
+                    $light-bg-color: #f5f5f5;
+                    $light-hover-bg-color: #e5e5e5;
+                    
+                    .btn-alt-#{$name} {
+                        background: var(--color-gray-25) !important;
+                        color: #{get-contrast-color($light-bg-color)} !important;
+                        &:hover,
+                        &:focus {
+                            background: var(--color-gray-50) !important;
+                            color: #{get-contrast-color($light-hover-bg-color)} !important;
+                        }
+                    }
+                }
+            }
+            
+            // Ghost Button (.btn-ghost-{color})
+            @if index($variants, 'ghost') {
+                @if $name != 'light' {
+                    // Check contrast between accent color and very light tinted background
+                    $ghost-bg-color: tint-color($base-color, 90%);
+                    $ghost-hover-bg-color: tint-color($base-color, 80%);
+                    $ghost-text-color: get-button-contrast-color($base-color, $ghost-bg-color);
+                    $ghost-hover-text-color: get-button-contrast-color($base-color, $ghost-hover-bg-color);
+                    
+                    .btn-ghost-#{$name} {
+                        background: #{$ghost-bg-color} !important;
+                        color: #{$ghost-text-color} !important;
+                        &:hover,
+                        &:focus {
+                            background: #{$ghost-hover-bg-color} !important;
+                            color: #{$ghost-hover-text-color} !important;
+                        }
+                    }
+                } @else {
+                    // Special handling for light color  
+                    $light-bg-color: #f5f5f5;
+                    $light-hover-bg-color: #e5e5e5;
+                    
+                    .btn-ghost-#{$name} {
+                        background-color: var(--color-gray-25) !important;
+                        color: #{get-contrast-color($light-bg-color)} !important;
+                        &:hover,
+                        &:focus {
+                            background: var(--color-gray-50) !important;
+                            color: #{get-contrast-color($light-hover-bg-color)} !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Backwards compatibility - keep the original mixin
+@mixin generate-button-variants($color-map, $filter: null) {
+    @include generate-all-button-variants($color-map, ('solid'), $filter);
+}
+
+@mixin generate-color-utilities($color-map, $filter: null) {
+    @each $name, $value in $color-map {
+        @if ($filter == null or index($filter, $name)) and type-of($value) == 'color' {
+            // Generate base color utilities
+            .text-#{$name} {
+                --bs-text-opacity: 1;
+                color: rgba(var(--bs-#{$name}-rgb), var(--bs-text-opacity)) !important;
+            }
+
+            .bg-#{$name} {
+                --bs-bg-opacity: 1;
+                background-color: rgba(var(--bs-#{$name}-rgb), var(--bs-bg-opacity)) !important;
+            }
+
+            .border-#{$name} {
+                --bs-border-opacity: 1;
+                border-color: rgba(var(--bs-#{$name}-rgb), var(--bs-border-opacity)) !important;
+            }
+
+            // Dark mode base color overrides with higher specificity
+            .uc-dark .dark\:text-#{$name} {
+                --bs-text-opacity: 1;
+                color: rgba(var(--bs-#{$name}-rgb), var(--bs-text-opacity)) !important;
+            }
+
+            .uc-dark .dark\:bg-#{$name} {
+                --bs-bg-opacity: 1;
+                background-color: rgba(var(--bs-#{$name}-rgb), var(--bs-bg-opacity)) !important;
+            }
+
+            .uc-dark .dark\:border-#{$name} {
+                --bs-border-opacity: 1;
+                border-color: rgba(var(--bs-#{$name}-rgb), var(--bs-border-opacity)) !important;
+            }
+            
+            // Generate utilities for shades
+            $shades: generate-color-shades($value);
+            @each $shade, $shade-color in $shades {
+                // Skip empty shade values
+                @if $shade != '' and $shade != null {
+                    // Light mode shade utilities
+                    .text-#{$name}-#{$shade} {
+                        --bs-text-opacity: 1;
+                        color: rgba(var(--bs-#{$name}-#{$shade}-rgb), var(--bs-text-opacity)) !important;
+                    }
+
+                    .bg-#{$name}-#{$shade} {
+                        --bs-bg-opacity: 1;
+                        background-color: rgba(var(--bs-#{$name}-#{$shade}-rgb), var(--bs-bg-opacity)) !important;
+                    }
+
+                    .border-#{$name}-#{$shade} {
+                        --bs-border-opacity: 1;
+                        border-color: rgba(var(--bs-#{$name}-#{$shade}-rgb), var(--bs-border-opacity)) !important;
+                    }
+
+                    // Dark mode shade overrides
+                    .uc-dark .dark\:text-#{$name}-#{$shade} {
+                        --bs-text-opacity: 1;
+                        color: rgba(var(--bs-#{$name}-#{$shade}-rgb), var(--bs-text-opacity)) !important;
+                    }
+
+                    .uc-dark .dark\:bg-#{$name}-#{$shade} {
+                        --bs-bg-opacity: 1;
+                        background-color: rgba(var(--bs-#{$name}-#{$shade}-rgb), var(--bs-bg-opacity)) !important;
+                    }
+
+                    .uc-dark .dark\:border-#{$name}-#{$shade} {
+                        --bs-border-opacity: 1;
+                        border-color: rgba(var(--bs-#{$name}-#{$shade}-rgb), var(--bs-border-opacity)) !important;
+                    }
+
+                    // Hover states for light mode
+                    .hover\:text-#{$name}-#{$shade}:hover {
+                        --bs-text-opacity: 1;
+                        color: rgba(var(--bs-#{$name}-#{$shade}-rgb), var(--bs-text-opacity)) !important;
+                    }
+
+                    .hover\:bg-#{$name}-#{$shade}:hover {
+                        --bs-bg-opacity: 1;
+                        background-color: rgba(var(--bs-#{$name}-#{$shade}-rgb), var(--bs-bg-opacity)) !important;
+                    }
+
+                    .hover\:border-#{$name}-#{$shade}:hover {
+                        --bs-border-opacity: 1;
+                        border-color: rgba(var(--bs-#{$name}-#{$shade}-rgb), var(--bs-border-opacity)) !important;
+                    }
+
+                    // Hover states for dark mode
+                    .uc-dark .dark\:hover\:text-#{$name}-#{$shade}:hover {
+                        --bs-text-opacity: 1;
+                        color: rgba(var(--bs-#{$name}-#{$shade}-rgb), var(--bs-text-opacity)) !important;
+                    }
+
+                    .uc-dark .dark\:hover\:bg-#{$name}-#{$shade}:hover {
+                        --bs-bg-opacity: 1;
+                        background-color: rgba(var(--bs-#{$name}-#{$shade}-rgb), var(--bs-bg-opacity)) !important;
+                    }
+
+                    .uc-dark .dark\:hover\:border-#{$name}-#{$shade}:hover {
+                        --bs-border-opacity: 1;
+                        border-color: rgba(var(--bs-#{$name}-#{$shade}-rgb), var(--bs-border-opacity)) !important;
+                    }
+                }
+            }
+        }
+    }
+    @each $type in ('bg', 'text', 'border') {
+        $property: if($type == 'bg', 'background-color',
+                  if($type == 'text', 'color',
+                  'border-color'));
+
+        :where(.uc-dark) .dark\:#{$type}-white, :where(.uc-dark) .dark\:#{$type}-white-hover:hover, :where(.uc-dark) .dark\:hover\:#{$type}-white:hover, :where(.uc-dark) .dark\:#{$type}-white-focus:focus, :where(.uc-dark) .dark\:focus\:#{$type}-white:focus {
+            --bs-#{$type}-opacity: 1;
+            #{$property}: rgba(var(--bs-white-rgb), var(--bs-#{$type}-opacity)) !important;
+        }
+
+        :where(.uc-dark) .dark\:#{$type}-black, :where(.uc-dark) .dark\:#{$type}-black-hover:hover, :where(.uc-dark) .dark\:hover\:#{$type}-black:hover, :where(.uc-dark) .dark\:#{$type}-black-focus:focus, :where(.uc-dark) .dark\:focus\:#{$type}-black:focus {
+            --bs-#{$type}-opacity: 1;
+            #{$property}: rgba(var(--bs-black-rgb), var(--bs-#{$type}-opacity)) !important;
+        }
+
+        :where(.uc-dark) .dark\:#{$type}-dark, :where(.uc-dark) .dark\:#{$type}-dark-hover:hover, :where(.uc-dark) .dark\:hover\:#{$type}-dark:hover, :where(.uc-dark) .dark\:#{$type}-dark-focus:focus, :where(.uc-dark) .dark\:focus\:#{$type}-dark:focus {
+            --bs-#{$type}-opacity: 1;
+            #{$property}: rgba(var(--bs-dark-rgb), var(--bs-#{$type}-opacity)) !important;
+        }
+    }
+}
+
+// ==================================================
+// Component & Base Mixin
+// ==================================================
+
+// Text
+@mixin text-size-modifier($bp: '') {
+    @each $name, $size in map.get($config, 'sizes', 'text') {
+        &#{if($name != '', '-' + $name, '')}#{$bp} {
+            @include font-props('text' + if($name != '', '-' + $name, ''));
+        }
+    }
+
+    &-lead#{$bp} {
+        @include font-props('text-xlarge');
+        color: var(--body-color-text);
+    }
+    &-meta#{$bp} {
+        @include font-props('text-xsmall');
+    }
+    &-overline#{$bp} {
+        @include font-props('text-xsmall');
+        font-weight: 500 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 1px !important;
+    }
+}
+@mixin text-weight-modifier($bp: '') {
+    @each $name, $size in map.get($config, 'font', 'weight') {
+        &#{if($name != '', '-' + $name, '')}#{$bp} {
+            font-weight: var(--font-weight-#{$name}) !important;
+        }
+    }
+}
+
+// Icon
+@mixin icon {
+
+    @include wrap-media() using ($bp) {
+        // Size Modifier
+        @each $name, $size in map.get($config, 'sizes', 'icon') {
+            $dash-name: if($name != '', '-' + $name, '');
+            .icon#{$dash-name}#{$bp} {
+                font-size: var(--sizes-icon#{$dash-name});
+                width: var(--sizes-icon#{$dash-name});
+                height: var(--sizes-icon#{$dash-name});
+                line-height: 1;
+            }
+        }
+    }
+
+}
+
+// Handle RTL classes
+@mixin rtl-utility-selector($selectors, $properties, $value) {
+    [dir=rtl] #{$selectors} {
+        @each $property in $properties {
+            @if str-index($property, 'left') {
+                $rtl-property: str-replace($property, 'left', 'right');
+                #{$rtl-property}: #{$value} !important;
+            } @else if str-index($property, 'right') {
+                $rtl-property: str-replace($property, 'right', 'left');
+                #{$rtl-property}: #{$value} !important;
+            } @else {
+                #{$property}: #{$value} !important;
+            }
+        }
+    }
+}
+@mixin rtl-prop($properties, $value, $default_value: 1rem, $selector: '&', $pseudo: '', $selector-parent: '') {
+    @if index(('::before', ':before', '::after', ':after'), $selector) and $pseudo == '' {
+        $pseudo: $selector;
+        $selector: '&';
+    }
+    
+    @if $selector-parent != '' {
+        #{$selector-parent} #{$selector}#{$pseudo} {
+            @each $property in $properties {
+                #{$property}: #{$value} !important;
+            }
+        }
+        [dir=rtl] #{$selector-parent} #{$selector}#{$pseudo}{
+            @each $property in $properties {
+                @include swap-direction($property, $value, $default_value);
+            }
+        }
+    } @else {
+        #{$selector}#{$pseudo} {
+            @each $property in $properties {
+                #{$property}: #{$value} !important;
+            }
+        }
+        [dir=rtl] #{$selector}#{$pseudo} {
+            @each $property in $properties {
+                @include swap-direction($property, $value, $default_value);
+            }
+        }
+    }
+}
+
+@mixin swap-direction($property, $value, $default_value) {
+    @if str-index($property, 'left') {
+        $rtl-property: str-replace($property, 'left', 'right');
+        #{$property}: #{$default_value} !important;
+        #{$rtl-property}: #{$value} !important;
+    } @else if str-index($property, 'right') {
+        $rtl-property: str-replace($property, 'right', 'left');
+        #{$property}: #{$default_value} !important;
+        #{$rtl-property}: #{$value} !important;
+    } @else if str-index($property, 'ltr') {
+        $rtl-property: str-replace($property, 'ltr', 'rtl');
+        #{$property}: #{$default_value} !important;
+        #{$rtl-property}: #{$value} !important;
+    } @else if str-index($property, 'rtl') {
+        $rtl-property: str-replace($property, 'rtl', 'ltr');
+        #{$property}: #{$default_value} !important;
+        #{$rtl-property}: #{$value} !important;
+    } @else {
+        #{$property}: #{$default_value} !important;
+    }
+}
+
+// Generate opacity utilities
+@mixin generate-opacity-utilities($values: $opacity, $prefix: '', $darkmode: true) {
+    @each $key, $value in $values {
+        @if $prefix == '' {
+            // Regular opacity property
+            .opacity-#{$key} {
+                @include utility-property(opacity, $value);
+            }
+
+            // Hover state
+            .hover\:opacity-#{$key}:hover {
+                @include utility-property(opacity, $value);
+            }
+
+            // Dark mode
+            @if $darkmode {
+                :where(.uc-dark) .dark\:opacity-#{$key} {
+                    @include utility-property(opacity, $value);
+                }
+
+                // Dark mode hover
+                :where(.uc-dark) .dark\:hover\:opacity-#{$key}:hover {
+                    @include utility-property(opacity, $value);
+                }
+            }
+        } @else {
+            // For bg/text/border opacity, use CSS variables
+            $type: str-slice($prefix, 1, -1); // Remove trailing hyphen
+            $var-name: '--bs-#{$type}opacity';
+
+            .#{$prefix}opacity-#{$key} {
+                @include utility-property($var-name, $value);
+            }
+
+            // Hover state
+            .hover\:#{$prefix}opacity-#{$key}:hover {
+                @include utility-property($var-name, $value);
+            }
+
+            // Dark mode
+            @if $darkmode {
+                :where(.uc-dark) .dark\:#{$prefix}opacity-#{$key} {
+                    @include utility-property($var-name, $value);
+                }
+
+                // Dark mode hover
+                :where(.uc-dark) .dark\:hover\:#{$prefix}opacity-#{$key}:hover {
+                    @include utility-property($var-name, $value);
+                }
+            }
+        }
+    }
+}
+
+// Add utility property with !important handling
+@mixin utility-property($property, $value) {
+    @if $enable-important-utilities {
+        #{$property}: #{$value} !important;
+    } @else {
+        #{$property}: #{$value};
+    }
+}
+
+// ==================================================
+// Heading Utilities
+// ==================================================
+
+// Generate CSS custom properties for heading sizes from config
+@mixin generate-heading-vars($config-map) {
+    $heading-sizes: map.get($config-map, 'sizes', 'heading');
+    @if $heading-sizes {
+        @each $name, $props in $heading-sizes {
+            @if type-of($props) == 'map' {
+                $size: map.get($props, 'size');
+                $lh: map.get($props, 'lh');
+                $lp: map.get($props, 'lp');
+                
+                @if $size {
+                    --sizes-heading-#{$name}-size: #{$size};
+                }
+                @if $lh {
+                    --sizes-heading-#{$name}-lh: #{$lh};
+                }
+                @if $lp {
+                    --sizes-heading-#{$name}-lp: #{$lp};
+                }
+            }
+        }
+    }
+}
+
+// Generate heading overrides that apply the CSS custom properties
+@mixin generate-heading-overrides($config-map) {
+    $heading-sizes: map.get($config-map, 'sizes', 'heading');
+    @if $heading-sizes {
+        @each $name, $props in $heading-sizes {
+            @if type-of($props) == 'map' {
+                // Handle standard heading tags (h1-h6)
+                @if str-index($name, 'h') == 1 and str-length($name) == 2 {
+                    #{$name}, .#{$name} {
+                        @include font-props('heading-#{$name}');
+                    }
+                }
+                // Handle display headings (display-1, display-2, etc.)
+                @else if str-index($name, 'display-') == 1 {
+                    .#{$name} {
+                        @include font-props('heading-#{$name}');
+                    }
+                }
+                // Handle any other heading classes
+                @else {
+                    .#{$name} {
+                        @include font-props('heading-#{$name}');
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Generate responsive heading utility classes
+@mixin generate-responsive-heading-overrides($config-map, $breakpoints: null) {
+    $heading-sizes: map.get($config-map, 'sizes', 'heading');
+    
+    // Use provided breakpoints or fall back to config breakpoints
+    $bp-map: $breakpoints;
+    @if $bp-map == null {
+        $bp-map: map.get($config-map, 'breakpoints');
+    }
+    
+    @if $heading-sizes and $bp-map {
+        // Generate responsive variants for each breakpoint
+        @each $breakpoint, $min-width in $bp-map {
+            @if $breakpoint != 'xs' { // Skip xs since it's the base (0px)
+                @media (min-width: #{$min-width}) {
+                    @each $name, $props in $heading-sizes {
+                        @if type-of($props) == 'map' {
+                            // Generate responsive utility classes for all headings
+                            .#{$breakpoint}\:#{$name} {
+                                @include font-props('heading-#{$name}');
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Combined mixin to generate both vars and overrides
+@mixin generate-heading-system($config-map, $breakpoints: null) {
+    // Generate CSS custom properties in :root
+    :root {
+        @include generate-heading-vars($config-map);
+    }
+    
+    // Generate heading overrides
+    @include generate-heading-overrides($config-map);
+    
+    // Generate responsive heading utilities
+    @include generate-responsive-heading-overrides($config-map, $breakpoints);
+}

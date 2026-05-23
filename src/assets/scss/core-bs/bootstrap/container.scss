@@ -1,0 +1,9 @@
+.container {
+    &.container-expand {
+        max-width: 100%;
+    }
+    &.container-full {
+        max-width: 100%;
+        padding: 0;
+    }
+}

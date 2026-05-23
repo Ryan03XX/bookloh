@@ -1,0 +1,1736 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookloh</title>
+    <meta name="description" content="Full-featured, professional-looking software, saas and startup website template.">
+    <meta name="keywords" content="saas, saas template, site template, software, startup, digital product, html5, landing, marketing, bootstrap, uikit3, agency, ai, digital agency, it solutions, nodejs">
+    <link rel="canonical" href="https://unistudio.co/html/Bookloh">
+    <meta name="theme-color" content="#178d72">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Bookloh" />
+    <meta property="og:description" content="Full-featured, Professional-looking SaaS, Software and Startup Site Template." />
+    <meta property="og:url" content="https://unistudio.co/html/Bookloh/" />
+    <meta property="og:site_name" content="Bookloh" />
+    <meta property="og:image" content="https://unistudio.co/html/Bookloh/assets/images/common/seo-image.jpg" />
+    <meta property="og:image:width" content="1180" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:image:type" content="image/png" />
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bookloh">
+    <meta name="twitter:description" content="Full-featured, Professional-looking SaaS, Software and Startup Site Template.">
+    <meta name="twitter:image" content="https://unistudio.co/html/Bookloh/assets/images/common/seo-image.jpg">
+
+    <link rel="canonical" href="https://unistudio.co/html/Bookloh/" />
+
+    <!-- preload head styles -->
+    <link rel="preload" href="../assets/css/fonts.css" as="style">
+    <link rel="preload" href="../assets/css/unicons.min.css" as="style">
+    <link rel="preload" href="../assets/css/swiper-bundle.min.css" as="style">
+    <link rel="preload" href="../assets/css/magic-cursor.min.css" as="style">
+
+    <!-- preload footer scripts -->
+    <link rel="preload" href="../assets/js/libs/jquery.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/scrollmagic.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/swiper-bundle.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/anime.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/typed.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/tilt.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/split-type.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/prettify.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/gsap.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/smooth-scroll.min.js" as="script">
+    <link rel="preload" href="../assets/js/core/magic-cursor.js" as="script">
+    <link rel="preload" href="../assets/js/helpers/data-attr-helper.js" as="script">
+    <link rel="preload" href="../assets/js/helpers/swiper-helper.js" as="script">
+    <link rel="preload" href="../assets/js/helpers/splitype-helper.js" as="script">
+    <link rel="preload" href="../assets/js/helpers/anime-helper.js" as="script">
+    <link rel="preload" href="../assets/js/helpers/typed-helper.js" as="script">
+    <link rel="preload" href="../assets/js/helpers/tilt-helper.js" as="script">
+    <link rel="preload" href="../assets/js/core/marquee.js" as="script">
+    <link rel="preload" href="../assets/js/uikit-components-bs.js" as="script">
+    <link rel="preload" href="../assets/js/form.js" as="script">
+    <link rel="preload" href="../assets/js/app.js" as="script">
+
+    <!-- app head for bootstrap core -->
+    <script src="../assets/js/app-head-bs.js"></script>
+
+    <!-- include uni-core components -->
+    <link rel="stylesheet" href="../assets/js/uni-core/css/uni-core.min.css">
+
+    <!-- include styles -->
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+    <link rel="stylesheet" href="../assets/css/unicons.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/css/prettify.min.css">
+    <link rel="stylesheet" href="../assets/css/magic-cursor.min.css">
+
+    <!-- include main style -->
+    <link rel="stylesheet" href="../assets/scss/theme/main.scss">
+    <link rel="stylesheet" href="../assets/scss/theme/theme-six.scss">
+
+    <!-- include scripts -->
+    <script src="../assets/js/uni-core/js/uni-core-bundle.min.js"></script>
+</head>
+
+<body class="uni-body panel uni-body panel bg-white text-gray-900 dark:bg-gray-800 dark:text-gray-100 overflow-x-hidden disable-cursor">
+
+    <!--  GDPR modal -->
+    <div id="uc-gdpr-notification" class="uc-gdpr-notification uc-notification min-w-1/2 ltr:start-0 ltr:end-auto rtl:end-0 rtl:start-auto top-auto bottom-0 lg:m-2">
+        <div class="uc-notification-message vstack lg:hstack items-end gap-2 lg:gap-4 lg:p-3 bg-white text-dark border rounded-1-5 min-w-1/2">
+            <a id="uc-close-gdpr-notification" class="uc-notification-close text-dark rtl:start-0 rtl:end-auto rtl:ms-2" data-uc-close></a>
+            <div class="vstack">
+                <h2 class="h5 ft-primary fw-bold -ls-1 m-0 text-dark">GDPR Compliance</h2>
+                <p class="fs-6 mt-1">We use cookies to ensure you get the best experience on our website. By continuing to use our site, you accept our use of cookies, <a href="page-privacy.html" class="uc-link text-underline">privacy policy</a> and <a href="page-terms.html" class="uc-link text-underline">terms of service</a>.</p>
+            </div>
+            <button class="btn btn-sm btn-primary px-2" id="uc-accept-gdpr">Accept</button>
+        </div>
+    </div>
+
+    <!--  Search modal -->
+    <div id="uc-search-modal" class="uc-modal-full uc-modal" data-uc-modal="overlay: true">
+        <div class="uc-modal-dialog d-flex justify-center bg-white text-dark dark:bg-gray-900 dark:text-white" data-uc-height-viewport="">
+
+            <div class="uc-modal-close-full m-1 p-0 vstack gap-narrow text-center">
+                <button class="icon-3 btn btn-md btn-dark dark:bg-white dark:text-dark w-24px sm:w-32px h-24px sm:h-32px rounded-circle flex-1" type="button">
+                    <i class="unicon-close"></i>
+                </button>
+                <span class="ft-tertiary fs-7">ESC</span>
+            </div>
+
+            <div class="panel w-100 sm:w-500px px-2 py-10">
+                <h3 class="h4 sm:h2 text-center">Search</h3>
+                <form class="hstack gap-1 mt-4 border-bottom p-narrow dark:border-gray-700" action="?">
+                    <span class="d-inline-flex justify-center items-center w-24px sm:w-40 h-24px sm:h-40px opacity-50"><i class="unicon-search icon-3"></i></span>
+                    <input type="search" name="q" class="form-control-plaintext ltr:ms-1 rtl:me-1 fs-6 sm:fs-5 w-full dark:text-white" placeholder="Type your keyword.." aria-label="Search" autofocus>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--  Newsletter modal -->
+    <div id="uc-newsletter-modal" data-uc-modal="overlay: true">
+        <div class="uc-modal-dialog w-800px bg-white text-dark dark:bg-gray-900 dark:text-white rounded-3 p-1 overflow-hidden">
+            <button class="uc-modal-close-default p-0 icon-3 btn border-0 dark:text-white dark:text-opacity-50 hover:text-primary hover:rotate-90 duration-150 transition-all" type="button">
+                <i class="unicon-close"></i>
+            </button>
+            <div class="row md:child-cols-6 col-match g-0">
+                <div class="d-none md:d-flex">
+                    <div class="position-relative w-100 ratio-1x1 rounded-2 overflow-hidden">
+                        <img class="media-cover" src="../assets/images/common/newsletter.jpg" alt="Newsletter image">
+                    </div>
+                </div>
+                <div>
+                    <div class="panel vstack self-center p-4 md:py-8 text-center">
+                        <h3 class="h3 md:h2">Subscribe to our Newsletter</h3>
+                        <p class="ft-tertiary">Join 10k+ people to get notified about new posts, news and updates.</p>
+                        <div class="panel mt-2 lg:mt-4">
+                            <form class="vstack gap-1">
+                                <input type="email" class="form-control form-control-sm w-full fs-6 bg-white dark:border-white dark:border-gray-700" placeholder="Your email address..">
+                                <button type="submit" class="btn btn-sm btn-primary">Sign up</button>
+                            </form>
+                            <p class="fs-7 mt-2">Do not worry we don't spam!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  Acccount modal -->
+    <div id="uc-account-modal" data-uc-modal="overlay: true">
+        <div class="uc-modal-dialog lg:max-w-500px bg-secondary text-dark dark:bg-gray-800 dark:text-white rounded">
+
+            <button class="uc-modal-close-default top-0 ltr:end-0 rtl:start-0 rtl:end-auto m-2 p-0 border-0 icon-2 lg:icon-3 btn btn-md dark:text-white transition-transform duration-150 hover:rotate-90" type="button">
+                <i class="unicon-close"></i>
+            </button>
+
+            <div class="panel vstack gap-2 md:gap-4 text-center">
+                <ul class="account-tabs-nav nav-x justify-center h6 py-2 border-bottom d-none" data-uc-switcher="animation: uc-animation-slide-bottom-small, uc-animation-slide-top-small">
+                    <li><a href="#">Sign in</a></li>
+                    <li><a href="#">Sign up</a></li>
+                    <li><a href="#">Reset password</a></li>
+                    <li><a href="#">Terms of use</a></li>
+                </ul>
+                <div class="account-tabs-content uc-switcher px-3 lg:px-4 py-4 lg:py-8 m-0 lg:mx-auto vstack justify-center items-center">
+                    <div class="w-100">
+                        <div class="panel vstack justify-center items-center gap-2 sm:gap-4 text-center">
+                            <h4 class="h5 lg:h4 m-0">Log in</h4>
+                            <div class="panel vstack gap-4 w-100 sm:w-350px mx-auto">
+                                <form class="vstack gap-2">
+                                    <input class="form-control h-48px w-full bg-white dark:border-white dark:text-dark" type="email" placeholder="Your email" required>
+                                    <input class="form-control h-48px w-full bg-white dark:border-white dark:text-dark" type="password" placeholder="Password" required>
+                                    <div class="hstack justify-between items-start text-start">
+                                        <div class="form-check text-start rtl:text-end">
+                                            <input class="form-check-input rounded-0 dark:bg-gray-900 dark:text-white dark:border-gray-700" type="checkbox" id="inputCheckRemember">
+                                            <label class="hstack justify-between form-check-label fs-7 sm:fs-6" for="inputCheckRemember">Remember me?</label>
+                                        </div>
+                                        <a href="#" class="uc-link" data-uc-switcher-item="2">Forgot password</a>
+                                    </div>
+                                    <button class="btn btn-primary btn-md text-white lg:mt-2" type="submit">Log in</button>
+                                </form>
+                                <div class="panel">
+                                    <hr class="m-0">
+                                    <span class="position-absolute top-50 start-50 translate-middle p-1 fs-7 text-uppercase bg-white dark:bg-gray-800">Or</span>
+                                </div>
+                                <div class="hstack gap-2">
+                                    <a href="#google" class="hstack items-center justify-center flex-1 gap-1 h-48px text-none rounded border border-gray-900 dark:border-white border-opacity-10">
+                                        <i class="icon icon-1 unicon-logo-google"></i>
+                                    </a>
+                                    <a href="#facebook" class="hstack items-center justify-center flex-1 gap-1 h-48px text-none rounded border border-gray-900 dark:border-white border-opacity-10">
+                                        <i class="icon icon-1 unicon-logo-facebook"></i>
+                                    </a>
+                                    <a href="#x" class="hstack items-center justify-center flex-1 gap-1 h-48px text-none rounded border border-gray-900 dark:border-white border-opacity-10">
+                                        <i class="icon icon-1 unicon-logo-x-filled"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="fs-7 sm:fs-6">Have no account yet? <a class="uc-link" href="#" data-uc-switcher-item="1">Sign up</a></p>
+                        </div>
+                    </div>
+                    <div class="w-100">
+                        <div class="panel vstack justify-center items-center gap-2 sm:gap-4 text-center">
+                            <h4 class="h5 lg:h4 m-0">Create an account</h4>
+                            <div class="panel vstack gap-4 w-100 sm:w-350px mx-auto">
+                                <form class="vstack gap-2">
+                                    <input class="form-control h-48px w-full bg-white dark:border-white dark:text-dark" type="text" placeholder="Full name" required>
+                                    <input class="form-control h-48px w-full bg-white dark:border-white dark:text-dark" type="email" placeholder="Your email" required>
+                                    <input class="form-control h-48px w-full bg-white dark:border-white dark:text-dark" type="password" placeholder="Password" required>
+                                    <input class="form-control h-48px w-full bg-white dark:border-white dark:text-dark" type="password" placeholder="Re-enter Password" required>
+                                    <div class="hstack text-start">
+                                        <div class="form-check text-start rtl:text-end">
+                                            <input class="form-check-input rounded-0 dark:bg-gray-900 dark:text-white dark:border-gray-700" type="checkbox" required>
+                                            <label class="hstack justify-between form-check-label fs-7 sm:fs-6">I read and accept the <a href="#" class="uc-link ltr:ms-narrow rtl:me-narrow" data-uc-switcher-item="3">terms of use</a>. </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary btn-md text-white lg:mt-2" type="submit">Sign up</button>
+                                </form>
+                                <div class="panel">
+                                    <hr class="m-0">
+                                    <span class="position-absolute top-50 start-50 translate-middle p-1 fs-7 text-uppercase bg-white dark:bg-gray-800">Or</span>
+                                </div>
+                                <div class="hstack gap-2">
+                                    <a href="#google" class="hstack items-center justify-center flex-1 gap-1 h-48px text-none rounded border border-gray-900 dark:border-white border-opacity-10">
+                                        <i class="icon icon-1 unicon-logo-google"></i>
+                                    </a>
+                                    <a href="#facebook" class="hstack items-center justify-center flex-1 gap-1 h-48px text-none rounded border border-gray-900 dark:border-white border-opacity-10">
+                                        <i class="icon icon-1 unicon-logo-facebook"></i>
+                                    </a>
+                                    <a href="#x" class="hstack items-center justify-center flex-1 gap-1 h-48px text-none rounded border border-gray-900 dark:border-white border-opacity-10">
+                                        <i class="icon icon-1 unicon-logo-x-filled"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="fs-7 sm:fs-6">Already have an account? <a class="uc-link" href="#" data-uc-switcher-item="0">Log in</a></p>
+                        </div>
+                    </div>
+                    <div class="w-100">
+                        <div class="panel vstack justify-center items-center gap-2 sm:gap-4 text-center">
+                            <h4 class="h5 lg:h4 m-0">Reset password</h4>
+                            <div class="panel w-100 sm:w-350px">
+                                <form class="vstack gap-2">
+                                    <input class="form-control h-48px w-full bg-white dark:border-white dark:text-dark" type="email" placeholder="Your email" required>
+                                    <div class="form-check text-start rtl:text-end">
+                                        <input class="form-check-input rounded-0 dark:bg-gray-900 dark:text-white dark:border-gray-700" type="checkbox" id="inputCheckVerify" required>
+                                        <label class="form-check-label fs-7 sm:fs-6" for="inputCheckVerify">
+                                            <span>I'm not a robot</span>.
+                                        </label>
+                                    </div>
+                                    <button class="btn btn-primary btn-md text-white lg:mt-2" type="submit">Reset a password</button>
+                                </form>
+                            </div>
+                            <p class="fs-7 sm:fs-6 mt-2 sm:m-0">Remember your password? <a class="uc-link" href="#" data-uc-switcher-item="0">Log in</a></p>
+                        </div>
+                    </div>
+                    <div class="w-100">
+                        <div class="panel vstack justify-center items-center gap-2 sm:gap-4">
+                            <h4 class="h5 lg:h4 m-0">Terms of use</h4>
+                            <div class="page-content panel fs-6 text-start max-h-400px overflow-scroll">
+                                <p>Terms of use dolor sit amet consectetur, adipisicing elit. Recusandae provident ullam aperiam quo ad non corrupti sit vel quam repellat ipsa quod sed, repellendus adipisci, ducimus ea modi odio assumenda.</p>
+                                <h5 class="h6 md:h5 mt-3 mb-1">Disclaimers</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, cum esse possimus officiis amet ea voluptatibus libero! Dolorum assumenda esse, deserunt ipsum ad iusto! Praesentium error nobis tenetur at, quis nostrum facere excepturi architecto totam.</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, soluta alias eaque modi ipsum sint iusto fugiat vero velit rerum.</p>
+                                <h5 class="h6 md:h5 mt-3 mb-1">Limitation on Liability</h5>
+                                <p>Sequi, cum esse possimus officiis amet ea voluptatibus libero! Dolorum assumenda esse, deserunt ipsum ad iusto! Praesentium error nobis tenetur at, quis nostrum facere excepturi architecto totam.</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, soluta alias eaque modi ipsum sint iusto fugiat vero velit rerum.</p>
+                                <h5 class="h6 md:h5 mt-3 mb-1">Copyright Policy</h5>
+                                <p>Dolor sit amet consectetur adipisicing elit. Sequi, cum esse possimus officiis amet ea voluptatibus libero! Dolorum assumenda esse, deserunt ipsum ad iusto! Praesentium error nobis tenetur at, quis nostrum facere excepturi architecto totam.</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, soluta alias eaque modi ipsum sint iusto fugiat vero velit rerum.</p>
+                                <h5 class="h6 md:h5 mt-3 mb-1">General</h5>
+                                <p>Sit amet consectetur adipisicing elit. Sequi, cum esse possimus officiis amet ea voluptatibus libero! Dolorum assumenda esse, deserunt ipsum ad iusto! Praesentium error nobis tenetur at, quis nostrum facere excepturi architecto totam.</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, soluta alias eaque modi ipsum sint iusto fugiat vero velit rerum.</p>
+                            </div>
+                            <p class="fs-7 sm:fs-6">Do you agree to our terms? <a class="uc-link" href="#" data-uc-switcher-item="1">Sign up</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  Menu panel -->
+    <div id="uc-menu-panel" data-uc-offcanvas="overlay: true;">
+        <div class="uc-offcanvas-bar bg-white text-dark dark:bg-gray-900 dark:text-white">
+
+            <header class="uc-offcanvas-header hstack justify-between items-center pb-2 bg-white dark:bg-gray-900">
+                <div class="uc-logo">
+                    <a href="index.html" class="h5 text-none text-gray-900 dark:text-white">
+                        <img class="w-32px" src="../assets/images/common/logo-mark.svg" alt="Bookloh">
+                    </a>
+                </div>
+                <button class="uc-offcanvas-close rtl:end-auto rtl:start-0 m-1 mt-2 icon-3 btn border-0 dark:text-white dark:text-opacity-50 hover:text-primary hover:rotate-90 duration-150 transition-all" type="button">
+                    <i class="unicon-close"></i>
+                </button>
+            </header>
+
+            <div class="panel">
+                <form id="search-panel" class="form-icon-group vstack gap-1 mb-2" data-uc-sticky="">
+                    <input type="email" class="form-control form-control-sm fs-7 rounded-default" placeholder="Search..">
+                    <span class="form-icon text-gray">
+                        <i class="unicon-search icon-1"></i>
+                    </span>
+                </form>
+                <ul class="nav-y gap-narrow fw-medium fs-6" data-uc-nav>
+                    <li><a href="page-features.html">Features</a></li>
+                    <li><a href="page-pricing.html">Pricing</a></li>
+                    <li><a href="page-about.html">About</a></li>
+                    <li><a href="page-career.html">Career</a></li>
+                    <li><a href="page-contact.html">Contact</a></li>
+                    <li class="uc-parent"><a href="#">Inner Pages</a>
+                        <ul class="uc-nav-sub" data-uc-nav="">
+                            <li><a href="page-services.html">Services</a></li>
+                            <li><a href="page-services-detail.html">Services Detail</a></li>
+                            <li><a href="page-integrations.html">Integrations</a></li>
+                            <li><a href="page-team.html">Team</a></li>
+                            <li><a href="components.html">Components</a></li>
+                            <li class="uc-parent"><a href="blog.html">Blog</a>
+                                <ul class="uc-nav-sub">
+                                    <li><a href="blog.html">Full Width</a></li>
+                                    <li><a href="blog-classic.html">Classic</a></li>
+                                    <li><a href="blog-sidebar.html">Sidebar</a></li>
+                                    <li><a href="blog-2cols.html">Grid 2 Cols</a></li>
+                                    <li><a href="blog-3cols.html">Grid 3 Cols</a></li>
+                                    <li><a href="blog-4cols.html">Grid 4 Cols</a></li>
+                                </ul>
+                            </li>
+                            <li class="uc-parent"><a href="blog-details.html">Blog - detail</a>
+                                <ul class="uc-nav-sub">
+                                    <li><a href="blog-details.html">Blog detail</a></li>
+                                    <li><a href="blog-details-2.html">Blog detail - v2</a></li>
+                                    <li><a href="blog-details-3.html">Blog detail - v3</a></li>
+                                </ul>
+                            </li>
+                            <li class="uc-parent"><a href="#">Useful pages</a>
+                                <ul class="uc-nav-sub">
+                                    <li><a href="sign-up.html">Sign up</a></li>
+                                    <li><a href="sign-in.html">Sign in</a></li>
+                                    <li><a href="reset-password.html">Reset password</a></li>
+                                    <li><a href="404.html">404 page</a></li>
+                                    <li><a href="coming-soon.html">Coming soon</a></li>
+                                </ul>
+                            </li>
+                            <li class="uc-parent"><a href="#">Other pages</a>
+                                <ul class="uc-nav-sub">
+                                    <li><a href="page-faq.html">FAQ</a></li>
+                                    <li><a href="page-terms.html">Terms of use</a></li>
+                                    <li><a href="page-privacy.html">Privacy policy</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="uc-parent"><a href="shop.html">Shop</a>
+                        <ul class="uc-nav-sub" data-uc-nav="">
+                            <li class="uc-parent"><a href="shop.html">Shop layouts</a>
+                                <ul class="uc-nav-sub">
+                                    <li><a href="shop.html">Shop 4 cols</a></li>
+                                    <li><a href="shop-3.html">Shop 3 cols</a></li>
+                                    <li><a href="shop-2.html">Shop 2 cols</a></li>
+                                    <li><a href="shop-sidebar.html">Shop with sidebar</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="shop-category.html">Archive category</a></li>
+                            <li><a href="shop-product-detail.html">Product detail</a></li>
+                            <li><a href="shop-product-detail-2.html">Product detail - v2</a></li>
+                            <li><a href="shop-cart.html">Cart</a></li>
+                            <li><a href="shop-cart-2.html">Cart - v2</a></li>
+                            <li><a href="shop-checkout.html">Checkout</a></li>
+                            <li><a href="shop-checkout-2.html">Checkout - v2</a></li>
+                            <li><a href="shop-order.html">Order confirmation</a></li>
+                        </ul>
+                    </li>
+                    <li class="hr opacity-10 my-1"></li>
+                    <li><a href="sign-up.html">Create an account</a></li>
+                    <li><a href="sign-in.html">Log in</a></li>
+                    <li><a href="https://themeforest.net/item/lexend-software-saas-startup-html5-template/51596504">Buy Template</a></li>
+                </ul>
+                <ul class="social-icons nav-x mt-4">
+                    <li>
+                        <a href="#"><i class="unicon-logo-medium icon-2"></i></a>
+                        <a href="#"><i class="unicon-logo-x-filled icon-2"></i></a>
+                        <a href="#"><i class="unicon-logo-instagram icon-2"></i></a>
+                        <a href="#"><i class="unicon-logo-pinterest icon-2"></i></a>
+                    </li>
+                </ul>
+                <div class="py-2 hstack gap-2 mt-4 bg-white dark:bg-gray-900" data-uc-sticky="position: bottom">
+                    <div class="vstack gap-1">
+                        <span class="fs-7 opacity-60">Select theme:</span>
+                        <div class="darkmode-trigger" data-darkmode-switch="">
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider fs-5"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--  Cart panel -->
+    <div id="uc-cart-panel" data-uc-offcanvas="overlay: true; flip: true;">
+        <div class="uc-offcanvas-bar bg-white text-dark dark:bg-gray-900 dark:text-white">
+
+            <button class="uc-offcanvas-close top-0 ltr:end-0 rtl:start-0 rtl:end-auto m-2 p-0 border-0 icon-2 lg:icon-3 btn btn-md dark:text-white transition-transform duration-150 hover:rotate-90" type="button">
+                <i class="unicon-close"></i>
+            </button>
+
+            <div class="mini-cart-content vstack justify-between panel h-100">
+                <div class="mini-cart-header">
+                    <h3 class="title h5 m-0 text-dark dark:bg-gray-900">Shopping cart</h3>
+                </div>
+                <div class="mini-cart-listing panel flex-1 my-4 overflow-scroll">
+                    <p class="alert alert-warning" hidden>Your cart empty!</p>
+                    <div class="panel vstack gap-3">
+                        <div>
+                            <article class="product type-product panel">
+                                <div class="hstack gap-2">
+                                    <figure class="featured-image m-0 rounded ratio ratio-1x1 w-80px uc-transition-toggle overflow-hidden">
+                                        <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../assets/images/common/products/img-07.jpg" alt="Laptop Cover">
+                                        <a href="shop-product-detail.html" class="position-cover" data-caption="Laptop Cover"></a>
+                                    </figure>
+                                    <div class="content vstack gap-narrow fs-6">
+                                        <h5 class="h6 m-0"><a class="text-none text-dark dark:text-white" href="shop-product-detail.html">Laptop Cover</a></h5>
+                                        <div class="hstack gap-narrow fs-7 opacity-50 text-dark dark:text-white">
+                                            <span class="qty">1</span> x <span class="price">$24.00</span>
+                                        </div>
+                                        <a href="#remove_from_cart" class="remove fs-7 text-dark dark:text-white">Remove</a>
+                                    </div>
+                                    <a href="#remove_from_cart" class="remove position-absolute top-0 end-0 btn p-0 hover:text-danger" hidden>
+                                        <i class="unicon-close icon-1"></i>
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+                        <div>
+                            <article class="product type-product panel">
+                                <div class="hstack gap-2">
+                                    <figure class="featured-image m-0 rounded ratio ratio-1x1 w-80px uc-transition-toggle overflow-hidden">
+                                        <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../assets/images/common/products/img-08.jpg" alt="Disney Toys">
+                                        <a href="shop-product-detail.html" class="position-cover" data-caption="Disney Toys"></a>
+                                    </figure>
+                                    <div class="content vstack gap-narrow fs-6">
+                                        <h5 class="h6 m-0"><a class="text-none text-dark dark:text-white" href="shop-product-detail.html">Disney Toys</a></h5>
+                                        <div class="hstack gap-narrow fs-7 opacity-50 text-dark dark:text-white">
+                                            <span class="qty">1</span> x <span class="price">$5.00</span>
+                                        </div>
+                                        <a href="#remove_from_cart" class="remove fs-7 text-dark dark:text-white">Remove</a>
+                                    </div>
+                                    <a href="#remove_from_cart" class="remove position-absolute top-0 end-0 btn p-0 hover:text-danger" hidden>
+                                        <i class="unicon-close icon-1"></i>
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+                        <div>
+                            <article class="product type-product panel">
+                                <div class="hstack gap-2">
+                                    <figure class="featured-image m-0 rounded ratio ratio-1x1 w-80px uc-transition-toggle overflow-hidden">
+                                        <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../assets/images/common/products/img-09.jpg" alt="Screen Axe">
+                                        <a href="shop-product-detail.html" class="position-cover" data-caption="Screen Axe"></a>
+                                    </figure>
+                                    <div class="content vstack gap-narrow fs-6">
+                                        <h5 class="h6 m-0"><a class="text-none text-dark dark:text-white" href="shop-product-detail.html">Screen Axe</a></h5>
+                                        <div class="hstack gap-narrow fs-7 opacity-50 text-dark dark:text-white">
+                                            <span class="qty">1</span> x <span class="price">$19.00</span>
+                                        </div>
+                                        <a href="#remove_from_cart" class="remove fs-7 text-dark dark:text-white">Remove</a>
+                                    </div>
+                                    <a href="#remove_from_cart" class="remove position-absolute top-0 end-0 btn p-0 hover:text-danger" hidden>
+                                        <i class="unicon-close icon-1"></i>
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+                        <div>
+                            <article class="product type-product panel">
+                                <div class="hstack gap-2">
+                                    <figure class="featured-image m-0 rounded ratio ratio-1x1 w-80px uc-transition-toggle overflow-hidden">
+                                        <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../assets/images/common/products/img-10.jpg" alt="Airpods Pro">
+                                        <a href="shop-product-detail.html" class="position-cover" data-caption="Airpods Pro"></a>
+                                    </figure>
+                                    <div class="content vstack gap-narrow fs-6">
+                                        <h5 class="h6 m-0"><a class="text-none text-dark dark:text-white" href="shop-product-detail.html">Airpods Pro</a></h5>
+                                        <div class="hstack gap-narrow fs-7 opacity-50 text-dark dark:text-white">
+                                            <span class="qty">1</span> x <span class="price">$49.00</span>
+                                        </div>
+                                        <a href="#remove_from_cart" class="remove fs-7 text-dark dark:text-white">Remove</a>
+                                    </div>
+                                    <a href="#remove_from_cart" class="remove position-absolute top-0 end-0 btn p-0 hover:text-danger" hidden>
+                                        <i class="unicon-close icon-1"></i>
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div class="mini-cart-footer panel pt-3 border-top">
+                    <div class="panel vstack gap-3 justify-between">
+                        <div class="mini-cart-total hstack justify-between">
+                            <h5 class="h5 m-0 text-dark dark:text-white">Subtotal</h5>
+                            <b class="fs-5">$97.00</b>
+                        </div>
+                        <div class="mini-cart-actions vstack gap-1">
+                            <a href="shop-cart.html" class="btn btn-md btn-outline-gray-100 text-dark dark:text-white dark:border-gray-700 dark:hover:bg-gray-700">View cart</a>
+                            <a href="shop-checkout.html" class="btn btn-md btn-primary text-white">Checkout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--  Favorites modal -->
+    <div id="uc-favorites-panel" data-uc-modal="overlay: true">
+        <div class="uc-modal-dialog lg:max-w-500px bg-white text-dark dark:bg-gray-800 dark:text-white rounded">
+
+            <button class="uc-modal-close-default top-0 ltr:end-0 rtl:start-0 rtl:end-auto m-2 p-0 border-0 icon-2 lg:icon-3 btn btn-md dark:text-white transition-transform duration-150 hover:rotate-90" type="button">
+                <i class="unicon-close"></i>
+            </button>
+
+            <div class="panel vstack justify-center items-center gap-2 text-center py-8">
+                <i class="icon icon-4 unicon-bookmark mb-2 text-primary dark:text-white"></i>
+                <h2 class="h4 md:h3 m-0">Your favorites</h2>
+                <p class="fs-5 opacity-60">You have not yet added any recipe to your favorites list.</p>
+                <a href="#" class="btn btn-md btn-outline-gray-100 text-dark dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 mt-2 uc-modal-close">Browse recipes</a>
+            </div>
+        </div>
+    </div>
+
+    <!--  Contact modal -->
+    <div id="uc-contact-modal" data-uc-modal="overlay: true">
+        <div class="uc-modal-dialog lg:max-w-650px bg-secondary text-dark dark:bg-gray-800 dark:text-white rounded-1-5">
+
+            <button class="uc-modal-close-default top-0 ltr:end-0 rtl:start-0 rtl:end-auto m-2 p-0 border-0 icon-2 lg:icon-3 btn btn-md dark:text-white transition-transform duration-150 hover:rotate-90" type="button">
+                <i class="unicon-close"></i>
+            </button>
+
+            <div class="panel vstack gap-2 md:gap-4 text-center">
+                <div class="panel cstack px-3 md:px-4 py-4 md:py-8 m-0 lg:mx-auto">
+                    <div class="panel vstack justify-center items-center gap-2 sm:gap-4 text-center">
+                        <h4 class="h5 lg:h4 m-0">Schedule your 15-minute demo now</h4>
+                        <div class="panel w-100 sm:w-350px md:w-500px mx-auto">
+                            <form class="vstack gap-2">
+                                <div class="vstack lg:hstack gap-2">
+                                    <input class="form-control h-48px w-100 md:w-1/2 bg-white dark:border-white dark:text-dark" type="text" placeholder="Full name*" required>
+                                    <input class="form-control h-48px w-100 md:w-1/2 bg-white dark:border-white dark:text-dark" type="text" placeholder="Last name*" required>
+                                </div>
+                                <div class="vstack lg:hstack gap-2">
+                                    <input class="form-control h-48px w-100 md:w-1/2 bg-white dark:border-white dark:text-dark" type="email" placeholder="Your email*" required>
+                                    <input class="form-control h-48px w-100 md:w-1/2 rtl:text-end bg-white dark:border-white dark:text-dark" type="tel" placeholder="Phone number*" required>
+                                </div>
+                                <input class="form-control h-48px w-full bg-white dark:border-white dark:text-dark" type="text" placeholder="Company name*" required>
+                                <textarea class="form-control min-h-150px w-full bg-white dark:border-white dark:text-dark" placeholder="Your message.."></textarea>
+                                <button class="btn btn-primary btn-md text-white mt-2" type="submit">Schedule my demo</button>
+                                <p class="fs-7 opacity-70 mt-2 text-center">We’ll tailor your demo to your immediate needs and answer all your questions. Get ready to see how it works!</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  Bottom Actions Sticky -->
+    <div class="backtotop-wrap position-fixed ltr:end-0 ltr:start-auto rtl:start-0 rtl:end-auto top-auto bottom-0 z-99 m-2 vstack">
+        <div class="darkmode-trigger cstack w-40px h-40px rounded-circle text-none bg-gray-100 dark:bg-gray-700 dark:text-white" data-darkmode-toggle="">
+            <label class="switch">
+                <span class="sr-only">Dark mode toggle</span>
+                <input type="checkbox">
+                <span class="slider fs-5"></span>
+            </label>
+        </div>
+        <a class="btn btn-sm bg-primary text-white w-40px h-40px rounded-circle" href="to_top" data-uc-backtotop>
+            <i class="icon-2 unicon-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- Header start -->
+    <header class="uc-header header-global uc-navbar-sticky-wrap z-999 ">
+        <nav class="uc-navbar-container uc-navbar-transparent uc-navbar-float ft-tertiary z-1" data-anime="translateY: [-40, 0]; opacity: [0, 1]; easing: easeOutExpo; duration: 750; delay: 0;">
+            <div class="uc-navbar-main">
+                <div class="container max-w-lg lg:max-w-950px xl:max-w-xl">
+                    <div class="uc-navbar min-h-56px lg:min-h-100px px-2 lg:px-0 text-gray-900 dark:text-white" data-uc-navbar=" animation: uc-animation-slide-top-small; duration: 150;">
+                        <div class="uc-navbar-left">
+                            <div class="uc-logo">
+                                <a class="panel text-none" href="index-10.html" style="width: 140px;">
+                                    <img class="text-primary dark:text-tertiary" src="../assets/images/common/logo-8-light.svg" alt="Bookloh" data-uc-svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="uc-navbar-center d-none xl:d-flex">
+                            <ul class="uc-navbar-nav gap-4 xl:gap-5 d-none lg:d-flex fs-5 fw-bold" style="--uc-nav-height: 48px" data-uc-scrollspy-nav="closest: li; offset: 40; scroll: true">
+                                <li>
+                                    <a href="page-features.html">Features</a>
+                                </li>
+                                <li>
+                                    <a href="page-pricing-2.html">Pricing</a>
+                                </li>
+                                <li>
+                                    <a href="page-blog.html">Blog</a>
+                                </li>
+                                <li>
+                                    <a href="page-about.html">About</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="uc-navbar-right">
+                            <div class="d-inline-block">
+                                <a href="#" class="hstack gap-1 text-none fw-medium">
+                                    <i class="icon icon-1 unicon-wikis fw-bold"></i>
+                                </a>
+                                <div class="p-2 bg-white dark:bg-gray-300 dark:bg-opacity-15 border shadow-xs rounded w-100px" data-uc-drop="mode: click; offset: 16; pos: bottom-right; boundary: !.uc-footer-widgets; animation: uc-animation-slide-top-small; duration: 150;">
+                                    <ul class="nav-y items-center gap-1 fw-medium rtl:items-end">
+                                        <li><a href="#en">English</a></li>
+                                        <li><a href="#ar">العربية</a></li>
+                                        <li><a href="#ch">中文</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="https://themeforest.net/item/lexend-software-saas-startup-html5-template/51596504" target="_blank" class="btn btn-md btn-primary dark:bg-tertiary dark:text-primary-700 border-0 px-3 d-none lg:d-inline-flex" data-uc-cursor="lg opaque">
+                                <span>Download App</span>
+                            </a>
+                            <a class="d-block lg:d-none" href="#uc-menu-panel" data-uc-navbar-toggle-icon data-uc-toggle></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Header end -->
+
+    <!-- Wrapper start -->
+    <div id="wrapper" class="wrap">
+
+        <!-- Section start -->
+        <div id="hero_header" class="hero-header section panel overflow-hidden">
+            <div class="position-absolute top-0 start-0 end-0 h-screen bg-secondary dark:bg-gray-300 dark:bg-opacity-15 rounded-bottom-2 lg:rounded-bottom-5"></div>
+            <div class="section-outer panel py-8 lg:py-9 xl:py-10">
+                <div class="container">
+                    <div class="section-inner panel">
+                        <div class="d-none xl:d-block" data-anime="targets: >*; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 500});">
+                            <div class="position-absolute rounded-circle border border-dashed border-primary-300 dark:border-white dark:border-opacity-15 cstack w-56px h-56px d-none lg:d-block" style="top: 5%; left: 5%" data-anime="translateY: [0, 10]; easing: linear; loop: true; direction: alternate; delay: 0;"><img class="p-narrow rounded-circle" src="../assets/images/avatars/03.png" alt="brand"></div>
+                            <div class="position-absolute rounded-circle border border-dashed border-primary-300 dark:border-white dark:border-opacity-15 cstack w-56px h-56px d-none lg:d-block" style="top: 20%; left: 10%" data-anime="translateY: [0, 15]; easing: linear; loop: true; direction: alternate; delay: 25;"><img class="p-narrow rounded-circle" src="../assets/images/avatars/08.png" alt="brand"></div>
+                            <div class="position-absolute rounded-circle border border-dashed border-primary-300 dark:border-white dark:border-opacity-15 cstack w-56px h-56px d-none lg:d-block" style="top: 35%; left: 0%" data-anime="translateY: [0, 5]; easing: linear; loop: true; direction: alternate; delay: 25;"><img class="p-narrow rounded-circle" src="../assets/images/avatars/02.png" alt="brand"></div>
+                            <div class="position-absolute rounded-circle border border-dashed border-primary-300 dark:border-white dark:border-opacity-15 cstack w-56px h-56px d-none lg:d-block" style="top: 5%; right: 5%" data-anime="translateY: [0, 10]; easing: linear; loop: true; direction: alternate; delay: 0;"><img class="p-narrow rounded-circle" src="../assets/images/avatars/01.png" alt="brand"></div>
+                            <div class="position-absolute rounded-circle border border-dashed border-primary-300 dark:border-white dark:border-opacity-15 cstack w-56px h-56px d-none lg:d-block" style="top: 20%; right: 10%" data-anime="translateY: [0, 15]; easing: linear; loop: true; direction: alternate; delay: 25;"><img class="p-narrow rounded-circle" src="../assets/images/avatars/06.png" alt="brand"></div>
+                            <div class="position-absolute rounded-circle border border-dashed border-primary-300 dark:border-white dark:border-opacity-15 cstack w-56px h-56px d-none lg:d-block" style="top: 35%; right: 0%" data-anime="translateY: [0, 5]; easing: linear; loop: true; direction: alternate; delay: 25;"><img class="p-narrow rounded-circle" src="../assets/images/avatars/09.png" alt="brand"></div>
+                        </div>
+                        <div class="row child-cols-12 justify-center items-center g-8">
+                            <div class="lg:col-10">
+                                <div class="panel vstack gap-4 lg:gap-8">
+                                    <div class="panel vstack justify-center items-center gap-2 px-2 pt-4 text-center">
+                                        <h1 class="h2 md:h1 lg:display-5 m-0" data-anime="translateY: [10, 0]; opacity: [0, 1]; easing: easeOutExpo; duration: 450; delay: 250;">
+                                            <span class="text-primary dark:text-tertiary">Connect Instantly,</span> <br class="d-none lg:d-block"> Communicate Seamlessly
+                                        </h1>
+                                        <p class="fs-6 xl:fs-4 xl:px-10 dark:text-white text-opacity-70" data-uc-splitext="types: 'words'" data-anime="targets: > *; translateX: [5, 0]; opacity: [0, 1]; easing: easeOutExpo; duration: 450; delay: anime.stagger(50, {start:650});">Stay connected with friends, family, and colleagues anywhere in the world.</p>
+                                        <div class="vstack md:hstack justify-center gap-1 my-1 lg:my-3" data-anime="translateY: [24, 0]; opacity: [0, 1]; easing: easeOutExpo; duration: 750; delay: 750;">
+                                            <a href="page-pricing.html" class="btn btn-md btn-outline-primary dark:border-tertiary dark:text-tertiary dark:hover:bg-tertiary dark:hover:text-primary-700 border-2 px-3 w-auto">
+                                                <i class="icon-narrow unicon-chat-launch fw-bold"></i>
+                                                <span>Start chatting</span>
+                                            </a>
+                                            <a href="#" class="btn btn-md btn-link fw-bold text-none text-primary dark:text-tertiary">Free Watch Demo</a>
+                                        </div>
+                                        <div class="vstack sm:hstack items-center justify-center gap-1 fs-6 text-gray-900 dark:text-white" data-anime="translateY: [24, 0]; opacity: [0, 1]; easing: easeOutExpo; duration: 750; delay: 850;">
+                                            <div class="hstack justify-center gap-2">
+                                                Exellent
+                                                <div class="rating panel">
+                                                    <div class="hstack justify-center">
+                                                        <i class="icon-1 unicon-star-filled text-yellow"></i>
+                                                        <i class="icon-1 unicon-star-filled text-yellow"></i>
+                                                        <i class="icon-1 unicon-star-filled text-yellow"></i>
+                                                        <i class="icon-1 unicon-star-filled text-yellow"></i>
+                                                        <i class="icon-1 unicon-star-filled text-yellow"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <span class="desc">Based on 10,250+ reviews.</span>
+                                        </div>
+                                    </div>
+                                    <div class="hero-scroll-scene panel max-w-850px mx-auto">
+                                        <div class="panel border shadow-lg rounded-1-5 p-1 bg-white dark:bg-gray-800 overflow-hidden" data-anime="translateY: [80, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 450; delay: 950;">
+                                            <img class="rounded-default" src="../assets/images/template/home-10-hero.jpg" alt="Hero image">
+                                        </div>
+                                        <div class="hero-ten-01 position-absolute w-150px xl:w-250px d-none lg:d-block" data-anime="translateY: [24, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 750; delay: 750;" style="top: 20%;">
+                                            <img class="rounded-2 shadow-lg border" src="../assets/images/template/home-10-hero-02.png" alt="hero-image" data-anime="onscroll: .hero-scroll-scene; onscroll-offset: -300; onscroll-trigger: 0; onscroll-duration: 700%; translateY: [-24, 180];">
+                                        </div>
+                                        <div class="hero-ten-02 position-absolute w-200px xl:w-300px d-none lg:d-block" data-anime="translateY: [24, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 750; delay: 750;" style="bottom: 20%;">
+                                            <img class="rounded-2 shadow-lg border" src="../assets/images/template/home-10-hero-01.png" alt="hero-image" data-anime="onscroll: .hero-scroll-scene; onscroll-offset: -300; onscroll-trigger: 0; onscroll-duration: 700%; translateY: [100, 0];">
+                                        </div>
+                                        <div class="hero-ten-03 position-absolute w-150px d-none lg:d-block" data-anime="translateY: [24, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 750; delay: 750;" style="top: 10%;">
+                                            <img class="rounded-2 shadow-lg border" src="../assets/images/template/home-10-hero-03.png" alt="hero-image" data-anime="onscroll: .hero-scroll-scene; onscroll-offset: -300; onscroll-trigger: 0; onscroll-duration: 700%; translateY: [-24, 48];">
+                                        </div>
+                                    </div>
+
+                                    <div class="panel mt-3 lg:mt-4 text-center">
+                                        <div class="row child-cols-12 md:child-cols justify-center g-1 gx-4 lg:gx-0">
+                                            <div>
+                                                <div class="hstack justify-center gap-1">
+                                                    <span class="icon mb-narrow text-primary dark:text-tertiary">
+                                                        <img class="w-24px lg:w-40px" src="../assets/images/custom-icons/icon-02.svg" alt="icon" data-uc-svg>
+                                                    </span>
+                                                    <span class="h6 mb-1 text-inherit">No Credit Card Required</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="hstack justify-center gap-1">
+                                                    <span class="icon mb-narrow text-primary dark:text-tertiary">
+                                                        <img class="w-24px lg:w-40px" src="../assets/images/custom-icons/icon-07.svg" alt="icon" data-uc-svg>
+                                                    </span>
+                                                    <span class="h6 mb-1 text-inherit">End-to-End Encryption</span>
+                                                </div>
+                                            </div>
+                                            <div class="d-none lg:d-block">
+                                                <div class="hstack justify-center gap-1">
+                                                    <span class="icon mb-narrow text-primary dark:text-tertiary">
+                                                        <img class="w-24px lg:w-40px" src="../assets/images/custom-icons/icon-02.svg" alt="icon" data-uc-svg>
+                                                    </span>
+                                                    <span class="h6 mb-1 text-inherit">Cutting-edge AI features</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section end -->
+
+        <!-- Section start -->
+        <div id="how_it_works" class="how-it-works section panel overflow-hidden">
+            <div class="section-outer panel">
+                <div class="container">
+                    <div class="section-inner panel vstack border rounded-3 overflow-hidden bg-secondary dark:bg-gray-300 dark:bg-opacity-15" data-anime="onview: -200; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 200;">
+                        <div class="row child-cols-12 md:child-cols justify-center col-match g-4 sep uc-grid" data-uc-grid>
+                            <div class="min-w-1/4">
+                                <div class="panel vstack items-center gap-2 text-center p-5 xl:py-8">
+                                    <span class="icon-box w-40px md:w-48px h-40px md:h-48px rounded-circle cstack bg-primary dark:bg-tertiary text-tertiary dark:text-primary">1</span>
+                                    <img class="w-100 max-h-200px" src="../assets/images/template/home-10-step-01.svg" alt="Image">
+                                    <h3 class="h5 lg:h4 m-0">Download, create account</h3>
+                                    <p class="fs-6">Quickly download the app and create your account in seconds. No complicated registrations or lengthy forms—just simple, fast onboarding.</p>
+                                </div>
+                            </div>
+                            <div class="min-w-1/4">
+                                <div class="panel vstack items-center gap-2 text-center p-5 xl:py-8">
+                                    <span class="icon-box w-40px md:w-48px h-40px md:h-48px rounded-circle cstack bg-primary dark:bg-tertiary text-tertiary dark:text-primary">2</span>
+                                    <img class="w-100 max-h-200px" src="../assets/images/template/home-10-step-02.svg" alt="Image">
+                                    <h3 class="h5 lg:h4 m-0">Connect with your circle</h3>
+                                    <p class="fs-6">Automatically sync your contacts or manually add friends. Our intelligent network helps you connect seamlessly across multiple platforms.</p>
+                                </div>
+                            </div>
+                            <div class="min-w-100 lg:min-w-1/4">
+                                <div class="panel vstack items-center gap-2 text-center p-5 xl:py-8">
+                                    <span class="icon-box w-40px md:w-48px h-40px md:h-48px rounded-circle cstack bg-primary dark:bg-tertiary text-tertiary dark:text-primary">3</span>
+                                    <img class="w-100 max-h-200px" src="../assets/images/template/home-10-step-03.svg" alt="Image">
+                                    <h3 class="h5 lg:h4 m-0">Start communicating</h3>
+                                    <p class="fs-6">Start chatting, make video calls, and share files instantly. Experience real-time communication with crystal-clear quality and ultimate privacy.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel vstack p-6 xl:p-8 border-top">
+                            <div class="vstack md:hstack justify-center gap-1 mb-1 lg:mb-3" data-anime="translateY: [24, 0]; opacity: [0, 1]; easing: easeOutExpo; duration: 750; delay: 750;">
+                                <a href="#" class="btn btn-md btn-primary dark:bg-tertiary dark:text-primary px-3 w-auto border-0">
+                                    <i class="icon-narrow unicon-chat-launch fw-bold"></i>
+                                    <span>Start chatting</span>
+                                </a>
+                                <a href="#" class="btn btn-md btn-link fw-bold text-none text-primary dark:text-white">Free Watch Demo</a>
+                            </div>
+                            <div class="vstack sm:hstack items-center justify-center gap-1 fs-6" data-anime="translateY: [24, 0]; opacity: [0, 1]; easing: easeOutExpo; duration: 750; delay: 850;">
+                                <div class="hstack justify-center gap-2">
+                                    Exellent
+                                    <div class="rating panel">
+                                        <div class="hstack justify-center">
+                                            <i class="icon-1 unicon-star-filled text-yellow"></i>
+                                            <i class="icon-1 unicon-star-filled text-yellow"></i>
+                                            <i class="icon-1 unicon-star-filled text-yellow"></i>
+                                            <i class="icon-1 unicon-star-filled text-yellow"></i>
+                                            <i class="icon-1 unicon-star-filled text-yellow"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="desc">Based on 10,250+ reviews.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section end -->
+
+        <!-- Section start -->
+        <div id="main_features" class="main-features section panel overflow-hidden">
+            <div class="section-outer panel py-6 lg:py-8 xl:py-10">
+                <div class="container">
+                    <div class="section-inner panel">
+                        <div class="panel row child-cols-12 g-2 lg:g-4" data-uc-scrollspy="target: >*; delay: 500; cls: uc-animation-slide-bottom-medium">
+                            <div>
+                                <div class="feature-item panel p-2 lg:p-4">
+                                    <div class="row child-cols items-center justify-between g-2 md:g-4">
+                                        <div class="col-12 md:col-6 lg:col-5 ">
+                                            <div class="panel overflow-hidden rounded-1-5 lg:rounded-2">
+                                                <figure class="featured-image m-0 rounded ratio ratio-1x1 rounded-2 overflow-hidden ">
+                                                    <img class="media-cover image " src="../assets/images/template/home-10-feature-01.jpg" alt="Instant Messaging">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 md:col-6 lg:col-6 ">
+                                            <div class="panel">
+                                                <div class="panel vstack justify-center gap-4 h-100 sm:p-3 lg:p-4">
+                                                    <div>
+                                                        <div class="panel vstack gap-2">
+                                                            <span class="cstack w-48px h-48px rounded-1-5 mb-2 d-none lg:d-inline-flex bg-primary text-tertiary dark:bg-tertiary dark:text-primary">
+                                                                <i class="icon-1 unicon-chat"></i>
+                                                            </span>
+                                                            <h3 class="h4 sm:h3 xl:h2 m-0">Instant Messaging</h3>
+                                                            <p class="fs-6 lg:fs-5 opacity-70 dark:opacity-80">Lightning-fast communication across devices. <br> Send messages, photos, and files instantly with real-time delivery and read receipts.</p>
+                                                            <a href="#" class="uc-link fw-bold hstack gap-narrow sm:mt-1 lg:mt-2 text-primary dark:text-tertiary">
+                                                                <span>Let's find out</span>
+                                                                <i class="position-relative icon icon-1 unicon-arrow-right rtl:rotate-180 translate-y-px"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="feature-item panel p-2 lg:p-4">
+                                    <div class="row child-cols items-center justify-between g-2 md:g-4">
+                                        <div class="col-12 md:col-6 lg:col-5 md:order-2">
+                                            <div class="panel overflow-hidden rounded-1-5 lg:rounded-2">
+                                                <figure class="featured-image m-0 rounded ratio ratio-1x1 rounded-2 overflow-hidden ">
+                                                    <img class="media-cover image " src="../assets/images/template/home-10-feature-02.jpg" alt="HD Video Calling">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 md:col-6 lg:col-6 md:order-1">
+                                            <div class="panel">
+                                                <div class="panel vstack justify-center gap-4 h-100 sm:p-3 lg:p-4">
+                                                    <div>
+                                                        <div class="panel vstack gap-2">
+                                                            <span class="cstack w-48px h-48px rounded-1-5 mb-2 d-none lg:d-inline-flex bg-primary text-tertiary dark:bg-tertiary dark:text-primary">
+                                                                <i class="icon-1 unicon-video-add"></i>
+                                                            </span>
+                                                            <h3 class="h4 sm:h3 xl:h2 m-0">HD Video Calling</h3>
+                                                            <p class="fs-6 lg:fs-5 opacity-70 dark:opacity-80">Crystal-clear video connections worldwide. <br> High-definition video calls with noise cancellation and seamless group video support.</p>
+                                                            <a href="#" class="uc-link fw-bold hstack gap-narrow sm:mt-1 lg:mt-2 text-primary dark:text-tertiary">
+                                                                <span>Learn more</span>
+                                                                <i class="position-relative icon icon-1 unicon-arrow-right rtl:rotate-180 translate-y-px"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="feature-item panel p-2 lg:p-4">
+                                    <div class="row child-cols items-center justify-between g-2 md:g-4">
+                                        <div class="col-12 md:col-6 lg:col-5 ">
+                                            <div class="panel overflow-hidden rounded-1-5 lg:rounded-2">
+                                                <figure class="featured-image m-0 rounded ratio ratio-1x1 rounded-2 overflow-hidden ">
+                                                    <img class="media-cover image " src="../assets/images/template/home-10-feature-03.jpg" alt="End-to-End Encryption">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 md:col-6 lg:col-6 ">
+                                            <div class="panel">
+                                                <div class="panel vstack justify-center gap-4 h-100 sm:p-3 lg:p-4">
+                                                    <div>
+                                                        <div class="panel vstack gap-2">
+                                                            <span class="cstack w-48px h-48px rounded-1-5 mb-2 d-none lg:d-inline-flex bg-primary text-tertiary dark:bg-tertiary dark:text-primary">
+                                                                <i class="icon-1 unicon-manage-protection"></i>
+                                                            </span>
+                                                            <h3 class="h4 sm:h3 xl:h2 m-0">End-to-End Encryption</h3>
+                                                            <p class="fs-6 lg:fs-5 opacity-70 dark:opacity-80">Uncompromising privacy and security. <br> Military-grade encryption protects every message and call, ensuring your conversations remain completely private.</p>
+                                                            <a href="#" class="uc-link fw-bold hstack gap-narrow sm:mt-1 lg:mt-2 text-primary dark:text-tertiary">
+                                                                <span>How privacy works</span>
+                                                                <i class="position-relative icon icon-1 unicon-arrow-right rtl:rotate-180 translate-y-px"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="feature-item panel p-2 lg:p-4">
+                                    <div class="row child-cols items-center justify-between g-2 md:g-4">
+                                        <div class="col-12 md:col-6 lg:col-5 md:order-2">
+                                            <div class="panel overflow-hidden rounded-1-5 lg:rounded-2">
+                                                <figure class="featured-image m-0 rounded ratio ratio-1x1 rounded-2 overflow-hidden ">
+                                                    <img class="media-cover image " src="../assets/images/template/home-10-feature-04.jpg" alt="Cross-Platform Sync">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 md:col-6 lg:col-6 md:order-1">
+                                            <div class="panel">
+                                                <div class="panel vstack justify-center gap-4 h-100 sm:p-3 lg:p-4">
+                                                    <div>
+                                                        <div class="panel vstack gap-2">
+                                                            <span class="cstack w-48px h-48px rounded-1-5 mb-2 d-none lg:d-inline-flex bg-primary text-tertiary dark:bg-tertiary dark:text-primary">
+                                                                <i class="icon-1 unicon-renew"></i>
+                                                            </span>
+                                                            <h3 class="h4 sm:h3 xl:h2 m-0">Cross-Platform Sync</h3>
+                                                            <p class="fs-6 lg:fs-5 opacity-70 dark:opacity-80">Seamless experience across all devices. <br> Synchronize conversations and media between smartphones, tablets, and desktops without missing a beat.</p>
+                                                            <a href="#" class="uc-link fw-bold hstack gap-narrow sm:mt-1 lg:mt-2 text-primary dark:text-tertiary">
+                                                                <span>Download app now</span>
+                                                                <i class="position-relative icon icon-1 unicon-arrow-right rtl:rotate-180 translate-y-px"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vstack mt-4 lg:mt-8">
+                                <div class="vstack md:hstack justify-center gap-1 my-1 lg:my-3" data-anime="translateY: [24, 0]; opacity: [0, 1]; easing: easeOutExpo; duration: 750; delay: 750;">
+                                    <a href="#" class="btn btn-md btn-primary dark:bg-tertiary dark:text-primary border-0 px-3 w-auto">
+                                        <i class="icon-narrow unicon-chat-launch fw-bold"></i>
+                                        <span>Start chatting</span>
+                                    </a>
+                                    <a href="#" class="btn btn-md btn-link fw-bold text-none text-primary dark:text-white">Free Watch Demo</a>
+                                </div>
+                                <div class="vstack sm:hstack items-center justify-center gap-1 fs-6 text-gray-900 dark:text-white" data-anime="translateY: [24, 0]; opacity: [0, 1]; easing: easeOutExpo; duration: 750; delay: 850;">
+                                    <div class="hstack justify-center gap-2">
+                                        Exellent
+                                        <div class="rating panel">
+                                            <div class="hstack justify-center">
+                                                <i class="icon-1 unicon-star-filled text-yellow"></i>
+                                                <i class="icon-1 unicon-star-filled text-yellow"></i>
+                                                <i class="icon-1 unicon-star-filled text-yellow"></i>
+                                                <i class="icon-1 unicon-star-filled text-yellow"></i>
+                                                <i class="icon-1 unicon-star-filled text-yellow"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="desc">Based on 10,250+ reviews.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section end -->
+
+        <!-- Section start -->
+        <div id="clients_feedbacks" class="clients-feedbacks section panel overflow-hidden">
+            <div class="section-outer panel">
+                <div class="container">
+                    <div class="section-inner panel">
+                        <div class="panel vstack justify-center items-center gap-4 sm:gap-6 xl:gap-8 max-w-lg mx-auto" data-anime="onview: -200; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 200;">
+                            <div class="row child-cols-12 justify-center col-match g-2 lg:g-3" data-uc-grid>
+                                <div>
+                                    <div class="panel vstack items-center gap-4 text-center">
+                                        <div class="panel vstack items-center gap-2 lg:gap-4">
+                                            <img class="w-128px text-primary dark:text-tertiary" src="../assets/images/brands/brand-08.svg" alt="Brand" data-uc-svg>
+                                            <p class="fs-5 lg:fs-4 xl:fs-3 ft-secondary fw-bold text-dark dark:text-white">“We are based in Europe and the latest Data Protection Regulation forces us to look for service suppliers than comply with this regulation and as we look to create our website and this builder just outstanding!”</p>
+                                        </div>
+                                        <div class="panel cstack gap-2 lg:mt-2">
+                                            <div class="panel">
+                                                <img class="w-48px lg:w-56px h-48px lg:h-56px rounded-circle" src="../assets/images/avatars/03.png" alt="Sarah Edrissi — Lead Marketing">
+                                            </div>
+                                            <div class="panel vstack gap-narrow">
+                                                <h6 class="h6 lg:h5 m-0">Sarah Edrissi</h6>
+                                                <span class="opacity-70">Lead Marketing</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section end -->
+
+        <!-- Section start -->
+        <div id="key_features" class="key-features section panel overflow-hidden">
+            <div class="section-outer panel py-6 lg:py-8 xl:py-10">
+                <div class="container">
+                    <div class="section-inner panel vstack gap-4 lg:gap-6 xl:gap-8 max-w-lg mx-auto" data-anime="onview: -100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100);">
+                        <div class="section-header vstack items-center gap-2 lg:gap-3">
+                            <h2 class="h4 sm:h3 lg:h2 m-0 text-center max-w-650px mx-auto">More features</h2>
+                        </div>
+                        <div class="panel">
+                            <div class="features-items row child-cols-12 lg:child-cols-4 justify-center g-2 md:g-4 col-match" data-anime="onview: -100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 400});">
+                                <div>
+                                    <div class="features-item hstack items-center gap-2 p-2 bg-secondary hover:bg-tertiary dark:bg-gray-300 dark:bg-opacity-15 dark:hover:bg-primary hover:scale-105 transition-all duration-150 rounded-pill">
+                                        <div class="icon-box w-40px md:w-48px h-40px md:h-48px rounded-circle cstack bg-primary dark:bg-tertiary">
+                                            <img class="w-20px xl:w-24px text-tertiary dark:text-primary" src="../assets/images/common/icons/zap.svg" alt="feature-icon" data-uc-svg>
+                                        </div>
+                                        <h3 class="title h6 md:h5 m-0">Fast Messaging</h3>
+                                        <a href="#" class="position-cover"></a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="features-item hstack items-center gap-2 p-2 bg-secondary hover:bg-tertiary dark:bg-gray-300 dark:bg-opacity-15 dark:hover:bg-primary hover:scale-105 transition-all duration-150 rounded-pill">
+                                        <div class="icon-box w-40px md:w-48px h-40px md:h-48px rounded-circle cstack bg-primary dark:bg-tertiary">
+                                            <img class="w-20px xl:w-24px text-tertiary dark:text-primary" src="../assets/images/common/icons/database.svg" alt="feature-icon" data-uc-svg>
+                                        </div>
+                                        <h3 class="title h6 md:h5 m-0">AI-Powered Translation</h3>
+                                        <a href="#" class="position-cover"></a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="features-item hstack items-center gap-2 p-2 bg-secondary hover:bg-tertiary dark:bg-gray-300 dark:bg-opacity-15 dark:hover:bg-primary hover:scale-105 transition-all duration-150 rounded-pill">
+                                        <div class="icon-box w-40px md:w-48px h-40px md:h-48px rounded-circle cstack bg-primary dark:bg-tertiary">
+                                            <img class="w-20px xl:w-24px text-tertiary dark:text-primary" src="../assets/images/common/icons/line-chart.svg" alt="feature-icon" data-uc-svg>
+                                        </div>
+                                        <h3 class="title h6 md:h5 m-0">Smart File Sharing</h3>
+                                        <a href="#" class="position-cover"></a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="features-item hstack items-center gap-2 p-2 bg-secondary hover:bg-tertiary dark:bg-gray-300 dark:bg-opacity-15 dark:hover:bg-primary hover:scale-105 transition-all duration-150 rounded-pill">
+                                        <div class="icon-box w-40px md:w-48px h-40px md:h-48px rounded-circle cstack bg-primary dark:bg-tertiary">
+                                            <img class="w-20px xl:w-24px text-tertiary dark:text-primary" src="../assets/images/common/icons/target.svg" alt="feature-icon" data-uc-svg>
+                                        </div>
+                                        <h3 class="title h6 md:h5 m-0">Collaboration Tools</h3>
+                                        <a href="#" class="position-cover"></a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="features-item hstack items-center gap-2 p-2 bg-secondary hover:bg-tertiary dark:bg-gray-300 dark:bg-opacity-15 dark:hover:bg-primary hover:scale-105 transition-all duration-150 rounded-pill">
+                                        <div class="icon-box w-40px md:w-48px h-40px md:h-48px rounded-circle cstack bg-primary dark:bg-tertiary">
+                                            <img class="w-20px xl:w-24px text-tertiary dark:text-primary" src="../assets/images/common/icons/settings.svg" alt="feature-icon" data-uc-svg>
+                                        </div>
+                                        <h3 class="title h6 md:h5 m-0">Customizable Privacy</h3>
+                                        <a href="#" class="position-cover"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section end -->
+
+        <!-- Section start -->
+        <div id="pricing" class="pricing section panel overflow-hidden">
+            <div class="section-outer panel py-6 xl:py-10 lg:mx-2 mt-2 rounded-2 xl:rounded-3 bg-gray-800 dark:bg-gray-300 dark:bg-opacity-15 text-white" data-anime="onview: -200; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 200;">
+                <div class="container">
+                    <div class="section-inner panel">
+                        <div class="pricing-tables panel vstack justify-center items-center gap-4 sm:gap-6 xl:gap-8" data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
+                            <div class="section-header vstack items-center gap-2 lg:gap-3">
+                                <h2 class="h3 md:h1 lg:display-5 m-0 text-center max-w-650px mx-auto text-white">Seamless prices and scalable plans</h2>
+                            </div>
+                            <div class="panel w-100">
+                                <ul class="uc-subnav uc-subnav-pill gap-1 uc-child-width-expand rounded-1-5 p-narrow max-w-xs mx-auto border" data-uc-switcher="swiping: false;">
+                                    <li>
+                                        <a class="d-flex justify-center text-white" href="#">Pay monthly</a>
+                                    </li>
+                                    <li>
+                                        <a class="d-flex justify-center text-white" href="#">Pay yearly</a>
+                                        <img class="position-absolute top-50 start-100 translate-middle-y mt-n3 ltr:ms-2 rtl:me-2 text-tertiary d-none md:d-block" src="../assets/images/template/50_off.svg" alt="50% OFF" data-uc-svg>
+                                    </li>
+                                </ul>
+                                <div class="uc-switcher mt-4 lg:mt-6">
+                                    <li>
+                                        <div class="swiper overflow-unset lg:overflow-hidden" data-uc-swiper="items: 1.1; gap: 8; center: true; center-bounds: true;" data-uc-swiper-s="items: 2.1; gap: 16;" data-uc-swiper-m="items: 3; gap: 16;" data-uc-swiper-l="items: 3; gap: 24;">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="pricing-box panel p-2 md:p-3 lg:p-4 xl:p-5 vstack items-center rounded-1-5 lg:rounded-2 text-center bg-gray-300 bg-opacity-15 text-white">
+                                                        <span class="pricing-box-title fs-6 fw-bold py-narrow px-2 border rounded-pill mb-2">Starter</span>
+                                                        <p class="pricing-box-desc opacity-70">For individuals, freelancers</p>
+                                                        <div class="pricing-box-price hstack justify-center gap-narrow mt-2">
+                                                            <h4 class="price h1 lg:display-5 m-0 text-inherit">$24</h4>
+                                                            <span class="duration fs-7 opacity-70">/ month</span>
+                                                        </div>
+                                                        <p class="pricing-box-bill fs-7 opacity-70">Billed once yearly</p>
+                                                        <hr>
+                                                        <ul class="nav-y items-center gap-1 fs-6">
+                                                            <li class="mb-1">Standout features</li>
+                                                            <li><i class="icon icon-narrow unicon-checkmark fw-bold ltr:me-1 rtl:ms-1"></i> Fast and Reliable</li>
+                                                            <li><i class="icon icon-narrow unicon-checkmark fw-bold ltr:me-1 rtl:ms-1"></i> Discover Data Everywhere</li>
+                                                        </ul>
+                                                        <div class="pricing-box-cta vstack gap-1 justify-center text-center mt-4">
+                                                            <a href="sign-up.html" class="btn btn-md btn-secondary w-100">Try for free</a>
+                                                            <span class="fs-7 opacity-70">No credit card required!</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="pricing-box panel p-2 md:p-3 lg:p-4 xl:p-5 vstack items-center rounded-1-5 lg:rounded-2 text-center bg-secondary text-dark shadow-xs">
+                                                        <span class="pricing-box-title fs-6 fw-bold py-narrow px-2 border rounded-pill mb-2">Pro</span>
+                                                        <p class="pricing-box-desc opacity-70">For startups, agencies</p>
+                                                        <div class="pricing-box-price hstack justify-center gap-narrow mt-2">
+                                                            <h4 class="price h1 lg:display-5 m-0 text-inherit">$48</h4>
+                                                            <span class="duration fs-7 opacity-70">/ month</span>
+                                                        </div>
+                                                        <p class="pricing-box-bill fs-7 opacity-70">Billed once yearly</p>
+                                                        <hr>
+                                                        <ul class="nav-y items-center gap-1 fs-6">
+                                                            <li class="mb-1">Standout features</li>
+                                                            <li><i class="icon icon-narrow unicon-checkmark fw-bold ltr:me-1 rtl:ms-1"></i> Fast and Reliable</li>
+                                                            <li><i class="icon icon-narrow unicon-checkmark fw-bold ltr:me-1 rtl:ms-1"></i> Discover Data Everywhere</li>
+                                                            <li><i class="icon icon-narrow unicon-checkmark fw-bold ltr:me-1 rtl:ms-1"></i> Enrich Data with Context</li>
+                                                            <li><i class="icon icon-narrow unicon-checkmark fw-bold ltr:me-1 rtl:ms-1"></i> Risk Management</li>
+                                                        </ul>
+                                                        <div class="pricing-box-cta vstack gap-1 justify-center text-center mt-4">
+                                                            <a href="sign-up.html" class="btn btn-md btn-primary border">Try for free</a>
+                                                            <span class="fs-7 opacity-70">No credit card required!</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="pricing-box panel p-2 md:p-3 lg:p-4 xl:p-5 vstack items-center rounded-1-5 lg:rounded-2 text-center bg-gray-300 bg-opacity-15 text-white">
+                                                        <span class="pricing-box-title fs-6 fw-bold py-narrow px-2 border rounded-pill mb-2">Business</span>
+                                                        <p class="pricing-box-desc opacity-70">For large business, companies</p>
+                                                        <div class="pricing-box-price hstack justify-center gap-narrow mt-2">
+                                                            <h4 class="price h1 lg:display-5 m-0 text-inherit">$64</h4>
+                                                            <span class="duration fs-7 opacity-70">/ month</span>
+                                                        </div>
+                                                        <p class="pricing-box-bill fs-7 opacity-70">Billed once yearly</p>
+                                                        <hr>
+                                                        <ul class="nav-y items-center gap-1 fs-6">
+                                                            <li class="mb-1">Standout features</li>
+                                                            <li><i class="icon icon-narrow unicon-checkmark fw-bold ltr:me-1 rtl:ms-1"></i> Fast and Reliable</li>
+                                                            <li><i class="icon icon-narrow unicon-checkmark fw-bold ltr:me-1 rtl:ms-1"></i> Discover Data Everywhere</li>
+                                                            <li><i class="icon icon-narrow unicon-checkmark fw-bold ltr:me-1 rtl:ms-1"></i> Enrich Data with Context</li>
+                                                            <li><i class="icon icon-narrow unicon-checkmark fw-bold ltr:me-1 rtl:ms-1"></i> Risk Management</li>
+                                                            <li><i class="icon icon-narrow unicon-checkmark fw-bold ltr:me-1 rtl:ms-1"></i> Privacy Compliance</li>
+                                                            <li><i class="icon icon-narrow unicon-checkmark fw-bold ltr:me-1 rtl:ms-1"></i> Third-Party Management</li>
+                                                        </ul>
+                                                        <div class="pricing-box-cta vstack items-center gap-2 justify-center text-center mt-4">
+                                                            <a href="page-contact-2.html" class="btn btn-md btn-secondary w-100">Get in touch</a>
+                                                            <a href="#" class="uc-link fs-7 fw-medium border-bottom text-secondary">Learn more</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="swiper overflow-unset lg:overflow-hidden" data-uc-swiper="items: 1.1; gap: 8; center: true; center-bounds: true;" data-uc-swiper-s="items: 2.1; gap: 16;" data-uc-swiper-m="items: 3; gap: 16;" data-uc-swiper-l="items: 3; gap: 24;">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="pricing-box panel p-2 md:p-3 lg:p-4 xl:p-5 vstack items-center rounded-1-5 lg:rounded-2 text-center bg-gray-300 bg-opacity-15 text-white">
+                                                        <span class="pricing-box-title fs-6 fw-bold py-narrow px-2 border rounded-pill mb-2">Starter</span>
+                                                        <p class="pricing-box-desc opacity-70">For individuals, freelancers</p>
+                                                        <div class="pricing-box-price hstack justify-center gap-narrow mt-2">
+                                                            <h4 class="price h1 lg:display-5 m-0 text-inherit">$12</h4>
+                                                            <span class="duration fs-7 opacity-70">/ month</span>
+                                                        </div>
+                                                        <p class="pricing-box-bill fs-7 opacity-70">Billed once yearly</p>
+                                                        <hr>
+                                                        <ul class="nav-y items-center gap-1 fs-6">
+                                                            <li class="mb-1">Standout features</li>
+                                                            <li><i class="icon icon-narrow unicon-checkmark fw-bold ltr:me-1 rtl:ms-1"></i> Fast and Reliable</li>
+                                                            <li><i class="icon icon-narrow unicon-checkmark fw-bold ltr:me-1 rtl:ms-1"></i> Discover Data Everywhere</li>
+                                                        </ul>
+                                                        <div class="pricing-box-cta vstack gap-1 justify-center text-center mt-4">
+                                                            <a href="sign-up.html" class="btn btn-md btn-secondary w-100">Try for free</a>
+                                                            <span class="fs-7 opacity-70">No credit card required!</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="pricing-box panel p-2 md:p-3 lg:p-4 xl:p-5 vstack items-center rounded-1-5 lg:rounded-2 text-center bg-secondary text-dark shadow-xs">
+                                                        <span class="pricing-box-title fs-6 fw-bold py-narrow px-2 border rounded-pill mb-2">Pro</span>
+                                                        <p class="pricing-box-desc opacity-70">For startups, agencies</p>
+                                                        <div class="pricing-box-price hstack justify-center gap-narrow mt-2">
+                                                            <h4 class="price h1 lg:display-5 m-0 text-inherit">$24</h4>
+                                                            <span class="duration fs-7 opacity-70">/ month</span>
+                                                        </div>
+                                                        <p class="pricing-box-bill fs-7 opacity-70">Billed once yearly</p>
+                                                        <hr>
+                                                        <ul class="nav-y items-center gap-1 fs-6">
+                                                            <li class="mb-1">Standout features</li>
+                                                            <li><i class="icon icon-narrow unicon-checkmark fw-bold ltr:me-1 rtl:ms-1"></i> Fast and Reliable</li>
+                                                            <li><i class="icon icon-narrow unicon-checkmark fw-bold ltr:me-1 rtl:ms-1"></i> Discover Data Everywhere</li>
+                                                            <li><i class="icon icon-narrow unicon-checkmark fw-bold ltr:me-1 rtl:ms-1"></i> Enrich Data with Context</li>
+                                                            <li><i class="icon icon-narrow unicon-checkmark fw-bold ltr:me-1 rtl:ms-1"></i> Risk Management</li>
+                                                        </ul>
+                                                        <div class="pricing-box-cta vstack gap-1 justify-center text-center mt-4">
+                                                            <a href="sign-up.html" class="btn btn-md btn-primary border">Try for free</a>
+                                                            <span class="fs-7 opacity-70">No credit card required!</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="pricing-box panel p-2 md:p-3 lg:p-4 xl:p-5 vstack items-center rounded-1-5 lg:rounded-2 text-center bg-gray-300 bg-opacity-15 text-white">
+                                                        <span class="pricing-box-title fs-6 fw-bold py-narrow px-2 border rounded-pill mb-2">Business</span>
+                                                        <p class="pricing-box-desc opacity-70">For large business, companies</p>
+                                                        <div class="pricing-box-price hstack justify-center gap-narrow mt-2">
+                                                            <h4 class="price h1 lg:display-5 m-0 text-inherit">$32</h4>
+                                                            <span class="duration fs-7 opacity-70">/ month</span>
+                                                        </div>
+                                                        <p class="pricing-box-bill fs-7 opacity-70">Billed once yearly</p>
+                                                        <hr>
+                                                        <ul class="nav-y items-center gap-1 fs-6">
+                                                            <li class="mb-1">Standout features</li>
+                                                            <li><i class="icon icon-narrow unicon-checkmark fw-bold ltr:me-1 rtl:ms-1"></i> Fast and Reliable</li>
+                                                            <li><i class="icon icon-narrow unicon-checkmark fw-bold ltr:me-1 rtl:ms-1"></i> Discover Data Everywhere</li>
+                                                            <li><i class="icon icon-narrow unicon-checkmark fw-bold ltr:me-1 rtl:ms-1"></i> Enrich Data with Context</li>
+                                                            <li><i class="icon icon-narrow unicon-checkmark fw-bold ltr:me-1 rtl:ms-1"></i> Risk Management</li>
+                                                            <li><i class="icon icon-narrow unicon-checkmark fw-bold ltr:me-1 rtl:ms-1"></i> Privacy Compliance</li>
+                                                            <li><i class="icon icon-narrow unicon-checkmark fw-bold ltr:me-1 rtl:ms-1"></i> Third-Party Management</li>
+                                                        </ul>
+                                                        <div class="pricing-box-cta vstack items-center gap-2 justify-center text-center mt-4">
+                                                            <a href="page-contact-2.html" class="btn btn-md btn-secondary w-100">Get in touch</a>
+                                                            <a href="#" class="uc-link fs-7 fw-medium border-bottom text-secondary">Learn more</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </div>
+                                <p class="text-center mt-4 lg:mt-6 ">*Yearly discount available on select plans.</p>
+                            </div>
+                            <div class="panel w-100 max-w-lg">
+                                <div class="row child-cols col-match items-center justify-center text-center gy-4 lg:gy-8" data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 500});">
+                                    <div>
+                                        <div class="fact-item panel vstack gap-1">
+                                            <h5 class="h3 md:h2 lg:h1 xl:display-5 m-0 text-tertiary">280+</h5>
+                                            <p class="fw-medium">Track of leads</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="fact-item panel vstack gap-1">
+                                            <h5 class="h3 md:h2 lg:h1 xl:display-5 m-0 text-tertiary">90%</h5>
+                                            <p class="fw-medium">Satisfied users</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="fact-item panel vstack gap-1">
+                                            <h5 class="h3 md:h2 lg:h1 xl:display-5 m-0 text-tertiary">10.2k</h5>
+                                            <p class="fw-medium">Team collaborations</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section end -->
+
+        <!-- Section start -->
+        <div id="testimonials" class="testimonials section panel overflow-hidden">
+            <div class="section-outer panel py-6 lg:py-8 xl:py-10">
+                <div class="container">
+                    <div class="section-inner panel">
+                        <div class="panel vstack justify-center items-center gap-4 sm:gap-6 xl:gap-8 max-w-850px mx-auto" data-anime="onview: -100; targets: > *; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100);">
+                            <div class="section-header vstack items-center gap-2 lg:gap-3">
+                                <h2 class="h3 sm:h1 lg:display-5 m-0 text-center max-w-650px mx-auto">What our clients sharing about us!</h2>
+                            </div>
+                            <div class="panel w-100 swiper-parent">
+                                <div class="swiper" data-uc-swiper="items: 1; gap: 16; center: true; dots: .swiper-pagination; center-bounds: true; effect: fade; fade: true;">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="panel vstack items-center gap-4 text-center">
+                                                <div class="panel vstack items-center gap-2 lg:gap-4">
+                                                    <div class="panel">
+                                                        <img class="w-48px lg:w-64px h-48px lg:h-64px rounded-circle" src="../assets/images/avatars/01.png" alt="Mark Zellers — CEO, Co-Founder.">
+                                                    </div>
+                                                    <p class="fs-5 lg:fs-4 xl:fs-3 ft-secondary fw-bold text-dark dark:text-white">“We’re looking for people who share our vision! most of our time used to be taken up by most of alternate administrative work whereas now we can focus on building out to help our employees.”</p>
+                                                </div>
+                                                <div class="panel vstack gap-2">
+                                                    <div class="panel vstack gap-narrow">
+                                                        <h6 class="h6 lg:h5 m-0">Mark Zellers</h6>
+                                                        <span class="opacity-70">CEO, Co-Founder.</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="panel vstack items-center gap-4 text-center">
+                                                <div class="panel vstack items-center gap-2 lg:gap-4">
+                                                    <div class="panel">
+                                                        <img class="w-48px lg:w-64px h-48px lg:h-64px rounded-circle" src="../assets/images/avatars/04.png" alt="Natalia Larsson — Director of Sales">
+                                                    </div>
+                                                    <p class="fs-5 lg:fs-4 xl:fs-3 ft-secondary fw-bold text-dark dark:text-white">“This powerfull tool eliminates the need to leave Salesforce to get things done as I can create a custom proposal with dynamic pricing tables, and get approval from my boss all within 36 minutes.”</p>
+                                                </div>
+                                                <div class="panel vstack gap-2">
+                                                    <div class="panel vstack gap-narrow">
+                                                        <h6 class="h6 lg:h5 m-0">Natalia Larsson</h6>
+                                                        <span class="opacity-70">Director of Sales</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="panel vstack items-center gap-4 text-center">
+                                                <div class="panel vstack items-center gap-2 lg:gap-4">
+                                                    <div class="panel">
+                                                        <img class="w-48px lg:w-64px h-48px lg:h-64px rounded-circle" src="../assets/images/avatars/03.png" alt="Sarah Edrissi — Lead Marketing">
+                                                    </div>
+                                                    <p class="fs-5 lg:fs-4 xl:fs-3 ft-secondary fw-bold text-dark dark:text-white">“We are based in Europe and the latest Data Protection Regulation forces us to look for service suppliers than comply with this regulation and as we look to create our website and this builder just outstanding!”</p>
+                                                </div>
+                                                <div class="panel vstack gap-2">
+                                                    <div class="panel vstack gap-narrow">
+                                                        <h6 class="h6 lg:h5 m-0">Sarah Edrissi</h6>
+                                                        <span class="opacity-70">Lead Marketing</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="panel vstack items-center gap-4 text-center">
+                                                <div class="panel vstack items-center gap-2 lg:gap-4">
+                                                    <div class="panel">
+                                                        <img class="w-48px lg:w-64px h-48px lg:h-64px rounded-circle" src="../assets/images/avatars/08.png" alt="Anna Yon — Senior UI/UX Designer">
+                                                    </div>
+                                                    <p class="fs-5 lg:fs-4 xl:fs-3 ft-secondary fw-bold text-dark dark:text-white">“We’re looking for people who share our vision! most of our time used to be taken up by most of alternate administrative work whereas now we can focus on building out to help our employees.”</p>
+                                                </div>
+                                                <div class="panel vstack gap-2">
+                                                    <div class="panel vstack gap-narrow">
+                                                        <h6 class="h6 lg:h5 m-0">Anna Yon</h6>
+                                                        <span class="opacity-70">Senior UI/UX Designer</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="panel vstack items-center gap-4 text-center">
+                                                <div class="panel vstack items-center gap-2 lg:gap-4">
+                                                    <div class="panel">
+                                                        <img class="w-48px lg:w-64px h-48px lg:h-64px rounded-circle" src="../assets/images/avatars/01.png" alt="Mark Zellers — CEO, Co-Founder.">
+                                                    </div>
+                                                    <p class="fs-5 lg:fs-4 xl:fs-3 ft-secondary fw-bold text-dark dark:text-white">“We’re looking for people who share our vision! most of our time used to be taken up by most of alternate administrative work whereas now we can focus on building out to help our employees.”</p>
+                                                </div>
+                                                <div class="panel vstack gap-2">
+                                                    <div class="panel vstack gap-narrow">
+                                                        <h6 class="h6 lg:h5 m-0">Mark Zellers</h6>
+                                                        <span class="opacity-70">CEO, Co-Founder.</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="panel vstack items-center gap-4 text-center">
+                                                <div class="panel vstack items-center gap-2 lg:gap-4">
+                                                    <div class="panel">
+                                                        <img class="w-48px lg:w-64px h-48px lg:h-64px rounded-circle" src="../assets/images/avatars/04.png" alt="Natalia Larsson — Director of Sales">
+                                                    </div>
+                                                    <p class="fs-5 lg:fs-4 xl:fs-3 ft-secondary fw-bold text-dark dark:text-white">“This powerfull tool eliminates the need to leave Salesforce to get things done as I can create a custom proposal with dynamic pricing tables, and get approval from my boss all within 36 minutes.”</p>
+                                                </div>
+                                                <div class="panel vstack gap-2">
+                                                    <div class="panel vstack gap-narrow">
+                                                        <h6 class="h6 lg:h5 m-0">Natalia Larsson</h6>
+                                                        <span class="opacity-70">Director of Sales</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-pagination position-relative mt-4 lg:mt-6 text-primary dark:text-tertiary"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section end -->
+
+        <!-- Section start -->
+        <div id="faq" class="faq section panel">
+            <div class="section-outer panel">
+                <div class="container">
+                    <div class="section-inner panel" data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
+                        <div class="row child-cols-12 col-match gy-2 lg:gy-6">
+                            <div>
+                                <div class="vstack items-center text-center gap-2">
+                                    <h2 class="h4 lg:h3 m-0">FAQ</h2>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="panel">
+                                    <ul class="uc-accordion gap-1 max-w-850px mx-auto" data-uc-accordion="targets: > li; multiple: false;">
+                                        <li class="panel p-3 lg:p-4 rounded-1-5 bg-secondary dark:bg-gray-300 dark:bg-opacity-15">
+                                            <a class="uc-accordion-title h6 md:h5 lg:h4 ls-0 fw-bold ltr:pe-4 rtl:ps-4" href="#">Do I need to know about how to code?</a>
+                                            <div class="uc-accordion-content lg:fs-5 opacity-70">
+                                                <p>Yes, you need to have a fair amount of knowledge in dealing with HTML/CSS as well as JavaScript in order to be able to use Bookloh.</p>
+                                            </div>
+                                        </li>
+                                        <li class="panel p-3 lg:p-4 rounded-1-5 bg-secondary dark:bg-gray-300 dark:bg-opacity-15">
+                                            <a class="uc-accordion-title h6 md:h5 lg:h4 ls-0 fw-bold ltr:pe-4 rtl:ps-4" href="#">Can I use it for commercial projects?</a>
+                                            <div class="uc-accordion-content lg:fs-5 opacity-70">
+                                                <p>Feel free to do so. Bookloh does exist to evolve every commercial project. You can also use it to build stunning websites for your own clients (we won’t breathe a word).</p>
+                                            </div>
+                                        </li>
+                                        <li class="panel p-3 lg:p-4 rounded-1-5 bg-secondary dark:bg-gray-300 dark:bg-opacity-15">
+                                            <a class="uc-accordion-title h6 md:h5 lg:h4 ls-0 fw-bold ltr:pe-4 rtl:ps-4" href="#">Can I use it for multiple projects?</a>
+                                            <div class="uc-accordion-content lg:fs-5 opacity-70">
+                                                <p>Definitely! Please use it however you like; we don’t limit it.</p>
+                                            </div>
+                                        </li>
+                                        <li class="panel p-3 lg:p-4 rounded-1-5 bg-secondary dark:bg-gray-300 dark:bg-opacity-15">
+                                            <a class="uc-accordion-title h6 md:h5 lg:h4 ls-0 fw-bold ltr:pe-4 rtl:ps-4" href="#">Can I use it to create and sell a product?</a>
+                                            <div class="uc-accordion-content lg:fs-5 opacity-70">
+                                                <p>Do not ever consider doing it.</p>
+                                            </div>
+                                        </li>
+                                        <li class="panel p-3 lg:p-4 rounded-1-5 bg-secondary dark:bg-gray-300 dark:bg-opacity-15">
+                                            <a class="uc-accordion-title h6 md:h5 lg:h4 ls-0 fw-bold ltr:pe-4 rtl:ps-4" href="#">What is your refund policy?</a>
+                                            <div class="uc-accordion-content lg:fs-5 opacity-70">
+                                                <p>We understand the importance of customer satisfaction and we strive to provide the best products and services. However, please note that due to the nature of our products and services, we do not offer refunds after a purchase has been made.</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section end -->
+
+        <!-- Section start -->
+        <div id="companies_sponsores" class="companies-sponsores section panel overflow-hidden">
+            <div class="section-outer panel py-6 lg:py-8 xl:py-10">
+                <div class="container sm:max-w-md">
+                    <div class="section-inner panel">
+                        <div class="brands panel vstack gap-3 sm:gap-4 xl:gap-5 text-center" data-anime="onview: -200; translateY: [-16, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 350;">
+                            <h5 class="h5 lg:h4 m-0 px-2">Trusted by over most popular companies worldwide</h5>
+                            <div class="panel">
+                                <div class="row child-cols items-center g-2 lg:g-4 text-center text-dark dark:text-tertiary">
+                                    <div>
+                                        <div class="panel">
+                                            <img class="max-w-100px lg:max-w-128px" src="../assets/images/brands/brand-01.svg" alt="brand" data-uc-svg>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="panel">
+                                            <img class="max-w-100px lg:max-w-128px" src="../assets/images/brands/brand-07.svg" alt="brand" data-uc-svg>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="panel">
+                                            <img class="max-w-100px lg:max-w-128px" src="../assets/images/brands/brand-03.svg" alt="brand" data-uc-svg>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="panel">
+                                            <img class="max-w-100px lg:max-w-128px" src="../assets/images/brands/brand-05.svg" alt="brand" data-uc-svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section end -->
+
+        <!-- Section start -->
+        <div id="blog_posts" class="blog-posts section panel overflow-hidden swiper-parent">
+            <div class="section-outer panel py-6 lg:py-8 xl:py-10 mx-2 bg-secondary dark:bg-gray-300 dark:bg-opacity-15 rounded-1-5 lg:rounded-2 xl:rounded-3" data-anime="onview: -200; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 200;">
+                <div class="container">
+                    <div class="section-inner panel vstack gap-4 lg:gap-8">
+                        <div class="section-header vstack items-center gap-2 lg:gap-3">
+                            <h2 class="h3 sm:h1 lg:display-5 m-0 text-center max-w-650px mx-auto">From the insights</h2>
+                        </div>
+                        <div class="section-content panel w-100">
+                            <div class="swiper swiper-match overflow-unset lg:overflow-hidden py-2" data-uc-swiper="items: 1.1; gap: 16; dots: .swiper-pagination; center: true; center-bounds: true;" data-uc-swiper-s="items: 2; gap: 24;" data-uc-swiper-m="items: 3; gap: 24;" data-uc-swiper-l="items: 3; gap: 24; center: false; center-bounds: false;">
+                                <div class="swiper-wrapper swiper-match">
+                                    <div class="swiper-slide">
+                                        <article class="post type-post panel overflow-hidden vstack duration-150 hover:-translate-y-1">
+                                            <figure class="featured-image m-0 rounded ratio ratio-16x9 rounded-default uc-transition-toggle overflow-hidden">
+                                                <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../assets/images/blog/post-4.jpg" alt="Unlock productivity potential with AI">
+                                                <a href="blog-details.html" class="position-cover" data-caption="Unlock productivity potential with AI"></a>
+                                            </figure>
+                                            <div class="panel vstack items-center text-center gap-2 p-2">
+                                                <a class="text-none" href="blog-details.html">
+                                                    <h3 class="post-title h4 xl:h3 m-0"><span>Unlock productivity potential with AI</span></h3>
+                                                </a>
+                                                <a href="blog-details.html" class="uc-link text-primary dark:text-tertiary fs-7 xl:fs-6 fw-bold">
+                                                    <span>Read more</span>
+                                                </a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="post type-post panel overflow-hidden vstack duration-150 hover:-translate-y-1">
+                                            <figure class="featured-image m-0 rounded ratio ratio-16x9 rounded-default uc-transition-toggle overflow-hidden">
+                                                <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../assets/images/blog/post-5.jpg" alt="Automate as fast as you can type with AI">
+                                                <a href="blog-details-2.html" class="position-cover" data-caption="Automate as fast as you can type with AI"></a>
+                                            </figure>
+                                            <div class="panel vstack items-center text-center gap-2 p-2">
+                                                <a class="text-none" href="blog-details-2.html">
+                                                    <h3 class="post-title h4 xl:h3 m-0"><span>Automate as fast as you can type with AI</span></h3>
+                                                </a>
+                                                <a href="blog-details-2.html" class="uc-link text-primary dark:text-tertiary fs-7 xl:fs-6 fw-bold">
+                                                    <span>Read more</span>
+                                                </a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="post type-post panel overflow-hidden vstack duration-150 hover:-translate-y-1">
+                                            <figure class="featured-image m-0 rounded ratio ratio-16x9 rounded-default uc-transition-toggle overflow-hidden">
+                                                <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../assets/images/blog/post-6.jpg" alt="Intuitive & powerful AI automation app">
+                                                <a href="blog-details-3.html" class="position-cover" data-caption="Intuitive & powerful AI automation app"></a>
+                                            </figure>
+                                            <div class="panel vstack items-center text-center gap-2 p-2">
+                                                <a class="text-none" href="blog-details-3.html">
+                                                    <h3 class="post-title h4 xl:h3 m-0"><span>Intuitive & powerful AI automation app</span></h3>
+                                                </a>
+                                                <a href="blog-details-3.html" class="uc-link text-primary dark:text-tertiary fs-7 xl:fs-6 fw-bold">
+                                                    <span>Read more</span>
+                                                </a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="post type-post panel overflow-hidden vstack duration-150 hover:-translate-y-1">
+                                            <figure class="featured-image m-0 rounded ratio ratio-16x9 rounded-default uc-transition-toggle overflow-hidden">
+                                                <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../assets/images/blog/img-01.jpg" alt="Team solve today’s biggest challenges">
+                                                <a href="blog-details.html" class="position-cover" data-caption="Team solve today’s biggest challenges"></a>
+                                            </figure>
+                                            <div class="panel vstack items-center text-center gap-2 p-2">
+                                                <a class="text-none" href="blog-details.html">
+                                                    <h3 class="post-title h4 xl:h3 m-0"><span>Team solve today’s biggest challenges</span></h3>
+                                                </a>
+                                                <a href="blog-details.html" class="uc-link text-primary dark:text-tertiary fs-7 xl:fs-6 fw-bold">
+                                                    <span>Read more</span>
+                                                </a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <article class="post type-post panel overflow-hidden vstack duration-150 hover:-translate-y-1">
+                                            <figure class="featured-image m-0 rounded ratio ratio-16x9 rounded-default uc-transition-toggle overflow-hidden">
+                                                <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../assets/images/blog/img-02.jpg" alt="Leading work from tasks management">
+                                                <a href="blog-details-2.html" class="position-cover" data-caption="Leading work from tasks management"></a>
+                                            </figure>
+                                            <div class="panel vstack items-center text-center gap-2 p-2">
+                                                <a class="text-none" href="blog-details-2.html">
+                                                    <h3 class="post-title h4 xl:h3 m-0"><span>Leading work from tasks management</span></h3>
+                                                </a>
+                                                <a href="blog-details-2.html" class="uc-link text-primary dark:text-tertiary fs-7 xl:fs-6 fw-bold">
+                                                    <span>Read more</span>
+                                                </a>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination position-relative mt-4 text-primary dark:text-tertiary"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section end -->
+
+    </div>
+
+    <!-- Wrapper end -->
+
+    <!-- Footer start -->
+    <footer id="uc-footer" class="uc-footer panel overflow-hidden">
+        <div class="footer-outer vstack gap-6 lg:gap-8 py-6 lg:py-8 dark:text-white">
+            <div class="uc-footer-cta">
+                <div class="container">
+                    <div class="uc-footer-inner panel vstack lg:hstack justify-between items-center text-center ltr:lg:text-start rtl:lg:text-end gap-3 sm:gap-4">
+                        <div class="vstack gap-2">
+                            <h2 class="h3 xl:h2 m-0">Stay up to date!</h2>
+                            <p class="fs-6 xl:fs-4 text-dark dark:text-white text-opacity-70 dark:text-white">Subscribe to our latest news, announcements, and articles.</p>
+                        </div>
+                        <div class="panel w-100 sm:w-350px xl:w-450px">
+                            <form class="row child-cols g-1">
+                                <div>
+                                    <div class="form-group inline-block">
+                                        <input type="email" class="form-control rounded-default h-48px w-full text-black bg-white" placeholder="Your email.." required="">
+                                    </div>
+                                </div>
+                                <div class="col-12 sm:col-auto">
+                                    <button class="btn btn-md btn-primary dark:bg-tertiary dark:text-primary border-0 rounded-default w-full h-48px text-white">Subscribe</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="uc-footer-content">
+                <div class="container">
+                    <div class="uc-footer-inner vstack gap-4 lg:gap-6 xl:gap-8">
+                        <div class="uc-footer-widgets panel">
+                            <div class="row child-cols-6 md:child-cols col-match g-4">
+                                <div class="col-12 lg:col-5">
+                                    <div class="panel vstack items-start gap-3 xl:gap-4 ltr:md:pe-8 rtl:md:ps-8">
+                                        <div>
+                                            <a class="panel text-none" href="index-10.html" style="width: 140px;">
+                                                <img class="text-primary dark:text-tertiary" src="../assets/images/common/logo-8-light.svg" alt="Bookloh" data-uc-svg="">
+                                            </a>
+                                            <p class="mt-2">Connect Instantly, Communicate Seamlessly, Stay connected with friends, family, and colleagues anywhere in the world.</p>
+                                        </div>
+                                        <div class="d-inline-block">
+                                            <a href="#" class="hstack gap-1 text-none fw-medium">
+                                                <i class="icon icon-1 unicon-wikis fw-bold"></i>
+                                                <span>English</span>
+                                                <span data-uc-drop-parent-icon=""></span>
+                                            </a>
+                                            <div class="p-2 bg-white dark:bg-gray-300 dark:bg-opacity-15 border shadow-xs rounded w-100px" data-uc-drop="mode: click; offset: 16; pos: bottom-right; boundary: !.uc-footer-widgets; animation: uc-animation-slide-top-small; duration: 150;">
+                                                <ul class="nav-y items-center gap-1 fw-medium rtl:items-end">
+                                                    <li><a href="#en">English</a></li>
+                                                    <li><a href="#ar">العربية</a></li>
+                                                    <li><a href="#ch">中文</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <ul class="nav-y gap-2 fw-medium">
+                                        <li><a href="page-pricing.html">Overview</a></li>
+                                        <li><a href="page-features.html">Features</a></li>
+                                        <li><a href="page-integrations.html">Solutions</a></li>
+                                        <li><a href="page-career.html">Tutorials</a></li>
+                                        <li><a href="page-contact.html">Pricing</a></li>
+                                        <li><a href="page-contact-2.html">Releases</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul class="nav-y gap-2 fw-medium">
+                                        <li><a href="shop-sidebar.html">About us</a></li>
+                                        <li><a href="shop-product-detail.html">Careers</a></li>
+                                        <li><a href="shop-product-detail-2.html">Press</a></li>
+                                        <li><a href="shop-cart.html">News</a></li>
+                                        <li><a href="shop-checkout.html">Media kit</a></li>
+                                        <li><a href="shop-order.html">Contact</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul class="nav-y gap-2 fw-medium">
+                                        <li><a href="sign-in.html">Blog</a></li>
+                                        <li><a href="sign-in-2.html">Newsletter</a></li>
+                                        <li><a href="sign-up.html">Events</a></li>
+                                        <li><a href="sign-up-2.html">Help center</a></li>
+                                        <li><a href="reset-password.html">Tutorials</a></li>
+                                        <li><a href="reset-password-2.html">Support</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul class="nav-y gap-2 fw-medium">
+                                        <li><a href="blog-details.html">Terms</a></li>
+                                        <li><a href="page-faq.html">Privacy</a></li>
+                                        <li><a href="404.html">Cookies</a></li>
+                                        <li><a href="coming-soon.html">Licenses</a></li>
+                                        <li><a href="page-terms.html">Settings</a></li>
+                                        <li><a href="page-privacy.html">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uc-footer-bottom panel vstack lg:hstack gap-4 justify-between text-center pt-4 lg:pt-6 border-top dark:text-white">
+                            <p class="opacity-60">Bookloh © 2025, All rights reserved.</p>
+                            <ul class="nav-x justify-center gap-2">
+                                <li><a href="#"><i class="icon icon-2 unicon-logo-linkedin"></i></a></li>
+                                <li><a href="#"><i class="icon icon-2 unicon-logo-facebook"></i></a></li>
+                                <li><a href="#"><i class="icon icon-2 unicon-logo-x-filled"></i></a></li>
+                                <li><a href="#"><i class="icon icon-2 unicon-logo-instagram"></i></a></li>
+                                <li><a href="#"><i class="icon icon-2 unicon-logo-youtube"></i></a></li>
+                                <li><a href="#"><i class="icon icon-2 unicon-logo-dribbble"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer end -->
+
+    <!-- include jquery & bootstrap js -->
+    <script defer src="../assets/js/libs/jquery.min.js"></script>
+    <script defer src="../assets/js/libs/bootstrap.min.js"></script>
+
+    <!-- include scripts -->
+    <script defer src="../assets/js/libs/anime.min.js"></script>
+    <script defer src="../assets/js/libs/swiper-bundle.min.js"></script>
+    <script defer src="../assets/js/libs/scrollmagic.min.js"></script>
+    <script defer src="../assets/js/libs/typed.min.js"></script>
+    <script defer src="../assets/js/libs/tilt.min.js"></script>
+    <script defer src="../assets/js/libs/split-type.min.js"></script>
+    <script defer src="../assets/js/libs/prettify.min.js"></script>
+    <script defer src="../assets/js/libs/gsap.min.js"></script>
+    <script defer src="../assets/js/libs/smooth-scroll.min.js"></script>
+    <script defer src="../assets/js/core/magic-cursor.js"></script>
+    <script defer src="../assets/js/helpers/data-attr-helper.js"></script>
+    <script defer src="../assets/js/helpers/swiper-helper.js"></script>
+    <script defer src="../assets/js/helpers/splitype-helper.js"></script>
+    <script defer src="../assets/js/helpers/anime-helper.js"></script>
+    <script defer src="../assets/js/helpers/typed-helper.js"></script>
+    <script defer src="../assets/js/helpers/tilt-helper.js"></script>
+    <script defer src="../assets/js/core/marquee.js"></script>
+    <script defer src="../assets/js/uikit-components-bs.js"></script>
+
+    <!-- include app script -->
+    <script defer src="../assets/js/form.js"></script>
+    <script defer src="../assets/js/app.js"></script>
+
+    <script>
+        // Schema toggle via URL
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const getSchema = urlParams.get('schema');
+        if ( getSchema === 'dark' ) {
+            setDarkMode(1);
+        } else if ( getSchema === 'light' ) {
+            setDarkMode(0);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,329 @@
+@use 'sass:map';
+
+/* Base */
+html {
+    font-family: var(--body-font-typeface);
+    font-size: var(--body-font-size, 1rem);
+    font-weight: var(--body-font-weight, 400);
+    letter-spacing: var(--body-font-spacing, normal);
+    background-color: var(--body-color-background, inherit);
+    color: var(--body-color-text, inherit);
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    font-family: var(--body-font-typeface);
+    font-size: var(--body-font-size, 1rem);
+    font-weight: var(--body-font-weight, 400);
+    letter-spacing: var(--body-font-spacing, normal);
+    background-color: var(--body-color-background, inherit);
+    color: var(--body-color-text, inherit);
+}
+
+// Link
+a, .link {
+    color: var(--link-color-text);
+    &:hover {
+        color: var(--link-color-text-hover);
+    }
+}
+.link {
+    display: inline-flex;
+    align-items: center;
+    line-height: 16px;
+}
+
+// Heading
+.h1, .h2, .h3, .h4, .h5, .h6, .display-1, .display-2, .display-3, .display-4, .display-5, .display-6, h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font-typeface, sans-serif) !important;
+    font-weight: var(--heading-font-weight, 700);
+    letter-spacing: var(--heading-font-spacing, normal);
+    font-style: var(--heading-font-style, normal);
+    text-transform: var(--heading-font-transform, initial);
+    @include dark-prop('color', var(--color-gray-900), white );
+    // font-feature-settings: 'zero' on;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+// Typeface
+.ft {
+    &-primary {
+        font-family: var(--font-family-primary) !important;
+    }
+    &-secondary {
+        font-family: var(--font-family-secondary) !important;
+    }
+    &-tertiary {
+        font-family: var(--font-family-tertiary) !important;
+    }
+    &-display {
+        font-family: var(--font-family-display) !important;
+    }
+    &-mono {
+        font-family: var(--font-family-mono) !important;
+    }
+    &-serif {
+        font-family: var(--font-family-serif) !important;
+    }
+    &-script {
+        font-family: var(--font-family-script) !important;
+    }
+}
+
+// Stacks
+.cstack {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Back to top
+.backtotop-wrap {
+    transform: translateY(40px);
+    transition: 200ms ease;
+    [data-uc-backtotop] {
+        opacity: 0;
+    }
+    &.uc-active {
+        gap: 0.5rem;
+        transform: translateY(0);
+        [data-uc-backtotop] {
+            opacity: 1;
+        }
+    }
+}
+
+// Horizontal Scroll
+.uc-horizontal-scroll > * {
+    text-wrap: nowrap;
+}
+
+// Icons
+@include icon;
+.uc-icon {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    overflow: visible;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    padding: 0;
+    background-color: transparent;
+    display: inline-block;
+    fill: currentcolor;
+    line-height: 0;
+}
+
+// Responsive Clip Path
+@include make-responsive('.clip-left') {
+    clip-path: inset(0 -1000px 0 0) !important;
+}
+@include make-responsive('.clip-right') {
+    clip-path: inset(0 1000px 0 0) !important;
+}
+
+// Screen Reader
+.sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+// Code
+pre {
+    tab-size: 4;
+    overflow: auto;
+    padding: 1.5rem;
+    color: inherit;
+}
+pre, :not(pre)>code, :not(pre)>kbd, :not(pre)>samp {
+    font-family: var(--font-code-family) !important;
+    font-size: .875rem;
+    font-style: normal;
+    line-height: 1.5rem;
+    padding: 1px 4px;
+    border-radius: 4px;
+    @include dark-props((
+        background-color: (var(--color-gray-25), var(--color-gray-700)),
+        border-color: (var(--color-gray-800), var(--color-gray-300)),
+    ));
+}
+:not(pre)>code, :not(pre)>kbd, :not(pre)>samp {
+    --font-code-family: 'IBM Plex Mono', monospace;
+    position: relative;
+    display: inline;
+    font-size: .875rem;
+    font-style: italic;
+    background-color: rgb(136 136 136 / 10%);
+}
+:not(pre) > samp {
+    color: inherit;
+}
+pre code {
+    font-family: var(--font-code-family) !important;
+    background: rgb(136 136 136 / 15%);
+    border-radius: 3px;
+    padding: 1px 4px 1px 2px;
+}
+
+// Prevent Layout shift
+.swiper:not(.swiper-initialized) > * {
+    display: none;
+}
+
+// Panel
+.panel {
+    display: flow-root;
+    position: relative;
+    box-sizing: border-box;
+    > :last-child{
+        margin-bottom: 0;
+    }
+}
+
+// Section
+.section {
+    display: flow-root;
+    position: relative;
+    box-sizing: border-box;
+}
+
+// Media cover
+.media-cover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    object-fit: cover;
+}
+
+// Position cover
+.position-cover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+// Toggle visibility
+.visible-toggle:not(:hover):not(:focus) {
+    .invisible-hover:not(:focus-within) {
+        opacity: 0 !important;
+        visibility: hidden;
+    } 
+    .hidden-hover:not(:focus-within) {
+        position: absolute!important;
+        width: 0!important;
+        height: 0!important;
+        padding: 0!important;
+        margin: 0!important;
+        overflow: hidden!important;
+    }
+}
+
+// Horizontal line
+hr, .hr, .vr {
+    display: inline-block;
+    align-self: stretch;
+    background-color: currentcolor;
+    opacity: 0.25;
+    margin: 0;
+}
+.hr, hr {
+    height: 1px;
+    min-width: 1em;
+    border-top-color: var(--border-color);
+    &.border {
+        border-bottom: 0 !important;
+    }
+}
+.vr {
+    width: 1px !important;
+    min-height: 1em !important;
+    border-left: 1px solid var(--border-color);
+    &.border {
+        border-left: 0 !important;
+    }
+}
+
+// Gradient text
+.link-gradient,
+.text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.link-gradient {
+    border-bottom: 1px solid;
+    border-color: var(--border-color);
+}
+
+// Responsive stacks
+@include make-responsive('.hstack') {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: stretch;
+}
+@include make-responsive('.vstack') {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    align-self: stretch;
+}
+.cstack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Ratio
+[class*="ratio-"] {
+    position: relative;
+    width: 100%;
+    &::before {
+        display: block;
+        padding-top: var(--#{$prefix}aspect-ratio);
+        content: "";
+    }
+    >* {
+        object-fit: cover;
+    }
+}
+
+// SVG
+svg {
+    color: currentColor;
+    *:not([fill="none"]) {
+        fill: currentColor;
+    }
+    *[fill="none"] {
+        stroke: currentColor;
+    }
+}
+
+// Lightbox
+.uc-lightbox-button {
+    color: white !important;
+    border-radius: 100%;
+}
+
+// Global links
+.uc-card-primary.uc-card-body .uc-link-toggle:hover .uc-link, .uc-card-primary.uc-card-body .uc-link:hover, .uc-card-primary.uc-card-body a:hover, .uc-card-primary>:not([class*=uc-card-media]) .uc-link-toggle:hover .uc-link, .uc-card-primary>:not([class*=uc-card-media]) .uc-link:hover, .uc-card-primary>:not([class*=uc-card-media]) a:hover, .uc-card-secondary.uc-card-body .uc-link-toggle:hover .uc-link, .uc-card-secondary.uc-card-body .uc-link:hover, .uc-card-secondary.uc-card-body a:hover, .uc-card-secondary>:not([class*=uc-card-media]) .uc-link-toggle:hover .uc-link, .uc-card-secondary>:not([class*=uc-card-media]) .uc-link:hover, .uc-card-secondary>:not([class*=uc-card-media]) a:hover, .uc-light .uc-link-toggle:hover .uc-link, .uc-light .uc-link:hover, .uc-light a:hover, .uc-offcanvas-bar .uc-link-toggle:hover .uc-link, .uc-offcanvas-bar .uc-link:hover, .uc-offcanvas-bar a:hover, .uc-overlay-primary .uc-link-toggle:hover .uc-link, .uc-overlay-primary .uc-link:hover, .uc-overlay-primary a:hover, .uc-section-primary:not(.uc-preserve-color) .uc-link-toggle:hover .uc-link, .uc-section-primary:not(.uc-preserve-color) .uc-link:hover, .uc-section-primary:not(.uc-preserve-color) a:hover, .uc-section-secondary:not(.uc-preserve-color) .uc-link-toggle:hover .uc-link, .uc-section-secondary:not(.uc-preserve-color) .uc-link:hover, .uc-section-secondary:not(.uc-preserve-color) a:hover, .uc-tile-primary:not(.uc-preserve-color) .uc-link-toggle:hover .uc-link, .uc-tile-primary:not(.uc-preserve-color) .uc-link:hover, .uc-tile-primary:not(.uc-preserve-color) a:hover, .uc-tile-secondary:not(.uc-preserve-color) .uc-link-toggle:hover .uc-link, .uc-tile-secondary:not(.uc-preserve-color) .uc-link:hover, .uc-tile-secondary:not(.uc-preserve-color) a:hover {
+    @include dark-prop('color', var(--color-gray-900), white);
+    transition: color 200ms ease;
+}

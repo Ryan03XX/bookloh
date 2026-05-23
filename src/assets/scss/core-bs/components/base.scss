@@ -1,0 +1,28 @@
+.uc-menu-trigger {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 9999;
+    &::after,
+    &::before {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: currentColor;
+        margin: 4px 0 3px 0;
+        transition: transform .2s ease-in, background-color .2s ease-in;
+    }
+    &[aria-expanded=true] {
+        &::before {
+            transform: translate(0,4px) rotate(45deg);
+        }
+        &::after {
+            transform: translate(0,-5px) rotate(-45deg)
+        }
+    }
+}

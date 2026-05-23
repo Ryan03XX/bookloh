@@ -1,0 +1,9 @@
+.uc-megamenu-panel {
+    .uc-accordion {
+        .uc-accordion-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            @include dark-prop('color', var(--bs-body-color), white);
+        }
+    }
+}

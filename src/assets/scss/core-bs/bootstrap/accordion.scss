@@ -1,0 +1,73 @@
+.uc-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    >:nth-child(n+2) {
+        margin: 0 !important;
+    }
+    &-title {
+        position: relative;
+        text-decoration: none;
+        font-weight: 500;
+        display: flex;
+        @include dark-prop('color', var(--color-gray-900), white);
+        &:hover {
+            @include dark-prop('color', var(--color-gray-900), white);
+            opacity: .75;
+        }
+        &::before {
+            content: "\e903";
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            font-family: 'Unicons';
+            width: 24px;
+            height: 24px;
+            font-size: 24px;
+            text-transform: none;
+            line-height: 1;
+            transform: translateY(-50%) rotate(0deg);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            transition: transform 200ms ease;
+            background-color: rgba( 155, 155, 155, 25%);
+            border-radius: 100%;
+        }
+    }
+    > *.uc-open {
+        .uc-accordion-title::before {
+            transform: translateY(-50%) rotate(45deg);
+        }
+    }
+    &-divider {
+        --divider-gap: 32px;
+        >*+*::before {
+            content: "";
+            display: block;
+            height: 1px;
+            width: 100%;
+            background: var(--bs-border-color);
+            transform: translateY(calc(var(--divider-gap) / 2 * -1));
+        }
+    }
+}
+
+[dir=rtl] .uc-accordion-title::before {
+    right: auto;
+    left: 0;
+}
+
+.uc-accordion.uc-accordion-chevron {
+    .uc-accordion-title::before {
+        content: "\e940";
+        background: none;
+        font-size: 80%;
+        font-weight: bold;
+    }
+    > *.uc-open .uc-accordion-title::before {
+        transform: translateY(-50%) rotate(-90deg);
+    }
+}

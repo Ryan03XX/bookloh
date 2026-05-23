@@ -1,0 +1,1992 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookloh — عربي</title>
+    <meta name="description" content="Full-featured, professional-looking software, saas and startup website template.">
+    <meta name="keywords" content="saas, saas template, site template, software, startup, digital product, html5, landing, marketing, bootstrap, uikit3, agency, ai, digital agency, it solutions, nodejs">
+    <link rel="canonical" href="https://unistudio.co/html/Bookloh">
+    <meta name="theme-color" content="#178d72">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Bookloh" />
+    <meta property="og:description" content="Full-featured, Professional-looking SaaS, Software and Startup Site Template." />
+    <meta property="og:url" content="https://unistudio.co/html/Bookloh/" />
+    <meta property="og:site_name" content="Bookloh" />
+    <meta property="og:image" content="https://unistudio.co/html/Bookloh/assets/images/common/seo-image.jpg" />
+    <meta property="og:image:width" content="1180" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:image:type" content="image/png" />
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Bookloh">
+    <meta name="twitter:description" content="Full-featured, Professional-looking SaaS, Software and Startup Site Template.">
+    <meta name="twitter:image" content="https://unistudio.co/html/Bookloh/assets/images/common/seo-image.jpg">
+
+    <link rel="canonical" href="https://unistudio.co/html/Bookloh/" />
+
+    <!-- preload head styles -->
+    <link rel="preload" href="../assets/css/fonts.css" as="style">
+    <link rel="preload" href="../assets/css/unicons.min.css" as="style">
+    <link rel="preload" href="../assets/css/swiper-bundle.min.css" as="style">
+    <link rel="preload" href="../assets/css/magic-cursor.min.css" as="style">
+
+    <!-- preload footer scripts -->
+    <link rel="preload" href="../assets/js/libs/jquery.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/scrollmagic.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/swiper-bundle.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/anime.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/typed.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/tilt.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/split-type.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/prettify.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/gsap.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/smooth-scroll.min.js" as="script">
+    <link rel="preload" href="../assets/js/core/magic-cursor.js" as="script">
+    <link rel="preload" href="../assets/js/helpers/data-attr-helper.js" as="script">
+    <link rel="preload" href="../assets/js/helpers/swiper-helper.js" as="script">
+    <link rel="preload" href="../assets/js/helpers/splitype-helper.js" as="script">
+    <link rel="preload" href="../assets/js/helpers/anime-helper.js" as="script">
+    <link rel="preload" href="../assets/js/helpers/typed-helper.js" as="script">
+    <link rel="preload" href="../assets/js/helpers/tilt-helper.js" as="script">
+    <link rel="preload" href="../assets/js/core/marquee.js" as="script">
+    <link rel="preload" href="../assets/js/uikit-components-bs.js" as="script">
+    <link rel="preload" href="../assets/js/form.js" as="script">
+    <link rel="preload" href="../assets/js/app.js" as="script">
+
+    <!-- app head for bootstrap core -->
+    <script src="../assets/js/app-head-bs.js"></script>
+
+    <!-- include uni-core components -->
+    <link rel="stylesheet" href="../assets/js/uni-core/css/uni-core.min.css">
+
+    <!-- include styles -->
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+    <link rel="stylesheet" href="../assets/css/unicons.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/css/prettify.min.css">
+    <link rel="stylesheet" href="../assets/css/magic-cursor.min.css">
+
+    <!-- include main style -->
+    <link rel="stylesheet" href="../assets/scss/theme/main.scss">
+
+    <!-- include scripts -->
+    <script src="../assets/js/uni-core/js/uni-core-bundle.min.js"></script>
+</head>
+
+<body class="uni-body panel bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-200 overflow-x-hidden disable-cursor">
+
+    <!--  GDPR modal -->
+    <div id="uc-gdpr-notification" class="uc-gdpr-notification uc-notification min-w-1/2 ltr:start-0 ltr:end-auto rtl:end-0 rtl:start-auto top-auto bottom-0 lg:m-2">
+        <div class="uc-notification-message vstack lg:hstack items-end gap-2 lg:gap-4 lg:p-3 bg-white text-dark border rounded-1-5 min-w-1/2">
+            <a id="uc-close-gdpr-notification" class="uc-notification-close text-dark rtl:start-0 rtl:end-auto rtl:ms-2" data-uc-close></a>
+            <div class="vstack">
+                <h2 class="h5 ft-primary fw-bold -ls-1 m-0 text-dark">الامتثال لقانون حماية البيانات العامة (GDPR)</h2>
+                <p class="fs-6 mt-1">نحن نستخدم الكوكيز لضمان أفضل تجربة على موقعنا. باستمرار استخدام موقعنا, فإنك تقبل استخدامنا للكوكيز, <a href="page-privacy.html" class="uc-link text-underline">سياسة الخصوصية</a> و <a href="page-terms.html" class="uc-link text-underline">الشروط والأحكام</a>.</p>
+            </div>
+            <button class="btn btn-sm btn-primary px-2" id="uc-accept-gdpr">قبول</button>
+        </div>
+    </div>
+
+    <!--  Search modal -->
+    <div id="uc-search-modal" class="uc-modal-full uc-modal" data-uc-modal="overlay: true">
+        <div class="uc-modal-dialog d-flex justify-center bg-white text-dark dark:bg-gray-900 dark:text-white" data-uc-height-viewport="">
+
+            <div class="uc-modal-close-full m-1 p-0 vstack gap-narrow text-center">
+                <button class="icon-3 btn btn-md btn-dark dark:bg-white dark:text-dark w-24px sm:w-32px h-24px sm:h-32px rounded-circle flex-1" type="button">
+                    <i class="unicon-close"></i>
+                </button>
+                <span class="ft-tertiary fs-7">ESC</span>
+            </div>
+
+            <div class="panel w-100 sm:w-500px px-2 py-10">
+                <h3 class="h4 sm:h2 text-center">البحث</h3>
+                <form class="hstack gap-1 mt-4 border-bottom p-narrow dark:border-gray-700" action="?">
+                    <span class="d-inline-flex justify-center items-center w-24px sm:w-40 h-24px sm:h-40px opacity-50"><i class="unicon-search icon-3"></i></span>
+                    <input type="search" name="q" class="form-control-plaintext ltr:ms-1 rtl:me-1 fs-6 sm:fs-5 w-full dark:text-white" placeholder="اكتب كلمة البحث.." aria-label="Search" autofocus>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--  Newsletter modal -->
+    <div id="uc-newsletter-modal" data-uc-modal="overlay: true">
+        <div class="uc-modal-dialog w-800px bg-white text-dark dark:bg-gray-900 dark:text-white rounded-3 p-1 overflow-hidden">
+            <button class="uc-modal-close-default p-0 icon-3 btn border-0 dark:text-white dark:text-opacity-50 hover:text-primary hover:rotate-90 duration-150 transition-all" type="button">
+                <i class="unicon-close"></i>
+            </button>
+            <div class="row md:child-cols-6 col-match g-0">
+                <div class="d-none md:d-flex">
+                    <div class="position-relative w-100 ratio-1x1 rounded-2 overflow-hidden">
+                        <img class="media-cover" src="../assets/images/common/newsletter.jpg" alt="Newsletter image">
+                    </div>
+                </div>
+                <div>
+                    <div class="panel vstack self-center p-4 md:py-8 text-center">
+                        <h3 class="h3 md:h2">Subscribe to our Newsletter</h3>
+                        <p class="ft-tertiary">Join 10k+ people to get notified about new posts, news and updates.</p>
+                        <div class="panel mt-2 lg:mt-4">
+                            <form class="vstack gap-1">
+                                <input type="email" class="form-control form-control-sm w-full fs-6 bg-white dark:border-white dark:border-gray-700" placeholder="Your email address..">
+                                <button type="submit" class="btn btn-sm btn-primary">Sign up</button>
+                            </form>
+                            <p class="fs-7 mt-2">Do not worry we don't spam!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  Acccount modal -->
+    <div id="uc-account-modal" data-uc-modal="overlay: true">
+        <div class="uc-modal-dialog lg:max-w-500px bg-secondary text-dark dark:bg-gray-800 dark:text-white rounded">
+
+            <button class="uc-modal-close-default top-0 ltr:end-0 rtl:start-0 rtl:end-auto m-2 p-0 border-0 icon-2 lg:icon-3 btn btn-md dark:text-white transition-transform duration-150 hover:rotate-90" type="button">
+                <i class="unicon-close"></i>
+            </button>
+
+            <div class="panel vstack gap-2 md:gap-4 text-center">
+                <ul class="account-tabs-nav nav-x justify-center h6 py-2 border-bottom d-none" data-uc-switcher="animation: uc-animation-slide-bottom-small, uc-animation-slide-top-small">
+                    <li><a href="#">Sign in</a></li>
+                    <li><a href="#">Sign up</a></li>
+                    <li><a href="#">Reset password</a></li>
+                    <li><a href="#">Terms of use</a></li>
+                </ul>
+                <div class="account-tabs-content uc-switcher px-3 lg:px-4 py-4 lg:py-8 m-0 lg:mx-auto vstack justify-center items-center">
+                    <div class="w-100">
+                        <div class="panel vstack justify-center items-center gap-2 sm:gap-4 text-center">
+                            <h4 class="h5 lg:h4 m-0">Log in</h4>
+                            <div class="panel vstack gap-4 w-100 sm:w-350px mx-auto">
+                                <form class="vstack gap-2">
+                                    <input class="form-control h-48px w-full bg-white dark:border-white dark:text-dark" type="email" placeholder="Your email" required>
+                                    <input class="form-control h-48px w-full bg-white dark:border-white dark:text-dark" type="password" placeholder="Password" required>
+                                    <div class="hstack justify-between items-start text-start">
+                                        <div class="form-check text-start rtl:text-end">
+                                            <input class="form-check-input rounded-0 dark:bg-gray-900 dark:text-white dark:border-gray-700" type="checkbox" id="inputCheckRemember">
+                                            <label class="hstack justify-between form-check-label fs-7 sm:fs-6" for="inputCheckRemember">Remember me?</label>
+                                        </div>
+                                        <a href="#" class="uc-link" data-uc-switcher-item="2">Forgot password</a>
+                                    </div>
+                                    <button class="btn btn-primary btn-md text-white lg:mt-2" type="submit">Log in</button>
+                                </form>
+                                <div class="panel">
+                                    <hr class="m-0">
+                                    <span class="position-absolute top-50 start-50 translate-middle p-1 fs-7 text-uppercase bg-white dark:bg-gray-800">Or</span>
+                                </div>
+                                <div class="hstack gap-2">
+                                    <a href="#google" class="hstack items-center justify-center flex-1 gap-1 h-48px text-none rounded border border-gray-900 dark:border-white border-opacity-10">
+                                        <i class="icon icon-1 unicon-logo-google"></i>
+                                    </a>
+                                    <a href="#facebook" class="hstack items-center justify-center flex-1 gap-1 h-48px text-none rounded border border-gray-900 dark:border-white border-opacity-10">
+                                        <i class="icon icon-1 unicon-logo-facebook"></i>
+                                    </a>
+                                    <a href="#x" class="hstack items-center justify-center flex-1 gap-1 h-48px text-none rounded border border-gray-900 dark:border-white border-opacity-10">
+                                        <i class="icon icon-1 unicon-logo-x-filled"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="fs-7 sm:fs-6">Have no account yet? <a class="uc-link" href="#" data-uc-switcher-item="1">Sign up</a></p>
+                        </div>
+                    </div>
+                    <div class="w-100">
+                        <div class="panel vstack justify-center items-center gap-2 sm:gap-4 text-center">
+                            <h4 class="h5 lg:h4 m-0">Create an account</h4>
+                            <div class="panel vstack gap-4 w-100 sm:w-350px mx-auto">
+                                <form class="vstack gap-2">
+                                    <input class="form-control h-48px w-full bg-white dark:border-white dark:text-dark" type="text" placeholder="Full name" required>
+                                    <input class="form-control h-48px w-full bg-white dark:border-white dark:text-dark" type="email" placeholder="Your email" required>
+                                    <input class="form-control h-48px w-full bg-white dark:border-white dark:text-dark" type="password" placeholder="Password" required>
+                                    <input class="form-control h-48px w-full bg-white dark:border-white dark:text-dark" type="password" placeholder="Re-enter Password" required>
+                                    <div class="hstack text-start">
+                                        <div class="form-check text-start rtl:text-end">
+                                            <input class="form-check-input rounded-0 dark:bg-gray-900 dark:text-white dark:border-gray-700" type="checkbox" required>
+                                            <label class="hstack justify-between form-check-label fs-7 sm:fs-6">I read and accept the <a href="#" class="uc-link ltr:ms-narrow rtl:me-narrow" data-uc-switcher-item="3">terms of use</a>. </label>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary btn-md text-white lg:mt-2" type="submit">Sign up</button>
+                                </form>
+                                <div class="panel">
+                                    <hr class="m-0">
+                                    <span class="position-absolute top-50 start-50 translate-middle p-1 fs-7 text-uppercase bg-white dark:bg-gray-800">Or</span>
+                                </div>
+                                <div class="hstack gap-2">
+                                    <a href="#google" class="hstack items-center justify-center flex-1 gap-1 h-48px text-none rounded border border-gray-900 dark:border-white border-opacity-10">
+                                        <i class="icon icon-1 unicon-logo-google"></i>
+                                    </a>
+                                    <a href="#facebook" class="hstack items-center justify-center flex-1 gap-1 h-48px text-none rounded border border-gray-900 dark:border-white border-opacity-10">
+                                        <i class="icon icon-1 unicon-logo-facebook"></i>
+                                    </a>
+                                    <a href="#x" class="hstack items-center justify-center flex-1 gap-1 h-48px text-none rounded border border-gray-900 dark:border-white border-opacity-10">
+                                        <i class="icon icon-1 unicon-logo-x-filled"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="fs-7 sm:fs-6">Already have an account? <a class="uc-link" href="#" data-uc-switcher-item="0">Log in</a></p>
+                        </div>
+                    </div>
+                    <div class="w-100">
+                        <div class="panel vstack justify-center items-center gap-2 sm:gap-4 text-center">
+                            <h4 class="h5 lg:h4 m-0">Reset password</h4>
+                            <div class="panel w-100 sm:w-350px">
+                                <form class="vstack gap-2">
+                                    <input class="form-control h-48px w-full bg-white dark:border-white dark:text-dark" type="email" placeholder="Your email" required>
+                                    <div class="form-check text-start rtl:text-end">
+                                        <input class="form-check-input rounded-0 dark:bg-gray-900 dark:text-white dark:border-gray-700" type="checkbox" id="inputCheckVerify" required>
+                                        <label class="form-check-label fs-7 sm:fs-6" for="inputCheckVerify">
+                                            <span>I'm not a robot</span>.
+                                        </label>
+                                    </div>
+                                    <button class="btn btn-primary btn-md text-white lg:mt-2" type="submit">Reset a password</button>
+                                </form>
+                            </div>
+                            <p class="fs-7 sm:fs-6 mt-2 sm:m-0">Remember your password? <a class="uc-link" href="#" data-uc-switcher-item="0">Log in</a></p>
+                        </div>
+                    </div>
+                    <div class="w-100">
+                        <div class="panel vstack justify-center items-center gap-2 sm:gap-4">
+                            <h4 class="h5 lg:h4 m-0">Terms of use</h4>
+                            <div class="page-content panel fs-6 text-start max-h-400px overflow-scroll">
+                                <p>Terms of use dolor sit amet consectetur, adipisicing elit. Recusandae provident ullam aperiam quo ad non corrupti sit vel quam repellat ipsa quod sed, repellendus adipisci, ducimus ea modi odio assumenda.</p>
+                                <h5 class="h6 md:h5 mt-3 mb-1">Disclaimers</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, cum esse possimus officiis amet ea voluptatibus libero! Dolorum assumenda esse, deserunt ipsum ad iusto! Praesentium error nobis tenetur at, quis nostrum facere excepturi architecto totam.</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, soluta alias eaque modi ipsum sint iusto fugiat vero velit rerum.</p>
+                                <h5 class="h6 md:h5 mt-3 mb-1">Limitation on Liability</h5>
+                                <p>Sequi, cum esse possimus officiis amet ea voluptatibus libero! Dolorum assumenda esse, deserunt ipsum ad iusto! Praesentium error nobis tenetur at, quis nostrum facere excepturi architecto totam.</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, soluta alias eaque modi ipsum sint iusto fugiat vero velit rerum.</p>
+                                <h5 class="h6 md:h5 mt-3 mb-1">Copyright Policy</h5>
+                                <p>Dolor sit amet consectetur adipisicing elit. Sequi, cum esse possimus officiis amet ea voluptatibus libero! Dolorum assumenda esse, deserunt ipsum ad iusto! Praesentium error nobis tenetur at, quis nostrum facere excepturi architecto totam.</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, soluta alias eaque modi ipsum sint iusto fugiat vero velit rerum.</p>
+                                <h5 class="h6 md:h5 mt-3 mb-1">General</h5>
+                                <p>Sit amet consectetur adipisicing elit. Sequi, cum esse possimus officiis amet ea voluptatibus libero! Dolorum assumenda esse, deserunt ipsum ad iusto! Praesentium error nobis tenetur at, quis nostrum facere excepturi architecto totam.</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, soluta alias eaque modi ipsum sint iusto fugiat vero velit rerum.</p>
+                            </div>
+                            <p class="fs-7 sm:fs-6">Do you agree to our terms? <a class="uc-link" href="#" data-uc-switcher-item="1">Sign up</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  Menu panel -->
+    <div id="uc-menu-panel" data-uc-offcanvas="overlay: true; flip: true;">
+        <div class="uc-offcanvas-bar bg-white text-dark dark:bg-gray-900 dark:text-white">
+
+            <header class="uc-offcanvas-header hstack justify-between items-center pb-2 bg-white dark:bg-gray-900">
+                <div class="uc-logo">
+                    <a href="index.html" class="h5 text-none text-gray-900 dark:text-white">
+                        <img class="w-32px" src="../assets/images/common/logo-mark.svg" alt="Bookloh">
+                    </a>
+                </div>
+                <button class="uc-offcanvas-close rtl:end-auto rtl:start-0 rtl:ms-3 m-1 mt-2 icon-3 btn border-0 dark:text-white dark:text-opacity-50 hover:text-primary hover:rotate-90 duration-150 transition-all" type="button">
+                    <i class="unicon-close"></i>
+                </button>
+            </header>
+
+            <div class="panel">
+                <form id="search-panel" class="form-icon-group vstack gap-1 mb-2" data-uc-sticky="">
+                    <input type="email" class="form-control form-control-sm fs-7 rounded-default" placeholder="بحث...">
+                    <span class="form-icon text-gray">
+                        <i class="unicon-search icon-1"></i>
+                    </span>
+                </form>
+                <ul class="nav-y gap-narrow fw-medium fs-6" data-uc-nav>
+                    <li><a href="page-features.html">المميزات</a></li>
+                    <li><a href="page-pricing.html">الأسعار</a></li>
+                    <li><a href="page-about.html">عن الشركة</a></li>
+                    <li><a href="page-career.html">الوظائف</a></li>
+                    <li><a href="page-contact.html">اتصل بنا</a></li>
+                    <li class="uc-parent"><a href="#">الصفحات الداخلية</a>
+                        <ul class="uc-nav-sub" data-uc-nav="">
+                            <li class="uc-parent"><a href="blog.html">المدونة</a>
+                                <ul class="uc-nav-sub">
+                                    <li><a href="blog.html">عرض كامل</a></li>
+                                    <li><a href="blog-2cols.html">شبكة عمودين</a></li>
+                                    <li><a href="blog-3cols.html">شبكة ثلاثة أعمدة</a></li>
+                                    <li><a href="blog-4cols.html">شبكة أربعة أعمدة</a></li>
+                                </ul>
+                            </li>
+                            <li class="uc-parent"><a href="blog-details.html">تفاصيل المدونة</a>
+                                <ul class="uc-nav-sub">
+                                    <li><a href="blog-details.html">تفاصيل المدونة</a></li>
+                                    <li><a href="blog-details-2.html">تفاصيل المدونة - النسخة 2</a></li>
+                                </ul>
+                            </li>
+                            <li class="uc-parent"><a href="#">صفحات مفيدة</a>
+                                <ul class="uc-nav-sub">
+                                    <li><a href="sign-up.html">إنشاء حساب</a></li>
+                                    <li><a href="sign-in.html">تسجيل الدخول</a></li>
+                                    <li><a href="reset-password.html">إعادة تعيين كلمة المرور</a></li>
+                                    <li><a href="404.html">صفحة 404</a></li>
+                                    <li><a href="coming-soon.html">قريباً</a></li>
+                                </ul>
+                            </li>
+                            <li class="uc-parent"><a href="#">صفحات أخرى</a>
+                                <ul class="uc-nav-sub">
+                                    <li><a href="page-faq.html">الأسئلة الشائعة</a></li>
+                                    <li><a href="page-terms.html">شروط الاستخدام</a></li>
+                                    <li><a href="page-privacy.html">سياسة الخصوصية</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="uc-parent"><a href="shop.html">المتجر</a>
+                        <ul class="uc-nav-sub" data-uc-nav="">
+                            <li class="uc-parent"><a href="shop.html">تخطيطات المتجر</a>
+                                <ul class="uc-nav-sub">
+                                    <li><a href="shop.html">متجر 4 أعمدة</a></li>
+                                    <li><a href="shop-3.html">متجر 3 أعمدة</a></li>
+                                    <li><a href="shop-2.html">متجر عمودين</a></li>
+                                    <li><a href="shop-sidebar.html">متجر مع شريط جانبي</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="shop-category.html">أرشيف التصنيفات</a></li>
+                            <li><a href="shop-product-detail.html">تفاصيل المنتج</a></li>
+                            <li><a href="shop-product-detail-2.html">تفاصيل المنتج - النسخة 2</a></li>
+                            <li><a href="shop-cart.html">سلة التسوق</a></li>
+                            <li><a href="shop-cart-2.html">سلة التسوق - النسخة 2</a></li>
+                            <li><a href="shop-checkout.html">إتمام الشراء</a></li>
+                            <li><a href="shop-checkout-2.html">إتمام الشراء - النسخة 2</a></li>
+                            <li><a href="shop-order.html">تأكيد الطلب</a></li>
+                        </ul>
+                    </li>
+                    <li class="hr opacity-10 my-1"></li>
+                    <li><a href="sign-up.html">إنشاء حساب</a></li>
+                    <li><a href="sign-in.html">تسجيل الدخول</a></li>
+                    <li><a href="https://themeforest.net/item/lexend-software-saas-startup-html5-template/51596504">شراء القالب</a></li>
+                </ul>
+                <ul class="social-icons nav-x mt-4">
+                    <li>
+                        <a href="#"><i class="unicon-logo-medium icon-2"></i></a>
+                        <a href="#"><i class="unicon-logo-x-filled icon-2"></i></a>
+                        <a href="#"><i class="unicon-logo-instagram icon-2"></i></a>
+                        <a href="#"><i class="unicon-logo-pinterest icon-2"></i></a>
+                    </li>
+                </ul>
+                <div class="py-2 hstack gap-2 mt-4 bg-white dark:bg-gray-900" data-uc-sticky="position: bottom">
+                    <div class="vstack gap-1">
+                        <span class="fs-7 opacity-60">تفعيل الوضع الداكن</span>
+                        <div class="darkmode-trigger" data-darkmode-switch="">
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider fs-5"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--  Cart panel -->
+    <div id="uc-cart-panel" data-uc-offcanvas="overlay: true; flip: true;">
+        <div class="uc-offcanvas-bar bg-white text-dark dark:bg-gray-900 dark:text-white">
+
+            <button class="uc-offcanvas-close top-0 ltr:end-0 rtl:start-0 rtl:end-auto m-2 p-0 border-0 icon-2 lg:icon-3 btn btn-md dark:text-white transition-transform duration-150 hover:rotate-90" type="button">
+                <i class="unicon-close"></i>
+            </button>
+
+            <div class="mini-cart-content vstack justify-between panel h-100">
+                <div class="mini-cart-header">
+                    <h3 class="title h5 m-0 text-dark dark:bg-gray-900">Shopping cart</h3>
+                </div>
+                <div class="mini-cart-listing panel flex-1 my-4 overflow-scroll">
+                    <p class="alert alert-warning" hidden>Your cart empty!</p>
+                    <div class="panel vstack gap-3">
+                        <div>
+                            <article class="product type-product panel">
+                                <div class="hstack gap-2">
+                                    <figure class="featured-image m-0 rounded ratio ratio-1x1 w-80px uc-transition-toggle overflow-hidden">
+                                        <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../assets/images/common/products/img-07.jpg" alt="Laptop Cover">
+                                        <a href="shop-product-detail.html" class="position-cover" data-caption="Laptop Cover"></a>
+                                    </figure>
+                                    <div class="content vstack gap-narrow fs-6">
+                                        <h5 class="h6 m-0"><a class="text-none text-dark dark:text-white" href="shop-product-detail.html">Laptop Cover</a></h5>
+                                        <div class="hstack gap-narrow fs-7 opacity-50 text-dark dark:text-white">
+                                            <span class="qty">1</span> x <span class="price">$24.00</span>
+                                        </div>
+                                        <a href="#remove_from_cart" class="remove fs-7 text-dark dark:text-white">Remove</a>
+                                    </div>
+                                    <a href="#remove_from_cart" class="remove position-absolute top-0 end-0 btn p-0 hover:text-danger" hidden>
+                                        <i class="unicon-close icon-1"></i>
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+                        <div>
+                            <article class="product type-product panel">
+                                <div class="hstack gap-2">
+                                    <figure class="featured-image m-0 rounded ratio ratio-1x1 w-80px uc-transition-toggle overflow-hidden">
+                                        <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../assets/images/common/products/img-08.jpg" alt="Disney Toys">
+                                        <a href="shop-product-detail.html" class="position-cover" data-caption="Disney Toys"></a>
+                                    </figure>
+                                    <div class="content vstack gap-narrow fs-6">
+                                        <h5 class="h6 m-0"><a class="text-none text-dark dark:text-white" href="shop-product-detail.html">Disney Toys</a></h5>
+                                        <div class="hstack gap-narrow fs-7 opacity-50 text-dark dark:text-white">
+                                            <span class="qty">1</span> x <span class="price">$5.00</span>
+                                        </div>
+                                        <a href="#remove_from_cart" class="remove fs-7 text-dark dark:text-white">Remove</a>
+                                    </div>
+                                    <a href="#remove_from_cart" class="remove position-absolute top-0 end-0 btn p-0 hover:text-danger" hidden>
+                                        <i class="unicon-close icon-1"></i>
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+                        <div>
+                            <article class="product type-product panel">
+                                <div class="hstack gap-2">
+                                    <figure class="featured-image m-0 rounded ratio ratio-1x1 w-80px uc-transition-toggle overflow-hidden">
+                                        <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../assets/images/common/products/img-09.jpg" alt="Screen Axe">
+                                        <a href="shop-product-detail.html" class="position-cover" data-caption="Screen Axe"></a>
+                                    </figure>
+                                    <div class="content vstack gap-narrow fs-6">
+                                        <h5 class="h6 m-0"><a class="text-none text-dark dark:text-white" href="shop-product-detail.html">Screen Axe</a></h5>
+                                        <div class="hstack gap-narrow fs-7 opacity-50 text-dark dark:text-white">
+                                            <span class="qty">1</span> x <span class="price">$19.00</span>
+                                        </div>
+                                        <a href="#remove_from_cart" class="remove fs-7 text-dark dark:text-white">Remove</a>
+                                    </div>
+                                    <a href="#remove_from_cart" class="remove position-absolute top-0 end-0 btn p-0 hover:text-danger" hidden>
+                                        <i class="unicon-close icon-1"></i>
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+                        <div>
+                            <article class="product type-product panel">
+                                <div class="hstack gap-2">
+                                    <figure class="featured-image m-0 rounded ratio ratio-1x1 w-80px uc-transition-toggle overflow-hidden">
+                                        <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../assets/images/common/products/img-10.jpg" alt="Airpods Pro">
+                                        <a href="shop-product-detail.html" class="position-cover" data-caption="Airpods Pro"></a>
+                                    </figure>
+                                    <div class="content vstack gap-narrow fs-6">
+                                        <h5 class="h6 m-0"><a class="text-none text-dark dark:text-white" href="shop-product-detail.html">Airpods Pro</a></h5>
+                                        <div class="hstack gap-narrow fs-7 opacity-50 text-dark dark:text-white">
+                                            <span class="qty">1</span> x <span class="price">$49.00</span>
+                                        </div>
+                                        <a href="#remove_from_cart" class="remove fs-7 text-dark dark:text-white">Remove</a>
+                                    </div>
+                                    <a href="#remove_from_cart" class="remove position-absolute top-0 end-0 btn p-0 hover:text-danger" hidden>
+                                        <i class="unicon-close icon-1"></i>
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div class="mini-cart-footer panel pt-3 border-top">
+                    <div class="panel vstack gap-3 justify-between">
+                        <div class="mini-cart-total hstack justify-between">
+                            <h5 class="h5 m-0 text-dark dark:text-white">Subtotal</h5>
+                            <b class="fs-5">$97.00</b>
+                        </div>
+                        <div class="mini-cart-actions vstack gap-1">
+                            <a href="shop-cart.html" class="btn btn-md btn-outline-gray-100 text-dark dark:text-white dark:border-gray-700 dark:hover:bg-gray-700">View cart</a>
+                            <a href="shop-checkout.html" class="btn btn-md btn-primary text-white">Checkout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--  Favorites modal -->
+    <div id="uc-favorites-panel" data-uc-modal="overlay: true">
+        <div class="uc-modal-dialog lg:max-w-500px bg-white text-dark dark:bg-gray-800 dark:text-white rounded">
+
+            <button class="uc-modal-close-default top-0 ltr:end-0 rtl:start-0 rtl:end-auto m-2 p-0 border-0 icon-2 lg:icon-3 btn btn-md dark:text-white transition-transform duration-150 hover:rotate-90" type="button">
+                <i class="unicon-close"></i>
+            </button>
+
+            <div class="panel vstack justify-center items-center gap-2 text-center py-8">
+                <i class="icon icon-4 unicon-bookmark mb-2 text-primary dark:text-white"></i>
+                <h2 class="h4 md:h3 m-0">Your favorites</h2>
+                <p class="fs-5 opacity-60">You have not yet added any recipe to your favorites list.</p>
+                <a href="#" class="btn btn-md btn-outline-gray-100 text-dark dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 mt-2 uc-modal-close">Browse recipes</a>
+            </div>
+        </div>
+    </div>
+
+    <!--  Contact modal -->
+    <div id="uc-contact-modal" data-uc-modal="overlay: true">
+        <div class="uc-modal-dialog lg:max-w-650px bg-secondary text-dark dark:bg-gray-800 dark:text-white rounded-1-5">
+
+            <button class="uc-modal-close-default top-0 ltr:end-0 rtl:start-0 rtl:end-auto m-2 p-0 border-0 icon-2 lg:icon-3 btn btn-md dark:text-white transition-transform duration-150 hover:rotate-90" type="button">
+                <i class="unicon-close"></i>
+            </button>
+
+            <div class="panel vstack gap-2 md:gap-4 text-center">
+                <div class="panel cstack px-3 md:px-4 py-4 md:py-8 m-0 lg:mx-auto">
+                    <div class="panel vstack justify-center items-center gap-2 sm:gap-4 text-center">
+                        <h4 class="h5 lg:h4 m-0">Schedule your 15-minute demo now</h4>
+                        <div class="panel w-100 sm:w-350px md:w-500px mx-auto">
+                            <form class="vstack gap-2">
+                                <div class="vstack lg:hstack gap-2">
+                                    <input class="form-control h-48px w-100 md:w-1/2 bg-white dark:border-white dark:text-dark" type="text" placeholder="Full name*" required>
+                                    <input class="form-control h-48px w-100 md:w-1/2 bg-white dark:border-white dark:text-dark" type="text" placeholder="Last name*" required>
+                                </div>
+                                <div class="vstack lg:hstack gap-2">
+                                    <input class="form-control h-48px w-100 md:w-1/2 bg-white dark:border-white dark:text-dark" type="email" placeholder="Your email*" required>
+                                    <input class="form-control h-48px w-100 md:w-1/2 rtl:text-end bg-white dark:border-white dark:text-dark" type="tel" placeholder="Phone number*" required>
+                                </div>
+                                <input class="form-control h-48px w-full bg-white dark:border-white dark:text-dark" type="text" placeholder="Company name*" required>
+                                <textarea class="form-control min-h-150px w-full bg-white dark:border-white dark:text-dark" placeholder="Your message.."></textarea>
+                                <button class="btn btn-primary btn-md text-white mt-2" type="submit">Schedule my demo</button>
+                                <p class="fs-7 opacity-70 mt-2 text-center">We’ll tailor your demo to your immediate needs and answer all your questions. Get ready to see how it works!</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  Bottom Actions Sticky -->
+    <div class="backtotop-wrap position-fixed ltr:end-0 ltr:start-auto rtl:start-0 rtl:end-auto top-auto bottom-0 z-99 m-2 vstack">
+        <div class="darkmode-trigger cstack w-40px h-40px rounded-circle text-none bg-gray-100 dark:bg-gray-700 dark:text-white" data-darkmode-toggle="">
+            <label class="switch">
+                <span class="sr-only">Dark mode toggle</span>
+                <input type="checkbox">
+                <span class="slider fs-5"></span>
+            </label>
+        </div>
+        <a class="btn btn-sm bg-primary text-white w-40px h-40px rounded-circle" href="to_top" data-uc-backtotop>
+            <i class="icon-2 unicon-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- Header start -->
+    <header class="uc-header header-four uc-navbar-sticky-wrap z-999 " style="--uc-nav-height: 80px" data-uc-sticky="start: 100vh; show-on-up: true; animation: uc-animation-slide-top; sel-target: .uc-navbar-container; cls-active: uc-navbar-sticky; cls-inactive: uc-navbar-transparent; end: !*;">
+        <nav class="uc-navbar-container uc-navbar-float ft-tertiary z-1" data-anime="translateY: [-40, 0]; opacity: [0, 1]; easing: easeOutExpo; duration: 750; delay: 0;">
+            <div class="container max-w-xl">
+                <div class="uc-navbar min-h-64px lg:min-h-80px text-gray-900 dark:text-white" data-uc-navbar="mode: click; animation: uc-animation-slide-top-small; duration: 150;">
+                    <div class="uc-navbar-left">
+                        <div class="uc-logo text-dark dark:text-white">
+                            <a class="panel text-none" href="index-4-rtl.html" style="width: 140px">
+                                <img class="dark:d-none" src="../assets/images/common/logo-light.svg" alt="Bookloh">
+                                <img class="d-none dark:d-block" src="../assets/images/common/logo-dark.svg" alt="Bookloh">
+                            </a>
+                        </div>
+                        <ul class="uc-navbar-nav gap-3 xl:gap-4 d-none lg:d-flex fw-medium ltr:ms-2 ltr:xl:ms-4 rtl:me-2 rtl:xl:me-4">
+                            <li>
+                                <a href="#">الميزات <span data-uc-navbar-parent-icon></span></a>
+                                <div class="uc-navbar-dropdown ft-primary text-unset fs-6 fw-normal p-0 hide-scrollbar rounded-2 overflow-hidden" data-uc-drop="mode: click; offset: 0; boundary: !.uc-navbar; stretch: x; animation: uc-animation-slide-top-small; duration: 150;">
+                                    <div class="row g-0 col-match" data-uc-grid>
+                                        <div class="col-7">
+                                            <div class="panel p-3">
+                                                <h6 class="h6 ms-3">الصفحات الرئيسية</h6>
+                                                <div class="row child-cols-3 g-0">
+                                                    <div>
+                                                        <a href="index.html" class="vstack p-1 text-none text-center rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150">
+                                                            <div class="featured-image panel border shadow-xs rounded-1 overflow-hidden">
+                                                                <img src="../assets/images/demos/screenshots/index.jpg" alt="الصفحة الرئيسية - 01">
+                                                            </div>
+                                                            <div class="panel p-1">
+                                                                <h5 class="fs-7 m-0">الصفحة الرئيسية 1</h5>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div>
+                                                        <a href="index-2.html" class="vstack p-1 text-none text-center rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150">
+                                                            <div class="featured-image panel border shadow-xs rounded-1 overflow-hidden">
+                                                                <img src="../assets/images/demos/screenshots/index-2.jpg" alt="الصفحة الرئيسية - 02">
+                                                            </div>
+                                                            <div class="panel p-1">
+                                                                <h5 class="fs-7 m-0">الصفحة الرئيسية 2</h5>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div>
+                                                        <a href="index-3.html" class="vstack p-1 text-none text-center rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150">
+                                                            <div class="featured-image panel border shadow-xs rounded-1 overflow-hidden">
+                                                                <img src="../assets/images/demos/screenshots/index-3.jpg" alt="الصفحة الرئيسية - 03">
+                                                            </div>
+                                                            <div class="panel p-1">
+                                                                <h5 class="fs-7 m-0">الصفحة الرئيسية 3</h5>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div>
+                                                        <a href="index-4-rtl.html" class="vstack p-1 text-none text-center rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150">
+                                                            <div class="featured-image panel border shadow-xs rounded-1 overflow-hidden">
+                                                                <img src="../assets/images/demos/screenshots/index-4.jpg" alt="الصفحة الرئيسية - 04">
+                                                            </div>
+                                                            <div class="panel p-1">
+                                                                <h5 class="fs-7 m-0">الصفحة الرئيسية 4</h5>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div>
+                                                        <a href="index-5.html" class="vstack p-1 text-none text-center rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150">
+                                                            <div class="featured-image panel border shadow-xs rounded-1 overflow-hidden">
+                                                                <img src="../assets/images/demos/screenshots/index-5.jpg" alt="الصفحة الرئيسية - 05">
+                                                            </div>
+                                                            <div class="panel p-1">
+                                                                <h5 class="fs-7 m-0">الصفحة الرئيسية 5</h5>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div>
+                                                        <a href="index-6.html" class="vstack p-1 text-none text-center rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150">
+                                                            <div class="featured-image panel border shadow-xs rounded-1 overflow-hidden">
+                                                                <img src="../assets/images/demos/screenshots/index-6.jpg" alt="الصفحة الرئيسية - 06">
+                                                            </div>
+                                                            <div class="panel p-1">
+                                                                <h5 class="fs-7 m-0">الصفحة الرئيسية 6</h5>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div>
+                                                        <a href="index-7.html" class="vstack p-1 text-none text-center rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150">
+                                                            <div class="featured-image panel border shadow-xs rounded-1 overflow-hidden">
+                                                                <img src="../assets/images/demos/screenshots/index-7.jpg" alt="الصفحة الرئيسية - 07">
+                                                            </div>
+                                                            <div class="panel p-1">
+                                                                <h5 class="fs-7 m-0">الصفحة الرئيسية 7</h5>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div>
+                                                        <a href="index-8.html" class="vstack p-1 text-none text-center rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150">
+                                                            <div class="featured-image panel border shadow-xs rounded-1 overflow-hidden">
+                                                                <img src="../assets/images/demos/screenshots/index-8.jpg" alt="الصفحة الرئيسية - 08">
+                                                            </div>
+                                                            <div class="panel p-1">
+                                                                <h5 class="fs-7 m-0">الصفحة الرئيسية 8</h5>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div>
+                                                        <a href="index-9.html" class="vstack p-1 text-none text-center rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150">
+                                                            <div class="featured-image panel border shadow-xs rounded-1 overflow-hidden">
+                                                                <img src="../assets/images/demos/screenshots/index-9.jpg" alt="الصفحة الرئيسية - 09">
+                                                            </div>
+                                                            <div class="panel p-1">
+                                                                <h5 class="fs-7 m-0">الصفحة الرئيسية 9</h5>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div>
+                                                        <a href="index-10.html" class="vstack p-1 text-none text-center rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150">
+                                                            <div class="featured-image panel border shadow-xs rounded-1 overflow-hidden">
+                                                                <img src="../assets/images/demos/screenshots/index-10.jpg" alt="الصفحة الرئيسية - 10">
+                                                            </div>
+                                                            <div class="panel p-1">
+                                                                <h5 class="fs-7 m-0">الصفحة الرئيسية 10</h5>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div>
+                                                        <a href="index-11-rtl.html" class="vstack p-1 text-none text-center rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150">
+                                                            <div class="featured-image panel border shadow-xs rounded-1 overflow-hidden">
+                                                                <img src="../assets/images/demos/screenshots/index-11.jpg" alt="الصفحة الرئيسية - 11">
+                                                            </div>
+                                                            <div class="panel p-1">
+                                                                <h5 class="fs-7 m-0">الصفحة الرئيسية 11</h5>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div>
+                                                        <a href="index-12-rtl.html" class="vstack p-1 text-none text-center rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150">
+                                                            <div class="featured-image panel border shadow-xs rounded-1 overflow-hidden">
+                                                                <img src="../assets/images/demos/screenshots/index-12.jpg" alt="الصفحة الرئيسية - 12">
+                                                            </div>
+                                                            <div class="panel p-1">
+                                                                <h5 class="fs-7 m-0">الصفحة الرئيسية 12</h5>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-5">
+                                            <div class="panel p-3 bg-gray-25 dark:bg-gray-300 dark:bg-opacity-5">
+                                                <h6 class="h6 ms-3">الصفحات الأخرى</h6>
+                                                <div class="row child-cols-6 g-0">
+                                                    <div>
+                                                        <ul class="uc-nav uc-navbar-dropdown-nav">
+                                                            <li>
+                                                                <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-career.html">
+                                                                    <i class="icon-1 unicon-wikis fw-bold text-primary dark:text-secondary"></i>
+                                                                    <span class="vstack gap-narrow">
+                                                                        <b class="fw-bold dark:text-white">المسار المهني</b>
+                                                                    </span>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-career-detail.html">
+                                                                    <i class="icon-1 unicon-wikis fw-bold text-primary dark:text-secondary"></i>
+                                                                    <span class="vstack gap-narrow">
+                                                                        <b class="fw-bold dark:text-white">تفاصيل الوظيفة</b>
+                                                                    </span>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-contact.html">
+                                                                    <i class="icon-1 unicon-wikis fw-bold text-primary dark:text-secondary"></i>
+                                                                    <span class="vstack gap-narrow">
+                                                                        <b class="fw-bold dark:text-white">اتصل بنا</b>
+                                                                    </span>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-contact-2.html">
+                                                                    <i class="icon-1 unicon-wikis fw-bold text-primary dark:text-secondary"></i>
+                                                                    <span class="vstack gap-narrow">
+                                                                        <b class="fw-bold dark:text-white">اتصل بنا v2</b>
+                                                                    </span>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="blog.html">
+                                                                    <i class="icon-1 unicon-course fw-bold text-primary dark:text-secondary"></i>
+                                                                    <span class="vstack gap-narrow">
+                                                                        <b class="fw-bold dark:text-white">مدونة</b>
+                                                                    </span>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="blog-details.html">
+                                                                    <i class="icon-1 unicon-course fw-bold text-primary dark:text-secondary"></i>
+                                                                    <span class="vstack gap-narrow">
+                                                                        <b class="fw-bold dark:text-white">تفاصيل المقالة v1</b>
+                                                                    </span>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="blog-details-2.html">
+                                                                    <i class="icon-1 unicon-course fw-bold text-primary dark:text-secondary"></i>
+                                                                    <span class="vstack gap-narrow">
+                                                                        <b class="fw-bold dark:text-white">تفاصيل المقالة v2</b>
+                                                                    </span>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="blog-details-3.html">
+                                                                    <i class="icon-1 unicon-course fw-bold text-primary dark:text-secondary"></i>
+                                                                    <span class="vstack gap-narrow">
+                                                                        <b class="fw-bold dark:text-white">تفاصيل المقالة v3</b>
+                                                                    </span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div>
+                                                        <ul class="uc-nav uc-navbar-dropdown-nav">
+                                                            <li>
+                                                                <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="index-2.html">
+                                                                    <i class="icon-1 unicon-unlocked fw-bold text-primary dark:text-secondary"></i>
+                                                                    <span class="vstack gap-narrow">
+                                                                        <b class="fw-bold dark:text-white">إنشاء حساب</b>
+                                                                    </span>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="index-3.html">
+                                                                    <i class="icon-1 unicon-unlocked fw-bold text-primary dark:text-secondary"></i>
+                                                                    <span class="vstack gap-narrow">
+                                                                        <b class="fw-bold dark:text-white">تسجيل الدخول</b>
+                                                                    </span>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="index-4.html">
+                                                                    <i class="icon-1 unicon-unlocked fw-bold text-primary dark:text-secondary"></i>
+                                                                    <span class="vstack gap-narrow">
+                                                                        <b class="fw-bold dark:text-white">استعادة كلمة السر</b>
+                                                                    </span>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="shop.html">
+                                                                    <i class="icon-1 unicon-shopping-cart fw-bold text-primary dark:text-secondary"></i>
+                                                                    <span class="vstack gap-narrow">
+                                                                        <b class="fw-bold dark:text-white">المتجر</b>
+                                                                    </span>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="shop-cart.html">
+                                                                    <i class="icon-1 unicon-shopping-cart fw-bold text-primary dark:text-secondary"></i>
+                                                                    <span class="vstack gap-narrow">
+                                                                        <b class="fw-bold dark:text-white">سلة المشتريات</b>
+                                                                    </span>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="shop-checkout.html">
+                                                                    <i class="icon-1 unicon-shopping-cart fw-bold text-primary dark:text-secondary"></i>
+                                                                    <span class="vstack gap-narrow">
+                                                                        <b class="fw-bold dark:text-white">إتمام الدفع</b>
+                                                                    </span>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="shop-product-detail.html">
+                                                                    <i class="icon-1 unicon-shopping-cart fw-bold text-primary dark:text-secondary"></i>
+                                                                    <span class="vstack gap-narrow">
+                                                                        <b class="fw-bold dark:text-white">تفاصيل المنتج</b>
+                                                                    </span>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="shop-order.html">
+                                                                    <i class="icon-1 unicon-shopping-cart fw-bold text-primary dark:text-secondary"></i>
+                                                                    <span class="vstack gap-narrow">
+                                                                        <b class="fw-bold dark:text-white">تأكيد الطلب</b>
+                                                                    </span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">المنتجات <span data-uc-navbar-parent-icon></span></a>
+                                <div class="uc-navbar-dropdown w-600px ft-primary text-unset fs-6 fw-normal p-0 hide-scrollbar rounded-2 overflow-hidden" data-uc-drop="mode: click; offset: 0; boundary: !.uc-navbar; animation: uc-animation-slide-top-small; duration: 150;">
+                                    <div class="row child-cols-6 g-0 col-match" data-uc-grid>
+                                        <div>
+                                            <ul class="uc-nav uc-navbar-dropdown-nav p-2">
+                                                <li>
+                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-features.html">
+                                                        <i class="icon-1 unicon-checkmark fw-bold text-primary dark:text-secondary"></i>
+                                                        <span class="vstack gap-narrow mt-nnarrow">
+                                                            <b class="fw-bold dark:text-white">قائمة المهام</b>
+                                                            <span class="fw-normal">إدارة برامج وأدوات متعددة لمهام مختلفة.</span>
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-features.html">
+                                                        <i class="icon-1 unicon-chart-pie fw-bold text-primary dark:text-secondary"></i>
+                                                        <span class="vstack gap-narrow mt-nnarrow">
+                                                            <b class="fw-bold dark:text-white">التقارير</b>
+                                                            <span class="fw-normal">أحدث التقارير والتحديثات والمعلومات حول الصناعة.</span>
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-features.html">
+                                                        <i class="icon-1 unicon-increase-level fw-bold text-primary dark:text-secondary"></i>
+                                                        <span class="vstack gap-narrow mt-nnarrow">
+                                                            <b class="fw-bold dark:text-white">جداول البيانات</b>
+                                                            <span class="fw-normal">مجموعة من الأدوات التي تغطي كافة جوانب عملك.</span>
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-features.html">
+                                                        <i class="icon-1 unicon-chart-venn-diagram fw-bold text-primary dark:text-secondary"></i>
+                                                        <span class="vstack gap-narrow mt-nnarrow">
+                                                            <b class="fw-bold dark:text-white">تعاون</b>
+                                                            <span class="fw-normal">تعيين المهام ومشاركة الملفات والتواصل مع فريقك.</span>
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <div class="vstack gap-2 p-3 h-100 bg-gray-25 dark:bg-gray-300 dark:bg-opacity-5">
+                                                <div class="featured-image panel" data-uc-lightbox="video-autoplay: true;">
+                                                    <figure class="featured-image m-0 rounded ratio ratio-3x2 rounded-1-5 uc-transition-toggle overflow-hidden">
+                                                        <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../assets/images/template/login.webp" alt="Image">
+                                                    </figure>
+                                                    <button class="btn btn-md btn-alt-primary p-0 w-32px h-32px position-absolute bottom-0 ltr:start-0 rtl:end-0 m-2"><i class="icon-1 unicon-play-filled-alt"></i></button>
+                                                    <a href="../assets/images/media/Bookloh_vid.webm" data-caption="إدارة سهلة للمشاريع مهما كان تعقيدها." data-attrs="width: 640; height: 480;" class="position-cover"></a>
+                                                </div>
+                                                <div class="vstack justify-between gap-2">
+                                                    <div class="vstack gap-1">
+                                                        <h5 class="h6 m-0">كل ما تحتاجه موجود في متناول يدك</h5>
+                                                        <p class="fs-7 opacity-70">قل وداعًا لمتاعب إدارة برامج وأدوات متعددة لمهام مختلفة.</p>
+                                                    </div>
+                                                    <a href="page-pricing.html" class="btn btn-sm btn-primary">بدء تجربة مجانية</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">الموارد <span data-uc-navbar-parent-icon></span></a>
+                                <div class="uc-navbar-dropdown w-600px ft-primary text-unset fs-6 fw-normal p-0 hide-scrollbar rounded-2 overflow-hidden" data-uc-drop="mode: click; offset: 0; boundary: !.uc-navbar; animation: uc-animation-slide-top-small; duration: 150;">
+                                    <div class="row child-cols-6 g-0 col-match" data-uc-grid>
+                                        <div>
+                                            <ul class="uc-nav uc-navbar-dropdown-nav p-2">
+                                                <li>
+                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="blog.html">
+                                                        <i class="icon-1 unicon-course fw-bold text-primary dark:text-secondary"></i>
+                                                        <span class="vstack gap-narrow mt-nnarrow">
+                                                            <b class="fw-bold dark:text-white">مدونة</b>
+                                                            <span class="fw-normal">إدارة برامج وأدوات متعددة لمهام مختلفة.</span>
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="#uc-newsletter-modal" data-uc-toggle="">
+                                                        <i class="icon-1 unicon-email fw-bold text-primary dark:text-secondary"></i>
+                                                        <span class="vstack gap-narrow mt-nnarrow">
+                                                            <b class="fw-bold dark:text-white">النشرة الإخبارية</b>
+                                                            <span class="fw-normal">أحدث التقارير والتحديثات والمعلومات حول الصناعة.</span>
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-features.html">
+                                                        <i class="icon-1 unicon-play fw-bold text-primary dark:text-secondary"></i>
+                                                        <span class="vstack gap-narrow mt-nnarrow">
+                                                            <b class="fw-bold dark:text-white">دروس الفيديو</b>
+                                                            <span class="fw-normal">تعيين المهام ومشاركة الملفات والتواصل مع فريقك.</span>
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <ul class="uc-nav uc-navbar-dropdown-nav p-2 h-100 bg-gray-25 dark:bg-gray-300 dark:bg-opacity-5">
+                                                <li>
+                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-career.html">
+                                                        <i class="icon-1 unicon-star fw-bold text-primary dark:text-secondary"></i>
+                                                        <span class="vstack gap-narrow mt-nnarrow">
+                                                            <b class="fw-bold dark:text-white">نحن نوظف</b>
+                                                            <span class="fw-normal">إدارة برامج وأدوات متعددة لمهام مختلفة.</span>
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-contact.html">
+                                                        <i class="icon-1 unicon-headset fw-bold text-primary dark:text-secondary"></i>
+                                                        <span class="vstack gap-narrow mt-nnarrow">
+                                                            <b class="fw-bold dark:text-white">مركز المساعدة</b>
+                                                            <span class="fw-normal">أحدث التقارير والتحديثات والمعلومات حول الصناعة.</span>
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="page-pricing.html">التسعير</a></li>
+                            <li><a href="https://themeforest.net/item/lexend-software-saas-startup-html5-template/51596504" target="_blank">المزيد</a></li>
+                        </ul>
+                    </div>
+                    <div class="uc-navbar-right">
+                        <ul class="uc-navbar-nav gap-3 xl:gap-4 d-none lg:d-flex fw-medium ltr:ms-2 ltr:xl:ms-4 rtl:me-2 rtl:xl:me-4">
+                            <li>
+                                <a href="#">اطلب عرضًا توضيحيًا</a>
+                                <div class="uc-navbar-dropdown p-3 w-300px ft-primary text-unset fs-6 fw-normal p-0 hide-scrollbar rounded-2 overflow-hidden" data-uc-drop="mode: click; offset: 0; boundary: !.uc-navbar; animation: uc-animation-slide-top-small; duration: 150;">
+                                    <p class="fs-7">Bookloh offers a comprehensive suite of tools that cover all aspects of your business.</p>
+                                    <form class="vstack gap-1 my-2">
+                                        <input class="form-control form-control-sm rounded-default fs-7 w-full bg-gray-25 dark:bg-opacity-0 dark:text-white dark:border-gray-300 dark:border-opacity-30" type="text" placeholder="Full name" required>
+                                        <input class="form-control form-control-sm rounded-default fs-7 w-full bg-gray-25 dark:bg-opacity-0 dark:text-white dark:border-gray-300 dark:border-opacity-30" type="email" placeholder="Your email" required>
+                                        <div class="hstack items-center justify-between mt-1">
+                                            <div class="form-check m-0">
+                                                <input id="header_request_demo_application" class="form-check-input rounded bg-white dark:bg-opacity-0 dark:text-white dark:border-gray-300 dark:border-opacity-30" type="checkbox" required>
+                                                <label for="header_request_demo_application" class="hstack justify-between form-check-label fw-medium fs-7">I read and agree to <a href="page-terms.html" class="uc-link text-underline ltr:ms-narrow rtl:me-narrow dark:text-secondary">terms</a>.</label>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-primary btn-sm rounded-default text-white mt-1" type="submit">Request a demo</button>
+                                    </form>
+                                    <p class="fs-7">We care about your data in our <a href="page-privacy.html" class="uc-link text-underline dark:text-secondary">privacy policy</a>.</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <a class="btn btn-sm btn-primary rounded-default text-white text-none d-none lg:d-inline-flex" href="page-pricing.html">بدء تجربة مجانية</a>
+                        <a class="d-block lg:d-none" href="#uc-menu-panel" data-uc-navbar-toggle-icon data-uc-toggle></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Header end -->
+
+    <!-- Wrapper start -->
+    <div id="wrapper" class="wrap">
+
+        <!-- بداية القسم -->
+        <div id="hero_header" class="hero-header section panel overflow-hidden">
+            <div class="position-cover bg-secondary dark:bg-gray-800"></div>
+            <div class="section-outer panel pt-8">
+                <div class="container max-w-xl">
+                    <div class="section-inner panel">
+                        <div class="row child-cols justify-center lg:justify-between items-center g-0">
+                            <div class="col-12 sm:col-10 md:col-8 lg:col-5">
+                                <div class="panel vstack gap-2 sm:text-center lg:text-start rtl:lg:text-end py-4" data-anime="targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
+                                    <h1 class="h2 xl:display-5 mb-1 xl:mb-2">أدوات تغطي <br> <span class="text-primary dark:text-secondary">جميع جوانب</span> عملك المتنامي.</h1>
+                                    <p class="fs-6 lg:fs-5 text-dark dark:text-white text-opacity-70">قل وداعاً لمتاعب إدارة برامج وأدوات متعددة لمهام مختلفة. يقدم Bookloh مجموعة شاملة من الأدوات التي تغطي جميع جوانب عملك.</p>
+                                    <form class="row child-cols g-1 mt-1 sm:mt-2">
+                                        <div>
+                                            <div class="form-icon-group inline-block">
+                                                <input type="email" class="form-control rounded-default h-48px w-full bg-white dark:border-white dark:bg-opacity-10 dark:border-opacity-0 dark:text-white" placeholder="بريدك الإلكتروني.." required="">
+                                                <span class="form-icon text-gray dark:text-gray-300">
+                                                    <i class="unicon-email icon-1"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 sm:col-auto">
+                                            <a href="page-pricing.html" class="btn btn-md btn-primary rounded-default h-48px w-100 lg:min-w-150px text-white">
+                                                <span class="d-none md:d-block">جربه مجاناً</span>
+                                                <span class="d-block md:d-none">سجل</span>
+                                            </a>
+                                        </div>
+                                    </form>
+                                    <p class="fs-7 text-dark dark:text-white text-opacity-70">نحن نهتم ببياناتك في <a href="page-privacy.html" class="uc-link text-underline dark:text-secondary">سياسة الخصوصية</a> الخاصة بنا.</p>
+                                </div>
+                            </div>
+                            <div class="col-12 lg:col-6">
+                                <div class="expand-container mt-0 lg:mt-4 ltr:ms-n2 rtl:me-n2" data-anime="translateX: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
+                                    <img class="ltr:d-block rtl:d-none" src="../assets/images/template/hero-mockup.png" alt="hero-mockup">
+                                    <img class="ltr:d-none rtl:d-block" src="../assets/images/template/hero-mockup-rtl.png" alt="hero-mockup-rtl">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- نهاية القسم -->
+
+        <!-- بداية القسم -->
+        <div id="companies_sponsores" class="companies-sponsores section panel overflow-hidden">
+            <div class="section-outer panel py-6">
+                <div class="container sm:max-w-lg xl:max-w-xl">
+                    <div class="section-inner panel">
+                        <div class="brands panel overflow-hidden" data-anime="onview: -200; translateY: [-16, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 350;">
+                            <div class="block-panel panel">
+                                <div class="element-brands text-primary dark:text-white mask-x">
+                                    <div class="swiper" data-uc-swiper="items: 2.25; center: true; center-bounds: true; autoplay: 7000; loop: true; speed: 7000; autoplay-delay: -1; allowTouchMove: false; disableOnInteraction: true;" data-uc-swiper-s="items: 4; center: false; center-bounds: false;" data-uc-swiper-m="items: 5; gap: 64;">
+                                        <div class="swiper-wrapper items-center ease-linear">
+                                            <div class="brand-item swiper-slide text-center">
+                                                <img class="brand-item-image h-40px dark:d-none" src="../assets/images/brands/brand-01.svg" alt="Proline">
+                                                <img class="brand-item-image h-40px d-none dark:d-inline-flex" src="../assets/images/brands/brand-01-dark.svg" alt="Proline">
+                                            </div>
+                                            <div class="brand-item swiper-slide text-center">
+                                                <img class="brand-item-image h-40px dark:d-none" src="../assets/images/brands/brand-02.svg" alt="Iceberg">
+                                                <img class="brand-item-image h-40px d-none dark:d-inline-flex" src="../assets/images/brands/brand-02-dark.svg" alt="Iceberg">
+                                            </div>
+                                            <div class="brand-item swiper-slide text-center">
+                                                <img class="brand-item-image h-40px dark:d-none" src="../assets/images/brands/brand-03.svg" alt="PinPoint">
+                                                <img class="brand-item-image h-40px d-none dark:d-inline-flex" src="../assets/images/brands/brand-03-dark.svg" alt="PinPoint">
+                                            </div>
+                                            <div class="brand-item swiper-slide text-center">
+                                                <img class="brand-item-image h-40px dark:d-none" src="../assets/images/brands/brand-04.svg" alt="Clues">
+                                                <img class="brand-item-image h-40px d-none dark:d-inline-flex" src="../assets/images/brands/brand-04-dark.svg" alt="Clues">
+                                            </div>
+                                            <div class="brand-item swiper-slide text-center">
+                                                <img class="brand-item-image h-40px dark:d-none" src="../assets/images/brands/brand-05.svg" alt="Snowflake">
+                                                <img class="brand-item-image h-40px d-none dark:d-inline-flex" src="../assets/images/brands/brand-05-dark.svg" alt="Snowflake">
+                                            </div>
+                                            <div class="brand-item swiper-slide text-center">
+                                                <img class="brand-item-image h-40px dark:d-none" src="../assets/images/brands/brand-06.svg" alt="Proline">
+                                                <img class="brand-item-image h-40px d-none dark:d-inline-flex" src="../assets/images/brands/brand-06-dark.svg" alt="Proline">
+                                            </div>
+                                            <div class="brand-item swiper-slide text-center">
+                                                <img class="brand-item-image h-40px dark:d-none" src="../assets/images/brands/brand-07.svg" alt="Iceberg">
+                                                <img class="brand-item-image h-40px d-none dark:d-inline-flex" src="../assets/images/brands/brand-07-dark.svg" alt="Iceberg">
+                                            </div>
+                                            <div class="brand-item swiper-slide text-center">
+                                                <img class="brand-item-image h-40px dark:d-none" src="../assets/images/brands/brand-08.svg" alt="PinPoint">
+                                                <img class="brand-item-image h-40px d-none dark:d-inline-flex" src="../assets/images/brands/brand-08-dark.svg" alt="PinPoint">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- نهاية القسم -->
+
+        <!-- بداية القسم -->
+        <div id="facts_numbers" class="facts-numbers section panel overflow-hidden">
+            <div class="section-outer panel pt-4 md:pt-6 xl:pt-9">
+                <div class="container sm:max-w-lg xl:max-w-xl">
+                    <div class="section-inner panel">
+                        <div class="panel vstack items-center gap-2 mb-4 lg:mb-8 max-w-800px mx-auto text-center" data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
+                            <h2 class="h4 md:h3 m-0">كل ما تحتاجه في متناول يدك</h2>
+                            <p class="fs-6 xl:fs-5 text-dark dark:text-white text-opacity-70">صُمم Bookloh لجعل حياتك العملية أسهل وأكثر كفاءة.</p>
+                        </div>
+                        <div class="panel p-6 xl:p-8 rounded-1-5 lg:rounded-2 bg-secondary dark:bg-gray-800" data-anime="onview: -200; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 350;">
+                            <div class="row child-cols col-match items-center justify-center text-center gy-4 lg:gy-8" data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 500});">
+                                <div>
+                                    <div class="fact-item panel vstack gap-1">
+                                        <h5 class="h3 md:h2 lg:h1 xl:display-5 m-0 text-primary dark:text-secondary">280+</h5>
+                                        <p class="fw-medium">تتبع العملاء المحتملين</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="fact-item panel vstack gap-1">
+                                        <h5 class="h3 md:h2 lg:h1 xl:display-5 m-0 text-primary dark:text-secondary">90%</h5>
+                                        <p class="fw-medium">مستخدمون راضون</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="fact-item panel vstack gap-1">
+                                        <h5 class="h3 md:h2 lg:h1 xl:display-5 m-0 text-primary dark:text-secondary">10.2k</h5>
+                                        <p class="fw-medium">تعاون الفرق</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- نهاية القسم -->
+
+        <!-- بداية القسم -->
+        <div id="main_features" class="main-features section panel overflow-hidden">
+            <div class="section-outer panel py-4 md:py-6 xl:py-9">
+                <div class="container sm:max-w-lg xl:max-w-xl">
+                    <div class="section-inner panel">
+                        <div class="panel vstack items-center gap-2 xl:gap-3 mb-4 lg:mb-8 max-w-650px mx-auto text-center" data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
+                            <span class="fw-bold text-primary dark:text-secondary">الميزات الرئيسية</span>
+                            <h2 class="h3 lg:h2 xl:h1 m-0">أدوات CRM تساعدك على تتبع العملاء المحتملين</h2>
+                            <p class="fs-6 xl:fs-5 text-dark dark:text-white text-opacity-70">انضم إلى آلاف المستخدمين الراضين وارتق بعملك إلى المستوى التالي. موثوق به من قبل أكثر من 2,500 شركة ناشئة.</p>
+                        </div>
+                        <div class="row child-cols-12 g-6 md:g-8 xl:g-6" data-uc-scrollspy="target: >*; delay: 500; cls: uc-animation-slide-bottom-medium">
+                            <div>
+                                <div class="feature-item panel">
+                                    <div class="row child-cols items-center justify-between g-2 md:g-4">
+                                        <div class="col-12 md:col-6 lg:col-5 ">
+                                            <div class="panel overflow-hidden rounded-1-5 lg:rounded-2">
+                                                <figure class="featured-image m-0 rounded ratio ratio-1x1 rounded-2 overflow-hidden ">
+                                                    <img class="media-cover image " src="../assets/images/template/home-four-feature-01.png" alt="ضمان التسليم في الوقت المحدد والكفاءة القصوى">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 md:col-6 lg:col-6 ">
+                                            <div class="panel">
+                                                <div class="panel vstack justify-center gap-4 h-100 sm:p-3 lg:p-4">
+                                                    <div>
+                                                        <div class="panel vstack gap-2">
+                                                            <span class="cstack w-48px h-48px bg-primary text-secondary rounded-1-5 mb-2 d-none lg:d-inline-flex">
+                                                                <i class="icon-1 unicon-cloud-download"></i>
+                                                            </span>
+                                                            <h3 class="h4 sm:h3 xl:h2 m-0">ضمان التسليم في الوقت المحدد والكفاءة القصوى</h3>
+                                                            <p class="fs-6 lg:fs-5 opacity-70 dark:opacity-80">نقدم ميزات إدارة المشاريع المتقدمة مثل مخططات جانت وتبعيات المهام وتخصيص الموارد</p>
+                                                            <a href="#" class="uc-link dark:text-secondary fw-bold hstack gap-narrow sm:mt-1 lg:mt-2">
+                                                                <span>لنكتشف ذلك</span>
+                                                                <i class="position-relative icon icon-1 unicon-arrow-right rtl:rotate-180 translate-y-px"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="feature-item panel">
+                                    <div class="row child-cols items-center justify-between g-2 md:g-4">
+                                        <div class="col-12 md:col-6 lg:col-5 md:order-2">
+                                            <div class="panel overflow-hidden rounded-1-5 lg:rounded-2">
+                                                <figure class="featured-image m-0 rounded ratio ratio-1x1 rounded-2 overflow-hidden ">
+                                                    <img class="media-cover image " src="../assets/images/template/home-four-feature-02.png" alt="لا مزيد من البحث في التقارير وجداول البيانات اللا نهائية">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 md:col-6 lg:col-6 md:order-1">
+                                            <div class="panel">
+                                                <div class="panel vstack justify-center gap-4 h-100 sm:p-3 lg:p-4">
+                                                    <div>
+                                                        <div class="panel vstack gap-2">
+                                                            <span class="cstack w-48px h-48px bg-primary text-secondary rounded-1-5 mb-2 d-none lg:d-inline-flex">
+                                                                <i class="icon-1 unicon-course"></i>
+                                                            </span>
+                                                            <h3 class="h4 sm:h3 xl:h2 m-0">لا مزيد من البحث في التقارير وجداول البيانات اللا نهائية</h3>
+                                                            <p class="fs-6 lg:fs-5 opacity-70 dark:opacity-80">منصة خدمة عملاء شاملة تساعدك على توازن كل ما يحتاجه عملاؤك ليكونوا سعداء.</p>
+                                                            <a href="#" class="uc-link dark:text-secondary fw-bold hstack gap-narrow sm:mt-1 lg:mt-2">
+                                                                <span>عرض جميع جداول البيانات</span>
+                                                                <i class="position-relative icon icon-1 unicon-arrow-right rtl:rotate-180 translate-y-px"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="feature-item panel">
+                                    <div class="row child-cols items-center justify-between g-2 md:g-4">
+                                        <div class="col-12 md:col-6 lg:col-5 ">
+                                            <div class="panel overflow-hidden rounded-1-5 lg:rounded-2">
+                                                <figure class="featured-image m-0 rounded ratio ratio-1x1 rounded-2 overflow-hidden ">
+                                                    <img class="media-cover image " src="../assets/images/template/home-four-feature-03.png" alt="شارك الملفات وتواصل مع فريقك في الوقت الفعلي">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 md:col-6 lg:col-6 ">
+                                            <div class="panel">
+                                                <div class="panel vstack justify-center gap-4 h-100 sm:p-3 lg:p-4">
+                                                    <div>
+                                                        <div class="panel vstack gap-2">
+                                                            <span class="cstack w-48px h-48px bg-primary text-secondary rounded-1-5 mb-2 d-none lg:d-inline-flex">
+                                                                <i class="icon-1 unicon-volume-block-storage"></i>
+                                                            </span>
+                                                            <h3 class="h4 sm:h3 xl:h2 m-0">شارك الملفات وتواصل مع فريقك في الوقت الفعلي</h3>
+                                                            <p class="fs-6 lg:fs-5 opacity-70 dark:opacity-80">يمكنك بسهولة تعيين المهام ومشاركة الملفات والتواصل مع فريقك في الوقت الفعلي، بغض النظر عن مكان تواجدهم.</p>
+                                                            <a href="#" class="uc-link dark:text-secondary fw-bold hstack gap-narrow sm:mt-1 lg:mt-2">
+                                                                <span>عرض التطبيقات والتكاملات</span>
+                                                                <i class="position-relative icon icon-1 unicon-arrow-right rtl:rotate-180 translate-y-px"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="feature-item panel">
+                                    <div class="row child-cols items-center justify-between g-2 md:g-4">
+                                        <div class="col-12 md:col-6 lg:col-5 md:order-2">
+                                            <div class="panel overflow-hidden rounded-1-5 lg:rounded-2">
+                                                <figure class="featured-image m-0 rounded ratio ratio-1x1 rounded-2 overflow-hidden ">
+                                                    <img class="media-cover image " src="../assets/images/template/home-four-feature-04.png" alt="التعاون أصبح سلساً مع Bookloh">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 md:col-6 lg:col-6 md:order-1">
+                                            <div class="panel">
+                                                <div class="panel vstack justify-center gap-4 h-100 sm:p-3 lg:p-4">
+                                                    <div>
+                                                        <div class="panel vstack gap-2">
+                                                            <span class="cstack w-48px h-48px bg-primary text-secondary rounded-1-5 mb-2 d-none lg:d-inline-flex">
+                                                                <i class="icon-1 unicon-model"></i>
+                                                            </span>
+                                                            <h3 class="h4 sm:h3 xl:h2 m-0">التعاون أصبح سلساً مع Bookloh</h3>
+                                                            <p class="fs-6 lg:fs-5 opacity-70 dark:opacity-80">احصل على وصول فوري للموافقات والتعليقات وتتبع الإصدارات. الميزات الذكية مثل المتغيرات والمنطق الشرطي تساعدك على إزالة الأخطاء.</p>
+                                                            <a href="#" class="uc-link dark:text-secondary fw-bold hstack gap-narrow sm:mt-1 lg:mt-2">
+                                                                <span>لنكتشف ذلك</span>
+                                                                <i class="position-relative icon icon-1 unicon-arrow-right rtl:rotate-180 translate-y-px"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- نهاية القسم -->
+
+        <!-- بداية القسم -->
+        <div id="pre_cta" class="pre-cta section panel overflow-hidden">
+            <div class="section-outer panel pb-4 sm:pb-6 xl:pb-9">
+                <div class="container max-w-xl">
+                    <div class="section-inner panel p-4 md:p-6 lg:p-8 rounded-1-5 lg:rounded-2 bg-secondary dark:bg-gray-800 dark:text-white" data-anime="onview: -200; translateY: [24, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500;">
+                        <div class="vstack items-center gap-2 sm:max-w-600px lg:max-w-650px mx-auto text-center" data-anime="onview: -200; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
+                            <h2 class="h3 lg:h2 m-0">ابدأ تجربتك المجانية لمدة 30 يوماً.</h2>
+                            <p class="fs-6 md:fs-5 xl:fs-4 text-dark dark:text-white text-opacity-70">انضم إلى أكثر من 2,500 شركة ناشئة تنمو بالفعل مع Bookloh.</p>
+                            <div class="vstack sm:hstack justify-center gap-1 lg:gap-2 mt-1 lg:mt-2">
+                                <a href="#uc-contact-modal" class="btn btn-md rounded-default bg-white dark:bg-gray-700 dark:text-white border-gray-900 dark:border-white border-opacity-20 hover:border-opacity-40 shadow-xs" data-uc-toggle>
+                                    <i class="icon-1 unicon-play-outline fw-medium"></i>
+                                    <span>مشاهدة العرض التوضيحي</span>
+                                </a>
+                                <a href="page-pricing.html" class="btn btn-md btn-primary rounded-default text-white shadow-xs">بدء التجربة المجانية</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- نهاية القسم -->
+
+        <!-- بداية القسم -->
+        <div id="pricing_tiers" class="pricing-tiers section panel overflow-hidden">
+            <div class="section-outer panel py-4 md:py-6 xl:py-9 rounded-1-5 lg:rounded-2 bg-primary-600 dark:bg-primary text-white">
+                <div class="container sm:max-w-lg xl:max-w-xl">
+                    <div class="section-inner panel">
+                        <div class="panel vstack gap-4 sm:gap-6 xl:gap-8">
+                            <div class="heading vstack gap-2 panel max-w-550px mx-auto text-center" data-anime="onview: -100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
+                                <span class="fw-bold text-secondary">التسعير</span>
+                                <h2 class="title h3 lg:h2 xl:h1 text-white m-0">تسعير بسيط وقابل للتوسع.</h2>
+                                <p class="fs-6 xl:fs-5 text-white text-opacity-70">لا رسوم إضافية. لا رسوم مخفية.</p>
+                            </div>
+                            <div class="content panel">
+                                <div class="row child-cols-12 sm:child-cols-6 xl:child-cols-4 col-match justify-center g-2 lg:g-4" data-anime="onview: -100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 400});">
+                                    <div>
+                                        <div class="tier panel vstack justify-between rounded-1-5 lg:rounded-2 bg-secondary text-dark text-center">
+                                            <header class="tier-header vstack gap-2 items-center p-3 md:p-4 pb-0 md:pb-0 pt-4 md:pt-6">
+                                                <span class="icon-box cstack w-48px h-48px rounded-circle bg-white text-primary shadow-xs">
+                                                    <i class="icon-1 unicon-sub-volume fw-bold"></i>
+                                                </span>
+                                                <h5 class="h5 lg:h4 m-0 text-primary">الخطة الأساسية</h5>
+                                                <div class="d-flex gap-narrow items-end mt-1">
+                                                    <h3 class="h1 lg:display-6 price m-0 text-dark">$49</h3>
+                                                    <span class="h6 lg:h3 m-0 pb-narrow text-dark">/ شهريا</span>
+                                                </div>
+                                                <p class="desc">يدفع بشكل سنوي</p>
+                                            </header>
+                                            <div class="tier-body p-3 md:p-4">
+                                                <ul class="nav-y gap-2 text-start">
+                                                    <li class="hstack items-start gap-1">
+                                                        <i class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"></i>
+                                                        <span class="d-inline">حتى 10 مستخدمين فرديين</span>
+                                                    </li>
+                                                    <li class="hstack items-start gap-1">
+                                                        <i class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"></i>
+                                                        <span class="d-inline">التقارير والتحليلات الأساسية</span>
+                                                    </li>
+                                                    <li class="hstack items-start gap-1">
+                                                        <i class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"></i>
+                                                        <span class="d-inline">إدارة المشاريع</span>
+                                                    </li>
+                                                    <li class="hstack items-start gap-1">
+                                                        <i class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"></i>
+                                                        <span class="d-inline">20 جيجابايت بيانات فردية لكل مستخدم</span>
+                                                    </li>
+                                                    <li class="hstack items-start gap-1">
+                                                        <i class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"></i>
+                                                        <span class="d-inline">دعم الدردشة والبريد الإلكتروني الأساسي</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <footer class="tier-footer p-3 md:p-4 border-top">
+                                                <a class="btn btn-md btn-primary text-white rounded-default w-100" href="sign-up.html">
+                                                    <span>البدء</span>
+                                                </a>
+                                            </footer>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="tier panel vstack justify-between rounded-1-5 lg:rounded-2 bg-secondary text-dark text-center">
+                                            <span class="fs-7 position-absolute top-0 end-0 fw-bold text-uppercase text-primary my-2 mx-3">شائع</span>
+                                            <header class="tier-header vstack gap-2 items-center p-3 md:p-4 pb-0 md:pb-0 pt-4 md:pt-6">
+                                                <span class="icon-box cstack w-48px h-48px rounded-circle bg-white text-primary shadow-xs">
+                                                    <i class="icon-1 unicon-course fw-bold"></i>
+                                                </span>
+                                                <h5 class="h5 lg:h4 m-0 text-primary">خطة الأعمال</h5>
+                                                <div class="d-flex gap-narrow items-end mt-1">
+                                                    <h3 class="h1 lg:display-6 price m-0 text-dark">$79</h3>
+                                                    <span class="h6 lg:h3 m-0 pb-narrow text-dark">/ شهريا</span>
+                                                </div>
+                                                <p class="desc">يدفع بشكل سنوي</p>
+                                            </header>
+                                            <div class="tier-body p-3 md:p-4">
+                                                <ul class="nav-y gap-2 text-start">
+                                                    <li class="hstack items-start gap-1">
+                                                        <i class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"></i>
+                                                        <span class="d-inline">الوصول إلى جميع ميزات <b>الأساسية</b></span>
+                                                    </li>
+                                                    <li class="hstack items-start gap-1">
+                                                        <i class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"></i>
+                                                        <span class="d-inline">أكثر من 200 تكامل</span>
+                                                    </li>
+                                                    <li class="hstack items-start gap-1">
+                                                        <i class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"></i>
+                                                        <span class="d-inline">مساحات عمل غير محدودة للفريق</span>
+                                                    </li>
+                                                    <li class="hstack items-start gap-1">
+                                                        <i class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"></i>
+                                                        <span class="d-inline">سير عمل الموافقات</span>
+                                                    </li>
+                                                    <li class="hstack items-start gap-1">
+                                                        <i class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"></i>
+                                                        <span class="d-inline">تكامل Salesforce*</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <footer class="tier-footer p-3 md:p-4 border-top">
+                                                <a class="btn btn-md btn-primary text-white rounded-default w-100" href="sign-up.html">
+                                                    <span>بدء تجربة مجانية</span>
+                                                </a>
+                                            </footer>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="tier panel vstack justify-between rounded-1-5 lg:rounded-2 bg-secondary text-dark text-center">
+                                            <header class="tier-header vstack gap-2 items-center p-3 md:p-4 pb-0 md:pb-0 pt-4 md:pt-6">
+                                                <span class="icon-box cstack w-48px h-48px rounded-circle bg-white text-primary shadow-xs">
+                                                    <i class="icon-1 unicon-building fw-bold"></i>
+                                                </span>
+                                                <h5 class="h5 lg:h4 m-0 text-primary">خطة المؤسسة</h5>
+                                                <div class="d-flex gap-narrow items-end mt-1">
+                                                    <h3 class="h1 lg:display-6 price m-0 text-dark">$199</h3>
+                                                    <span class="h6 lg:h3 m-0 pb-narrow text-dark">/ شهريا</span>
+                                                </div>
+                                                <p class="desc">يدفع بشكل سنوي</p>
+                                            </header>
+                                            <div class="tier-body p-3 md:p-4">
+                                                <ul class="nav-y gap-2 text-start">
+                                                    <li class="hstack items-start gap-1">
+                                                        <i class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"></i>
+                                                        <span class="d-inline">الوصول إلى جميع ميزات <b>الأعمال</b></span>
+                                                    </li>
+                                                    <li class="hstack items-start gap-1">
+                                                        <i class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"></i>
+                                                        <span class="d-inline">رفع ملفات غير محدود</span>
+                                                    </li>
+                                                    <li class="hstack items-start gap-1">
+                                                        <i class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"></i>
+                                                        <span class="d-inline">تعاون الفريق في الوقت الفعلي</span>
+                                                    </li>
+                                                    <li class="hstack items-start gap-1">
+                                                        <i class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"></i>
+                                                        <span class="d-inline">دعم SSO وأدوار المستخدم المخصصة</span>
+                                                    </li>
+                                                    <li class="hstack items-start gap-1">
+                                                        <i class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"></i>
+                                                        <span class="d-inline">الإرسال بالجملة والنماذج</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <footer class="tier-footer p-3 md:p-4 border-top">
+                                                <a class="btn btn-md btn-primary text-white rounded-default w-100" href="sign-up.html">
+                                                    <span>حجز عرض توضيحي</span>
+                                                </a>
+                                            </footer>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-center text-white text-opacity-70" data-anime="onview: -100; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 200;">الأسعار لا تشمل أي ضرائب قابلة للتطبيق.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- نهاية القسم -->
+
+        <!-- بداية القسم -->
+        <div id="clients_feedbacks" class="clients-feedbacks section panel overflow-hidden">
+            <div class="section-outer panel pt-4 md:pt-6 xl:pt-9">
+                <div class="container max-w-lg">
+                    <div class="section-inner panel">
+                        <div class="panel vstack justify-center items-center gap-4 sm:gap-6 xl:gap-8" data-anime="onview: -100; targets: > *; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
+                            <div class="row child-cols-12 justify-center col-match g-2 lg:g-3" data-uc-grid>
+                                <div>
+                                    <div class="panel vstack justify-between gap-3 rounded-2 bg-secondary dark:bg-gray-800 overflow-hidden">
+                                        <div class="row child-cols-12 col-match g-0" data-uc-grid>
+                                            <div class="sm:col-6 lg:col-8">
+                                                <div class="panel vstack justify-between gap-3 px-3 py-4 lg:px-5 lg:py-6">
+                                                    <div class="panel vstack items-start gap-2">
+                                                        <div class="panel">
+                                                            <div class="hstack h-48px">
+                                                                <img class="w-128px dark:d-none" src="../assets/images/brands/brand-08.svg" alt="Brand">
+                                                                <img class="w-128px d-none dark:d-inline-flex" src="../assets/images/brands/brand-08-dark.svg" alt="Brand">
+                                                            </div>
+                                                        </div>
+                                                        <p class="fs-5 lg:fs-4 xl:fs-3 fw-medium text-dark dark:text-white">"نحن مقيمون في أوروبا وأحدث لائحة لحماية البيانات تجبرنا على البحث عن مقدمي الخدمات الذين يمتثلون لهذه اللائحة وبينما نتطلع إلى إنشاء موقعنا على الويب، فإن هذا المنشئ رائع للغاية!"</p>
+                                                    </div>
+                                                    <div class="panel mt-2 lg:mt-4">
+                                                        <div class="panel vstack items-start gap-0 lg:gap-1">
+                                                            <h6 class="h6 lg:h5 m-0">كيفن سميث</h6>
+                                                            <span class="fs-7 lg:h6 opacity-70">رئيس قسم التسويق</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="sm:col-6 lg:col-4">
+                                                <div class="panel overflow-hidden h-100" data-uc-lightbox="video-autoplay: true;">
+                                                    <figure class="featured-image m-0 rounded ratio ratio-1x1 h-100 uc-transition-toggle overflow-hidden">
+                                                        <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../assets/images/template/login.webp" alt="image">
+                                                    </figure>
+                                                    <a href="../assets/images/media/Bookloh_vid.webm" class="position-absolute top-50 start-50 translate-middle cstack w-48px lg:w-64px h-48px lg:h-64px rounded-circle shadow-xs text-none bg-white bg-opacity-80 text-primary" data-caption="كيفن سميث' said:" data-attrs="width: 640; height: 480;" style="backdrop-filter: blur(2px);">
+                                                        <i class="icon-1 unicon-play fw-bold"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="uc-link dark:text-secondary fw-bold d-inline-flex items-center gap-narrow">
+                                <span>جميع الآراء</span>
+                                <i class="icon icon-1 unicon-arrow-right rtl:rotate-180"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section end -->
+
+        <!-- Section start -->
+        <div id="faq" class="section panel overflow-hidden">
+            <div class="section-outer panel py-4 md:py-6 xl:py-9">
+                <div class="container max-w-md">
+                    <div class="section-inner panel" data-anime="onview: -100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
+                        <div class="panel vstack gap-4 md:gap-6 lg:gap-8">
+                            <h2 class="h4 sm:h3 lg:h2 m-0 text-center">الأسئلة الشائعة</h2>
+                            <div class="panel">
+                                <ul class="gap-1" data-uc-accordion="targets: > li;">
+                                    <li class="panel p-3 lg:p-4 rounded-1-5 lg:rounded-2 bg-secondary dark:bg-gray-800">
+                                        <a class="uc-accordion-title fs-5 sm:fs-4" href="#">هل أحتاج لمعرفة البرمجة لإستخدام قالب Bookloh؟</a>
+                                        <div class="uc-accordion-content">
+                                            <p>ليس بالأمر بالصعب فقط، يجب أن تكون لديك معرفة كافية بالتعامل مع HTML/CSS بالإضافة إلى JavaScript لتتمكن من استخدام Bookloh.</p>
+                                        </div>
+                                    </li>
+                                    <li class="panel p-3 lg:p-4 rounded-1-5 lg:rounded-2 bg-secondary dark:bg-gray-800">
+                                        <a class="uc-accordion-title fs-5 sm:fs-4" href="#">هل يمكنني استخدامه للمشاريع التجارية؟</a>
+                                        <div class="uc-accordion-content">
+                                            <p>لا تتردد في ذلك. Bookloh موجود لتطوير أي مشروع تجاري. يمكنك أيضًا استخدامه لبناء مواقع ويب رائعة لعملائك (لن نعلق).</p>
+                                        </div>
+                                    </li>
+                                    <li class="panel p-3 lg:p-4 rounded-1-5 lg:rounded-2 bg-secondary dark:bg-gray-800">
+                                        <a class="uc-accordion-title fs-5 sm:fs-4" href="#">هل يمكنني استخدامه لمشاريع متعددة؟</a>
+                                        <div class="uc-accordion-content">
+                                            <p>بالتأكيد! من فضلك استخدمه كما يحلو لك لا نفرض قيودًا على ذلك.</p>
+                                        </div>
+                                    </li>
+                                    <li class="panel p-3 lg:p-4 rounded-1-5 lg:rounded-2 bg-secondary dark:bg-gray-800">
+                                        <a class="uc-accordion-title fs-5 sm:fs-4" href="#">هل يمكنني استخدام هذا لإنشاء منتج وبيعه؟</a>
+                                        <div class="uc-accordion-content">
+                                            <p>لا تفكر أبدًا في القيام بذلك.</p>
+                                        </div>
+                                    </li>
+                                    <li class="panel p-3 lg:p-4 rounded-1-5 lg:rounded-2 bg-secondary dark:bg-gray-800">
+                                        <a class="uc-accordion-title fs-5 sm:fs-4" href="#">ما هي سياسة الاسترداد لديكم؟</a>
+                                        <div class="uc-accordion-content">
+                                            <p>نحن ندرك أهمية رضا العملاء ونسعى جاهدين لتقديم أفضل المنتجات والخدمات. مع ذلك، يُرجى العلم أنه نظرًا لطبيعة منتجاتنا وخدماتنا، لا نقدم استردادًا للمبالغ بعد إتمام عملية الشراء.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a href="#" class="uc-link dark:text-secondary fw-bold d-inline-flex items-center gap-narrow mx-auto">
+                                <span>هل لا يزال لديك سؤال؟</span>
+                                <i class="icon icon-1 unicon-arrow-right rtl:rotate-180"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section end -->
+
+        <!-- Section start -->
+        <div id="about-team" class="about-team section panel overflow-hidden border-top">
+            <div class="section-outer panel py-4 md:py-6 xl:py-9">
+                <div class="container max-w-lg">
+                    <div class="section-inner panel">
+                        <div class="panel vstack justify-center items-center gap-4 sm:gap-6 xl:gap-8" data-anime="onview: -100; targets: > *; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});">
+                            <div class="heading vstack gap-2 panel max-w-700px mx-auto text-center" data-anime="onview: -100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
+                                <span class="fw-bold text-primary dark:text-secondary">نحن نبحث عن موظفين</span>
+                                <h2 class="title h3 lg:h2 xl:h1 m-0">تعرف على فريقنا</h2>
+                                <p class="fs-6 xl:fs-5 text-dark dark:text-white text-opacity-70">فلسفتنا بسيطة - توظيف فريق من الأشخاص المتنوعين والمتحمسين وتعزيز ثقافة تمكنك من القيام بأفضل عملك.</p>
+                            </div>
+                            <div class="content panel">
+                                <div class="row child-cols-6 sm:child-cols-4 lg:child-cols-3 col-match gx-2 gy-6" data-anime="onview: -100; targets: > *; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});">
+                                    <div>
+                                        <div class="panel vstack items-center gap-2 text-center">
+                                            <img class="w-72px lg:w-96px h-72px lg:h-96px rounded-circle border border-secondary-600" src="../assets/images/template/team-01.jpg" alt="مارك زيلر">
+                                            <div class="panel vstack items-center gap-0">
+                                                <h6 class="h6 lg:h5 m-0">مارك زيلر</h6>
+                                                <span class="fs-7 lg:fs-6 opacity-70">الرئيس التنفيذي</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="panel vstack items-center gap-2 text-center">
+                                            <img class="w-72px lg:w-96px h-72px lg:h-96px rounded-circle border border-secondary-600" src="../assets/images/template/team-02.jpg" alt="جون زيلر">
+                                            <div class="panel vstack items-center gap-0">
+                                                <h6 class="h6 lg:h5 m-0">جون زيلر</h6>
+                                                <span class="fs-7 lg:fs-6 opacity-70">المؤسس المشارك</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="panel vstack items-center gap-2 text-center">
+                                            <img class="w-72px lg:w-96px h-72px lg:h-96px rounded-circle border border-secondary-600" src="../assets/images/template/team-03.jpg" alt="كيم يون سون">
+                                            <div class="panel vstack items-center gap-0">
+                                                <h6 class="h6 lg:h5 m-0">كيم يون سون</h6>
+                                                <span class="fs-7 lg:fs-6 opacity-70">مدير الهندسة</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="panel vstack items-center gap-2 text-center">
+                                            <img class="w-72px lg:w-96px h-72px lg:h-96px rounded-circle border border-secondary-600" src="../assets/images/template/team-04.jpg" alt="أندريه جارسيا">
+                                            <div class="panel vstack items-center gap-0">
+                                                <h6 class="h6 lg:h5 m-0">أندريه جارسيا</h6>
+                                                <span class="fs-7 lg:fs-6 opacity-70">مدير المنتج</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="panel vstack items-center gap-2 text-center">
+                                            <img class="w-72px lg:w-96px h-72px lg:h-96px rounded-circle border border-secondary-600" src="../assets/images/template/team-05.jpg" alt="بيتر لاري">
+                                            <div class="panel vstack items-center gap-0">
+                                                <h6 class="h6 lg:h5 m-0">بيتر لاري</h6>
+                                                <span class="fs-7 lg:fs-6 opacity-70">باحث تجربة المستخدم</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="panel vstack items-center gap-2 text-center">
+                                            <img class="w-72px lg:w-96px h-72px lg:h-96px rounded-circle border border-secondary-600" src="../assets/images/template/team-06.jpg" alt="هنري ماتيوس">
+                                            <div class="panel vstack items-center gap-0">
+                                                <h6 class="h6 lg:h5 m-0">هنري ماتيوس</h6>
+                                                <span class="fs-7 lg:fs-6 opacity-70">مساعدة العملاء</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="panel vstack items-center gap-2 text-center">
+                                            <img class="w-72px lg:w-96px h-72px lg:h-96px rounded-circle border border-secondary-600" src="../assets/images/template/team-07.jpg" alt="ناتاليا">
+                                            <div class="panel vstack items-center gap-0">
+                                                <h6 class="h6 lg:h5 m-0">ناتاليا</h6>
+                                                <span class="fs-7 lg:fs-6 opacity-70">قائدة المرح</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="panel vstack items-center gap-2 text-center">
+                                            <img class="w-72px lg:w-96px h-72px lg:h-96px rounded-circle border border-secondary-600" src="../assets/images/template/team-08.jpg" alt="لاري">
+                                            <div class="panel vstack items-center gap-0">
+                                                <h6 class="h6 lg:h5 m-0">لاري</h6>
+                                                <span class="fs-7 lg:fs-6 opacity-70">مدير الفرح</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="page-career.html" class="uc-link dark:text-secondary fw-bold d-inline-flex items-center gap-narrow mx-auto">
+                                <span>إنضم إلينا</span>
+                                <i class="icon icon-1 unicon-arrow-right rtl:rotate-180"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section end -->
+
+        <!-- Section start -->
+        <div id="blog_posts" class="section panel overflow-hidden gap-3 bg-secondary dark:bg-gray-800 rounded-1-5 lg:rounded-2">
+            <div class="section-outer panel py-4 md:py-6 xl:py-9">
+                <div class="container max-w-xl">
+                    <div class="section-inner panel">
+                        <div class="panel vstack items-center gap-4 sm:gap-6 xl:gap-8" data-anime="onview: -100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
+                            <div class="heading vstack sm:hstack gap-4 justify-between md:items-end panel" data-anime="onview: -100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
+                                <div class="vstack gap-2">
+                                    <span class="fw-bold text-primary dark:text-secondary">رؤيتنا وآخر المقالات</span>
+                                    <h2 class="title h3 lg:h2 xl:h1 m-0">أحدث المقالات والتحديثات</h2>
+                                </div>
+                                <div>
+                                    <a href="blog.html" class="btn btn-sm lg:btn-md btn-primary rounded-default">عرض جميع المقالات</a>
+                                </div>
+                            </div>
+                            <div class="content panel">
+                                <div class="row child-cols-12 sm:child-cols-6 lg:child-cols-4 justify-center g-2 xl:g-4">
+                                    <div>
+                                        <article class="post type-post panel overflow-hidden vstack rounded-1-5 bg-white dark:bg-gray-800">
+                                            <figure class="featured-image m-0 rounded ratio ratio-16x9 rounded-0 uc-transition-toggle overflow-hidden">
+                                                <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../assets/images/blog/img-01.jpg" alt="عروض مراجعة تجربة المستخدم">
+                                                <a href="blog-details.html" class="position-cover" data-caption="عروض مراجعة تجربة المستخدم"></a>
+                                            </figure>
+                                            <div class="panel vstack gap-1 p-2 lg:p-3 lg:pt-2">
+                                                <a class="post-category text-primary fw-normal text-none fw-bold fs-7 text-primary dark:text-secondary" href="blog-category.html">تصميم</a>
+                                                <a class="text-none" href="blog-details.html">
+                                                    <h3 class="post-title panel h5 lg:h4 m-0 ltr:pe-4 rtl:ps-4">
+                                                        <span>عروض مراجعة تجربة المستخدم</span>
+                                                        <i class="position-absolute top-0 ltr:end-0 rtl:start-0 mt-narrow icon-1 unicon-arrow-up-right fw-bold rtl:-rotate-90"></i>
+                                                    </h3>
+                                                </a>
+                                                <p class="post-excrept fs-6 opacity-70">انضم إلى آلاف المستخدمين الراضين وارتق بعملك إلى المستوى التالي اليوم واستفد من قوة العمليات التجارية.</p>
+                                                <div class="post-meta hstack gap-1 panel overflow-hidden mt-2">
+                                                    <a href="page-author.html"><img src="../assets/images/avatars/02.png" alt="داود" class="w-40px h-40px rounded-circle"></a>
+                                                    <div class="vstack gap-0">
+                                                        <a href="page-author.html" class="text-none fw-bold text-dark dark:text-white">داود</a>
+                                                        <div class="post-date hstack gap-narrow fs-7 opacity-70">
+                                                            <span>07 ماي، 2025</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div>
+                                        <article class="post type-post panel overflow-hidden vstack rounded-1-5 bg-white dark:bg-gray-800">
+                                            <figure class="featured-image m-0 rounded ratio ratio-16x9 rounded-0 uc-transition-toggle overflow-hidden">
+                                                <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../assets/images/blog/img-02.jpg" alt="الانتقال إلى Linear 101">
+                                                <a href="blog-details.html" class="position-cover" data-caption="الانتقال إلى Linear 101"></a>
+                                            </figure>
+                                            <div class="panel vstack gap-1 p-2 lg:p-3 lg:pt-2">
+                                                <a class="post-category text-primary fw-normal text-none fw-bold fs-7 text-primary dark:text-secondary" href="blog-category.html">أعمال</a>
+                                                <a class="text-none" href="blog-details.html">
+                                                    <h3 class="post-title panel h5 lg:h4 m-0 ltr:pe-4 rtl:ps-4">
+                                                        <span>الانتقال إلى Linear 101</span>
+                                                        <i class="position-absolute top-0 ltr:end-0 rtl:start-0 mt-narrow icon-1 unicon-arrow-up-right fw-bold rtl:-rotate-90"></i>
+                                                    </h3>
+                                                </a>
+                                                <p class="post-excrept fs-6 opacity-70">مساعدتك في تتبع العملاء المحتملين والصفقات، مما يسهل رعاية العملاء المحتملين وتحويلهم إلى عملاء مخلصين.</p>
+                                                <div class="post-meta hstack gap-1 panel overflow-hidden mt-2">
+                                                    <a href="page-author.html"><img src="../assets/images/avatars/01.png" alt="كيفن" class="w-40px h-40px rounded-circle"></a>
+                                                    <div class="vstack gap-0">
+                                                        <a href="page-author.html" class="text-none fw-bold text-dark dark:text-white">كيفن</a>
+                                                        <div class="post-date hstack gap-narrow fs-7 opacity-70">
+                                                            <span>24 أبريل، 2025</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div>
+                                        <article class="post type-post panel overflow-hidden vstack rounded-1-5 bg-white dark:bg-gray-800">
+                                            <figure class="featured-image m-0 rounded ratio ratio-16x9 rounded-0 uc-transition-toggle overflow-hidden">
+                                                <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../assets/images/blog/img-03.jpg" alt="بناء مجموعة API الخاصة بك">
+                                                <a href="blog-details.html" class="position-cover" data-caption="بناء مجموعة API الخاصة بك"></a>
+                                            </figure>
+                                            <div class="panel vstack gap-1 p-2 lg:p-3 lg:pt-2">
+                                                <a class="post-category text-primary fw-normal text-none fw-bold fs-7 text-primary dark:text-secondary" href="blog-category.html">منتج</a>
+                                                <a class="text-none" href="blog-details.html">
+                                                    <h3 class="post-title panel h5 lg:h4 m-0 ltr:pe-4 rtl:ps-4">
+                                                        <span>بناء مجموعة API الخاصة بك</span>
+                                                        <i class="position-absolute top-0 ltr:end-0 rtl:start-0 mt-narrow icon-1 unicon-arrow-up-right fw-bold rtl:-rotate-90"></i>
+                                                    </h3>
+                                                </a>
+                                                <p class="post-excrept fs-6 opacity-70">يمكنك تخصيصه لعرض المعلومات والمقاييس الأكثر صلة بنشاطك التجاري، مما يمنحك الأداء.</p>
+                                                <div class="post-meta hstack gap-1 panel overflow-hidden mt-2">
+                                                    <a href="page-author.html"><img src="../assets/images/avatars/04.png" alt="سارة" class="w-40px h-40px rounded-circle"></a>
+                                                    <div class="vstack gap-0">
+                                                        <a href="page-author.html" class="text-none fw-bold text-dark dark:text-white">سارة</a>
+                                                        <div class="post-date hstack gap-narrow fs-7 opacity-70">
+                                                            <span>27 أبريل، 2025</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section end -->
+
+        <!-- Section start -->
+        <div id="cta" class="cta section panel overflow-hidden">
+            <div class="section-outer panel pt-4 sm:pt-6 xl:pt-9">
+                <div class="container max-w-xl">
+                    <div class="section-inner">
+                        <div class="vstack items-center gap-narrow max-w-400px lg:max-w-700px mx-auto text-center" data-anime="onview:-100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
+                            <h2 class="h4 lg:h3 m-0">لا عقود طويلة الأجل. لا شروط. الأمر بسيط.</h2>
+                            <p class="fs-6 sm:fs-5 text-dark dark:text-white text-opacity-70 mt-1 lg:mt-2">ابدأ تجربتك المجانية لمدة 30 يومًا. يمكنك الإلغاء في أي وقت.</p>
+                            <div class="vstack sm:hstack justify-center gap-1 lg:gap-2 mt-2 lg:mt-4">
+                                <a href="#uc-contact-modal" class="btn btn-md rounded-default bg-white dark:bg-gray-700 dark:text-white border-gray-900 dark:border-white border-opacity-20 hover:border-opacity-40 shadow-xs" data-uc-toggle>
+                                    <i class="icon-1 unicon-play-outline fw-medium"></i>
+                                    <span>عرض تجريبي</span>
+                                </a>
+                                <a href="page-pricing.html" class="btn btn-md btn-primary rounded-default text-white shadow-xs">بدء تجربة مجانية</a>
+                            </div>
+                            <p class="fs-7 text-dark dark:text-white text-opacity-70 mt-2">نسخة تجريبية لمدة 14 يومًا، لا يلزم وجود بطاقة ائتمان.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section end -->
+
+    </div>
+
+    <!-- Wrapper end -->
+
+    <!-- Footer start -->
+    <footer id="uc-footer" class="uc-footer panel py-4 lg:py-6 xl:py-9 overflow-hidden">
+        <div class="container max-w-xl">
+            <div class="footer-inner vstack gap-4 lg:gap-6 xl:gap-8" data-anime="onview: -100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
+                <div class="uc-footer-top panel p-4 lg:p-6 rounded-1-5 lg:rounded-2 bg-secondary dark:bg-gray-800">
+                    <div class="vstack lg:hstack gap-4 justify-between">
+                        <div>
+                            <div class="uc-logo ">
+                                <a class="panel text-none" href="index-4.html" style="width: 140px">
+                                    <img class="dark:d-none" src="../assets/images/common/logo-light.svg" alt="">
+                                    <img class="d-none dark:d-block" src="../assets/images/common/logo-dark.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="hstack items-start gap-1">
+                                <a href="#">
+                                    <img class="text-gray-900 dark:text-white hover:text-opacity-70 transition-all duration-150" src="../assets/images/common/playstore.svg" alt="Google Play Store" data-uc-svg>
+                                </a>
+                                <a href="#">
+                                    <img class="text-gray-900 dark:text-white hover:text-opacity-70 transition-all duration-150" src="../assets/images/common/appstore.svg" alt="Apple Store" data-uc-svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="uc-footer-nav panel">
+                    <div class="row child-cols-6 sm:child-cols col-match g-4">
+                        <div>
+                            <ul class="nav-y gap-1 fw-medium">
+                                <li class="uc-nav-header opacity-60 lg:mb-2">الصفحات الداخلية</li>
+                                <li><a href="page-features.html">الميزات</a></li>
+                                <li><a href="page-pricing.html">التسعير</a></li>
+                                <li><a href="page-about.html">نبذة عنا</a></li>
+                                <li><a href="page-career.html">المسار المهني</a></li>
+                                <li><a href="page-contact.html">صفحة التواصل</a></li>
+                                <li><a href="page-contact-2.html">صفحة التواصل v2</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="nav-y gap-1 fw-medium">
+                                <li class="uc-nav-header opacity-60 lg:mb-2">المدونة</li>
+                                <li><a href="blog.html">عرض كلاسيكي</a></li>
+                                <li><a href="blog-2cols.html">شبكة 2 أعمدة</a></li>
+                                <li><a href="blog-3cols.html">شبكة 3 أعمدة</a></li>
+                                <li><a href="blog-4cols.html">شبكة 4 أعمدة</a></li>
+                                <li><a href="blog-details.html">تفاصيل المقالة</a></li>
+                                <li><a href="blog-details-2.html">>تفاصيل المقالة v2</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="nav-y gap-1 fw-medium">
+                                <li class="uc-nav-header opacity-60 lg:mb-2">المتجر</li>
+                                <li><a href="shop.html">عرض المنتجات</a></li>
+                                <li><a href="shop-sidebar.html">منتجات مع عمود</a></li>
+                                <li><a href="shop-product-detail.html">تفاصيل المنتج</a></li>
+                                <li><a href="shop-cart.html">سلة المشتريات</a></li>
+                                <li><a href="shop-checkout.html">إتمام الدفع</a></li>
+                                <li><a href="shop-order.html">تأكيد الطلب</a></li>
+                            </ul>
+                        </div>
+                        <div class="d-none lg:d-block">
+                            <ul class="nav-y gap-1 fw-medium">
+                                <li class="uc-nav-header opacity-60 lg:mb-2">صفحات أخرى</li>
+                                <li><a href="page-faq.html">الأسئلة الشائعة</a></li>
+                                <li><a href="404.html">صفحة الخطأ</a></li>
+                                <li><a href="coming-soon.html">صفحة قريبا</a></li>
+                                <li><a href="page-terms.html">شروط الخدمة</a></li>
+                                <li><a href="page-privacy.html">سياسة الخصوصية</a></li>
+                                <li><a href="request-demo.html">طلب عرض توضيحي</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul class="nav-y gap-1 fw-medium">
+                                <li class="uc-nav-header opacity-60 lg:mb-2">العضويات</li>
+                                <li><a href="sign-in.html">تسجيل الدخول</a></li>
+                                <li><a href="sign-in-2.html">تسجيل الدخول v2</a></li>
+                                <li><a href="sign-up.html">إنشاء حساب</a></li>
+                                <li><a href="sign-up-2.html">إنشاء حساب v2</a></li>
+                                <li><a href="reset-password.html">استعادة كلمة السر</a></li>
+                                <li><a href="reset-password-2.html">استعادة كلمة السر v2</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="uc-footer-bottom panel vstack gap-4 pt-4 lg:pt-6 border-top dark:text-white">
+                    <div class="vstack sm:hstack justify-center items-center gap-1 lg:gap-2">
+                        <p class="opacity-60">Bookloh © 2025, جميع الحقوق محفوظة.</p>
+                        <ul class="nav-x gap-2 fw-medium">
+                            <li><a href="#">إشعار الخصوصية</a></li>
+                            <li><a href="#">القوانين</a></li>
+                            <li><a href="#">ملفات تعريف الإرتباط</a></li>
+                        </ul>
+                    </div>
+                    <div class="hstack justify-center gap-2 lg:gap-3">
+                        <ul class="nav-x gap-2">
+                            <li><a href="#"><i class="icon icon-2 unicon-logo-linkedin"></i></a></li>
+                            <li><a href="#"><i class="icon icon-2 unicon-logo-facebook"></i></a></li>
+                            <li><a href="#"><i class="icon icon-2 unicon-logo-x-filled"></i></a></li>
+                            <li><a href="#"><i class="icon icon-2 unicon-logo-instagram"></i></a></li>
+                            <li><a href="#"><i class="icon icon-2 unicon-logo-youtube"></i></a></li>
+                        </ul>
+                        <div class="vr"></div>
+                        <div class="d-inline-block">
+                            <a href="#" class="hstack gap-1 text-none fw-medium">
+                                <i class="icon icon-1 unicon-earth-filled"></i>
+                                <span>العربية</span>
+                                <span data-uc-drop-parent-icon=""></span>
+                            </a>
+                            <div class="p-2 bg-white dark:bg-gray-800 shadow-xs rounded w-150px" data-uc-drop="mode: click; offset: 28; pos: top-right; boundary: !.uc-footer-bottom; animation: uc-animation-slide-top-small; duration: 150;">
+                                <ul class="nav-y gap-1 fw-medium items-end">
+                                    <li><a href="#ar">العربية</a></li>
+                                    <li><a href="#en">English</a></li>
+                                    <li><a href="#ch">中文</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer end -->
+
+    <!-- include jquery & bootstrap js -->
+    <script defer src="../assets/js/libs/jquery.min.js"></script>
+    <script defer src="../assets/js/libs/bootstrap.min.js"></script>
+
+    <!-- include scripts -->
+    <script defer src="../assets/js/libs/anime.min.js"></script>
+    <script defer src="../assets/js/libs/swiper-bundle.min.js"></script>
+    <script defer src="../assets/js/libs/scrollmagic.min.js"></script>
+    <script defer src="../assets/js/libs/typed.min.js"></script>
+    <script defer src="../assets/js/libs/tilt.min.js"></script>
+    <script defer src="../assets/js/libs/split-type.min.js"></script>
+    <script defer src="../assets/js/libs/prettify.min.js"></script>
+    <script defer src="../assets/js/libs/gsap.min.js"></script>
+    <script defer src="../assets/js/libs/smooth-scroll.min.js"></script>
+    <script defer src="../assets/js/core/magic-cursor.js"></script>
+    <script defer src="../assets/js/helpers/data-attr-helper.js"></script>
+    <script defer src="../assets/js/helpers/swiper-helper.js"></script>
+    <script defer src="../assets/js/helpers/splitype-helper.js"></script>
+    <script defer src="../assets/js/helpers/anime-helper.js"></script>
+    <script defer src="../assets/js/helpers/typed-helper.js"></script>
+    <script defer src="../assets/js/helpers/tilt-helper.js"></script>
+    <script defer src="../assets/js/core/marquee.js"></script>
+    <script defer src="../assets/js/uikit-components-bs.js"></script>
+
+    <!-- include app script -->
+    <script defer src="../assets/js/form.js"></script>
+    <script defer src="../assets/js/app.js"></script>
+
+    <script>
+        // Schema toggle via URL
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const getSchema = urlParams.get('schema');
+        if ( getSchema === 'dark' ) {
+            setDarkMode(1);
+        } else if ( getSchema === 'light' ) {
+            setDarkMode(0);
+        }
+    </script>
+</body>
+
+</html>

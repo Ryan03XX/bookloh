@@ -1,0 +1,11 @@
+.uc-list {
+    &-divider {
+        >:nth-child(n+2) {
+            border-top: 1px solid var(--border-color);
+        }
+        &.uc-list-large>:nth-child(n+2) {
+            margin-top: 40px;
+            padding-top: 40px;
+        }
+    }
+}

@@ -1,0 +1,124 @@
+// =================================
+// STEP 4: Generate CSS custom properties from theme config
+// =================================
+:root {
+    // Fonts
+    --font-family-primary: #{$font-primary};
+    --font-family-secondary: #{$font-secondary};
+    --font-family-tertiary: #{$font-tertiary};
+    --font-family-serif: #{$font-serif};
+    
+    // Utilities
+    --radius: #{map-get($config, 'radius')};
+    --border-radius: #{map-get($config, 'radius')};
+
+    // Colors and RGB variables
+    @include theme-color-vars-with-shades($template-colors);
+    
+    // Heading size variables
+    @include generate-heading-vars($config);
+}
+
+// Generate theme overrides for gradient utility
+@include generate-gradient-utilities-with-shades($template-colors);
+
+// =================================
+// STEP 5: Generate color utilities
+// =================================
+
+// Default opacity variables
+:root {
+    --bs-bg-opacity: 1;
+    --bs-text-opacity: 1;
+    --bs-border-opacity: 1;
+}
+
+// Generate color utilities
+@include generate-color-utilities($template-colors);
+
+// Typography overrides
+body {
+    font-family: var(--font-primary);
+    font-weight: #{map-get(map-get(map-get($config, 'font'), 'text'), 'weight')};
+}
+
+// Base heading styles (font-family and weight)
+.h1, .h2, .h3, .h4, .h5, .h6,
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-primary);
+    font-weight: #{map-get(map-get(map-get($config, 'font'), 'heading'), 'weight')};
+}
+
+// Generate heading overrides from config (size, line-height, letter-spacing)
+@include generate-heading-overrides($config);
+
+// Generate responsive heading utility classes
+// Use Bootstrap-compatible breakpoints for responsive utilities
+$responsive-breakpoints: (
+    'xs': 0,
+    'sm': 459px,
+    'md': 768px,
+    'lg': 992px,
+    'xl': 1200px,
+    'xxl': 1400px
+);
+@include generate-responsive-heading-overrides($config, $responsive-breakpoints);
+
+// =================================
+// Button Variants Overrides
+// =================================
+.btn {
+    border-radius: var(--border-radius);
+    font-family: #{map-get(map-get(map-get($config, 'button'), 'font'), 'typeface')};
+    font-weight: #{map-get(map-get(map-get($config, 'button'), 'font'), 'weight')};
+}
+
+// Generate all button variants including shades for solid buttons
+@include generate-all-button-variants($template-colors, ('solid', 'outline', 'alt', 'ghost'));
+
+// =================================
+// Text Variants Overrides
+// =================================
+.text-gradient {
+    @include gradient();
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.text-muted {
+    --bs-text-opacity: 0.5;
+    @include dark-prop('color', rgba(var(--bs-dark-rgb), var(--bs-text-opacity)) !important, rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important);
+}
+
+// Generate opacity utilities
+$opacity: (
+    0: 0,
+    5: .05,
+    10: .1,
+    15: .15,
+    20: .2,
+    25: .25,
+    30: .3,
+    35: .35,
+    40: .4,
+    45: .45,
+    50: .5,
+    55: .55,
+    60: .6,
+    65: .65,
+    70: .7,
+    75: .75,
+    80: .8,
+    85: .85,
+    90: .9,
+    95: .95,
+    100: 1
+);
+
+// Generate all opacity utilities
+@include generate-opacity-utilities();
+
+// Generate specific opacity utilities
+@include generate-opacity-utilities($opacity, 'bg-', true);  // For background opacity
+@include generate-opacity-utilities($opacity, 'text-', true);  // For text opacity
+@include generate-opacity-utilities($opacity, 'border-', true);  // For border opacity

@@ -1,0 +1,26 @@
+.uc-notification-message {
+    font-size: 1rem;
+    font-weight: 500;
+    @include dark-prop('background-color', var(--color-gray-50), var(--color-gray-800));
+    @include dark-prop('color', var(--color-gray-900), white);
+    border-radius: var(--radius);
+    &.uc-notification-message{
+        &-success {
+            color: var(--color-success);
+        }
+        &-danger {
+            color: var(--color-danger);
+        }
+        &-warning {
+            color: var(--color-warning);
+        }
+    }
+    .uc-notification-close {
+        @include dark-prop('color', var(--color-gray-900), white);
+        svg,
+        svg > * {
+            fill: currentColor !important;
+            stroke: currentColor !important;
+        }
+    }
+}

@@ -1,0 +1,74 @@
+// Template config
+// Please do not edit cause you may lose your changes after next update!
+
+// Base font size by default is : 16px
+$base-font: 1rem;
+$font-primary:                  'Sunsive', 'IBM Plex Sans Arabic', sans-serif;
+$font-secondary:                'Sunsive', 'IBM Plex Sans Arabic', serif;
+$font-tertiary:                 'Sunsive', 'IBM Plex Sans Arabic', serif;
+
+// Base letter spacing multiplier
+$text-font-spacing: 0;
+$heading-font-spacing: -4;
+
+// Base spacer size by default is : 16px
+$base-spacer: 1rem;
+
+// Enable/Disable Prefix
+$enable-prefix-only:          false;
+
+// Enable/Disable Dark mode
+$enable-dark-mode:            true;
+
+// Enable/Disable Importance
+$enable-important-utilities:  true;
+
+// Layout
+$enable-grid-classes:         true;
+$enable-cssgrid:              true;
+$grid-row-columns:            12;
+$container-padding-x:         32px;
+
+// Design system config map
+$config: (
+    'font': (
+        'text': (
+            'weight': 400,
+        ),
+        'heading': (
+            'weight': 700,
+        ),
+    ),
+    "radius": 4px,
+    'border-size': 1px,
+    'border-color': rgba(131, 131, 131, 0.25),
+    'color': (
+        'primary': #1e9579, // #ce0f2e | #ff5d2c
+        'secondary': #f5eee9,
+        'tertiary': #ddff9a,
+        'gray': #45454c,
+    ),
+    "sizes": (
+        "heading": (
+            "display-4":  ("size": $base-font * 4.5, "lh": 1, "lp": calc($base-font * 4.5 * $heading-font-spacing / 100)),
+            "display-5":  ("size": $base-font * 4, "lh": 1, "lp": calc($base-font * 4 * $heading-font-spacing / 100)),
+            "display-6":  ("size": $base-font * 3.5, "lh": 1, "lp": calc($base-font * 3.5 * $heading-font-spacing / 100)),
+            "h1":       ("size": $base-font * 3, "lh":  1.1, "lp": calc($base-font * 3 * $heading-font-spacing / 100)),
+            "h2":       ("size": $base-font * 2.5, "lh":  1.1, "lp": calc($base-font * 2 * $heading-font-spacing / 100)),
+            "h3":       ("size": $base-font * 2, "lh":  1.1, "lp": calc($base-font * 1.75 * $heading-font-spacing / 100)),
+            "h4":       ("size": $base-font * 1.5, "lh":  1.2, "lp": calc($base-font * 1.5 * $heading-font-spacing / 100)),
+            "h5":       ("size": $base-font * 1.25, "lh":  1.2, "lp": calc($base-font * 1.25 * $heading-font-spacing / 100)),
+            "h6":       ("size": $base-font, "lh":  1.2, "lp": calc($base-font * $heading-font-spacing / 1000) ),
+        ),
+        'spacing': (
+            '4xl': $base-spacer * 6,
+        ),
+    ),
+    "button": (
+        "font": (
+            "typeface": var(--font-family-tertiary),
+            "weight": 500,
+        ),
+        "radius": 0,
+    ),
+);

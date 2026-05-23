@@ -1,0 +1,38 @@
+.table {
+    --bs-table-bg: inherit !important;
+    --bs-table-color: inherit !important;
+    
+    > :not(caption) > * > * {
+        padding: $table-cell-padding-y $table-cell-padding-x;
+    }
+    &.table-xs > :not(caption) > * > * {
+        padding: $table-cell-padding-y-xs $table-cell-padding-x-xs;
+    }
+    &.table-sm > :not(caption) > * > * {
+        padding: $table-cell-padding-y-sm $table-cell-padding-x-sm;
+    }
+    &.table-md > :not(caption) > * > * {
+        padding: $table-cell-padding-y-md $table-cell-padding-x-md;
+    }
+    &.table-lg > :not(caption) > * > * {
+        padding: $table-cell-padding-y-lg $table-cell-padding-x-lg;
+    }
+
+    &.table-justify > :not(caption) > * {
+      > *:first-child {
+          padding-left: 0;
+      }
+      > *:last-child {
+          padding-right: 0;
+      }
+    }
+
+    > :not(caption) > *:last-child > * {
+        border-width: 0;
+    }
+}
+
+.uc-table-striped tbody tr:nth-of-type(odd),
+.uc-table-striped>tr:nth-of-type(odd) {
+    background: rgb(150 150 150 / 10%);
+}

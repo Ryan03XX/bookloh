@@ -1,0 +1,247 @@
+// Colors
+$theme-colors: map-merge($theme-colors, (
+  "light": $light,
+  "dark": $dark,
+));
+
+@each $key, $colors in map-deep-get($config, 'color') {
+  @each $shade, $color in $colors {
+    @if $shade == '' {
+      $theme-colors: map-merge($theme-colors, ( $key: $color ));
+    } @else {
+      $key-shade: $key + '-' + $shade;
+      $theme-colors: map-merge($theme-colors, ( $key-shade: $color ));
+    }
+  }
+}
+
+// Breakpoints
+$grid-breakpoints: (
+    xs: 0,
+    sm: 459px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+// Typography
+$font-family-base:            map-deep-get($config, 'font', 'text', 'family');
+$font-family-code:            map-deep-get($config, 'font', 'code', 'family');
+$font-size-base:              map-deep-get($config, 'root-size');
+
+$headings-font-family:        map-deep-get($config, 'font', 'heading', 'family');
+$headings-font-weight:        map-deep-get($config, 'font', 'heading', 'weight');
+$headings-line-height:        map-deep-get($config, 'font', 'heading', 'lh');
+
+$display-font-family:         map-deep-get($config, 'font', 'display', 'family');
+$display-font-weight:         map-deep-get($config, 'font', 'display', 'weight');
+$display-line-height:         map-deep-get($config, 'font', 'display', 'lh');
+
+$h1-font-size:                map-deep-get($config, 'sizes', 'heading', 'h1', 'size');
+$h2-font-size:                map-deep-get($config, 'sizes', 'heading', 'h2', 'size');
+$h3-font-size:                map-deep-get($config, 'sizes', 'heading', 'h3', 'size');
+$h4-font-size:                map-deep-get($config, 'sizes', 'heading', 'h4', 'size');
+$h5-font-size:                map-deep-get($config, 'sizes', 'heading', 'h5', 'size');
+$h6-font-size:                map-deep-get($config, 'sizes', 'heading', 'h6', 'size');
+
+$font-weight-utralight:       map-deep-get($config, 'font', 'weight', 'ultralight');
+$font-weight-light:           map-deep-get($config, 'font', 'weight', 'light');
+$font-weight-lighter:         map-deep-get($config, 'font', 'weight', 'lighter');
+$font-weight-normal:          map-deep-get($config, 'font', 'weight', 'normal');
+$font-weight-medium:          map-deep-get($config, 'font', 'weight', 'medium');
+$font-weight-semibold:        map-deep-get($config, 'font', 'weight', 'semibold');
+$font-weight-bold:            map-deep-get($config, 'font', 'weight', 'bold');
+$font-weight-bolder:          map-deep-get($config, 'font', 'weight', 'bolder');
+$font-weight-ultrabold:       map-deep-get($config, 'font', 'weight', 'ultrabold');
+
+$font-sizes: (
+  1: map-deep-get($config, 'sizes', 'text', '2xl', 'size'),
+  2: map-deep-get($config, 'sizes', 'text', 'xl', 'size'),
+  3: map-deep-get($config, 'sizes', 'text', 'lg', 'size'),
+  4: map-deep-get($config, 'sizes', 'text', 'md', 'size'),
+  5: map-deep-get($config, 'sizes', 'text', 'sm', 'size'),
+  6: map-deep-get($config, 'sizes', 'text', 'xs', 'size'),
+  7: map-deep-get($config, 'sizes', 'text', '2xs', 'size'),
+  8: map-deep-get($config, 'sizes', 'text', '3xs', 'size'),
+);
+
+$paragraph-margin:            1rem;
+$headings-margin-bottom:      1rem;
+
+// Gutters
+$gutters: (
+  0: 0,
+  'narrow': map-deep-get($config, 'sizes', 'grid', 'narrow'),
+  1: map-deep-get($config, 'sizes', 'grid', '2xs'),
+  2: map-deep-get($config, 'sizes', 'grid', 'xs'),
+  3: map-deep-get($config, 'sizes', 'grid', 'sm'),
+  4: map-deep-get($config, 'sizes', 'grid', 'md'),
+  5: map-deep-get($config, 'sizes', 'grid', 'lg'),
+  6: map-deep-get($config, 'sizes', 'grid', 'xl'),
+  7: map-deep-get($config, 'sizes', 'grid', '2xl'),
+  8: map-deep-get($config, 'sizes', 'grid', '3xl'),
+  9: map-deep-get($config, 'sizes', 'grid', '4xl'),
+  10: map-deep-get($config, 'sizes', 'grid', '5xl'),
+);
+
+// Spacing
+$enable-negative-margins: true;
+
+$spacers: (
+  0: 0,
+  'narrow': map-deep-get($config, 'sizes', 'spacing', 'narrow'),
+  1: map-deep-get($config, 'sizes', 'spacing', '2xs'),
+  2: map-deep-get($config, 'sizes', 'spacing', 'xs'),
+  3: map-deep-get($config, 'sizes', 'spacing', 'sm'),
+  4: map-deep-get($config, 'sizes', 'spacing', 'md'),
+  5: map-deep-get($config, 'sizes', 'spacing', 'lg'),
+  6: map-deep-get($config, 'sizes', 'spacing', 'xl'),
+  7: map-deep-get($config, 'sizes', 'spacing', '2xl'),
+  8: map-deep-get($config, 'sizes', 'spacing', '3xl'),
+  9: map-deep-get($config, 'sizes', 'spacing', '4xl'),
+  10: map-deep-get($config, 'sizes', 'spacing', '5xl'),
+);
+
+// Position
+$position-values: (
+  auto: auto,
+  0: 0,
+  "px": 1px,
+  1: 0.125rem,
+  2: 0.25rem,
+  3: 0.5rem,
+  4: 1rem,
+  5: 1.5rem,
+  6: 2rem,
+  7: 2.5rem,
+  8: 3rem,
+  9: 4rem,
+  10: 5rem,
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%
+);
+
+// Icons
+$icon: (
+  narrow: map-deep-get($config, 'sizes', 'icon', '2xs'),
+  1: map-deep-get($config, 'sizes', 'icon', 'xs'),
+  2: map-deep-get($config, 'sizes', 'icon', 'sm'),
+  3: map-deep-get($config, 'sizes', 'icon', 'md'),
+  4: map-deep-get($config, 'sizes', 'icon', 'lg'),
+  5: map-deep-get($config, 'sizes', 'icon', 'xl'),
+  6: map-deep-get($config, 'sizes', 'icon', '2xl'),
+);
+
+// Shadows
+$shadow:                      map-deep-get($config, 'sizes', 'shadow');
+$box-shadow:                  map-deep-get($shadow, '');
+$box-shadow-xs:               map-deep-get($shadow, 'xs');
+$box-shadow-sm:               map-deep-get($shadow, 'sm');
+$box-shadow-lg:               map-deep-get($shadow, 'lg');
+$box-shadow-xl:               map-deep-get($shadow, 'xl');
+$box-shadow-2xl:              map-deep-get($shadow, '2xl');
+
+// Border
+$border-color:                map-deep-get($config, 'border-color');
+$border-size:                 map-deep-get($config, 'border-size');
+$border-width:                map-deep-get($config, 'border-size');
+
+// Blur
+$blur:                        map-deep-get($config, 'sizes', 'blur');
+
+// Minimum contrast ratio
+$min-contrast-ratio:          map-deep-get($config, 'contrast-ratio');
+
+// Table
+$table-cell-padding-y:        map-deep-get($config, 'sizes', 'table', '');
+$table-cell-padding-x:        map-deep-get($config, 'sizes', 'table', '');
+$table-cell-padding-y-xs:     map-deep-get($config, 'sizes', 'table', 'xs');
+$table-cell-padding-x-xs:     map-deep-get($config, 'sizes', 'table', 'xs');
+$table-cell-padding-y-sm:     map-deep-get($config, 'sizes', 'table', 'sm');
+$table-cell-padding-x-sm:     map-deep-get($config, 'sizes', 'table', 'sm');
+$table-cell-padding-y-md:     map-deep-get($config, 'sizes', 'table', 'md');
+$table-cell-padding-x-md:     map-deep-get($config, 'sizes', 'table', 'md');
+$table-cell-padding-y-lg:     map-deep-get($config, 'sizes', 'table', 'lg');
+$table-cell-padding-x-lg:     map-deep-get($config, 'sizes', 'table', 'lg');
+
+// Form Input
+$input-padding-y:             1rem;
+$input-padding-x:             map-deep-get($config, 'sizes', 'form', 'md', 'px');
+$input-font-size:             map-deep-get($config, 'sizes', 'form', 'md', 'text');
+$input-font-family:           map-deep-get($config, 'form', 'font', 'typeface');
+$input-line-height:           map-deep-get($config, 'form', 'font', 'line-height');
+
+$input-padding-y-sm:          map-deep-get($config, 'sizes', 'form', 'sm', 'py');
+$input-padding-x-sm:          map-deep-get($config, 'sizes', 'form', 'sm', 'px');
+$input-font-size-sm:          map-deep-get($config, 'sizes', 'form', 'sm', 'text');
+
+$input-padding-y-lg:          map-deep-get($config, 'sizes', 'form', 'lg', 'py');
+$input-padding-x-lg:          map-deep-get($config, 'sizes', 'form', 'lg', 'px');
+$input-font-size-lg:          map-deep-get($config, 'sizes', 'form', 'lg', 'text');
+
+$input-border-width:          map-deep-get($config, 'border-size');
+$input-border-radius:         map-deep-get($config, 'form', 'border', 'radius');
+$input-border-radius-sm:      map-deep-get($config, 'form', 'border', 'radius');
+$input-border-radius-lg:      map-deep-get($config, 'form', 'border', 'radius');
+
+$input-focus-width:           .25rem !default;
+$input-focus-color-opacity:   .25 !default;
+$input-focus-color:           rgba($component-active-bg, $input-focus-color-opacity) !default;
+$input-focus-blur:            0 !default;
+$input-focus-box-shadow:      0 0 $input-focus-blur $input-focus-width $input-focus-color !default;
+
+// Form Select
+$form-select-padding-y:       map-deep-get($config, 'sizes', 'form', 'md', 'py');
+$form-select-padding-x:       map-deep-get($config, 'sizes', 'form', 'md', 'px');
+$form-select-font-size:       map-deep-get($config, 'sizes', 'form', 'md', 'text');
+$form-select-font-family:     map-deep-get($config, 'form', 'font', 'typeface');
+$form-select-font-weight:     map-deep-get($config, 'form', 'font', 'weight');
+$form-select-line-height:     map-deep-get($config, 'form', 'font', 'line-height');
+
+
+$form-select-padding-y-sm:    map-deep-get($config, 'sizes', 'form', 'sm', 'py');
+$form-select-padding-x-sm:    map-deep-get($config, 'sizes', 'form', 'sm', 'px');
+$form-select-font-size-sm:    map-deep-get($config, 'sizes', 'form', 'sm', 'text');
+
+$form-select-padding-y-lg:    map-deep-get($config, 'sizes', 'form', 'lg', 'py');
+$form-select-padding-x-lg:    map-deep-get($config, 'sizes', 'form', 'lg', 'px');
+$form-select-font-size-lg:    map-deep-get($config, 'sizes', 'form', 'lg', 'text');
+
+$form-select-padding-y-xl:    map-deep-get($config, 'sizes', 'form', 'xl', 'py');
+$form-select-padding-x-xl:    map-deep-get($config, 'sizes', 'form', 'xl', 'px');
+$form-select-font-size-xl:    map-deep-get($config, 'sizes', 'form', 'xl', 'text');
+
+// $form-select-border-width:    map-deep-get($config, 'form', 'border', 'width');
+
+$form-range-thumb-bg:         var(--color-primary);
+$form-range-thumb-active-bg:  var(--color-primary-400);
+
+// Buttons
+$btn-padding-y:               0px;
+$btn-padding-x:               map-deep-get($config, 'sizes', 'button', 'md', 'px');
+$btn-font-size:               map-deep-get($config, 'sizes', 'button', 'md', 'text');
+$btn-font-family:             map-deep-get($config, 'button', 'font', 'typeface');
+$btn-font-weight:             map-deep-get($config, 'button', 'font', 'weight');
+$btn-line-height:             map-deep-get($config, 'sizes', 'button', 'md', 'height');
+$btn-border-width:            map-deep-get($config, 'border-size');
+$btn-border-radius:           map-deep-get($config, 'button', 'border', 'radius');
+$btn-border-radius-md:        map-deep-get($config, 'button', 'border', 'radius');
+$btn-border-radius-sm:        map-deep-get($config, 'button', 'border', 'radius');
+$btn-border-radius-xs:        map-deep-get($config, 'button', 'border', 'radius');
+
+.nav-pills {
+    --bs-nav-pills-link-active-bg: #553cdf !important;
+}
+
+.navbar-brand .fw-bolder {
+    font-weight: 900 !important;
+    letter-spacing: -0.075rem;
+}
+
+:root {
+    --bs-link-color: rgb(81, 81, 81) !important;
+    --bs-link-hover-color: black !important;
+}

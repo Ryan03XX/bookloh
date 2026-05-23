@@ -1,0 +1,276 @@
+@use 'sass:map';
+
+// https://github.dev/twbs/bootstrap/blob/f6476508c2d63d1f5d970ae941d04d5338c790f9/scss/_dropdown.scss#L88-L110
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $prefix-class: breakpoint-prefix($breakpoint, $grid-breakpoints);
+
+    @if ($prefix-class != "") {
+      .#{$prefix-class}dropdown-menu-start {
+        --bs-position: start;
+
+        &[data-bs-popper] {
+          right: auto;
+          left: 0;
+        }
+      }
+
+      .#{$prefix-class}dropdown-menu-end {
+        --bs-position: end;
+
+        &[data-bs-popper] {
+          right: 0;
+          left: auto;
+        }
+      }
+    }
+  }
+}
+
+// https://github.dev/twbs/bootstrap/blob/f6476508c2d63d1f5d970ae941d04d5338c790f9/scss/_list-group.scss#L121-L156
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $prefix-class: breakpoint-prefix($breakpoint, $grid-breakpoints);
+
+    @if ($prefix-class != "") {
+      .#{$prefix-class}list-group-horizontal {
+        flex-direction: row;
+
+        > .list-group-item {
+          &:first-child:not(:last-child) {
+            @include border-bottom-start-radius(var(--#{$prefix}list-group-border-radius));
+            @include border-top-end-radius(0);
+          }
+
+          &:last-child:not(:first-child) {
+            @include border-top-end-radius(var(--#{$prefix}list-group-border-radius));
+            @include border-bottom-start-radius(0);
+          }
+
+          &.active {
+            margin-top: 0;
+          }
+
+          + .list-group-item {
+            border-top-width: var(--#{$prefix}list-group-border-width);
+            border-left-width: 0;
+
+            &.active {
+              margin-left: calc(-1 * var(--#{$prefix}list-group-border-width)); // stylelint-disable-line function-disallowed-list
+              border-left-width: var(--#{$prefix}list-group-border-width);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// https://github.dev/twbs/bootstrap/blob/f6476508c2d63d1f5d970ae941d04d5338c790f9/scss/_navbar.scss#L188-L256
+// Generate series of `.navbar-expand-*` responsive classes for configuring
+// where your navbar collapses.
+@each $breakpoint in map-keys($grid-breakpoints) {
+  $next: breakpoint-next($breakpoint, $grid-breakpoints);
+  $prefix-class: breakpoint-prefix($next, $grid-breakpoints);
+  @if ($prefix-class != "") {
+    // stylelint-disable-next-line scss/selector-no-union-class-name
+    .#{$prefix-class}navbar-expand {
+      @include media-breakpoint-up($next) {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+
+        .navbar-nav {
+          flex-direction: row;
+
+          .dropdown-menu {
+            position: absolute;
+          }
+
+          .nav-link {
+            padding-right: var(--#{$prefix}navbar-nav-link-padding-x);
+            padding-left: var(--#{$prefix}navbar-nav-link-padding-x);
+          }
+        }
+
+        .navbar-nav-scroll {
+          overflow: visible;
+        }
+
+        .navbar-collapse {
+          display: flex !important; // stylelint-disable-line declaration-no-important
+          flex-basis: auto;
+        }
+
+        .navbar-toggler {
+          display: none;
+        }
+
+        .offcanvas {
+          // stylelint-disable declaration-no-important
+          position: static;
+          z-index: auto;
+          flex-grow: 1;
+          width: auto !important;
+          height: auto !important;
+          visibility: visible !important;
+          background-color: transparent !important;
+          border: 0 !important;
+          transform: none !important;
+          @include box-shadow(none);
+          @include transition(none);
+          // stylelint-enable declaration-no-important
+
+          .offcanvas-header {
+            display: none;
+          }
+
+          .offcanvas-body {
+            display: flex;
+            flex-grow: 0;
+            padding: 0;
+            overflow-y: visible;
+          }
+        }
+      }
+    }
+  }
+}
+
+// https://github.dev/twbs/bootstrap/blob/f6476508c2d63d1f5d970ae941d04d5338c790f9/scss/_offcanvas.scss#L20-L117
+@each $breakpoint in map-keys($grid-breakpoints) {
+  $next: breakpoint-next($breakpoint, $grid-breakpoints);
+  $prefix-class: breakpoint-prefix($next, $grid-breakpoints);
+
+  @if $prefix-class != "" {
+    .#{$prefix-class}offcanvas {
+      @extend %offcanvas-css-vars;
+    }
+  }
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  $next: breakpoint-next($breakpoint, $grid-breakpoints);
+  $prefix-class: breakpoint-prefix($next, $grid-breakpoints);
+
+  @if ($prefix-class != "") {
+    .#{$prefix-class}offcanvas {
+      @include media-breakpoint-down($next) {
+        position: fixed;
+        bottom: 0;
+        z-index: var(--#{$prefix}offcanvas-zindex);
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        color: var(--#{$prefix}offcanvas-color);
+        visibility: hidden;
+        background-color: var(--#{$prefix}offcanvas-bg);
+        background-clip: padding-box;
+        outline: 0;
+        @include box-shadow(var(--#{$prefix}offcanvas-box-shadow));
+        @include transition(var(--#{$prefix}offcanvas-transition));
+
+        &.offcanvas-start {
+          top: 0;
+          left: 0;
+          width: var(--#{$prefix}offcanvas-width);
+          border-right: var(--#{$prefix}offcanvas-border-width) solid var(--#{$prefix}offcanvas-border-color);
+          transform: translateX(-100%);
+        }
+
+        &.offcanvas-end {
+          top: 0;
+          right: 0;
+          width: var(--#{$prefix}offcanvas-width);
+          border-left: var(--#{$prefix}offcanvas-border-width) solid var(--#{$prefix}offcanvas-border-color);
+          transform: translateX(100%);
+        }
+
+        &.offcanvas-top {
+          top: 0;
+          right: 0;
+          left: 0;
+          height: var(--#{$prefix}offcanvas-height);
+          max-height: 100%;
+          border-bottom: var(--#{$prefix}offcanvas-border-width) solid var(--#{$prefix}offcanvas-border-color);
+          transform: translateY(-100%);
+        }
+
+        &.offcanvas-bottom {
+          right: 0;
+          left: 0;
+          height: var(--#{$prefix}offcanvas-height);
+          max-height: 100%;
+          border-top: var(--#{$prefix}offcanvas-border-width) solid var(--#{$prefix}offcanvas-border-color);
+          transform: translateY(100%);
+        }
+
+        &.showing,
+        &.show:not(.hiding) {
+          transform: none;
+        }
+
+        &.showing,
+        &.hiding,
+        &.show {
+          visibility: visible;
+        }
+      }
+
+      @if not ($prefix-class == "") {
+        @include media-breakpoint-up($next) {
+          --#{$prefix}offcanvas-height: auto;
+          --#{$prefix}offcanvas-border-width: 0;
+          background-color: transparent !important; // stylelint-disable-line declaration-no-important
+
+          .offcanvas-header {
+            display: none;
+          }
+
+          .offcanvas-body {
+            display: flex;
+            flex-grow: 0;
+            padding: 0;
+            overflow-y: visible;
+            // Reset `background-color` in case `.bg-*` classes are used in offcanvas
+            background-color: transparent !important; // stylelint-disable-line declaration-no-important
+          }
+        }
+      }
+    }
+  }
+}
+
+// https://github.dev/twbs/bootstrap/blob/f6476508c2d63d1f5d970ae941d04d5338c790f9/scss/_tables.scss#L155-L164
+@each $breakpoint in map-keys($grid-breakpoints) {
+  $prefix-class: breakpoint-prefix($breakpoint, $grid-breakpoints);
+
+  @if ($prefix-class != "") {
+    @include media-breakpoint-down($breakpoint) {
+      .#{$prefix-class}table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+    }
+  }
+}
+
+// https://github.dev/twbs/bootstrap/blob/f6476508c2d63d1f5d970ae941d04d5338c790f9/scss/helpers/_position.scss#L20-L36
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $prefix-class: breakpoint-prefix($breakpoint, $grid-breakpoints);
+
+    @if ($prefix-class != "") {
+      .#{$prefix-class}sticky-top {
+        position: sticky;
+        top: 0;
+        z-index: $zindex-sticky;
+      }
+
+      .#{$prefix-class}sticky-bottom {
+        position: sticky;
+        bottom: 0;
+        z-index: $zindex-sticky;
+      }
+    }
+  }
+}
