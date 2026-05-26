@@ -15,6 +15,11 @@ import os from 'os';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+/** fast-glob requires forward slashes (path.join on Windows breaks matches). */
+function globPath(...segments) {
+    return path.join(...segments).replace(/\\/g, '/');
+}
+
 // Configuration
 const SRC_FOLDER = 'src';
 let isMinified = false;
@@ -116,8 +121,8 @@ try {
 // Helper function to create blacklist patterns for glob
 const createAssetBlacklistPattern = (type) => {
     const config = buildConfig.assetsBlacklist[type] || { files: [], folders: [] };
-    const filePatterns = config.files.map(file => '!' + path.join(SRC_FOLDER, 'assets', type, '**', file).replace(/\\/g, '/'));
-    const folderPatterns = config.folders.map(folder => '!' + path.join(SRC_FOLDER, 'assets', type, folder).replace(/\\/g, '/'));
+    const filePatterns = config.files.map(file => '!' + globPath(SRC_FOLDER, 'assets', type, '**', file));
+    const folderPatterns = config.folders.map(folder => '!' + globPath(SRC_FOLDER, 'assets', type, folder));
     return [...filePatterns, ...folderPatterns];
 };
 
@@ -159,7 +164,7 @@ async function copyAssets() {
     // Copy fonts
     await copyFiles(
         [
-            path.join(SRC_FOLDER, 'assets/fonts/**/*'),
+            globPath(SRC_FOLDER, 'assets/fonts/**/*'),
             ...createAssetBlacklistPattern('fonts')
         ],
         'dist/assets/fonts',
@@ -220,7 +225,7 @@ async function copyAssets() {
     try {
         await fs.access(iconsDir);
         await copyFiles(
-            [path.join(SRC_FOLDER, 'assets/icons/**/*')],
+            [globPath(SRC_FOLDER, 'assets/icons/**/*')],
             'dist/assets/icons',
             { base: iconsDir }
         );
@@ -233,7 +238,7 @@ async function copyAssets() {
     try {
         await fs.access(flatIconsDir);
         await copyFiles(
-            [path.join(SRC_FOLDER, 'icons/**/*')],
+            [globPath(SRC_FOLDER, 'icons/**/*')],
             'dist/assets/icons',
             { base: flatIconsDir }
         );
@@ -248,7 +253,7 @@ async function copyAssets() {
         console.log('📸 Copying images...');
         await copyFiles(
             [
-                path.join(SRC_FOLDER, 'assets/images/**/*'),
+                globPath(SRC_FOLDER, 'assets/images/**/*'),
                 ...createAssetBlacklistPattern('images')
             ],
             'dist/assets/images',
@@ -269,7 +274,7 @@ async function processCSS() {
     };
 
     const cssFiles = await glob([
-        path.join(SRC_FOLDER, 'assets/css/**/*.css'),
+        globPath(SRC_FOLDER, 'assets/css/**/*.css'),
         ...createAssetBlacklistPattern('css')
     ]);
     for (const file of cssFiles) {
@@ -295,7 +300,7 @@ async function processSass() {
         ]
     };
 
-    const files = await glob(path.join(SRC_FOLDER, 'assets/scss/theme/*.scss'));
+    const files = await glob(globPath(SRC_FOLDER, 'assets/scss/theme/*.scss'));
     
     for (const file of files) {
         const result = sass.compile(file, sassOptions);
@@ -339,13 +344,15 @@ async function processSass() {
 // Process HTML Files
 async function processHTML() {
     console.log('📄 Processing HTML files...');
-    const files = await glob(path.join(SRC_FOLDER, '**/*.html'));
+    const files = await glob(globPath(SRC_FOLDER, '**/*.html'));
     
     for (const file of files) {
         let content = await fs.readFile(file, 'utf8');
+        // Map theme SCSS names to compiled CSS; do not turn main.min.css → main.min.min.css
         content = content.replace(
-            /assets\/s?css\/theme\/(.*?)\.s?css/g,
-            `assets/css/theme/$1${usePurgeCSS ? '.purge' : '.min'}.css`
+            /\.\.\/assets\/css\/theme\/([\w-]+)(?:\.min)?\.css/g,
+            (_match, baseName) =>
+                `../assets/css/theme/${baseName}${usePurgeCSS ? '.purge' : '.min'}.css`
         );
         
         const destPath = path.join('dist', path.relative(SRC_FOLDER, file));
@@ -359,7 +366,7 @@ async function processJS() {
     console.log(`⚙️  Processing JavaScript files (${isMinified ? 'minified' : 'beautified'})...`);
     
     const jsFiles = await glob([
-        path.join(SRC_FOLDER, 'assets/js/**/*.js'),
+        globPath(SRC_FOLDER, 'assets/js/**/*.js'),
         ...createAssetBlacklistPattern('js')
     ]);
     for (const file of jsFiles) {
@@ -406,7 +413,7 @@ async function processJS() {
 
     // Copy CSS files that are in the JS directory structure
     const jsCssFiles = await glob([
-        path.join(SRC_FOLDER, 'assets/js/**/*.css'),
+        globPath(SRC_FOLDER, 'assets/js/**/*.css'),
         ...createAssetBlacklistPattern('js').map(pattern => pattern.replace('/**/*.js', '/**/*.css'))
     ]);
     for (const file of jsCssFiles) {
@@ -449,12 +456,11 @@ async function build() {
         console.time('⌛ Build completed in');
 
         await clean();
-        await Promise.all([
-            copyAssets(),
-            processCSS(),
-            processJS(),
-            processHTML().then(processSass),
-        ]);
+        await processCSS();
+        await processJS();
+        await processHTML();
+        await processSass();
+        await copyAssets();
 
         if (usePurgeCSS) {
             await cleanLargeCSS();
