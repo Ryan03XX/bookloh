@@ -38,12 +38,24 @@ const isDarkMode = () => html.classList.contains('uc-dark'),
           html.classList.toggle('uc-dark', enableDark);
           window.dispatchEvent(new CustomEvent('darkmodechange'));
       }, 
-      getInitialDarkMode = () => USE_LOCAL_STORAGE && localStorage.getItem('darkMode') !== null ? localStorage.getItem('darkMode') === '1' : USE_SYSTEM_PREFERENCES ? matchMedia('(prefers-color-scheme: dark)').matches : DEFAULT_DARK_MODE;
+      isLightOnlyPage = () => {
+          const p = location.pathname.replace(/\\/g, '/').toLowerCase();
+          return /^\/(about|features|pricing|contact)(\/|$)/.test(p)
+              || /\/page-(about|features|pricing|contact)\.html$/.test(p);
+      },
+      getInitialDarkMode = () => {
+          if (isLightOnlyPage()) return false;
+          return USE_LOCAL_STORAGE && localStorage.getItem('darkMode') !== null
+              ? localStorage.getItem('darkMode') === '1'
+              : USE_SYSTEM_PREFERENCES
+                  ? matchMedia('(prefers-color-scheme: dark)').matches
+                  : DEFAULT_DARK_MODE;
+      };
 setDarkMode(getInitialDarkMode());
 
 // darkmode feature by url parameters
 const dark = new URLSearchParams(location.search).get('dark');
-if (dark) html.classList.toggle('uc-dark', dark === '1');
+if (dark && !isLightOnlyPage()) html.classList.toggle('uc-dark', dark === '1');
 
 // page preloader feature
 if (ENABLE_PAGE_PRELOADER) {

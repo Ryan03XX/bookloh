@@ -7,6 +7,27 @@ const path = require('path');
 const distDir = path.join(__dirname, 'dist');
 const port = Number(process.env.PORT) || 8080;
 
+const cleanRoutes = new Map([
+  ['/home', 'main/index-8.html'],
+  ['/about', 'main/page-about.html'],
+  ['/features', 'main/page-features.html'],
+  ['/pricing', 'main/page-pricing.html'],
+  ['/contact', 'main/page-contact.html'],
+]);
+
+const legacyRoutes = new Map([
+  ['/index-8.html', '/home'],
+  ['/main/index-8.html', '/home'],
+  ['/page-about.html', '/about'],
+  ['/main/page-about.html', '/about'],
+  ['/page-features.html', '/features'],
+  ['/main/page-features.html', '/features'],
+  ['/page-pricing.html', '/pricing'],
+  ['/main/page-pricing.html', '/pricing'],
+  ['/page-contact.html', '/contact'],
+  ['/main/page-contact.html', '/contact'],
+]);
+
 const mimeTypes = {
   '.html': 'text/html; charset=utf-8',
   '.htm': 'text/html; charset=utf-8',
@@ -170,29 +191,23 @@ const server = http.createServer((req, res) => {
   }
 
   const url = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
-  // Redirect / → /main/index-8.html so relative links (page-about.html, etc.) resolve under /main/.
+  // Redirect / to the public home URL.
   if (url.pathname === '/' || url.pathname === '') {
     res.statusCode = 302;
-    res.setHeader('Location', `/main/index-8.html${url.search}`);
+    res.setHeader('Location', `/home${url.search}`);
     return res.end();
   }
 
-  // Wrong bookmarks like /page-about.html → /main/page-about.html
-  const flatPage = /^\/(page-[\w-]+\.html)$/i.exec(url.pathname);
-  if (flatPage) {
-    const base = flatPage[1];
-    const underMain = path.join(distDir, 'main', base);
-    try {
-      fs.accessSync(underMain, fs.constants.F_OK);
-      res.statusCode = 302;
-      res.setHeader('Location', `/main/${base}${url.search}`);
-      return res.end();
-    } catch (_) {
-      /* fall through */
-    }
+  const normalizedPath = url.pathname.toLowerCase();
+  const legacyTarget = legacyRoutes.get(normalizedPath);
+  if (legacyTarget) {
+    res.statusCode = 302;
+    res.setHeader('Location', `${legacyTarget}${url.search}`);
+    return res.end();
   }
 
-  const filePath = resolveUnderDist(url.pathname);
+  const cleanRouteFile = cleanRoutes.get(normalizedPath);
+  const filePath = cleanRouteFile ? path.join(distDir, cleanRouteFile) : resolveUnderDist(url.pathname);
   if (!filePath) {
     return send(res, 403, 'Forbidden', 'text/plain; charset=utf-8');
   }

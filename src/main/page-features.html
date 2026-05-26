@@ -73,8 +73,8 @@
     <link rel="stylesheet" href="../assets/css/magic-cursor.min.css">
 
     <!-- include main style -->
-    <link rel="stylesheet" href="../assets/scss/theme/main.scss">
-    <link rel="stylesheet" href="../assets/scss/theme/theme-four.scss">
+    <link rel="stylesheet" href="../assets/css/theme/main.min.css">
+    <link rel="stylesheet" href="../assets/css/theme/theme-four.min.css">
     <link rel="stylesheet" href="../assets/css/theme-violet-coral.css">
 
     <!-- include scripts -->
@@ -88,10 +88,15 @@
         <div class="uc-notification-message vstack lg:hstack items-end gap-2 lg:gap-4 lg:p-3 bg-white text-dark border rounded-1-5 min-w-1/2">
             <a id="uc-close-gdpr-notification" class="uc-notification-close text-dark rtl:start-0 rtl:end-auto rtl:ms-2" data-uc-close></a>
             <div class="vstack">
-                <h2 class="h5 ft-primary fw-bold -ls-1 m-0 text-dark">GDPR Compliance</h2>
-                <p class="fs-6 mt-1">We use cookies to ensure you get the best experience on our website. By continuing to use our site, you accept our use of cookies, <a href="page-privacy.html" class="uc-link text-underline">privacy policy</a> and <a href="page-terms.html" class="uc-link text-underline">terms of service</a>.</p>
+                <h2 class="h5 ft-primary fw-bold -ls-1 m-0 text-dark">Privacy Notice</h2>
+                <p class="fs-6 mt-1">We use cookies to ensure the best experience on our website. By continuing, you agree
+                    to our <a href="page-privacy.html" class="uc-link text-underline">Privacy Policy</a> and <a
+                        href="page-terms.html" class="uc-link text-underline">Terms of Service</a>.</p>
             </div>
-            <button class="btn btn-sm btn-primary px-2" id="uc-accept-gdpr">Accept</button>
+            <div class="hstack gap-2 flex-shrink-0">
+                <button class="btn btn-sm btn-outline-secondary px-2" id="uc-decline-gdpr" type="button">Decline</button>
+                <button class="btn btn-sm btn-primary px-2" id="uc-accept-gdpr" type="button">Accept</button>
+            </div>
         </div>
     </div>
 
@@ -278,117 +283,46 @@
 
     <!--  Menu panel -->
     <div id="uc-menu-panel" data-uc-offcanvas="overlay: true;">
-        <div class="uc-offcanvas-bar bg-white text-dark dark:bg-gray-900 dark:text-white">
+        <div class="uc-offcanvas-bar bg-white text-dark vc-mobile-menu">
 
-            <header class="uc-offcanvas-header hstack justify-between items-center pb-2 bg-white dark:bg-gray-900">
+            <header class="uc-offcanvas-header hstack justify-between items-center pb-2 bg-white">
                 <div class="uc-logo">
-                    <a href="index-8.html" class="panel text-none" style="width: 120px;">
-                        <img src="../assets/icons/logo-white.png" alt="Bookloh">
+                    <a href="/home" class="panel text-none" style="width: 120px;">
+                        <img src="../assets/icons/logo.png" alt="Bookloh">
                     </a>
                 </div>
-                <button class="uc-offcanvas-close rtl:end-auto rtl:start-0 m-1 mt-2 icon-3 btn border-0 dark:text-white dark:text-opacity-50 hover:text-primary hover:rotate-90 duration-150 transition-all" type="button">
+                <button
+                    class="uc-offcanvas-close rtl:end-auto rtl:start-0 m-1 mt-2 icon-3 btn border-0 text-dark hover:text-primary hover:rotate-90 duration-150 transition-all"
+                    type="button">
                     <i class="unicon-close"></i>
                 </button>
             </header>
 
             <div class="panel">
-                <form id="search-panel" class="form-icon-group vstack gap-1 mb-2" data-uc-sticky="">
-                    <input type="email" class="form-control form-control-sm fs-7 rounded-default" placeholder="Search..">
-                    <span class="form-icon text-gray">
-                        <i class="unicon-search icon-1"></i>
-                    </span>
-                </form>
-                <ul class="nav-y gap-narrow fw-medium fs-6" data-uc-nav>
-                    <li><a href="page-features.html">Features</a></li>
-                    <li><a href="page-pricing.html">Pricing</a></li>
-                    <li><a href="page-about.html">About</a></li>
-                    <li><a href="page-career.html">Career</a></li>
-                    <li><a href="page-contact.html">Contact</a></li>
-                    <li class="uc-parent"><a href="#">Inner Pages</a>
-                        <ul class="uc-nav-sub" data-uc-nav="">
-                            <li><a href="page-services.html">Services</a></li>
-                            <li><a href="page-services-detail.html">Services Detail</a></li>
-                            <li><a href="page-integrations.html">Integrations</a></li>
-                            <li><a href="page-team.html">Team</a></li>
-                            <li><a href="components.html">Components</a></li>
-                            <li class="uc-parent"><a href="blog.html">Blog</a>
-                                <ul class="uc-nav-sub">
-                                    <li><a href="blog.html">Full Width</a></li>
-                                    <li><a href="blog-classic.html">Classic</a></li>
-                                    <li><a href="blog-sidebar.html">Sidebar</a></li>
-                                    <li><a href="blog-2cols.html">Grid 2 Cols</a></li>
-                                    <li><a href="blog-3cols.html">Grid 3 Cols</a></li>
-                                    <li><a href="blog-4cols.html">Grid 4 Cols</a></li>
-                                </ul>
-                            </li>
-                            <li class="uc-parent"><a href="blog-details.html">Blog - detail</a>
-                                <ul class="uc-nav-sub">
-                                    <li><a href="blog-details.html">Blog detail</a></li>
-                                    <li><a href="blog-details-2.html">Blog detail - v2</a></li>
-                                    <li><a href="blog-details-3.html">Blog detail - v3</a></li>
-                                </ul>
-                            </li>
-                            <li class="uc-parent"><a href="#">Useful pages</a>
-                                <ul class="uc-nav-sub">
-                                    <li><a href="sign-up.html">Sign up</a></li>
-                                    <li><a href="https://app.bookloh.com/login">Sign in</a></li>
-                                    <li><a href="reset-password.html">Reset password</a></li>
-                                    <li><a href="404.html">404 page</a></li>
-                                    <li><a href="coming-soon.html">Coming soon</a></li>
-                                </ul>
-                            </li>
-                            <li class="uc-parent"><a href="#">Other pages</a>
-                                <ul class="uc-nav-sub">
-                                    <li><a href="page-faq.html">FAQ</a></li>
-                                    <li><a href="page-terms.html">Terms of use</a></li>
-                                    <li><a href="page-privacy.html">Privacy policy</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="uc-parent"><a href="shop.html">Shop</a>
-                        <ul class="uc-nav-sub" data-uc-nav="">
-                            <li class="uc-parent"><a href="shop.html">Shop layouts</a>
-                                <ul class="uc-nav-sub">
-                                    <li><a href="shop.html">Shop 4 cols</a></li>
-                                    <li><a href="shop-3.html">Shop 3 cols</a></li>
-                                    <li><a href="shop-2.html">Shop 2 cols</a></li>
-                                    <li><a href="shop-sidebar.html">Shop with sidebar</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="shop-category.html">Archive category</a></li>
-                            <li><a href="shop-product-detail.html">Product detail</a></li>
-                            <li><a href="shop-product-detail-2.html">Product detail - v2</a></li>
-                            <li><a href="shop-cart.html">Cart</a></li>
-                            <li><a href="shop-cart-2.html">Cart - v2</a></li>
-                            <li><a href="shop-checkout.html">Checkout</a></li>
-                            <li><a href="shop-checkout-2.html">Checkout - v2</a></li>
-                            <li><a href="shop-order.html">Order confirmation</a></li>
-                        </ul>
-                    </li>
-                    <li class="hr opacity-10 my-1"></li>
-                    <li><a href="sign-up.html">Create an account</a></li>
-                    <li><a href="https://app.bookloh.com/login">Log in</a></li>
-                    <li><a href="https://themeforest.net/item/lexend-software-saas-startup-html5-template/51596504">Buy Template</a></li>
+                <ul class="nav-y gap-narrow fw-medium fs-6 vc-mobile-nav" data-uc-nav>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/features">Features</a></li>
+                    <li><a href="/pricing">Pricing</a></li>
+                    <li><a href="/contact">Contact</a></li>
                 </ul>
-                <ul class="social-icons nav-x mt-4">
-                    <li>
-                        <a href="#"><i class="unicon-logo-medium icon-2"></i></a>
-                        <a href="#"><i class="unicon-logo-x-filled icon-2"></i></a>
-                        <a href="#"><i class="unicon-logo-instagram icon-2"></i></a>
-                        <a href="#"><i class="unicon-logo-pinterest icon-2"></i></a>
-                    </li>
-                </ul>
-                <div class="py-2 hstack gap-2 mt-4 bg-white dark:bg-gray-900" data-uc-sticky="position: bottom">
-                    <div class="vstack gap-1">
-                        <span class="fs-7 opacity-60">Select theme:</span>
-                        <div class="darkmode-trigger" data-darkmode-switch="">
-                            <label class="switch">
-                                <input type="checkbox">
-                                <span class="slider fs-5"></span>
-                            </label>
-                        </div>
-                    </div>
+                <div class="vstack gap-2 mt-4 pt-3 border-top vc-mobile-menu-auth">
+                    <a href="https://app.bookloh.com/login" class="nav-login-mobile text-none">Sign in</a>
+                    <a href="sign-up.html" class="btn btn-sm nav-signup-mobile text-none">Try bookloh.</a>
+                    <ul class="nav-x gap-2 mt-2 mb-0 p-0 vc-mobile-menu-social" role="list">
+                        <li>
+                            <a class="vc-mobile-menu-social-link text-none" href="#" target="_blank"
+                                rel="noopener noreferrer" aria-label="Facebook">
+                                <i class="icon icon-2 unicon-logo-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="vc-mobile-menu-social-link text-none" href="#" target="_blank"
+                                rel="noopener noreferrer" aria-label="Instagram">
+                                <i class="icon icon-2 unicon-logo-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
@@ -562,13 +496,6 @@
 
     <!--  Bottom Actions Sticky -->
     <div class="backtotop-wrap position-fixed ltr:end-0 ltr:start-auto rtl:start-0 rtl:end-auto top-auto bottom-0 z-99 m-2 vstack">
-        <div class="darkmode-trigger cstack w-40px h-40px rounded-circle text-none bg-gray-100 dark:bg-gray-700 dark:text-white" data-darkmode-toggle="">
-            <label class="switch">
-                <span class="sr-only">Dark mode toggle</span>
-                <input type="checkbox">
-                <span class="slider fs-5"></span>
-            </label>
-        </div>
         <a class="btn btn-sm bg-primary text-white w-40px h-40px rounded-circle" href="to_top" data-uc-backtotop>
             <i class="icon-2 unicon-chevron-up"></i>
         </a>
@@ -582,18 +509,18 @@
                     <div class="uc-navbar min-h-56px lg:min-h-56px text-gray-900 dark:text-white px-3 lg:px-5 bg-white dark:bg-tertiary-600 bg-opacity-90 rounded-3 shadow-xs" data-uc-navbar=" animation: uc-animation-slide-top-small; duration: 150;">
                         <div class="uc-navbar-left">
                             <div class="uc-logo ltr:ms-1 rtl:me-1">
-                                <a class="panel text-none" href="index-8.html" style="width: 115px;">
+                                <a class="panel text-none" href="/home" style="width: 115px;">
                                     <img src="../assets/icons/logo-white.png" alt="Bookloh">
                                 </a>
                             </div>
                         </div>
                         <div class="uc-navbar-center flex-1 d-flex justify-end items-center">
                             <ul class="uc-navbar-nav fs-6 gap-2 lg:gap-2 d-none lg:d-flex flex-wrap justify-end items-center">
-                                <li><a href="index-8.html">Home</a></li>
-                                <li><a href="page-about.html">About</a></li>
-                                <li><a href="page-features.html">Features</a></li>
-                                <li><a href="page-pricing.html">Pricing</a></li>
-                                <li><a href="page-contact.html">Contact</a></li>
+                                <li><a href="/home">Home</a></li>
+                                <li><a href="/about">About</a></li>
+                                <li><a href="/features">Features</a></li>
+                                <li><a href="/pricing">Pricing</a></li>
+                                <li><a href="/contact">Contact</a></li>
                             </ul>
                         </div>
                         <div class="uc-navbar-right">
@@ -645,9 +572,9 @@
                                         <div class="panel vstack justify-center gap-4 h-100">
                                             <div>
                                                 <div class="panel vstack gap-2">
-                                                    <span class="fs-6 fw-bold m-0 text-primary">01.</span>
-                                                    <h3 class="h4 lg:h2 m-0">Share tools quickly and confidently in minutes</h3>
-                                                    <p class="fs-6 lg:fs-5 opacity-70 dark:opacity-80">This powerfull tool eliminates the need to leave Salesforce to get things done as I can create a custom proposal with dynamic pricing tables. You can also customize your own dynamic versions.</p>
+                                                    <span class="fs-6 fw-bold m-0 text-primary">01 — Speed &amp; Flexibility</span>
+                                                    <h3 class="h4 lg:h2 m-0">Create bookings and quotes in minutes—not hours</h3>
+                                                    <p class="fs-6 lg:fs-5 opacity-70 dark:opacity-80">Build bookings with your services, add-ons, products, and dynamic pricing in one place—without jumping between WhatsApp and spreadsheets. Use quotation templates and contract terms so every job starts with accurate, consistent details from day one.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -665,13 +592,9 @@
                                         <div class="panel vstack justify-center gap-4 h-100">
                                             <div>
                                                 <div class="panel vstack gap-2">
-                                                    <span class="fs-6 fw-bold m-0 text-primary">02.</span>
-                                                    <h3 class="h4 lg:h2 m-0">Connect every part of your entire business</h3>
-                                                    <p class="fs-6 lg:fs-5 opacity-70 dark:opacity-80">Keep data consistent, with native CRM integrations that streamline your entire Tool workflow.</p>
-                                                    <a href="#" class="uc-link fw-bold hstack gap-narrow">
-                                                        <span>See all integrations</span>
-                                                        <i class="position-relative icon icon-1 unicon-arrow-right rtl:rotate-180 translate-y-px"></i>
-                                                    </a>
+                                                    <span class="fs-6 fw-bold m-0 text-primary">02 — Connected Workflows</span>
+                                                    <h3 class="h4 lg:h2 m-0">Connect every part of your booking business</h3>
+                                                    <p class="fs-6 lg:fs-5 opacity-70 dark:opacity-80">Keep customers, calendars, teams, and billing aligned in one platform. Sync bookings with Google or Apple Calendar, send WhatsApp reminders, accept subscription payments via Stripe, and optionally list your business on the Bookloh marketplace—so nothing slips through the cracks.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -689,9 +612,9 @@
                                         <div class="panel vstack justify-center gap-4 h-100">
                                             <div>
                                                 <div class="panel vstack gap-2">
-                                                    <span class="fs-6 fw-bold m-0 text-primary">03.</span>
-                                                    <h3 class="h4 lg:h2 m-0">Maintain compliance and control your apps</h3>
-                                                    <p class="fs-6 lg:fs-5 opacity-70 dark:opacity-80">Improve security and trust with built-in legally binding e-Signatures. Create pre-approved templates, content blocks and lock all legal information to prevent costly mistakes.</p>
+                                                    <span class="fs-6 fw-bold m-0 text-primary">03 — Control &amp; Compliance-Ready Records</span>
+                                                    <h3 class="h4 lg:h2 m-0">Stay in control with permissions and audit-ready records</h3>
+                                                    <p class="fs-6 lg:fs-5 opacity-70 dark:opacity-80">Each company operates in its own secure workspace with role-based access control. Decide who can view or edit bookings, customers, and invoices. Use approved invoice and quotation templates, track booking statuses from draft to paid, and keep payment and e-invoice records organized for operations and compliance.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -709,9 +632,9 @@
                                         <div class="panel vstack justify-center gap-4 h-100">
                                             <div>
                                                 <div class="panel vstack gap-2">
-                                                    <span class="fs-6 fw-bold m-0 text-primary">04.</span>
-                                                    <h3 class="h4 lg:h2 m-0">Review quickly and confidently</h3>
-                                                    <p class="fs-6 lg:fs-5 opacity-70 dark:opacity-80">Get real-time access to approvals, comments and version tracking. Smart features like variables and conditional logic help you eliminate Tool errors.</p>
+                                                    <span class="fs-6 fw-bold m-0 text-primary">04 — Team Clarity &amp; Transparency</span>
+                                                    <h3 class="h4 lg:h2 m-0">Review schedules and decisions with confidence</h3>
+                                                    <p class="fs-6 lg:fs-5 opacity-70 dark:opacity-80">Assign staff and salespersons to every booking, monitor updates in real time through calendars and booking lists, and use dashboards and reports to track revenue and commissions. Everyone works from the same source of truth—reducing misunderstandings and speeding up follow-ups.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -728,11 +651,11 @@
 
         <!-- Section start -->
         <div id="key_features" class="key-features section panel overflow-hidden bg-gray-900 uc-dark">
-            <div class="section-outer panel py-6 xl:py-9 dark:bg-gray-800">
+            <div class="section-outer panel py-6 xl:py-9 pb-10 xl:pb-12 dark:bg-gray-800">
                 <div class="container sm:max-w-md lg:max-w-lg">
                     <div class="section-inner panel">
                         <div class="panel vstack gap-4 sm:gap-6 xl:gap-8">
-                            <h2 class="title h3 lg:h2 xl:h1 m-0 text-center max-w-550px mx-auto" data-anime="onview: -100; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 250;">Review quickly and confidently using <span class="hero-title-gradient">Bookloh.</span></h2>
+                            <h2 class="title h3 lg:h2 xl:h1 m-0 text-center max-w-550px mx-auto" data-anime="onview: -100; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 250;">Everything you need to run bookings on <span class="hero-title-gradient">Bookloh</span></h2>
                             <div class="panel">
                                 <div class="row child-cols-12 sm:child-cols-6 lg:child-cols-4 col-match g-3" data-anime="onview: -100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});">
                                     <div>
@@ -743,12 +666,12 @@
                                                     <i class="icon icon-4 unicon-document"></i>
                                                     <div class="panel">
                                                         <div class="vstack gap-1">
-                                                            <h3 class="title h5 m-0 text-inherit">Proposals</h3>
-                                                            <p class="desc fs-6 opacity-70">Share Tools in minutes with pre-built, customizable templates.</p>
+                                                            <h3 class="title h5 m-0 text-inherit">Bookings</h3>
+                                                            <p class="desc fs-6 opacity-70">Create and update bookings in minutes with your services, add-ons, team assignments, and status tracking—from draft to confirmed.</p>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <a href="page-features.html" class="position-cover"></a>
+                                                <a href="/features" class="position-cover"></a>
                                             </div>
                                         </div>
                                     </div>
@@ -760,12 +683,12 @@
                                                     <i class="icon icon-4 unicon-model"></i>
                                                     <div class="panel">
                                                         <div class="vstack gap-1">
-                                                            <h3 class="title h5 m-0 text-inherit">Quotes</h3>
-                                                            <p class="desc fs-6 opacity-70">Find out in real time when they’re opened, viewed and signed.</p>
+                                                            <h3 class="title h5 m-0 text-inherit">Quotations</h3>
+                                                            <p class="desc fs-6 opacity-70">Build professional quotations using your templates and line items, then attach terms so clients can review clear pricing before they commit.</p>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <a href="page-features.html" class="position-cover"></a>
+                                                <a href="/features" class="position-cover"></a>
                                             </div>
                                         </div>
                                     </div>
@@ -778,11 +701,11 @@
                                                     <div class="panel">
                                                         <div class="vstack gap-1">
                                                             <h3 class="title h5 m-0 text-inherit">Contracts</h3>
-                                                            <p class="desc fs-6 opacity-70">Use our native CRM integrations to pull customer data into your Tools fast.</p>
+                                                            <p class="desc fs-6 opacity-70">Store and reuse contract and terms templates under Contract Management to keep legal wording consistent across bookings and quotations.</p>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <a href="page-features.html" class="position-cover"></a>
+                                                <a href="/features" class="position-cover"></a>
                                             </div>
                                         </div>
                                     </div>
@@ -794,12 +717,12 @@
                                                     <i class="icon icon-4 unicon-touch-interaction"></i>
                                                     <div class="panel">
                                                         <div class="vstack gap-1">
-                                                            <h3 class="title h5 m-0 text-inherit">eSignatures</h3>
-                                                            <p class="desc fs-6 opacity-70">Keep your data secure with our legally-binding e-Signature software.</p>
+                                                            <h3 class="title h5 m-0 text-inherit">E-Invoices</h3>
+                                                            <p class="desc fs-6 opacity-70">Issue e-invoices, track paid and outstanding balances, and link payments to bookings—keeping your finance and compliance records organized.</p>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <a href="page-features.html" class="position-cover"></a>
+                                                <a href="/features" class="position-cover"></a>
                                             </div>
                                         </div>
                                     </div>
@@ -811,12 +734,12 @@
                                                     <i class="icon icon-4 unicon-sub-volume"></i>
                                                     <div class="panel">
                                                         <div class="vstack gap-1">
-                                                            <h3 class="title h5 m-0 text-inherit">Forms</h3>
-                                                            <p class="desc fs-6 opacity-70">Share via direct link or by embedding them on your website, no coding necessary.</p>
+                                                            <h3 class="title h5 m-0 text-inherit">Calendar</h3>
+                                                            <p class="desc fs-6 opacity-70">View your schedule in a calendar layout, filter by team or booking status, and subscribe to a private feed on Google or Apple Calendar—no coding required.</p>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <a href="page-features.html" class="position-cover"></a>
+                                                <a href="/features" class="position-cover"></a>
                                             </div>
                                         </div>
                                     </div>
@@ -829,219 +752,16 @@
                                                     <div class="panel">
                                                         <div class="vstack gap-1">
                                                             <h3 class="title h5 m-0 text-inherit">Payments</h3>
-                                                            <p class="desc fs-6 opacity-70">Collect them instantly right from your contract, while increasing your close rate by 36%.</p>
+                                                            <p class="desc fs-6 opacity-70">Record customer payments against invoices, use payment receipt templates, and manage your Bookloh subscription securely through Stripe.</p>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <a href="page-features.html" class="position-cover"></a>
+                                                <a href="/features" class="position-cover"></a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Section end -->
-
-        <!-- Section start -->
-        <div id="faq" class="section panel overflow-hidden">
-            <div class="section-outer panel py-6 xl:py-9">
-                <div class="container max-w-lg">
-                    <div class="section-inner panel" data-anime="onview: -100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});">
-                        <div class="panel">
-                            <h2 class="h4 sm:h3 lg:h2 m-0 text-center">Frequenlty asked questions:</h2>
-                            <div class="panel mt-4 sm:mt-6 lg:mt-8 p-3 sm:p-4 xl:p-6 lg:max-w-750px xl:w-auto m-auto rounded-2 bg-secondary dark:bg-gray-800">
-                                <ul class="gap-4" data-uc-accordion="targets: > li;">
-                                    <li class="uc-open">
-                                        <a class="uc-accordion-title fs-5 sm:fs-4" href="#">Do I need to know about how to code?</a>
-                                        <div class="uc-accordion-content">
-                                            <p>Yes, you need to have a fair amount of knowledge in dealing with HTML/CSS as well as JavaScript in order to be able to use Bookloh.</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a class="uc-accordion-title fs-5 sm:fs-4" href="#">Can I use it for commercial projects?</a>
-                                        <div class="uc-accordion-content">
-                                            <p>Feel free to do so. Bookloh does exist to evolve every commercial project. You can also use it to build stunning websites for your own clients (we won’t breathe a word).</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a class="uc-accordion-title fs-5 sm:fs-4" href="#">Can I use it for multiple projects?</a>
-                                        <div class="uc-accordion-content">
-                                            <p>Definitely! Please use it however you like; we don’t limit it.</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a class="uc-accordion-title fs-5 sm:fs-4" href="#">Can I use this to create and sell a product?</a>
-                                        <div class="uc-accordion-content">
-                                            <p>Do not ever consider doing it.</p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a class="uc-accordion-title fs-5 sm:fs-4" href="#">What is your refund policy?</a>
-                                        <div class="uc-accordion-content">
-                                            <p>We understand the importance of customer satisfaction and we strive to provide the best products and services. However, please note that due to the nature of our products and services, we do not offer refunds after a purchase has been made.</p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Section end -->
-
-        <!-- Section start -->
-        <div id="clients_feedback" class="clients-feedback section panel overflow-hidden">
-            <div class="section-outer panel">
-                <div class="container max-w-lg">
-                    <div class="section-inner panel swiper-parent" data-anime="onview: -100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});">
-                        <h2 class="h4 sm:h3 lg:h2 m-0 text-center">What clients said:</h2>
-                        <div class="panel p-3 lg:p-6 bg-secondary dark:bg-gray-800 rounded-3 mt-4 sm:mt-6">
-                            <div class="row child-cols-12 sm:child-cols-6 col-match g-3 lg:g-8">
-                                <div>
-                                    <div class="panel rounded-2 overflow-hidden">
-                                        <div class="swiper connect-image" data-uc-swiper="items: 1; autoplay: 5000; dots: .swiper-pagination; effect: fade; fade: true; allowTouchMove: false; disableOnInteraction: true;">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide">
-                                                    <figure class="featured-image m-0 rounded ratio ratio-3x4  uc-transition-toggle overflow-hidden">
-                                                        <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../assets/images/portrait/01.jpg" alt="Mark Zellers">
-                                                    </figure>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <figure class="featured-image m-0 rounded ratio ratio-3x4  uc-transition-toggle overflow-hidden">
-                                                        <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../assets/images/portrait/02.jpg" alt="André Garcia">
-                                                    </figure>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <figure class="featured-image m-0 rounded ratio ratio-3x4  uc-transition-toggle overflow-hidden">
-                                                        <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../assets/images/portrait/03.jpg" alt="Matt Henderson">
-                                                    </figure>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="panel">
-                                        <div class="swiper h-100" data-uc-swiper="connect: .connect-image; items: 1; autoplay: 5000; dots: .swiper-pagination; effect: fade; fade: true;">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide h-100">
-                                                    <div class="panel vstack justify-between items-center gap-2 lg:gap-4 h-100 text-center">
-                                                        <div class="panel">
-                                                            <i class="icon icon-4 unicon-quotes text-primary"></i>
-                                                            <p class="fs-6 sm:fs-5 lg:fs-4 fw-bold mt-1 sm:mt-4 dark:text-white">“Most of our time used to be taken up by administrative work whereas now we can focus on building out programs to help our employees. <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas nisi consectetur adipisci eaque. Porro, atque.”</p>
-                                                        </div>
-                                                        <div class="panel pt-3">
-                                                            <div class="panel vstack items-center gap-narrow">
-                                                                <h6 class="h5 m-0">Mark Zellers</h6>
-                                                                <span class="fs-6 opacity-70">Director of Human Resources.</span>
-                                                            </div>
-                                                            <div class="panel mt-6">
-                                                                <div class="swiper-pagination text-primary m-0 justify-center"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide h-100">
-                                                    <div class="panel vstack justify-between items-center gap-2 lg:gap-4 h-100 text-center">
-                                                        <div class="panel">
-                                                            <i class="icon icon-4 unicon-quotes text-primary"></i>
-                                                            <p class="fs-6 sm:fs-5 lg:fs-4 fw-bold mt-1 sm:mt-4 dark:text-white">“I can create a custom proposal with dynamic pricing tables, and get approval from my boss all within 36 minutes and looks fantastic. <br> Dolor sit amet consectetur adipisicing elit. Quas nisi consectetur adipisci eaque. Porro, atque.”</p>
-                                                        </div>
-                                                        <div class="panel pt-3">
-                                                            <div class="panel vstack items-center gap-narrow">
-                                                                <h6 class="h5 m-0">André Garcia</h6>
-                                                                <span class="fs-6 opacity-70">Client Success Manager</span>
-                                                            </div>
-                                                            <div class="panel mt-6">
-                                                                <div class="swiper-pagination text-primary m-0 justify-center"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="swiper-slide h-100">
-                                                    <div class="panel vstack justify-between items-center gap-2 lg:gap-4 h-100 text-center">
-                                                        <div class="panel">
-                                                            <i class="icon icon-4 unicon-quotes text-primary"></i>
-                                                            <p class="fs-6 sm:fs-5 lg:fs-4 fw-bold mt-1 sm:mt-4 dark:text-white">“This powerfull tool eliminates the need to leave Salesforce to get things done, <br> quas libero placeat voluptates sed sequi? Corporis, earum vitae. <br> Tempore pariatur dignissimos coming for great tool of repellat quae a eaque culpa iusto fugit.”</p>
-                                                        </div>
-                                                        <div class="panel pt-3">
-                                                            <div class="panel vstack items-center gap-narrow">
-                                                                <h6 class="h5 m-0">Matt Henderson</h6>
-                                                                <span class="fs-6 opacity-70">Director of Sales Operations</span>
-                                                            </div>
-                                                            <div class="panel mt-6">
-                                                                <div class="swiper-pagination text-primary m-0 justify-center"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Section end -->
-
-        <!-- Section start -->
-        <div id="clients_brands" class="clients-brands section panel overflow-hidden">
-            <div class="section-outer panel py-6 sm:py-8 xl:py-9">
-                <h5 class="h6 sm:h5 text-center mb-4 sm:mb-6 xl:mb-8" data-anime="onview: -100; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 200;">Trusted by well-known brands.</h5>
-                <div class="block-panel panel" data-anime="onview: -100; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 250;">
-                    <div class="element-brands max-w-950px m-auto text-gray-900 dark:text-white ">
-                        <div class="swiper" data-uc-swiper="items: 2; center: true; center-bounds: true;" data-uc-swiper-s="items: 4; center: false; center-bounds: false;" data-uc-swiper-m="items: 5; gap: 80;">
-                            <div class="swiper-wrapper items-center ease-linear">
-                                <div class="brand-item swiper-slide text-center">
-                                    <img class="brand-item-image h-40px" src="../assets/images/brands/brand-01.svg" alt="Proline" data-uc-svg>
-                                </div>
-                                <div class="brand-item swiper-slide text-center">
-                                    <img class="brand-item-image h-40px" src="../assets/images/brands/brand-02.svg" alt="Iceberg" data-uc-svg>
-                                </div>
-                                <div class="brand-item swiper-slide text-center">
-                                    <img class="brand-item-image h-40px" src="../assets/images/brands/brand-03.svg" alt="PinPoint" data-uc-svg>
-                                </div>
-                                <div class="brand-item swiper-slide text-center">
-                                    <img class="brand-item-image h-40px" src="../assets/images/brands/brand-04.svg" alt="Clues" data-uc-svg>
-                                </div>
-                                <div class="brand-item swiper-slide text-center">
-                                    <img class="brand-item-image h-40px" src="../assets/images/brands/brand-05.svg" alt="Snowflake" data-uc-svg>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Section end -->
-
-        <!-- Section start -->
-        <div id="cta" class="cta section panel overflow-hidden">
-            <div class="section-outer panel py-4 xl:py-9">
-                <div class="container max-w-xl">
-                    <div class="section-inner panel p-4 sm:p-6 xl:p-8 rounded-2 bg-secondary dark:bg-gray-800 overflow-hidden">
-                        <div class="vstack gap-2 max-w-550px items-center lg:items-start m-auto lg:m-0 text-center lg:text-start rtl:lg:text-end">
-                            <h2 class="h3 sm:h1 m-0">Create <span class="hero-title-gradient">stunning websites</span> that fits your needs.</h2>
-                            <div class="vstack sm:hstack justify-center lg:justify-start gap-1 lg:gap-2 mt-1 lg:mt-2">
-                                <a href="page-pricing.html" class="btn btn-md lg:btn-lg btn-primary vc-cta-gradient border-0">Try Bookloh today</a>
-                            </div>
-                            <p class="fs-7 text-dark dark:text-white text-opacity-70">14-day trial, no credit card required.</p>
-                        </div>
-                        <div class="position-absolute top-50 ltr:end-0 rtl:start-0 translate-middle-y z-1 ltr:me-8 rtl:ms-8 d-none lg:d-block">
-                            <img class="w-250px xl:w-300px d-block dark:d-none ltr:xl:me-7 rtl:xl:ms-7" src="../assets/images/template/charts.svg" alt="charts">
-                            <img class="w-250px xl:w-300px d-none dark:d-block ltr:xl:me-7 rtl:xl:ms-7" src="../assets/images/template/charts-dark.svg" alt="charts-dark">
                         </div>
                     </div>
                 </div>
@@ -1057,52 +777,77 @@
     <!-- Footer start -->
     <footer id="uc-footer" class="uc-footer panel overflow-hidden uc-dark">
         <div
-            class="footer-outer vc-footer-outer vc-footer-outer--compact py-6 lg:py-7 xl:py-8 text-white m-2 mt-0 rounded-2">
+            class="footer-outer vc-footer-outer vc-footer-outer--compact py-4 lg:py-5 text-white m-2 rounded-2">
             <div class="uc-footer-content position-relative z-1">
                 <div class="container">
-                    <div class="uc-footer-inner vstack gap-4 lg:gap-5">
+                    <div class="uc-footer-inner vstack gap-3 lg:gap-4">
                         <div class="uc-footer-widgets panel">
                             <nav class="vc-footer-nav vc-footer-nav--compact" aria-label="Footer">
                                 <div class="row g-4 lg:g-6 w-100 items-start lg:justify-between">
                                     <div class="col-12 lg:col-5 xl:col-4">
                                         <div class="vc-footer-brand vstack gap-2 lg:gap-3">
                                             <div class="uc-logo">
-                                                <a class="panel text-none d-inline-block" href="index-8.html"
+                                                <a class="panel text-none d-inline-block" href="/home"
                                                     style="width: 120px;">
                                                     <img class="w-100" src="../assets/icons/logo-white.png"
                                                         alt="Bookloh" width="120" loading="lazy">
                                                 </a>
                                             </div>
-                                            <p class="vc-footer-desc fs-6 sm:fs-6 m-0">Bookloh brings onboarding,
-                                                permissions, and day-to-day ops into one calm workspace—so your team
-                                                ships faster with less admin noise.</p>
+                                            <p class="vc-footer-desc fs-7 m-0">Bookloh brings bookings, calendar,
+                                                customers, and invoicing into one workspace—so your team spends less time
+                                                on admin and more time serving clients.</p>
                                         </div>
                                     </div>
-                                    <div class="col-12 lg:col-auto lg:ms-auto lg:me-6 xl:me-8">
+                                    <div class="col-12 lg:col-auto lg:ms-auto">
                                         <div
-                                            class="vc-footer-nav-cols hstack items-start gap-4 lg:gap-6 justify-center lg:justify-end">
+                                            class="vc-footer-nav-cols hstack items-start gap-3 lg:gap-4 justify-center lg:justify-end flex-wrap">
                                             <div class="vc-footer-nav-col">
                                                 <h3
-                                                    class="vc-footer-col-title fs-7 fw-semibold text-uppercase m-0 mb-2">
-                                                    Company</h3>
-                                                <ul class="nav-y gap-1 m-0 p-0 list-unstyled">
-                                                    <li><a class="vc-footer-link text-none" href="index-8.html">Home</a>
-                                                    </li>
+                                                    class="vc-footer-col-title fs-8 fw-semibold text-uppercase m-0 mb-1">
+                                                    Product</h3>
+                                                <ul class="nav-y gap-narrow m-0 p-0 list-unstyled">
                                                     <li><a class="vc-footer-link text-none"
-                                                            href="page-about.html">About</a></li>
+                                                            href="/features">Features</a></li>
                                                     <li><a class="vc-footer-link text-none"
-                                                            href="page-contact.html">Contact</a></li>
+                                                            href="/pricing">Pricing</a></li>
+                                                    <li><a class="vc-footer-link text-none"
+                                                            href="/features">Industries</a></li>
                                                 </ul>
                                             </div>
                                             <div class="vc-footer-nav-col">
                                                 <h3
-                                                    class="vc-footer-col-title fs-7 fw-semibold text-uppercase m-0 mb-2">
-                                                    Product</h3>
-                                                <ul class="nav-y gap-1 m-0 p-0 list-unstyled">
+                                                    class="vc-footer-col-title fs-8 fw-semibold text-uppercase m-0 mb-1">
+                                                    Company</h3>
+                                                <ul class="nav-y gap-narrow m-0 p-0 list-unstyled">
                                                     <li><a class="vc-footer-link text-none"
-                                                            href="page-features.html">Features</a></li>
+                                                            href="/about">About</a></li>
                                                     <li><a class="vc-footer-link text-none"
-                                                            href="page-pricing.html">Pricing</a></li>
+                                                            href="/contact">Contact us</a></li>
+                                                    <li><a class="vc-footer-link text-none"
+                                                            href="request-demo.html">Book a demo</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="vc-footer-nav-col">
+                                                <h3
+                                                    class="vc-footer-col-title fs-8 fw-semibold text-uppercase m-0 mb-1">
+                                                    Support</h3>
+                                                <ul class="nav-y gap-narrow m-0 p-0 list-unstyled">
+                                                    <li><a class="vc-footer-link text-none"
+                                                            href="page-faq.html">Help Centre</a></li>
+                                                    <li><a class="vc-footer-link text-none" href="https://wa.me/"
+                                                            target="_blank" rel="noopener noreferrer">WhatsApp
+                                                            Support</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="vc-footer-nav-col">
+                                                <h3
+                                                    class="vc-footer-col-title fs-8 fw-semibold text-uppercase m-0 mb-1">
+                                                    Legal</h3>
+                                                <ul class="nav-y gap-narrow m-0 p-0 list-unstyled">
+                                                    <li><a class="vc-footer-link text-none"
+                                                            href="page-privacy.html">Privacy Policy</a></li>
+                                                    <li><a class="vc-footer-link text-none"
+                                                            href="page-terms.html">Terms of Service</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -1111,22 +856,14 @@
                             </nav>
                         </div>
                         <div
-                            class="uc-footer-bottom panel vc-footer-bottom vc-footer-bottom--compact vstack gap-3 pt-4 lg:pt-5 mt-0">
+                            class="uc-footer-bottom panel vc-footer-bottom vc-footer-bottom--compact vstack gap-2 pt-3 lg:pt-4 mt-0">
                             <div class="hstack flex-wrap gap-3 justify-between items-center w-100">
-                                <p class="vc-footer-copy m-0 fs-7 sm:fs-6">Bookloh © 2026, All rights reserved.</p>
+                                <p class="vc-footer-copy m-0 fs-8">Bookloh © 2026, All rights reserved.</p>
                                 <ul class="nav-x justify-center lg:justify-end gap-2 m-0 p-0 list-unstyled">
-                                    <li><a class="vc-footer-social text-none" href="#" aria-label="LinkedIn"><i
-                                                class="icon icon-2 unicon-logo-linkedin"></i></a></li>
                                     <li><a class="vc-footer-social text-none" href="#" aria-label="Facebook"><i
                                                 class="icon icon-2 unicon-logo-facebook"></i></a></li>
-                                    <li><a class="vc-footer-social text-none" href="#" aria-label="X"><i
-                                                class="icon icon-2 unicon-logo-x-filled"></i></a></li>
                                     <li><a class="vc-footer-social text-none" href="#" aria-label="Instagram"><i
                                                 class="icon icon-2 unicon-logo-instagram"></i></a></li>
-                                    <li><a class="vc-footer-social text-none" href="#" aria-label="YouTube"><i
-                                                class="icon icon-2 unicon-logo-youtube"></i></a></li>
-                                    <li><a class="vc-footer-social text-none" href="#" aria-label="Dribbble"><i
-                                                class="icon icon-2 unicon-logo-dribbble"></i></a></li>
                                 </ul>
                             </div>
                         </div>

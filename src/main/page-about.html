@@ -73,8 +73,8 @@
     <link rel="stylesheet" href="../assets/css/magic-cursor.min.css">
 
     <!-- include main style -->
-    <link rel="stylesheet" href="../assets/scss/theme/main.scss">
-    <link rel="stylesheet" href="../assets/scss/theme/theme-four.scss">
+    <link rel="stylesheet" href="../assets/css/theme/main.min.css">
+    <link rel="stylesheet" href="../assets/css/theme/theme-four.min.css">
     <link rel="stylesheet" href="../assets/css/theme-violet-coral.css">
 
     <!-- include scripts -->
@@ -88,10 +88,15 @@
         <div class="uc-notification-message vstack lg:hstack items-end gap-2 lg:gap-4 lg:p-3 bg-white text-dark border rounded-1-5 min-w-1/2">
             <a id="uc-close-gdpr-notification" class="uc-notification-close text-dark rtl:start-0 rtl:end-auto rtl:ms-2" data-uc-close></a>
             <div class="vstack">
-                <h2 class="h5 ft-primary fw-bold -ls-1 m-0 text-dark">GDPR Compliance</h2>
-                <p class="fs-6 mt-1">We use cookies to ensure you get the best experience on our website. By continuing to use our site, you accept our use of cookies, <a href="page-privacy.html" class="uc-link text-underline">privacy policy</a> and <a href="page-terms.html" class="uc-link text-underline">terms of service</a>.</p>
+                <h2 class="h5 ft-primary fw-bold -ls-1 m-0 text-dark">Privacy Notice</h2>
+                <p class="fs-6 mt-1">We use cookies to ensure the best experience on our website. By continuing, you agree
+                    to our <a href="page-privacy.html" class="uc-link text-underline">Privacy Policy</a> and <a
+                        href="page-terms.html" class="uc-link text-underline">Terms of Service</a>.</p>
             </div>
-            <button class="btn btn-sm btn-primary px-2" id="uc-accept-gdpr">Accept</button>
+            <div class="hstack gap-2 flex-shrink-0">
+                <button class="btn btn-sm btn-outline-secondary px-2" id="uc-decline-gdpr" type="button">Decline</button>
+                <button class="btn btn-sm btn-primary px-2" id="uc-accept-gdpr" type="button">Accept</button>
+            </div>
         </div>
     </div>
 
@@ -278,117 +283,46 @@
 
     <!--  Menu panel -->
     <div id="uc-menu-panel" data-uc-offcanvas="overlay: true;">
-        <div class="uc-offcanvas-bar bg-white text-dark dark:bg-gray-900 dark:text-white">
+        <div class="uc-offcanvas-bar bg-white text-dark vc-mobile-menu">
 
-            <header class="uc-offcanvas-header hstack justify-between items-center pb-2 bg-white dark:bg-gray-900">
+            <header class="uc-offcanvas-header hstack justify-between items-center pb-2 bg-white">
                 <div class="uc-logo">
-                    <a href="index-8.html" class="panel text-none" style="width: 120px;">
-                        <img src="../assets/icons/logo-white.png" alt="Bookloh">
+                    <a href="/home" class="panel text-none" style="width: 120px;">
+                        <img src="../assets/icons/logo.png" alt="Bookloh">
                     </a>
                 </div>
-                <button class="uc-offcanvas-close rtl:end-auto rtl:start-0 m-1 mt-2 icon-3 btn border-0 dark:text-white dark:text-opacity-50 hover:text-primary hover:rotate-90 duration-150 transition-all" type="button">
+                <button
+                    class="uc-offcanvas-close rtl:end-auto rtl:start-0 m-1 mt-2 icon-3 btn border-0 text-dark hover:text-primary hover:rotate-90 duration-150 transition-all"
+                    type="button">
                     <i class="unicon-close"></i>
                 </button>
             </header>
 
             <div class="panel">
-                <form id="search-panel" class="form-icon-group vstack gap-1 mb-2" data-uc-sticky="">
-                    <input type="email" class="form-control form-control-sm fs-7 rounded-default" placeholder="Search..">
-                    <span class="form-icon text-gray">
-                        <i class="unicon-search icon-1"></i>
-                    </span>
-                </form>
-                <ul class="nav-y gap-narrow fw-medium fs-6" data-uc-nav>
-                    <li><a href="page-features.html">Features</a></li>
-                    <li><a href="page-pricing.html">Pricing</a></li>
-                    <li><a href="page-about.html">About</a></li>
-                    <li><a href="page-career.html">Career</a></li>
-                    <li><a href="page-contact.html">Contact</a></li>
-                    <li class="uc-parent"><a href="#">Inner Pages</a>
-                        <ul class="uc-nav-sub" data-uc-nav="">
-                            <li><a href="page-services.html">Services</a></li>
-                            <li><a href="page-services-detail.html">Services Detail</a></li>
-                            <li><a href="page-integrations.html">Integrations</a></li>
-                            <li><a href="page-team.html">Team</a></li>
-                            <li><a href="components.html">Components</a></li>
-                            <li class="uc-parent"><a href="blog.html">Blog</a>
-                                <ul class="uc-nav-sub">
-                                    <li><a href="blog.html">Full Width</a></li>
-                                    <li><a href="blog-classic.html">Classic</a></li>
-                                    <li><a href="blog-sidebar.html">Sidebar</a></li>
-                                    <li><a href="blog-2cols.html">Grid 2 Cols</a></li>
-                                    <li><a href="blog-3cols.html">Grid 3 Cols</a></li>
-                                    <li><a href="blog-4cols.html">Grid 4 Cols</a></li>
-                                </ul>
-                            </li>
-                            <li class="uc-parent"><a href="blog-details.html">Blog - detail</a>
-                                <ul class="uc-nav-sub">
-                                    <li><a href="blog-details.html">Blog detail</a></li>
-                                    <li><a href="blog-details-2.html">Blog detail - v2</a></li>
-                                    <li><a href="blog-details-3.html">Blog detail - v3</a></li>
-                                </ul>
-                            </li>
-                            <li class="uc-parent"><a href="#">Useful pages</a>
-                                <ul class="uc-nav-sub">
-                                    <li><a href="sign-up.html">Sign up</a></li>
-                                    <li><a href="https://app.bookloh.com/login">Sign in</a></li>
-                                    <li><a href="reset-password.html">Reset password</a></li>
-                                    <li><a href="404.html">404 page</a></li>
-                                    <li><a href="coming-soon.html">Coming soon</a></li>
-                                </ul>
-                            </li>
-                            <li class="uc-parent"><a href="#">Other pages</a>
-                                <ul class="uc-nav-sub">
-                                    <li><a href="page-faq.html">FAQ</a></li>
-                                    <li><a href="page-terms.html">Terms of use</a></li>
-                                    <li><a href="page-privacy.html">Privacy policy</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="uc-parent"><a href="shop.html">Shop</a>
-                        <ul class="uc-nav-sub" data-uc-nav="">
-                            <li class="uc-parent"><a href="shop.html">Shop layouts</a>
-                                <ul class="uc-nav-sub">
-                                    <li><a href="shop.html">Shop 4 cols</a></li>
-                                    <li><a href="shop-3.html">Shop 3 cols</a></li>
-                                    <li><a href="shop-2.html">Shop 2 cols</a></li>
-                                    <li><a href="shop-sidebar.html">Shop with sidebar</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="shop-category.html">Archive category</a></li>
-                            <li><a href="shop-product-detail.html">Product detail</a></li>
-                            <li><a href="shop-product-detail-2.html">Product detail - v2</a></li>
-                            <li><a href="shop-cart.html">Cart</a></li>
-                            <li><a href="shop-cart-2.html">Cart - v2</a></li>
-                            <li><a href="shop-checkout.html">Checkout</a></li>
-                            <li><a href="shop-checkout-2.html">Checkout - v2</a></li>
-                            <li><a href="shop-order.html">Order confirmation</a></li>
-                        </ul>
-                    </li>
-                    <li class="hr opacity-10 my-1"></li>
-                    <li><a href="sign-up.html">Create an account</a></li>
-                    <li><a href="https://app.bookloh.com/login">Log in</a></li>
-                    <li><a href="https://themeforest.net/item/lexend-software-saas-startup-html5-template/51596504">Buy Template</a></li>
+                <ul class="nav-y gap-narrow fw-medium fs-6 vc-mobile-nav" data-uc-nav>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/features">Features</a></li>
+                    <li><a href="/pricing">Pricing</a></li>
+                    <li><a href="/contact">Contact</a></li>
                 </ul>
-                <ul class="social-icons nav-x mt-4">
-                    <li>
-                        <a href="#"><i class="unicon-logo-medium icon-2"></i></a>
-                        <a href="#"><i class="unicon-logo-x-filled icon-2"></i></a>
-                        <a href="#"><i class="unicon-logo-instagram icon-2"></i></a>
-                        <a href="#"><i class="unicon-logo-pinterest icon-2"></i></a>
-                    </li>
-                </ul>
-                <div class="py-2 hstack gap-2 mt-4 bg-white dark:bg-gray-900" data-uc-sticky="position: bottom">
-                    <div class="vstack gap-1">
-                        <span class="fs-7 opacity-60">Select theme:</span>
-                        <div class="darkmode-trigger" data-darkmode-switch="">
-                            <label class="switch">
-                                <input type="checkbox">
-                                <span class="slider fs-5"></span>
-                            </label>
-                        </div>
-                    </div>
+                <div class="vstack gap-2 mt-4 pt-3 border-top vc-mobile-menu-auth">
+                    <a href="https://app.bookloh.com/login" class="nav-login-mobile text-none">Sign in</a>
+                    <a href="sign-up.html" class="btn btn-sm nav-signup-mobile text-none">Try bookloh.</a>
+                    <ul class="nav-x gap-2 mt-2 mb-0 p-0 vc-mobile-menu-social" role="list">
+                        <li>
+                            <a class="vc-mobile-menu-social-link text-none" href="#" target="_blank"
+                                rel="noopener noreferrer" aria-label="Facebook">
+                                <i class="icon icon-2 unicon-logo-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="vc-mobile-menu-social-link text-none" href="#" target="_blank"
+                                rel="noopener noreferrer" aria-label="Instagram">
+                                <i class="icon icon-2 unicon-logo-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
@@ -562,13 +496,6 @@
 
     <!--  Bottom Actions Sticky -->
     <div class="backtotop-wrap position-fixed ltr:end-0 ltr:start-auto rtl:start-0 rtl:end-auto top-auto bottom-0 z-99 m-2 vstack">
-        <div class="darkmode-trigger cstack w-40px h-40px rounded-circle text-none bg-gray-100 dark:bg-gray-700 dark:text-white" data-darkmode-toggle="">
-            <label class="switch">
-                <span class="sr-only">Dark mode toggle</span>
-                <input type="checkbox">
-                <span class="slider fs-5"></span>
-            </label>
-        </div>
         <a class="btn btn-sm bg-primary text-white w-40px h-40px rounded-circle" href="to_top" data-uc-backtotop>
             <i class="icon-2 unicon-chevron-up"></i>
         </a>
@@ -582,18 +509,18 @@
                     <div class="uc-navbar min-h-56px lg:min-h-56px text-gray-900 dark:text-white px-3 lg:px-5 bg-white dark:bg-tertiary-600 bg-opacity-90 rounded-3 shadow-xs" data-uc-navbar=" animation: uc-animation-slide-top-small; duration: 150;">
                         <div class="uc-navbar-left">
                             <div class="uc-logo ltr:ms-1 rtl:me-1">
-                                <a class="panel text-none" href="index-8.html" style="width: 115px;">
+                                <a class="panel text-none" href="/home" style="width: 115px;">
                                     <img src="../assets/icons/logo-white.png" alt="Bookloh">
                                 </a>
                             </div>
                         </div>
                         <div class="uc-navbar-center flex-1 d-flex justify-end items-center">
                             <ul class="uc-navbar-nav fs-6 gap-2 lg:gap-2 d-none lg:d-flex flex-wrap justify-end items-center">
-                                <li><a href="index-8.html">Home</a></li>
-                                <li><a href="page-about.html">About</a></li>
-                                <li><a href="page-features.html">Features</a></li>
-                                <li><a href="page-pricing.html">Pricing</a></li>
-                                <li><a href="page-contact.html">Contact</a></li>
+                                <li><a href="/home">Home</a></li>
+                                <li><a href="/about">About</a></li>
+                                <li><a href="/features">Features</a></li>
+                                <li><a href="/pricing">Pricing</a></li>
+                                <li><a href="/contact">Contact</a></li>
                             </ul>
                         </div>
                         <div class="uc-navbar-right">
@@ -630,11 +557,11 @@
                 <div class="container max-w-xl">
                     <div class="section-inner panel mt-2 sm:mt-4 lg:mt-0" data-anime="targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});">
                         <div class="vstack items-center gap-4 mb-4 sm:mb-6 lg:mb-8 max-w-850px mx-auto text-center">
-                            <h1 class="h2 sm:h1 lg:display-6 xl:display-5 m-0">About <span class="hero-title-gradient">Bookloh</span>.</h1>
-                            <p class="fs-6 md:fs-5 text-dark dark:text-white text-opacity-70">In 2014, Steven Smith have gotten so much of our time back that we're now able to put towards things that are actually helping our company as opposed to just throwing content out there. and the idea of Bookloh was born. Today, Bookloh empowers teams to easily communicate with customers through personalized documents that can be created in minutes, build meaningful relationships.</p>
+                            <h1 class="h2 sm:h1 lg:display-6 xl:display-5 m-0">About <span class="hero-title-gradient">Bookloh</span></h1>
+                            <p class="fs-6 md:fs-5 text-dark dark:text-white text-opacity-70 m-0">Bookloh is built for businesses that run on appointments, events, and on-site services—photography studios, event planners, salons, venue rentals, and any team that books by date, time, or project.</p>
                         </div>
-                        <div class="panel row child-cols-12 col-match g-1 sm:g-2">
-                            <div class="col-4">
+                        <div class="panel row col-match g-2 sm:g-3 position-relative">
+                            <div class="col-12 col-sm-4 position-relative">
                                 <figure class="featured-image m-0 rounded ratio ratio-2x3 sm:rounded-2 uc-transition-toggle overflow-hidden">
                                     <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../assets/images/template/hero-about-01.jpg" alt="About image">
                                 </figure>
@@ -643,7 +570,7 @@
                                     <img class="w-200px xl:w-250px d-none dark:d-block" src="../assets/images/template/hand-pencil-dark.svg" alt="hand-pencil-dark">
                                 </div>
                             </div>
-                            <div class="col-8">
+                            <div class="col-12 col-sm-8 position-relative">
                                 <div class="h-100">
                                     <figure class="panel h-100 m-0 rounded sm:rounded-2 overflow-hidden">
                                         <canvas class="h-100 w-100"></canvas>
@@ -664,77 +591,14 @@
         <!-- Section end -->
 
         <!-- Section start -->
-        <div id="clients_brands" class="clients-brands section panel overflow-hidden">
-            <div class="section-outer panel pb-6 xl:pb-9">
-                <div class="container max-w-xl">
-                    <div class="section-inner panel">
-                        <div class="block-panel panel" data-anime="onview: -100; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 250;">
-                            <div class="element-brands max-w-950px m-auto text-gray-900 dark:text-white ">
-                                <div class="swiper" data-uc-swiper="items: 2; center: true; center-bounds: true;" data-uc-swiper-s="items: 4; center: false; center-bounds: false;" data-uc-swiper-m="items: 5; gap: 80;">
-                                    <div class="swiper-wrapper items-center ease-linear">
-                                        <div class="brand-item swiper-slide text-center">
-                                            <img class="brand-item-image h-40px" src="../assets/images/brands/brand-01.svg" alt="Proline" data-uc-svg>
-                                        </div>
-                                        <div class="brand-item swiper-slide text-center">
-                                            <img class="brand-item-image h-40px" src="../assets/images/brands/brand-02.svg" alt="Iceberg" data-uc-svg>
-                                        </div>
-                                        <div class="brand-item swiper-slide text-center">
-                                            <img class="brand-item-image h-40px" src="../assets/images/brands/brand-03.svg" alt="PinPoint" data-uc-svg>
-                                        </div>
-                                        <div class="brand-item swiper-slide text-center">
-                                            <img class="brand-item-image h-40px" src="../assets/images/brands/brand-04.svg" alt="Clues" data-uc-svg>
-                                        </div>
-                                        <div class="brand-item swiper-slide text-center">
-                                            <img class="brand-item-image h-40px" src="../assets/images/brands/brand-05.svg" alt="Snowflake" data-uc-svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Section end -->
-
-        <!-- Section start -->
         <div id="about_us" class="about-us section panel overflow-hidden" data-anime="onview: -100; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 250;">
             <div class="section-outer panel py-6 xl:py-9 bg-secondary dark:bg-gray-800">
-                <div class="d-none lg:d-block" data-anime="onview: -100; targets: img; scale: [0.8, 1]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 350;">
-                    <div class="position-absolute bottom-0 start-0 ms-n8 mb-6">
-                        <img class="w-150px xl:w-250px d-block dark:d-none" src="../assets/images/template/walking.svg" alt="walking">
-                        <img class="w-150px xl:w-250px d-none dark:d-block" src="../assets/images/template/walking-dark.svg" alt="walking-dark">
-                    </div>
-                </div>
                 <div class="container max-w-lg">
                     <div class="section-inner panel">
-                        <div class="panel vstack text-center" data-anime="onview: -100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});">
-                            <h2 class="h3 lg:h2 mb-4">How <span class="hero-title-gradient">Bookloh</span> helps</h2>
-                            <p class="fs-5 xl:fs-4 text-dark dark:text-white text-opacity-70">Teams use Bookloh to improve document workflows, insights, and speed while delivering an amazing experience for their customers. Businesses trust Bookloh’s all-in-one document automation software to streamline the process to create, approve, and eSign proposals, quotes, contracts, and more. With powerful document creation and workflow capabilities, teams can provide their customers with a more professional, timely, and engaging experience.</p>
-                            <p class="fs-5 xl:fs-4 text-dark dark:text-white text-opacity-70">In 2014, Steven Smith have gotten so much of our time back that we're now able to put towards things that are actually helping our company as opposed to just throwing content out there. and the idea of Bookloh was born. Today, Bookloh empowers teams to easily communicate with customers through personalized documents that can be created in minutes, build meaningful relationships..</p>
-                            <div class="panel mt-6">
-                                <div class="row child-cols-6 lg:child-cols-4 justify-center g-3 col-match">
-                                    <div>
-                                        <div class="panel vstack gap-1">
-                                            <h4 class="h2 xl:h1 m-0"><span data-anime="onview: -100; textContent: 2014; round: 1; easing: linear; duration: 1200;">0</span></h4>
-                                            <p class="fs-6 lg:fs-5 text-dark dark:text-white text-opacity-70">Bookloh founded.</p>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="panel vstack gap-1">
-                                            <h4 class="h2 xl:h1 m-0"><span data-anime="onview: -100; textContent: [0, 50]; round: 1; easing: linear; duration: 1200;">0</span></h4>
-                                            <p class="fs-6 lg:fs-5 text-dark dark:text-white text-opacity-70">Hardworking group.</p>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="panel vstack gap-1">
-                                            <h4 class="h2 xl:h1 m-0"><span data-anime="onview: -100; textContent: [0, 100]; round: 1; easing: linear; duration: 1200;">0</span>k</h4>
-                                            <p class="fs-6 lg:fs-5 text-dark dark:text-white text-opacity-70 text-nowrap">Document workflows.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="panel vstack text-center gap-3 max-w-850px mx-auto" data-anime="onview: -100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});">
+                            <h2 class="h3 lg:h2 m-0">How <span class="hero-title-gradient">Bookloh</span> helps</h2>
+                            <p class="fs-5 xl:fs-4 text-dark dark:text-white text-opacity-70 m-0">Bookloh is an all-in-one cloud booking management platform for businesses that run on appointments, events, and on-site services. It replaces scattered WhatsApp chats, spreadsheets, and paper notes with one system for bookings, calendars, customer records, quotations, e-invoices, payments, and sales reports—helping teams reduce double bookings, stay organized, and manage operations more professionally.</p>
+                            <p class="fs-5 xl:fs-4 text-dark dark:text-white text-opacity-70 fw-bold m-0">Perfect for photography studios, event planners, salons, venue rentals, and other service-based businesses. Start with a 30-day full-access trial for RM59, then scale with flexible monthly or yearly plans.</p>
                         </div>
                     </div>
                 </div>
@@ -749,292 +613,38 @@
                 <div class="container max-w-lg">
                     <div class="section-inner panel">
                         <div class="panel vstack gap-4 sm:gap-6 xl:gap-8">
-                            <h2 class="h4 sm:h3 lg:h2 m-0 text-center" data-anime="onview: -100; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 100;">Our Values it’s Simple!</h2>
+                            <h2 class="h4 sm:h3 lg:h2 m-0 text-center" data-anime="onview: -100; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 100;">Our Values — Simple, Practical, Customer-Focused</h2>
                             <div class="row child-cols-12 sm:child-cols-6 g-2 lg:g-4 justify-between" data-anime="onview: -100; targets: > *; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});">
                                 <div>
                                     <div class="panel vstack gap-2 p-4 lg:py-6 rounded-2 bg-secondary dark:bg-gray-800">
                                         <img class="w-64px lg:w-80px d-block dark:d-none" src="../assets/images/template/icon-diamond.svg" alt="impact-icon">
                                         <img class="w-64px lg:w-80px d-none dark:d-block" src="../assets/images/template/icon-diamond-dark.svg" alt="impact-icon">
-                                        <h5 class="h5 lg:h4 m-0">Make an impact</h5>
-                                        <p class="fs-6 opacity-70 dark:opacity-80">We’re building something big. Something that has the power to change the trajectory of any sized business for the better.</p>
+                                        <h5 class="h5 lg:h4 m-0">Make an Impact</h5>
+                                        <p class="fs-6 opacity-70 dark:opacity-80">We build tools that solve real operational challenges for service businesses—helping teams reduce missed bookings, improve efficiency, and deliver a better customer experience.</p>
                                     </div>
                                 </div>
                                 <div>
                                     <div class="panel vstack gap-2 p-4 lg:py-6 rounded-2 bg-secondary dark:bg-gray-800">
                                         <img class="w-64px lg:w-80px d-block dark:d-none" src="../assets/images/template/icon-trophy.svg" alt="crown-icon">
                                         <img class="w-64px lg:w-80px d-none dark:d-block" src="../assets/images/template/icon-trophy-dark.svg" alt="crown-icon">
-                                        <h5 class="h5 lg:h4 m-0">Learn</h5>
-                                        <p class="fs-6 opacity-70 dark:opacity-80">Bookloh team are masters of their craft. Even though we’re all experts in our respective fields, we always make time to expand our minds.</p>
+                                        <h5 class="h5 lg:h4 m-0">Continuous Learning</h5>
+                                        <p class="fs-6 opacity-70 dark:opacity-80">We work closely with merchants and continuously improve Bookloh based on real business workflows, feedback, and day-to-day operational needs.</p>
                                     </div>
                                 </div>
                                 <div>
                                     <div class="panel vstack gap-2 p-4 lg:py-6 rounded-2 bg-secondary dark:bg-gray-800">
                                         <img class="w-64px lg:w-80px d-block dark:d-none" src="../assets/images/template/icon-globe.svg" alt="fun-icon">
                                         <img class="w-64px lg:w-80px d-none dark:d-block" src="../assets/images/template/icon-globe-dark.svg" alt="fun-icon">
-                                        <h5 class="h5 lg:h4 m-0">Have fun</h5>
-                                        <p class="fs-6 opacity-70 dark:opacity-80">We work hard and play harder. We believe in the importance of celebrating wins big or small, for the business or individuals.</p>
+                                        <h5 class="h5 lg:h4 m-0">Keep It Simple</h5>
+                                        <p class="fs-6 opacity-70 dark:opacity-80">We believe business management software should feel intuitive and stress-free, helping teams stay organized without adding unnecessary complexity.</p>
                                     </div>
                                 </div>
                                 <div>
                                     <div class="panel vstack gap-2 p-4 lg:py-6 rounded-2 bg-secondary dark:bg-gray-800">
                                         <img class="w-64px lg:w-80px d-block dark:d-none" src="../assets/images/template/icon-crown.svg" alt="empathy-icon">
                                         <img class="w-64px lg:w-80px d-none dark:d-block" src="../assets/images/template/icon-crown-dark.svg" alt="empathy-icon">
-                                        <h5 class="h5 lg:h4 m-0">Empathy</h5>
-                                        <p class="fs-6 opacity-70 dark:opacity-80">We strive to be empathetic to every customer and colleague and by doing so we can provide a better experience for all.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Section end -->
-
-        <!-- Section start -->
-        <div id="clients_feedbacks" class="clients-feedbacks section panel overflow-hidden">
-            <div class="section-outer panel pb-6 xl:pb-9">
-                <div class="container max-w-lg">
-                    <div class="section-inner panel">
-                        <div class="panel vstack justify-center items-center gap-4 sm:gap-6 xl:gap-8" data-anime="onview: -100; targets: > *; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});">
-                            <h2 class="h4 sm:h3 lg:h2 m-0 text-center">Some clients feedbacks</h2>
-                            <div class="row child-cols-12 sm:child-cols-6 xl:child-cols-4 justify-center col-match g-2 lg:g-3" data-uc-grid>
-                                <div>
-                                    <div class="px-3 sm:px-4 py-4 panel vstack justify-between gap-3 rounded-2 border">
-                                        <div class="panel vstack items-start gap-2">
-                                            <div class="panel">
-                                                <div class="hstack h-48px">
-                                                    <img class="w-128px text-gray-900 dark:text-white" src="../assets/images/brands/brand-07.svg" alt="Brand" data-uc-svg>
-                                                </div>
-                                            </div>
-                                            <p class="fs-6 lg:fs-5 text-dark dark:text-white text-opacity-70">“We’re looking for people who share our vision! most of our time used to be taken up by most of alternate administrative work whereas now we can focus on building out to help our employees.”</p>
-                                        </div>
-                                        <div class="panel hstack gap-2 mt-2 lg:mt-4">
-                                            <img class="w-40px rounded-circle" src="../assets/images/avatars/01.png" alt="Mark Zellers">
-                                            <div class="panel vstack items-start gap-0">
-                                                <h6 class="h6 m-0">Mark Zellers</h6>
-                                                <span class="fs-7 opacity-70">CEO, Co-Founder.</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="px-3 sm:px-4 py-4 panel vstack justify-between gap-3 rounded-2 border">
-                                        <div class="panel vstack items-start gap-2">
-                                            <div class="panel">
-                                                <div class="hstack h-48px">
-                                                    <img class="w-128px text-gray-900 dark:text-white" src="../assets/images/brands/brand-06.svg" alt="Brand" data-uc-svg>
-                                                </div>
-                                            </div>
-                                            <p class="fs-6 lg:fs-5 text-dark dark:text-white text-opacity-70">“This powerfull tool eliminates the need to leave Salesforce to get things done as I can create a custom proposal with dynamic pricing tables, and get approval from my boss all within 36 minutes.”</p>
-                                        </div>
-                                        <div class="panel hstack gap-2 mt-2 lg:mt-4">
-                                            <img class="w-40px rounded-circle" src="../assets/images/avatars/04.png" alt="Natalia Larsson">
-                                            <div class="panel vstack items-start gap-0">
-                                                <h6 class="h6 m-0">Natalia Larsson</h6>
-                                                <span class="fs-7 opacity-70">Director of Sales</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="px-3 sm:px-4 py-4 panel vstack justify-between gap-3 rounded-2 border">
-                                        <div class="panel vstack items-start gap-2">
-                                            <div class="panel">
-                                                <div class="hstack h-48px">
-                                                    <img class="w-128px text-gray-900 dark:text-white" src="../assets/images/brands/brand-08.svg" alt="Brand" data-uc-svg>
-                                                </div>
-                                            </div>
-                                            <p class="fs-6 lg:fs-5 text-dark dark:text-white text-opacity-70">“We are based in Europe and the latest Data Protection Regulation forces us to look for service suppliers than comply with this regulation and as we look to create our website and this builder just outstanding!”</p>
-                                        </div>
-                                        <div class="panel hstack gap-2 mt-2 lg:mt-4">
-                                            <img class="w-40px rounded-circle" src="../assets/images/avatars/03.png" alt="Sarah Edrissi">
-                                            <div class="panel vstack items-start gap-0">
-                                                <h6 class="h6 m-0">Sarah Edrissi</h6>
-                                                <span class="fs-7 opacity-70">Lead Marketing</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#" class="uc-link fw-bold d-inline-flex items-center gap-narrow">
-                                <span>See all feedbacks</span>
-                                <i class="icon icon-1 unicon-arrow-right rtl:rotate-180"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Section end -->
-
-        <!-- Section start -->
-        <div id="about-timeline" class="about-timeline section panel overflow-hidden bg-secondary dark:bg-gray-800">
-            <div class="section-outer panel py-6 xl:py-9">
-                <div class="container max-w-lg">
-                    <div class="section-inner panel">
-                        <div class="panel vstack justify-center items-center gap-4 sm:gap-6 xl:gap-8">
-                            <h2 class="h4 sm:h3 lg:h2 m-0 text-center" data-anime="onview: -100; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 100;">How we got here</h2>
-                            <div class="panel w-100 swiper-parent">
-                                <div class="swiper-timeline swiper swiper-container overflow-unset" data-uc-swiper="items: 1; gap: 0; dots: .swiper-pagination; disable-class: d-none; center: true; center-bounding: true;" data-uc-swiper-s="items: 2;" data-uc-swiper-m="items: 3;">
-                                    <div class="swiper-wrapper" data-anime="onview: -100; targets: > *; translateX: [100, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});">
-                                        <div class="swiper-slide panel">
-                                            <div class="timeline-box panel vstack items-center gap-9 text-center">
-                                                <div class="image-wrap panel overflow-hidden w-200px">
-                                                    <img class="image w-100 origin-bottom" src="../assets/images/template/timeline-01.png" alt="Where the idea come up of Bookloh :)">
-                                                </div>
-                                                <div class="content panel vstack items-center px-3 xl:px-6">
-                                                    <h3 class="title h4 sm:h3 dark:text-white">2014</h3>
-                                                    <p class="desc fs-6 xl:fs-5 opacity-70 dark:text-white">Where the idea come up of Bookloh :)</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide panel">
-                                            <div class="timeline-box panel vstack items-center gap-9 text-center">
-                                                <div class="image-wrap panel overflow-hidden w-200px">
-                                                    <img class="image w-100 origin-bottom" src="../assets/images/template/timeline-02.png" alt="Launched our first business that can be created in minutes, build meaningful relationships.">
-                                                </div>
-                                                <div class="content panel vstack items-center px-3 xl:px-6">
-                                                    <h3 class="title h4 sm:h3 dark:text-white">2015</h3>
-                                                    <p class="desc fs-6 xl:fs-5 opacity-70 dark:text-white">Launched our first business that can be created in minutes, build meaningful relationships.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide panel">
-                                            <div class="timeline-box panel vstack items-center gap-9 text-center">
-                                                <div class="image-wrap panel overflow-hidden w-200px">
-                                                    <img class="image w-100 origin-bottom" src="../assets/images/template/timeline-03.png" alt="Opened our new office in Toronto, CA">
-                                                </div>
-                                                <div class="content panel vstack items-center px-3 xl:px-6">
-                                                    <h3 class="title h4 sm:h3 dark:text-white">2016</h3>
-                                                    <p class="desc fs-6 xl:fs-5 opacity-70 dark:text-white">Opened our new office in Toronto, CA</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide panel">
-                                            <div class="timeline-box panel vstack items-center gap-9 text-center">
-                                                <div class="image-wrap panel overflow-hidden w-200px">
-                                                    <img class="image w-100 origin-bottom" src="../assets/images/template/timeline-04.png" alt="Moved to Silicon Valley whereas now we can focus on building out to help our employees.">
-                                                </div>
-                                                <div class="content panel vstack items-center px-3 xl:px-6">
-                                                    <h3 class="title h4 sm:h3 dark:text-white">2019</h3>
-                                                    <p class="desc fs-6 xl:fs-5 opacity-70 dark:text-white">Moved to Silicon Valley whereas now we can focus on building out to help our employees.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide panel">
-                                            <div class="timeline-box panel vstack items-center gap-9 text-center">
-                                                <div class="image-wrap panel overflow-hidden w-200px">
-                                                    <img class="image w-100 origin-bottom" src="../assets/images/template/timeline-05.png" alt="Opened a new office in London, UK.">
-                                                </div>
-                                                <div class="content panel vstack items-center px-3 xl:px-6">
-                                                    <h3 class="title h4 sm:h3 dark:text-white">2020</h3>
-                                                    <p class="desc fs-6 xl:fs-5 opacity-70 dark:text-white">Opened a new office in London, UK.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide panel">
-                                            <div class="timeline-box panel vstack items-center gap-9 text-center">
-                                                <div class="image-wrap panel overflow-hidden w-200px">
-                                                    <img class="image w-100 origin-bottom" src="../assets/images/template/timeline-06.png" alt="Top-rated software solution for service suppliers.">
-                                                </div>
-                                                <div class="content panel vstack items-center px-3 xl:px-6">
-                                                    <h3 class="title h4 sm:h3 dark:text-white">Today</h3>
-                                                    <p class="desc fs-6 xl:fs-5 opacity-70 dark:text-white">Top-rated software solution for service suppliers.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Section end -->
-
-        <!-- Section start -->
-        <div id="about-team" class="about-team section panel overflow-hidden">
-            <div class="section-outer panel py-6 xl:py-9">
-                <div class="container max-w-lg">
-                    <div class="section-inner panel">
-                        <div class="panel vstack justify-center items-center gap-4 sm:gap-6 xl:gap-8" data-anime="onview: -100; targets: > *; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});">
-                            <h2 class="h4 sm:h3 lg:h2 m-0 text-center">Our Executive Team</h2>
-                            <div class="row child-cols-6 sm:child-cols-4 lg:child-cols-3 col-match gx-2 lg:gx-4 gy-4 lg:gy-6" data-anime="onview: -100; targets: > *; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});" data-uc-grid>
-                                <div>
-                                    <div class="panel vstack gap-2">
-                                        <img class="w-100 rounded" src="../assets/images/template/team-01.jpg" alt="Mark Zellers">
-                                        <div class="panel vstack items-start gap-0">
-                                            <h6 class="h6 m-0">Mark Zellers</h6>
-                                            <span class="fs-7 opacity-70">Founder & CEO</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="panel vstack gap-2">
-                                        <img class="w-100 rounded" src="../assets/images/template/team-02.jpg" alt="John Zellers">
-                                        <div class="panel vstack items-start gap-0">
-                                            <h6 class="h6 m-0">John Zellers</h6>
-                                            <span class="fs-7 opacity-70">Co-Founder</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="panel vstack gap-2">
-                                        <img class="w-100 rounded" src="../assets/images/template/team-03.jpg" alt="Kim Yun Son">
-                                        <div class="panel vstack items-start gap-0">
-                                            <h6 class="h6 m-0">Kim Yun Son</h6>
-                                            <span class="fs-7 opacity-70">Engineering Manager</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="panel vstack gap-2">
-                                        <img class="w-100 rounded" src="../assets/images/template/team-04.jpg" alt="André Garcia">
-                                        <div class="panel vstack items-start gap-0">
-                                            <h6 class="h6 m-0">André Garcia</h6>
-                                            <span class="fs-7 opacity-70">Product Manager</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="panel vstack gap-2">
-                                        <img class="w-100 rounded" src="../assets/images/template/team-05.jpg" alt="Peter Lary">
-                                        <div class="panel vstack items-start gap-0">
-                                            <h6 class="h6 m-0">Peter Lary</h6>
-                                            <span class="fs-7 opacity-70">UX Researcher</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="panel vstack gap-2">
-                                        <img class="w-100 rounded" src="../assets/images/template/team-06.jpg" alt="Henry Matt">
-                                        <div class="panel vstack items-start gap-0">
-                                            <h6 class="h6 m-0">Henry Matt</h6>
-                                            <span class="fs-7 opacity-70">Customer Success</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="panel vstack gap-2">
-                                        <img class="w-100 rounded" src="../assets/images/template/team-07.jpg" alt="Natalia">
-                                        <div class="panel vstack items-start gap-0">
-                                            <h6 class="h6 m-0">Natalia</h6>
-                                            <span class="fs-7 opacity-70">Lead of fun</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="panel vstack gap-2">
-                                        <img class="w-100 rounded" src="../assets/images/template/team-08.jpg" alt="Larry">
-                                        <div class="panel vstack items-start gap-0">
-                                            <h6 class="h6 m-0">Larry</h6>
-                                            <span class="fs-7 opacity-70">Director of Joy</span>
-                                        </div>
+                                        <h5 class="h5 lg:h4 m-0">Empathy First</h5>
+                                        <p class="fs-6 opacity-70 dark:opacity-80">We design Bookloh with business owners, office teams, and on-site staff in mind—ensuring every feature supports the people using it every day.</p>
                                     </div>
                                 </div>
                             </div>
@@ -1048,31 +658,13 @@
 
         <!-- Section start -->
         <div id="cta" class="cta section panel overflow-hidden" data-anime="onview:-100; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 200;">
-            <div class="section-outer panel py-4 sm:py-6 xl:py-9 bg-secondary dark:bg-gray-800">
-                <div class="d-none lg:d-block" data-anime="onview: -100; targets: img; scale: [0.8, 1]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 350;">
-                    <div class="position-absolute top-50 start-0 translate-middle-y ms-n6">
-                        <img class="w-200px xl:w-250px d-block dark:d-none" src="../assets/images/template/thinking.svg" alt="thinking">
-                        <img class="w-200px xl:w-250px d-none dark:d-block" src="../assets/images/template/thinking-dark.svg" alt="thinking-dark">
-                    </div>
-                    <div class="position-absolute top-50 end-0 translate-middle-y me-n6">
-                        <img class="w-200px xl:w-250px d-block dark:d-none" src="../assets/images/template/send-message.svg" alt="send-message">
-                        <img class="w-200px xl:w-250px d-none dark:d-block" src="../assets/images/template/send-message-dark.svg" alt="send-message-dark">
-                    </div>
-                </div>
-                <div class="d-none lg:d-block" data-anime="targets: >*; scale: [0, 1]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 750});">
-                    <div class="position-absolute bottom-0 start-0 rotate-45" style="bottom: 30% !important; left: 24% !important;">
-                        <img class="w-24px text-gray-900 dark:text-white" src="../assets/images/template/star-2.svg" alt="star-2" data-uc-svg>
-                    </div>
-                    <div class="position-absolute top-0 end-0 rotate-45" style="top: 50% !important; right: 21% !important;">
-                        <img class="w-32px text-gray-900 dark:text-white" src="../assets/images/template/star-1.svg" alt="star-1" data-uc-svg>
-                    </div>
-                </div>
+            <div class="section-outer panel py-4 sm:py-6 xl:py-9">
                 <div class="container max-w-xl">
                     <div class="section-inner panel">
-                        <div class="vstack items-center gap-2 sm:gap-3 max-w-550px mx-auto text-center" data-anime="onview:-100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});">
-                            <h2 class="h3 sm:h1 m-0">We’re looking for <span class="hero-title-gradient">people</span> who share our vision!</h2>
-                            <p class="fs-5 xl:fs-4 text-dark dark:text-white text-opacity-70">Have what it takes to be one of us.</p>
-                            <a href="page-career.html" class="btn btn-md lg:btn-lg btn-primary vc-cta-gradient border-0 mt-1 xl:mt-2">View current openings</a>
+                        <div class="vstack items-center gap-2 sm:gap-3 max-w-650px mx-auto text-center" data-anime="onview:-100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});">
+                            <h2 class="h3 sm:h1 m-0">Let's Grow Your <br> <span class="hero-title-gradient">Business</span> Together</h2>
+                            <p class="fs-5 xl:fs-4 text-dark dark:text-white text-opacity-70">Get in touch for a demo or consultation.</p>
+                            <a href="/contact" class="btn btn-md lg:btn-lg btn-primary vc-cta-gradient border-0 mt-1 xl:mt-2">Contact Us Now</a>
                         </div>
                     </div>
                 </div>
@@ -1088,52 +680,77 @@
     <!-- Footer start -->
     <footer id="uc-footer" class="uc-footer panel overflow-hidden uc-dark">
         <div
-            class="footer-outer vc-footer-outer vc-footer-outer--compact py-6 lg:py-7 xl:py-8 text-white m-2 mt-0 rounded-2">
+            class="footer-outer vc-footer-outer vc-footer-outer--compact py-4 lg:py-5 text-white m-2 mt-0 rounded-2">
             <div class="uc-footer-content position-relative z-1">
                 <div class="container">
-                    <div class="uc-footer-inner vstack gap-4 lg:gap-5">
+                    <div class="uc-footer-inner vstack gap-3 lg:gap-4">
                         <div class="uc-footer-widgets panel">
                             <nav class="vc-footer-nav vc-footer-nav--compact" aria-label="Footer">
                                 <div class="row g-4 lg:g-6 w-100 items-start lg:justify-between">
                                     <div class="col-12 lg:col-5 xl:col-4">
                                         <div class="vc-footer-brand vstack gap-2 lg:gap-3">
                                             <div class="uc-logo">
-                                                <a class="panel text-none d-inline-block" href="index-8.html"
+                                                <a class="panel text-none d-inline-block" href="/home"
                                                     style="width: 120px;">
                                                     <img class="w-100" src="../assets/icons/logo-white.png"
                                                         alt="Bookloh" width="120" loading="lazy">
                                                 </a>
                                             </div>
-                                            <p class="vc-footer-desc fs-6 sm:fs-6 m-0">Bookloh brings onboarding,
-                                                permissions, and day-to-day ops into one calm workspace—so your team
-                                                ships faster with less admin noise.</p>
+                                            <p class="vc-footer-desc fs-7 m-0">Bookloh brings bookings, calendar,
+                                                customers, and invoicing into one workspace—so your team spends less time
+                                                on admin and more time serving clients.</p>
                                         </div>
                                     </div>
-                                    <div class="col-12 lg:col-auto lg:ms-auto lg:me-6 xl:me-8">
+                                    <div class="col-12 lg:col-auto lg:ms-auto">
                                         <div
-                                            class="vc-footer-nav-cols hstack items-start gap-4 lg:gap-6 justify-center lg:justify-end">
+                                            class="vc-footer-nav-cols hstack items-start gap-3 lg:gap-4 justify-center lg:justify-end flex-wrap">
                                             <div class="vc-footer-nav-col">
                                                 <h3
-                                                    class="vc-footer-col-title fs-7 fw-semibold text-uppercase m-0 mb-2">
-                                                    Company</h3>
-                                                <ul class="nav-y gap-1 m-0 p-0 list-unstyled">
-                                                    <li><a class="vc-footer-link text-none" href="index-8.html">Home</a>
-                                                    </li>
+                                                    class="vc-footer-col-title fs-8 fw-semibold text-uppercase m-0 mb-1">
+                                                    Product</h3>
+                                                <ul class="nav-y gap-narrow m-0 p-0 list-unstyled">
                                                     <li><a class="vc-footer-link text-none"
-                                                            href="page-about.html">About</a></li>
+                                                            href="/features">Features</a></li>
                                                     <li><a class="vc-footer-link text-none"
-                                                            href="page-contact.html">Contact</a></li>
+                                                            href="/pricing">Pricing</a></li>
+                                                    <li><a class="vc-footer-link text-none"
+                                                            href="/features">Industries</a></li>
                                                 </ul>
                                             </div>
                                             <div class="vc-footer-nav-col">
                                                 <h3
-                                                    class="vc-footer-col-title fs-7 fw-semibold text-uppercase m-0 mb-2">
-                                                    Product</h3>
-                                                <ul class="nav-y gap-1 m-0 p-0 list-unstyled">
+                                                    class="vc-footer-col-title fs-8 fw-semibold text-uppercase m-0 mb-1">
+                                                    Company</h3>
+                                                <ul class="nav-y gap-narrow m-0 p-0 list-unstyled">
                                                     <li><a class="vc-footer-link text-none"
-                                                            href="page-features.html">Features</a></li>
+                                                            href="/about">About</a></li>
                                                     <li><a class="vc-footer-link text-none"
-                                                            href="page-pricing.html">Pricing</a></li>
+                                                            href="/contact">Contact us</a></li>
+                                                    <li><a class="vc-footer-link text-none"
+                                                            href="request-demo.html">Book a demo</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="vc-footer-nav-col">
+                                                <h3
+                                                    class="vc-footer-col-title fs-8 fw-semibold text-uppercase m-0 mb-1">
+                                                    Support</h3>
+                                                <ul class="nav-y gap-narrow m-0 p-0 list-unstyled">
+                                                    <li><a class="vc-footer-link text-none"
+                                                            href="page-faq.html">Help Centre</a></li>
+                                                    <li><a class="vc-footer-link text-none" href="https://wa.me/"
+                                                            target="_blank" rel="noopener noreferrer">WhatsApp
+                                                            Support</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="vc-footer-nav-col">
+                                                <h3
+                                                    class="vc-footer-col-title fs-8 fw-semibold text-uppercase m-0 mb-1">
+                                                    Legal</h3>
+                                                <ul class="nav-y gap-narrow m-0 p-0 list-unstyled">
+                                                    <li><a class="vc-footer-link text-none"
+                                                            href="page-privacy.html">Privacy Policy</a></li>
+                                                    <li><a class="vc-footer-link text-none"
+                                                            href="page-terms.html">Terms of Service</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -1142,22 +759,14 @@
                             </nav>
                         </div>
                         <div
-                            class="uc-footer-bottom panel vc-footer-bottom vc-footer-bottom--compact vstack gap-3 pt-4 lg:pt-5 mt-0">
+                            class="uc-footer-bottom panel vc-footer-bottom vc-footer-bottom--compact vstack gap-2 pt-3 lg:pt-4 mt-0">
                             <div class="hstack flex-wrap gap-3 justify-between items-center w-100">
-                                <p class="vc-footer-copy m-0 fs-7 sm:fs-6">Bookloh © 2026, All rights reserved.</p>
+                                <p class="vc-footer-copy m-0 fs-8">Bookloh © 2026, All rights reserved.</p>
                                 <ul class="nav-x justify-center lg:justify-end gap-2 m-0 p-0 list-unstyled">
-                                    <li><a class="vc-footer-social text-none" href="#" aria-label="LinkedIn"><i
-                                                class="icon icon-2 unicon-logo-linkedin"></i></a></li>
                                     <li><a class="vc-footer-social text-none" href="#" aria-label="Facebook"><i
                                                 class="icon icon-2 unicon-logo-facebook"></i></a></li>
-                                    <li><a class="vc-footer-social text-none" href="#" aria-label="X"><i
-                                                class="icon icon-2 unicon-logo-x-filled"></i></a></li>
                                     <li><a class="vc-footer-social text-none" href="#" aria-label="Instagram"><i
                                                 class="icon icon-2 unicon-logo-instagram"></i></a></li>
-                                    <li><a class="vc-footer-social text-none" href="#" aria-label="YouTube"><i
-                                                class="icon icon-2 unicon-logo-youtube"></i></a></li>
-                                    <li><a class="vc-footer-social text-none" href="#" aria-label="Dribbble"><i
-                                                class="icon icon-2 unicon-logo-dribbble"></i></a></li>
                                 </ul>
                             </div>
                         </div>

@@ -75,8 +75,8 @@
     <link rel="stylesheet" href="../assets/css/magic-cursor.min.css">
 
     <!-- include main style -->
-    <link rel="stylesheet" href="../assets/scss/theme/main.scss">
-    <link rel="stylesheet" href="../assets/scss/theme/theme-four.scss">
+    <link rel="stylesheet" href="../assets/css/theme/main.min.css">
+    <link rel="stylesheet" href="../assets/css/theme/theme-four.min.css">
     <link rel="stylesheet" href="../assets/css/theme-violet-coral.css">
 
     <!-- include scripts -->
@@ -351,111 +351,47 @@
 
     <!--  Menu panel -->
     <div id="uc-menu-panel" data-uc-offcanvas="overlay: true;">
-        <div class="uc-offcanvas-bar bg-white text-dark dark:bg-gray-900 dark:text-white">
+        <div class="uc-offcanvas-bar bg-white text-dark vc-mobile-menu">
 
-            <header class="uc-offcanvas-header hstack justify-between items-center pb-2 bg-white dark:bg-gray-900">
+            <header class="uc-offcanvas-header hstack justify-between items-center pb-2 bg-white">
                 <div class="uc-logo">
-                    <a href="index-8.html" class="panel text-none" style="width: 120px;">
-                        <img src="../assets/icons/logo-white.png" alt="Bookloh">
+                    <a href="/home" class="panel text-none" style="width: 120px;">
+                        <img src="../assets/icons/logo.png" alt="Bookloh">
                     </a>
                 </div>
                 <button
-                    class="uc-offcanvas-close rtl:end-auto rtl:start-0 m-1 mt-2 icon-3 btn border-0 dark:text-white dark:text-opacity-50 hover:text-primary hover:rotate-90 duration-150 transition-all"
+                    class="uc-offcanvas-close rtl:end-auto rtl:start-0 m-1 mt-2 icon-3 btn border-0 text-dark hover:text-primary hover:rotate-90 duration-150 transition-all"
                     type="button">
                     <i class="unicon-close"></i>
                 </button>
             </header>
 
             <div class="panel">
-                <form id="search-panel" class="form-icon-group vstack gap-1 mb-2" data-uc-sticky="">
-                    <input type="email" class="form-control form-control-sm fs-7 rounded-default"
-                        placeholder="Search..">
-                    <span class="form-icon text-gray">
-                        <i class="unicon-search icon-1"></i>
-                    </span>
-                </form>
-                <ul class="nav-y gap-narrow fw-medium fs-6" data-uc-nav>
-                    <li><a href="page-features.html">Features</a></li>
-                    <li><a href="page-pricing.html">Pricing</a></li>
-                    <li><a href="page-about.html">About</a></li>
-                    <li><a href="page-career.html">Career</a></li>
-                    <li><a href="page-contact.html">Contact</a></li>
-                    <li class="uc-parent"><a href="#">Inner Pages</a>
-                        <ul class="uc-nav-sub" data-uc-nav="">
-                            <li><a href="page-services.html">Services</a></li>
-                            <li><a href="page-services-detail.html">Services Detail</a></li>
-                            <li><a href="page-integrations.html">Integrations</a></li>
-                            <li><a href="page-team.html">Team</a></li>
-                            <li><a href="components.html">Components</a></li>
-                            <li class="uc-parent"><a href="blog.html">Blog</a>
-                                <ul class="uc-nav-sub">
-                                    <li><a href="blog.html">Full Width</a></li>
-                                    <li><a href="blog-classic.html">Classic</a></li>
-                                    <li><a href="blog-sidebar.html">Sidebar</a></li>
-                                    <li><a href="blog-2cols.html">Grid 2 Cols</a></li>
-                                    <li><a href="blog-3cols.html">Grid 3 Cols</a></li>
-                                    <li><a href="blog-4cols.html">Grid 4 Cols</a></li>
-                                </ul>
-                            </li>
-                            <li class="uc-parent"><a href="blog-details.html">Blog - detail</a>
-                                <ul class="uc-nav-sub">
-                                    <li><a href="blog-details.html">Blog detail</a></li>
-                                    <li><a href="blog-details-2.html">Blog detail - v2</a></li>
-                                    <li><a href="blog-details-3.html">Blog detail - v3</a></li>
-                                </ul>
-                            </li>
-                            <li class="uc-parent"><a href="#">Useful pages</a>
-                                <ul class="uc-nav-sub">
-                                    <li><a href="sign-up.html">Sign up</a></li>
-                                    <li><a href="https://app.bookloh.com/login">Sign in</a></li>
-                                    <li><a href="reset-password.html">Reset password</a></li>
-                                    <li><a href="404.html">404 page</a></li>
-                                    <li><a href="coming-soon.html">Coming soon</a></li>
-                                </ul>
-                            </li>
-                            <li class="uc-parent"><a href="#">Other pages</a>
-                                <ul class="uc-nav-sub">
-                                    <li><a href="page-faq.html">FAQ</a></li>
-                                    <li><a href="page-terms.html">Terms of use</a></li>
-                                    <li><a href="page-privacy.html">Privacy policy</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="uc-parent"><a href="shop.html">Shop</a>
-                        <ul class="uc-nav-sub" data-uc-nav="">
-                            <li class="uc-parent"><a href="shop.html">Shop layouts</a>
-                                <ul class="uc-nav-sub">
-                                    <li><a href="shop.html">Shop 4 cols</a></li>
-                                    <li><a href="shop-3.html">Shop 3 cols</a></li>
-                                    <li><a href="shop-2.html">Shop 2 cols</a></li>
-                                    <li><a href="shop-sidebar.html">Shop with sidebar</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="shop-category.html">Archive category</a></li>
-                            <li><a href="shop-product-detail.html">Product detail</a></li>
-                            <li><a href="shop-product-detail-2.html">Product detail - v2</a></li>
-                            <li><a href="shop-cart.html">Cart</a></li>
-                            <li><a href="shop-cart-2.html">Cart - v2</a></li>
-                            <li><a href="shop-checkout.html">Checkout</a></li>
-                            <li><a href="shop-checkout-2.html">Checkout - v2</a></li>
-                            <li><a href="shop-order.html">Order confirmation</a></li>
-                        </ul>
-                    </li>
-                    <li class="hr opacity-10 my-1"></li>
-                    <li><a href="sign-up.html">Create an account</a></li>
-                    <li><a href="https://app.bookloh.com/login">Log in</a></li>
-                    <li><a href="https://themeforest.net/item/lexend-software-saas-startup-html5-template/51596504">Buy
-                            Template</a></li>
+                <ul class="nav-y gap-narrow fw-medium fs-6 vc-mobile-nav" data-uc-nav>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/features">Features</a></li>
+                    <li><a href="/pricing">Pricing</a></li>
+                    <li><a href="/contact">Contact</a></li>
                 </ul>
-                <ul class="social-icons nav-x mt-4">
-                    <li>
-                        <a href="#"><i class="unicon-logo-medium icon-2"></i></a>
-                        <a href="#"><i class="unicon-logo-x-filled icon-2"></i></a>
-                        <a href="#"><i class="unicon-logo-instagram icon-2"></i></a>
-                        <a href="#"><i class="unicon-logo-pinterest icon-2"></i></a>
-                    </li>
-                </ul>
+                <div class="vstack gap-2 mt-4 pt-3 border-top vc-mobile-menu-auth">
+                    <a href="https://app.bookloh.com/login" class="nav-login-mobile text-none">Sign in</a>
+                    <a href="sign-up.html" class="btn btn-sm nav-signup-mobile text-none">Try bookloh.</a>
+                    <ul class="nav-x gap-2 mt-2 mb-0 p-0 vc-mobile-menu-social" role="list">
+                        <li>
+                            <a class="vc-mobile-menu-social-link text-none" href="#" target="_blank"
+                                rel="noopener noreferrer" aria-label="Facebook">
+                                <i class="icon icon-2 unicon-logo-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="vc-mobile-menu-social-link text-none" href="#" target="_blank"
+                                rel="noopener noreferrer" aria-label="Instagram">
+                                <i class="icon icon-2 unicon-logo-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
         </div>
@@ -692,7 +628,7 @@
                         data-uc-navbar=" animation: uc-animation-slide-top-small; duration: 150;">
                         <div class="uc-navbar-left">
                             <div class="uc-logo ltr:ms-1 rtl:me-1">
-                                <a class="panel text-none" href="index-8.html" style="width: 115px;">
+                                <a class="panel text-none" href="/home" style="width: 115px;">
                                     <img src="../assets/icons/logo-white.png" alt="Bookloh">
                                 </a>
                             </div>
@@ -700,11 +636,11 @@
                         <div class="uc-navbar-center flex-1 d-flex justify-end items-center">
                             <ul
                                 class="uc-navbar-nav fs-6 gap-2 lg:gap-2 d-none lg:d-flex flex-wrap justify-end items-center">
-                                <li><a href="index-8.html">Home</a></li>
-                                <li><a href="page-about.html">About</a></li>
-                                <li><a href="page-features.html">Features</a></li>
-                                <li><a href="page-pricing.html">Pricing</a></li>
-                                <li><a href="page-contact.html">Contact</a></li>
+                                <li><a href="/home">Home</a></li>
+                                <li><a href="/about">About</a></li>
+                                <li><a href="/features">Features</a></li>
+                                <li><a href="/pricing">Pricing</a></li>
+                                <li><a href="/contact">Contact</a></li>
                             </ul>
                         </div>
                         <div class="uc-navbar-right">
@@ -759,7 +695,7 @@
                                         <div class="vstack md:hstack justify-center gap-1 mt-1 mb-0"
                                             data-anime="translateY: [24, 0]; opacity: [0, 1]; easing: easeOutExpo; duration: 750; delay: 750;">
                                             <a href="sign-up.html"
-                                                class="btn btn-md xl:btn-lg btn-primary hero-cta-gradient hero-cta-pill border-0 px-3 lg:px-5 w-auto">
+                                                class="btn btn-sm md:btn-md btn-primary hero-cta-gradient hero-cta-pill border-0 px-3 lg:px-4 w-auto">
                                                 <span>Try Bookloh Today</span>
                                             </a>
                                         </div>
@@ -769,7 +705,7 @@
                                         <div class="hero-preview-card hero-preview-card--overlap panel border-0"
                                             data-anime="translateY: [80, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 450; delay: 950;">
                                             <div class="hero-preview-card__media">
-                                                <img class="hero-preview-card__img w-100 d-block" src="../main.jpg"
+                                                <img class="hero-preview-card__img w-100 d-block" src="../main.png"
                                                     alt="Bookloh">
                                             </div>
                                         </div>
@@ -914,14 +850,14 @@
                             <div class="col-12 lg:col-6">
                                 <div
                                     class="panel position-relative overflow-hidden min-h-450px vc-features-card vc-features-card--wide vc-features-card--support rounded-3">
-                                    <div class="panel vstack items-center text-center gap-2 p-3 md:p-4 xl:p-6">
+                                    <div class="panel vstack items-center text-center gap-2 p-3 md:p-4 xl:p-6 vc-support-card-copy position-relative z-2">
                                         <h4 class="h4 m-0 text-inherit">Customer support for <br> seamless booking management
                                         </h4>
                                         <p class="fs-6 md:fs-5 lg:fs-4 m-0 xl:px-4 text-center vc-features-lead">Get
                                             reliable support whenever you need it. Our dedicated team is here to help you
                                             manage bookings, solve issues quickly, and keep your business running
                                             smoothly.</p>
-                                        <a href="#" class="btn btn-sm btn-primary border px-2 mt-2">
+                                        <a href="/contact" class="btn btn-sm btn-primary border px-2 mt-2 vc-support-contact-btn">
                                             <span>Contact us</span>
                                             <i class="icon icon-narrow unicon-arrow-right fw-bold rtl:rotate-180"></i>
                                         </a>
@@ -1074,19 +1010,7 @@
                                 <div
                                     class="features-item vc-solutions-card panel h-full vstack items-center justify-center gap-2 lg:gap-3 p-3 lg:p-4 rounded-3">
                                     <div class="vc-solutions-icon-wrap" aria-hidden="true">
-                                        <svg class="vc-solutions-svg" width="44" height="44" viewBox="0 0 44 44"
-                                            fill="none">
-                                            <defs>
-                                                <linearGradient id="solg1" x1="4" y1="6" x2="40" y2="38">
-                                                    <stop stop-color="#F472B6" />
-                                                    <stop offset="1" stop-color="#7C3AED" />
-                                                </linearGradient>
-                                            </defs>
-                                            <rect x="7" y="7" width="30" height="30" rx="10" fill="url(#solg1)"
-                                                opacity=".16" />
-                                            <path d="M22 11v22M11 22h22" stroke="url(#solg1)" stroke-width="2.2"
-                                                stroke-linecap="round" />
-                                        </svg>
+                                        <img class="vc-solutions-icon" src="../assets/images/icons/faq/home-8-icon-01.svg" alt="" width="44" height="44">
                                     </div>
                                     <div class="panel px-0 w-100">
                                         <div class="vstack gap-1 sm:gap-2 w-100">
@@ -1102,20 +1026,7 @@
                                 <div
                                     class="features-item vc-solutions-card panel h-full vstack items-center justify-center gap-2 lg:gap-3 p-3 lg:p-4 rounded-3">
                                     <div class="vc-solutions-icon-wrap" aria-hidden="true">
-                                        <svg class="vc-solutions-svg" width="44" height="44" viewBox="0 0 44 44"
-                                            fill="none">
-                                            <defs>
-                                                <linearGradient id="solg2" x1="6" y1="10" x2="38" y2="34">
-                                                    <stop stop-color="#C084FC" />
-                                                    <stop offset="1" stop-color="#6366F1" />
-                                                </linearGradient>
-                                            </defs>
-                                            <circle cx="22" cy="22" r="14" stroke="url(#solg2)" stroke-width="2"
-                                                fill="none" />
-                                            <circle cx="22" cy="22" r="6" stroke="url(#solg2)" stroke-width="1.8"
-                                                fill="none" opacity=".55" />
-                                            <circle cx="22" cy="22" r="2" fill="url(#solg2)" />
-                                        </svg>
+                                        <img class="vc-solutions-icon" src="../assets/images/icons/faq/home-8-icon-02.svg" alt="" width="44" height="44">
                                     </div>
                                     <div class="panel px-0 w-100">
                                         <div class="vstack gap-1 sm:gap-2 w-100">
@@ -1131,24 +1042,13 @@
                                 <div
                                     class="features-item vc-solutions-card panel h-full vstack items-center justify-center gap-2 lg:gap-3 p-3 lg:p-4 rounded-3">
                                     <div class="vc-solutions-icon-wrap" aria-hidden="true">
-                                        <svg class="vc-solutions-svg" width="44" height="44" viewBox="0 0 44 44"
-                                            fill="none">
-                                            <defs>
-                                                <linearGradient id="solg3" x1="8" y1="12" x2="36" y2="32">
-                                                    <stop stop-color="#F472B6" />
-                                                    <stop offset="1" stop-color="#A855F7" />
-                                                </linearGradient>
-                                            </defs>
-                                            <path d="M10 20h24v4H10v-4z" fill="url(#solg3)" opacity=".22" />
-                                            <path d="M10 26h18v4H10v-4z" fill="url(#solg3)" opacity=".38" />
-                                            <path d="M10 14h20v4H10v-4z" fill="url(#solg3)" opacity=".55" />
-                                        </svg>
+                                        <img class="vc-solutions-icon" src="../assets/images/icons/faq/home-8-icon-03.svg" alt="" width="44" height="44">
                                     </div>
                                     <div class="panel px-0 w-100">
                                         <div class="vstack gap-1 sm:gap-2 w-100">
                                             <h3 class="title h6 lg:h5 m-0 text-center">Rich booking context</h3>
                                             <p class="desc fs-6 m-0 vc-solutions-desc">Attach services, add-ons, products,
-                                                team members, and customer details to each booking so nothing is lost
+                                                team members, and customer details to each&nbsp;booking so nothing is lost
                                                 between inquiry and event day.</p>
                                         </div>
                                     </div>
@@ -1158,17 +1058,7 @@
                                 <div
                                     class="features-item vc-solutions-card panel h-full vstack items-center justify-center gap-2 lg:gap-3 p-3 lg:p-4 rounded-3">
                                     <div class="vc-solutions-icon-wrap" aria-hidden="true">
-                                        <svg class="vc-solutions-svg" width="44" height="44" viewBox="0 0 44 44"
-                                            fill="none">
-                                            <defs>
-                                                <linearGradient id="solg4" x1="10" y1="8" x2="34" y2="36">
-                                                    <stop stop-color="#A855F7" />
-                                                    <stop offset="1" stop-color="#6366F1" />
-                                                </linearGradient>
-                                            </defs>
-                                            <path d="M22 8l12 8v12L22 36 10 28V16l12-8z" stroke="url(#solg4)"
-                                                stroke-width="2" fill="url(#solg4)" fill-opacity=".12" />
-                                        </svg>
+                                        <img class="vc-solutions-icon" src="../assets/images/icons/faq/home-8-icon-05.svg" alt="" width="44" height="44">
                                     </div>
                                     <div class="panel px-0 w-100">
                                         <div class="vstack gap-1 sm:gap-2 w-100">
@@ -1184,18 +1074,7 @@
                                 <div
                                     class="features-item vc-solutions-card panel h-full vstack items-center justify-center gap-2 lg:gap-3 p-3 lg:p-4 rounded-3">
                                     <div class="vc-solutions-icon-wrap" aria-hidden="true">
-                                        <svg class="vc-solutions-svg" width="44" height="44" viewBox="0 0 44 44"
-                                            fill="none">
-                                            <defs>
-                                                <linearGradient id="solg5" x1="8" y1="6" x2="36" y2="38">
-                                                    <stop stop-color="#F472B6" />
-                                                    <stop offset="1" stop-color="#8B5CF6" />
-                                                </linearGradient>
-                                            </defs>
-                                            <rect x="12" y="10" width="20" height="26" rx="4" stroke="url(#solg5)"
-                                                stroke-width="2" fill="url(#solg5)" fill-opacity=".1" />
-                                            <path d="M18 18h8v10h-8V18z" fill="url(#solg5)" opacity=".45" />
-                                        </svg>
+                                        <img class="vc-solutions-icon" src="../assets/images/icons/faq/home-8-icon-06.svg" alt="" width="44" height="44">
                                     </div>
                                     <div class="panel px-0 w-100">
                                         <div class="vstack gap-1 sm:gap-2 w-100">
@@ -1211,26 +1090,13 @@
                                 <div
                                     class="features-item vc-solutions-card panel h-full vstack items-center justify-center gap-2 lg:gap-3 p-3 lg:p-4 rounded-3">
                                     <div class="vc-solutions-icon-wrap" aria-hidden="true">
-                                        <svg class="vc-solutions-svg" width="44" height="44" viewBox="0 0 44 44"
-                                            fill="none">
-                                            <defs>
-                                                <linearGradient id="solg6" x1="4" y1="22" x2="40" y2="22">
-                                                    <stop stop-color="#C084FC" />
-                                                    <stop offset="1" stop-color="#7C3AED" />
-                                                </linearGradient>
-                                            </defs>
-                                            <circle cx="14" cy="22" r="4" fill="url(#solg6)" />
-                                            <circle cx="30" cy="14" r="4" fill="url(#solg6)" opacity=".85" />
-                                            <circle cx="30" cy="30" r="4" fill="url(#solg6)" opacity=".85" />
-                                            <path d="M17.5 22h7M24 17l6-4M24 27l6 4" stroke="url(#solg6)"
-                                                stroke-width="1.6" stroke-linecap="round" opacity=".5" />
-                                        </svg>
+                                        <img class="vc-solutions-icon" src="../assets/images/icons/faq/home-8-icon-07.svg" alt="" width="44" height="44">
                                     </div>
                                     <div class="panel px-0 w-100">
                                         <div class="vstack gap-1 sm:gap-2 w-100">
                                             <h3 class="title h6 lg:h5 m-0 text-center">Connected workflows</h3>
-                                            <p class="desc fs-6 m-0 vc-solutions-desc">Send WhatsApp reminders, subscribe
-                                                bookings to phone calendars, list on the Bookloh marketplace, and issue
+                                            <p class="desc fs-6 m-0 vc-solutions-desc">Send WhatsApp reminders, subscribe&nbsp;bookings
+                                                to phone calendars, list on the Bookloh marketplace, and issue
                                                 e-invoices and payment receipts from the same system.</p>
                                         </div>
                                     </div>
@@ -1240,8 +1106,8 @@
                         <div class="pre-cta vstack items-center gap-3 max-w-400px lg:max-w-750px mx-auto text-center mt-4 xl:mt-6"
                             data-anime="onview:-100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});">
                             <div>
-                                <a href="page-pricing.html"
-                                    class="btn btn-md xl:btn-lg vc-solutions-cta border-0 px-4 lg:px-6 w-auto text-none hstack items-center justify-center gap-narrow">
+                                <a href="/pricing"
+                                    class="btn btn-md xl:btn-lg vc-solutions-cta border px-4 lg:px-6 w-auto text-none hstack items-center justify-center gap-narrow">
                                     <span>Start your free trial</span>
                                     <i class="icon icon-narrow unicon-arrow-right fw-bold rtl:rotate-180"></i>
                                 </a>
@@ -1271,411 +1137,189 @@
                                 billed yearly. <br> Try everything with our RM59 trial first.</p>
                             <ul class="uc-switcher-nav vc-pricing-toggle nav-x gap-0 p-narrow border rounded-pill fs-7 fw-medium"
                                 data-uc-switcher="connect: .pricing-switcher;">
-                                <li><a href="#" class="text-none vc-pricing-toggle-link cstack p-1">Monthly</a></li>
+                                <li class="uc-active"><a href="#" class="text-none vc-pricing-toggle-link cstack p-1">Monthly</a></li>
                                 <li><a href="#" class="text-none vc-pricing-toggle-link cstack p-1">Yearly</a></li>
                             </ul>
                         </div>
                         <div class="uc-switcher pricing-switcher mt-1 sm:mt-2"
                             data-anime="onview: -100; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 200;">
-                            <div>
-
-                                <div class="panel vc-pricing-wrap pricing-compare-wrap overflow-hidden">
-                                    <div class="overflow-x-auto">
-                                        <table
-                                            class="pricing-compare-table vc-pricing-table w-100 m-0 text-dark dark:text-white"
-                                            style="min-width: 880px; border-collapse: separate; border-spacing: 0;">
-                                            <thead>
-                                                <tr class="border-bottom border-gray-200 dark:border-gray-700">
-                                                    <th scope="col" class="p-4 pb-2 align-bottom" style="width: 22%;">
-                                                        <span class="sr-only">Compare plans</span>
-                                                    </th>
-                                                    <th scope="col" class="text-center p-4 pb-2 align-bottom">
-                                                        <span
-                                                            class="pricing-plan-title text-gray-900 dark:text-white text-uppercase d-inline-block mb-1">Starter</span>
-                                                    </th>
-                                                    <th scope="col"
-                                                        class="text-center p-4 pb-2 align-top pricing-col-pop vc-pricing-pop-col position-relative">
-                                                        <span
-                                                            class="vc-pricing-badge d-inline-flex rounded-pill text-white text-uppercase fw-bold">Most
-                                                            popular</span>
-                                                        <div class="vstack items-center gap-0 mx-auto">
-                                                            <span
-                                                                class="pricing-plan-title vc-pricing-plan-highlight d-inline-block mb-0">Growth</span>
-                                                        </div>
-                                                    </th>
-                                                    <th scope="col" class="text-center p-4 pb-2 align-bottom">
-                                                        <span
-                                                            class="pricing-plan-title text-gray-900 dark:text-white text-uppercase d-inline-block mb-1">Business</span>
-                                                    </th>
-                                                </tr>
-                                                <tr class="border-bottom border-gray-200 dark:border-gray-700">
-                                                    <th scope="col"
-                                                        class="p-4 pt-2 pb-3 align-top fw-normal fs-7 text-start text-opacity-70">
-                                                        Pick what fits today—upgrade anytime.</th>
-                                                    <th scope="col"
-                                                        class="text-center p-4 pt-0 pb-3 align-top fs-7 text-opacity-80 fw-normal">
-                                                        Light bookings &amp; essential workflows.</th>
-                                                    <th scope="col"
-                                                        class="text-center p-4 pt-0 pb-3 align-top fs-7 text-opacity-80 fw-normal pricing-col-pop">
-                                                        The sweet spot for growing teams.</th>
-                                                    <th scope="col"
-                                                        class="text-center p-4 pt-0 pb-3 align-top fs-7 text-opacity-80 fw-normal">
-                                                        Agencies &amp; high-volume operations.</th>
-                                                </tr>
-                                                <tr class="border-bottom border-gray-200 dark:border-gray-700">
-                                                    <th scope="col"
-                                                        class="p-4 pt-0 pb-4 align-bottom fs-7 text-uppercase text-opacity-50 fw-semibold text-start">
-                                                        Your price</th>
-                                                    <th scope="col"
-                                                        class="text-center p-4 pt-0 pb-4 align-bottom fw-normal">
-                                                        <div
-                                                            class="pricing-price vc-pricing-price text-gray-900 dark:text-white">
-                                                            MYR 59<span
-                                                                class="fs-6 fw-normal vc-pricing-price-suffix">/mo</span>
-                                                        </div>
-                                                    </th>
-                                                    <th scope="col"
-                                                        class="text-center p-4 pt-0 pb-4 align-bottom fw-normal pricing-col-pop">
-                                                        <div class="pricing-price vc-pricing-price-featured">MYR
-                                                            129<span
-                                                                class="fs-6 fw-normal vc-pricing-price-suffix">/mo</span>
-                                                        </div>
-                                                    </th>
-                                                    <th scope="col"
-                                                        class="text-center p-4 pt-0 pb-4 align-bottom fw-normal">
-                                                        <div
-                                                            class="pricing-price vc-pricing-price text-gray-900 dark:text-white">
-                                                            MYR 249<span
-                                                                class="fs-6 fw-normal vc-pricing-price-suffix">/mo</span>
-                                                        </div>
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="border-bottom border-gray-200 dark:border-gray-700">
-                                                    <th class="text-start py-3 px-3 sm:px-4 fw-semibold text-gray-900 dark:text-white"
-                                                        scope="row">Bookings</th>
-                                                    <td class="text-center py-3 px-3 sm:px-4 text-opacity-90">100
-                                                        lifetime bookings</td>
-                                                    <td
-                                                        class="text-center py-3 px-3 sm:px-4 text-opacity-90 pricing-col-pop">
-                                                        1,000 lifetime bookings</td>
-                                                    <td class="text-center py-3 px-3 sm:px-4 text-opacity-90">Unlimited
-                                                    </td>
-                                                </tr>
-                                                <tr class="border-bottom border-gray-200 dark:border-gray-700">
-                                                    <th class="text-start py-3 px-3 sm:px-4 fw-semibold text-gray-900 dark:text-white"
-                                                        scope="row">Admin seats</th>
-                                                    <td class="text-center py-3 px-3 sm:px-4">1 admin</td>
-                                                    <td class="text-center py-3 px-3 sm:px-4 pricing-col-pop">3 admins
-                                                    </td>
-                                                    <td class="text-center py-3 px-3 sm:px-4">8 admins</td>
-                                                </tr>
-                                                <tr class="border-bottom border-gray-200 dark:border-gray-700">
-                                                    <th class="text-start py-3 px-3 sm:px-4 fw-semibold text-gray-900 dark:text-white"
-                                                        scope="row">Sales team access</th>
-                                                    <td class="text-center py-3 px-3 sm:px-4">1 user</td>
-                                                    <td class="text-center py-3 px-3 sm:px-4 pricing-col-pop">4 users
-                                                    </td>
-                                                    <td class="text-center py-3 px-3 sm:px-4">12 users</td>
-                                                </tr>
-                                                <tr class="border-bottom border-gray-200 dark:border-gray-700">
-                                                    <th class="text-start py-3 px-3 sm:px-4 fw-semibold text-gray-900 dark:text-white"
-                                                        scope="row">Operations &amp; scheduling team</th>
-                                                    <td class="text-center py-3 px-3 sm:px-4 text-opacity-70">—</td>
-                                                    <td class="text-center py-3 px-3 sm:px-4 pricing-col-pop">Up to 8
-                                                        members</td>
-                                                    <td class="text-center py-3 px-3 sm:px-4">Unlimited members</td>
-                                                </tr>
-                                                <tr class="border-bottom border-gray-200 dark:border-gray-700">
-                                                    <th class="text-start py-3 px-3 sm:px-4 fw-semibold text-gray-900 dark:text-white"
-                                                        scope="row">Roles &amp; permissions</th>
-                                                    <td class="text-center py-3 px-3 sm:px-4 fs-7 sm:fs-6">Essential
-                                                        access controls</td>
-                                                    <td
-                                                        class="text-center py-3 px-3 sm:px-4 fs-7 sm:fs-6 pricing-col-pop">
-                                                        Team-level permissions</td>
-                                                    <td class="text-center py-3 px-3 sm:px-4 fs-7 sm:fs-6">Advanced
-                                                        access governance</td>
-                                                </tr>
-                                                <tr class="border-bottom border-gray-200 dark:border-gray-700">
-                                                    <th class="text-start py-3 px-3 sm:px-4 fw-semibold text-gray-900 dark:text-white"
-                                                        scope="row">Quotes, invoicing &amp; payments</th>
-                                                    <td class="text-center py-3 px-3 sm:px-4">
-                                                        <div class="hstack justify-center gap-1"><span
-                                                                class="vc-pricing-tick" aria-hidden="true"><i
-                                                                    class="icon icon-narrow unicon-checkmark"></i></span>
-                                                        </div>
-                                                    </td>
-                                                    <td class="text-center py-3 px-3 sm:px-4 pricing-col-pop">
-                                                        <div class="hstack justify-center gap-1"><span
-                                                                class="vc-pricing-tick" aria-hidden="true"><i
-                                                                    class="icon icon-narrow unicon-checkmark"></i></span>
-                                                        </div>
-                                                    </td>
-                                                    <td class="text-center py-3 px-3 sm:px-4">
-                                                        <div class="hstack justify-center gap-1"><span
-                                                                class="vc-pricing-tick" aria-hidden="true"><i
-                                                                    class="icon icon-narrow unicon-checkmark"></i></span>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr class="border-bottom border-gray-200 dark:border-gray-700">
-                                                    <th class="text-start py-3 px-3 sm:px-4 fw-semibold text-gray-900 dark:text-white"
-                                                        scope="row">Reporting &amp; insights</th>
-                                                    <td class="text-center py-3 px-3 sm:px-4 fs-7 sm:fs-6">Essential
-                                                        reports</td>
-                                                    <td
-                                                        class="text-center py-3 px-3 sm:px-4 fs-7 sm:fs-6 pricing-col-pop">
-                                                        Advanced reporting</td>
-                                                    <td class="text-center py-3 px-3 sm:px-4 fs-7 sm:fs-6">Business
-                                                        intelligence &amp; analytics</td>
-                                                </tr>
-                                                <tr class="border-bottom border-gray-200 dark:border-gray-700">
-                                                    <th class="text-start py-3 px-3 sm:px-4 fw-semibold text-gray-900 dark:text-white"
-                                                        scope="row">Support experience</th>
-                                                    <td class="text-center py-3 px-3 sm:px-4 fs-7 sm:fs-6">Standard
-                                                        support</td>
-                                                    <td
-                                                        class="text-center py-3 px-3 sm:px-4 fs-7 sm:fs-6 pricing-col-pop">
-                                                        Priority support</td>
-                                                    <td class="text-center py-3 px-3 sm:px-4 fs-7 sm:fs-6">Dedicated
-                                                        success support</td>
-                                                </tr>
-                                                <tr>
-                                                    <th class="text-start py-3 px-3 sm:px-4 fw-semibold text-gray-900 dark:text-white"
-                                                        scope="row">Best suited for</th>
-                                                    <td class="text-center py-3 px-3 sm:px-4 fs-7 sm:fs-6">Independent
-                                                        professionals</td>
-                                                    <td
-                                                        class="text-center py-3 px-3 sm:px-4 fs-7 sm:fs-6 pricing-col-pop">
-                                                        Scaling event teams</td>
-                                                    <td class="text-center py-3 px-3 sm:px-4 fs-7 sm:fs-6">Agencies
-                                                        &amp; high-volume operations</td>
-                                                </tr>
-                                            </tbody>
-                                            <tfoot>
-                                                <tr>
-                                                    <td class="p-4"></td>
-                                                    <td class="p-4 text-center align-top">
-                                                        <a href="sign-up.html"
-                                                            class="btn btn-md w-100 vc-pricing-btn-primary text-none">Get
-                                                            started</a>
-                                                    </td>
-                                                    <td class="p-4 text-center align-top pricing-col-pop">
-                                                        <a href="sign-up.html"
-                                                            class="btn btn-md w-100 vc-pricing-btn-primary text-none">Get
-                                                            started</a>
-                                                    </td>
-                                                    <td class="p-4 text-center align-top">
-                                                        <a href="page-contact.html"
-                                                            class="btn btn-md w-100 vc-pricing-btn-secondary text-none">Talk
-                                                            to us</a>
-                                                    </td>
-                                                </tr>
-                                            </tfoot>
-                                        </table>
+                            <div class="uc-active">
+                                <div class="vc-pricing-cards row child-cols-12 lg:child-cols-3 col-match g-4 lg:g-5 xl:g-6 justify-center">
+                                    <div>
+                                        <div class="vc-pricing-card panel vstack h-100 rounded-2">
+                                            <div class="vc-pricing-card-top" aria-hidden="true"></div>
+                                            <div class="vc-pricing-card-header vstack items-center gap-1 w-100">
+                                                <span class="vc-pricing-card-badge fs-7 fw-semibold py-narrow px-2 rounded-pill text-uppercase">Starter</span>
+                                            </div>
+                                            <p class="vc-pricing-card-desc fs-7 m-0 vc-pricing-card-desc-wrap">Light bookings &amp; essential workflows.</p>
+                                            <div class="vc-pricing-card-price vc-pricing-card-price-wrap mb-3">
+                                                <div class="pricing-price vc-pricing-price text-gray-900 dark:text-white">MYR 59<span class="fs-6 fw-normal vc-pricing-price-suffix">/mo</span></div>
+                                            </div>
+                                            <hr class="vc-pricing-card-divider w-100 m-0 mb-3">
+                                            <p class="vc-pricing-features-title fs-7 fw-bold m-0 mb-2">Standout features</p>
+                                            <ul class="vc-pricing-features-list nav-y gap-2 fs-7 m-0 flex-grow">
+                                                <li class="vc-pricing-feature-item"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Bookings</span><span class="vc-pricing-feature-value">100 lifetime bookings</span></div></li>
+                                                <li class="vc-pricing-feature-item"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Admin seats</span><span class="vc-pricing-feature-value">1 admin</span></div></li>
+                                                <li class="vc-pricing-feature-item"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Sales team access</span><span class="vc-pricing-feature-value">1 user</span></div></li>
+                                                <li class="vc-pricing-feature-item vc-pricing-feature-item--stack vc-pricing-feature-unavailable"><span class="vc-pricing-cross flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-close"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Operations &amp; scheduling</span><span class="vc-pricing-feature-value">Not included</span></div></li>
+                                                <li class="vc-pricing-feature-item vc-pricing-feature-item--stack"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Roles &amp; permissions</span><span class="vc-pricing-feature-value">Essential access controls</span></div></li>
+                                                <li class="vc-pricing-feature-item vc-pricing-feature-item--stack"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Quotes, invoicing &amp; payments</span><span class="vc-pricing-feature-value">Included</span></div></li>
+                                                <li class="vc-pricing-feature-item"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Reporting</span><span class="vc-pricing-feature-value">Essential reports</span></div></li>
+                                                <li class="vc-pricing-feature-item"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Support</span><span class="vc-pricing-feature-value">Standard support</span></div></li>
+                                                <li class="vc-pricing-feature-item vc-pricing-feature-item--stack"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Best for</span><span class="vc-pricing-feature-value">Independent professionals</span></div></li>
+                                            </ul>
+                                            <div class="vc-pricing-card-cta vstack gap-1 mt-4 pt-2">
+                                                <a href="sign-up.html" class="btn btn-md w-100 vc-pricing-btn-outline text-none">Get started</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="vc-pricing-card vc-pricing-card--featured panel vstack h-100 rounded-2 position-relative">
+                                            <div class="vc-pricing-card-top">
+                                                <span class="vc-pricing-badge d-inline-flex rounded-pill text-white text-uppercase fw-bold">Most popular</span>
+                                            </div>
+                                            <div class="vc-pricing-card-header vstack items-center gap-1 w-100">
+                                                <span class="pricing-plan-title vc-pricing-plan-highlight vc-pricing-card-badge fs-7 fw-semibold py-narrow px-2 rounded-pill">Pro</span>
+                                            </div>
+                                            <p class="vc-pricing-card-desc fs-7 m-0 vc-pricing-card-desc-wrap">The sweet spot for growing teams.</p>
+                                            <div class="vc-pricing-card-price vc-pricing-card-price-wrap mb-3">
+                                                <div class="pricing-price vc-pricing-price-featured">MYR 129<span class="fs-6 fw-normal vc-pricing-price-suffix">/mo</span></div>
+                                            </div>
+                                            <hr class="vc-pricing-card-divider w-100 m-0 mb-3">
+                                            <p class="vc-pricing-features-title fs-7 fw-bold m-0 mb-2">Standout features</p>
+                                            <ul class="vc-pricing-features-list nav-y gap-2 fs-7 m-0 flex-grow">
+                                                <li class="vc-pricing-feature-item"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Bookings</span><span class="vc-pricing-feature-value">1,000 lifetime bookings</span></div></li>
+                                                <li class="vc-pricing-feature-item"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Admin seats</span><span class="vc-pricing-feature-value">3 admins</span></div></li>
+                                                <li class="vc-pricing-feature-item"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Sales team access</span><span class="vc-pricing-feature-value">4 users</span></div></li>
+                                                <li class="vc-pricing-feature-item vc-pricing-feature-item--stack"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Operations &amp; scheduling</span><span class="vc-pricing-feature-value">Up to 8 members</span></div></li>
+                                                <li class="vc-pricing-feature-item vc-pricing-feature-item--stack"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Roles &amp; permissions</span><span class="vc-pricing-feature-value">Team-level permissions</span></div></li>
+                                                <li class="vc-pricing-feature-item vc-pricing-feature-item--stack"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Quotes, invoicing &amp; payments</span><span class="vc-pricing-feature-value">Included</span></div></li>
+                                                <li class="vc-pricing-feature-item"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Reporting</span><span class="vc-pricing-feature-value">Advanced reporting</span></div></li>
+                                                <li class="vc-pricing-feature-item"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Support</span><span class="vc-pricing-feature-value">Priority support</span></div></li>
+                                                <li class="vc-pricing-feature-item vc-pricing-feature-item--stack"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Best for</span><span class="vc-pricing-feature-value">Scaling event teams</span></div></li>
+                                            </ul>
+                                            <div class="vc-pricing-card-cta vstack gap-1 mt-4 pt-2">
+                                                <a href="sign-up.html" class="btn btn-md w-100 vc-pricing-btn-primary text-none">Get started</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="vc-pricing-card panel vstack h-100 rounded-2">
+                                            <div class="vc-pricing-card-top" aria-hidden="true"></div>
+                                            <div class="vc-pricing-card-header vstack items-center gap-1 w-100">
+                                                <span class="vc-pricing-card-badge fs-7 fw-semibold py-narrow px-2 rounded-pill text-uppercase">Business</span>
+                                            </div>
+                                            <p class="vc-pricing-card-desc fs-7 m-0 vc-pricing-card-desc-wrap">Agencies &amp; high-volume operations.</p>
+                                            <div class="vc-pricing-card-price vc-pricing-card-price-wrap mb-3">
+                                                <div class="pricing-price vc-pricing-price text-gray-900 dark:text-white">MYR 249<span class="fs-6 fw-normal vc-pricing-price-suffix">/mo</span></div>
+                                            </div>
+                                            <hr class="vc-pricing-card-divider w-100 m-0 mb-3">
+                                            <p class="vc-pricing-features-title fs-7 fw-bold m-0 mb-2">Standout features</p>
+                                            <ul class="vc-pricing-features-list nav-y gap-2 fs-7 m-0 flex-grow">
+                                                <li class="vc-pricing-feature-item"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Bookings</span><span class="vc-pricing-feature-value">Unlimited</span></div></li>
+                                                <li class="vc-pricing-feature-item"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Admin seats</span><span class="vc-pricing-feature-value">8 admins</span></div></li>
+                                                <li class="vc-pricing-feature-item"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Sales team access</span><span class="vc-pricing-feature-value">12 users</span></div></li>
+                                                <li class="vc-pricing-feature-item vc-pricing-feature-item--stack"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Operations &amp; scheduling</span><span class="vc-pricing-feature-value">Unlimited members</span></div></li>
+                                                <li class="vc-pricing-feature-item vc-pricing-feature-item--stack"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Roles &amp; permissions</span><span class="vc-pricing-feature-value">Advanced access governance</span></div></li>
+                                                <li class="vc-pricing-feature-item vc-pricing-feature-item--stack"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Quotes, invoicing &amp; payments</span><span class="vc-pricing-feature-value">Included</span></div></li>
+                                                <li class="vc-pricing-feature-item vc-pricing-feature-item--stack"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Reporting</span><span class="vc-pricing-feature-value">Business intelligence &amp; analytics</span></div></li>
+                                                <li class="vc-pricing-feature-item"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Support</span><span class="vc-pricing-feature-value">Dedicated success support</span></div></li>
+                                                <li class="vc-pricing-feature-item vc-pricing-feature-item--stack"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Best for</span><span class="vc-pricing-feature-value">Agencies &amp; high-volume operations</span></div></li>
+                                            </ul>
+                                            <div class="vc-pricing-card-cta vstack gap-1 mt-4 pt-2">
+                                                <a href="/contact" class="btn btn-md w-100 vc-pricing-btn-outline text-none">Talk to us</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div>
-
-                                <div class="panel vc-pricing-wrap pricing-compare-wrap overflow-hidden">
-                                    <div class="overflow-x-auto">
-                                        <table
-                                            class="pricing-compare-table vc-pricing-table w-100 m-0 text-dark dark:text-white"
-                                            style="min-width: 880px; border-collapse: separate; border-spacing: 0;">
-                                            <thead>
-                                                <tr class="border-bottom border-gray-200 dark:border-gray-700">
-                                                    <th scope="col" class="p-4 pb-2 align-bottom" style="width: 22%;">
-                                                        <span class="sr-only">Compare plans</span>
-                                                    </th>
-                                                    <th scope="col" class="text-center p-4 pb-2 align-bottom">
-                                                        <span
-                                                            class="pricing-plan-title text-gray-900 dark:text-white text-uppercase d-inline-block mb-1">Starter</span>
-                                                    </th>
-                                                    <th scope="col"
-                                                        class="text-center p-4 pb-2 align-top pricing-col-pop vc-pricing-pop-col position-relative">
-                                                        <span
-                                                            class="vc-pricing-badge d-inline-flex rounded-pill text-white text-uppercase fw-bold">Most
-                                                            popular</span>
-                                                        <div class="vstack items-center gap-0 mx-auto">
-                                                            <span
-                                                                class="pricing-plan-title vc-pricing-plan-highlight d-inline-block mb-0">Growth</span>
-                                                        </div>
-                                                    </th>
-                                                    <th scope="col" class="text-center p-4 pb-2 align-bottom">
-                                                        <span
-                                                            class="pricing-plan-title text-gray-900 dark:text-white text-uppercase d-inline-block mb-1">Business</span>
-                                                    </th>
-                                                </tr>
-                                                <tr class="border-bottom border-gray-200 dark:border-gray-700">
-                                                    <th scope="col"
-                                                        class="p-4 pt-2 pb-3 align-top fw-normal fs-7 text-start text-opacity-70">
-                                                        Pick what fits today—upgrade anytime.</th>
-                                                    <th scope="col"
-                                                        class="text-center p-4 pt-0 pb-3 align-top fs-7 text-opacity-80 fw-normal">
-                                                        Light bookings &amp; essential workflows.</th>
-                                                    <th scope="col"
-                                                        class="text-center p-4 pt-0 pb-3 align-top fs-7 text-opacity-80 fw-normal pricing-col-pop">
-                                                        The sweet spot for growing teams.</th>
-                                                    <th scope="col"
-                                                        class="text-center p-4 pt-0 pb-3 align-top fs-7 text-opacity-80 fw-normal">
-                                                        Agencies &amp; high-volume operations.</th>
-                                                </tr>
-                                                <tr class="border-bottom border-gray-200 dark:border-gray-700">
-                                                    <th scope="col"
-                                                        class="p-4 pt-0 pb-4 align-bottom fs-7 text-uppercase text-opacity-50 fw-semibold text-start">
-                                                        Your price</th>
-                                                    <th scope="col"
-                                                        class="text-center p-4 pt-0 pb-4 align-bottom fw-normal">
-                                                        <div
-                                                            class="pricing-price vc-pricing-price text-gray-900 dark:text-white">
-                                                            MYR 590<span
-                                                                class="fs-6 fw-normal vc-pricing-price-suffix">/year</span>
-                                                        </div>
-                                                    </th>
-                                                    <th scope="col"
-                                                        class="text-center p-4 pt-0 pb-4 align-bottom fw-normal pricing-col-pop">
-                                                        <div class="pricing-price vc-pricing-price-featured">MYR
-                                                            1,290<span
-                                                                class="fs-6 fw-normal vc-pricing-price-suffix">/year</span>
-                                                        </div>
-                                                    </th>
-                                                    <th scope="col"
-                                                        class="text-center p-4 pt-0 pb-4 align-bottom fw-normal">
-                                                        <div
-                                                            class="pricing-price vc-pricing-price text-gray-900 dark:text-white">
-                                                            MYR 2,490<span
-                                                                class="fs-6 fw-normal vc-pricing-price-suffix">/year</span>
-                                                        </div>
-                                                    </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="border-bottom border-gray-200 dark:border-gray-700">
-                                                    <th class="text-start py-3 px-3 sm:px-4 fw-semibold text-gray-900 dark:text-white"
-                                                        scope="row">Bookings</th>
-                                                    <td class="text-center py-3 px-3 sm:px-4 text-opacity-90">100
-                                                        lifetime bookings</td>
-                                                    <td
-                                                        class="text-center py-3 px-3 sm:px-4 text-opacity-90 pricing-col-pop">
-                                                        1,000 lifetime bookings</td>
-                                                    <td class="text-center py-3 px-3 sm:px-4 text-opacity-90">Unlimited
-                                                    </td>
-                                                </tr>
-                                                <tr class="border-bottom border-gray-200 dark:border-gray-700">
-                                                    <th class="text-start py-3 px-3 sm:px-4 fw-semibold text-gray-900 dark:text-white"
-                                                        scope="row">Admin seats</th>
-                                                    <td class="text-center py-3 px-3 sm:px-4">1 admin</td>
-                                                    <td class="text-center py-3 px-3 sm:px-4 pricing-col-pop">3 admins
-                                                    </td>
-                                                    <td class="text-center py-3 px-3 sm:px-4">8 admins</td>
-                                                </tr>
-                                                <tr class="border-bottom border-gray-200 dark:border-gray-700">
-                                                    <th class="text-start py-3 px-3 sm:px-4 fw-semibold text-gray-900 dark:text-white"
-                                                        scope="row">Sales team access</th>
-                                                    <td class="text-center py-3 px-3 sm:px-4">1 user</td>
-                                                    <td class="text-center py-3 px-3 sm:px-4 pricing-col-pop">4 users
-                                                    </td>
-                                                    <td class="text-center py-3 px-3 sm:px-4">12 users</td>
-                                                </tr>
-                                                <tr class="border-bottom border-gray-200 dark:border-gray-700">
-                                                    <th class="text-start py-3 px-3 sm:px-4 fw-semibold text-gray-900 dark:text-white"
-                                                        scope="row">Operations &amp; scheduling team</th>
-                                                    <td class="text-center py-3 px-3 sm:px-4 text-opacity-70">—</td>
-                                                    <td class="text-center py-3 px-3 sm:px-4 pricing-col-pop">Up to 8
-                                                        members</td>
-                                                    <td class="text-center py-3 px-3 sm:px-4">Unlimited members</td>
-                                                </tr>
-                                                <tr class="border-bottom border-gray-200 dark:border-gray-700">
-                                                    <th class="text-start py-3 px-3 sm:px-4 fw-semibold text-gray-900 dark:text-white"
-                                                        scope="row">Roles &amp; permissions</th>
-                                                    <td class="text-center py-3 px-3 sm:px-4 fs-7 sm:fs-6">Essential
-                                                        access controls</td>
-                                                    <td
-                                                        class="text-center py-3 px-3 sm:px-4 fs-7 sm:fs-6 pricing-col-pop">
-                                                        Team-level permissions</td>
-                                                    <td class="text-center py-3 px-3 sm:px-4 fs-7 sm:fs-6">Advanced
-                                                        access governance</td>
-                                                </tr>
-                                                <tr class="border-bottom border-gray-200 dark:border-gray-700">
-                                                    <th class="text-start py-3 px-3 sm:px-4 fw-semibold text-gray-900 dark:text-white"
-                                                        scope="row">Quotes, invoicing &amp; payments</th>
-                                                    <td class="text-center py-3 px-3 sm:px-4">
-                                                        <div class="hstack justify-center gap-1"><span
-                                                                class="vc-pricing-tick" aria-hidden="true"><i
-                                                                    class="icon icon-narrow unicon-checkmark"></i></span>
-                                                        </div>
-                                                    </td>
-                                                    <td class="text-center py-3 px-3 sm:px-4 pricing-col-pop">
-                                                        <div class="hstack justify-center gap-1"><span
-                                                                class="vc-pricing-tick" aria-hidden="true"><i
-                                                                    class="icon icon-narrow unicon-checkmark"></i></span>
-                                                        </div>
-                                                    </td>
-                                                    <td class="text-center py-3 px-3 sm:px-4">
-                                                        <div class="hstack justify-center gap-1"><span
-                                                                class="vc-pricing-tick" aria-hidden="true"><i
-                                                                    class="icon icon-narrow unicon-checkmark"></i></span>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr class="border-bottom border-gray-200 dark:border-gray-700">
-                                                    <th class="text-start py-3 px-3 sm:px-4 fw-semibold text-gray-900 dark:text-white"
-                                                        scope="row">Reporting &amp; insights</th>
-                                                    <td class="text-center py-3 px-3 sm:px-4 fs-7 sm:fs-6">Essential
-                                                        reports</td>
-                                                    <td
-                                                        class="text-center py-3 px-3 sm:px-4 fs-7 sm:fs-6 pricing-col-pop">
-                                                        Advanced reporting</td>
-                                                    <td class="text-center py-3 px-3 sm:px-4 fs-7 sm:fs-6">Business
-                                                        intelligence &amp; analytics</td>
-                                                </tr>
-                                                <tr class="border-bottom border-gray-200 dark:border-gray-700">
-                                                    <th class="text-start py-3 px-3 sm:px-4 fw-semibold text-gray-900 dark:text-white"
-                                                        scope="row">Support experience</th>
-                                                    <td class="text-center py-3 px-3 sm:px-4 fs-7 sm:fs-6">Standard
-                                                        support</td>
-                                                    <td
-                                                        class="text-center py-3 px-3 sm:px-4 fs-7 sm:fs-6 pricing-col-pop">
-                                                        Priority support</td>
-                                                    <td class="text-center py-3 px-3 sm:px-4 fs-7 sm:fs-6">Dedicated
-                                                        success support</td>
-                                                </tr>
-                                                <tr>
-                                                    <th class="text-start py-3 px-3 sm:px-4 fw-semibold text-gray-900 dark:text-white"
-                                                        scope="row">Best suited for</th>
-                                                    <td class="text-center py-3 px-3 sm:px-4 fs-7 sm:fs-6">Independent
-                                                        professionals</td>
-                                                    <td
-                                                        class="text-center py-3 px-3 sm:px-4 fs-7 sm:fs-6 pricing-col-pop">
-                                                        Scaling event teams</td>
-                                                    <td class="text-center py-3 px-3 sm:px-4 fs-7 sm:fs-6">Agencies
-                                                        &amp; high-volume operations</td>
-                                                </tr>
-                                            </tbody>
-                                            <tfoot>
-                                                <tr>
-                                                    <td class="p-4"></td>
-                                                    <td class="p-4 text-center align-top">
-                                                        <a href="sign-up.html"
-                                                            class="btn btn-md w-100 vc-pricing-btn-primary text-none">Get
-                                                            started</a>
-                                                    </td>
-                                                    <td class="p-4 text-center align-top pricing-col-pop">
-                                                        <a href="sign-up.html"
-                                                            class="btn btn-md w-100 vc-pricing-btn-primary text-none">Get
-                                                            started</a>
-                                                    </td>
-                                                    <td class="p-4 text-center align-top">
-                                                        <a href="page-contact.html"
-                                                            class="btn btn-md w-100 vc-pricing-btn-secondary text-none">Talk
-                                                            to us</a>
-                                                    </td>
-                                                </tr>
-                                            </tfoot>
-                                        </table>
+                                <div class="vc-pricing-cards row child-cols-12 lg:child-cols-3 col-match g-4 lg:g-5 xl:g-6 justify-center">
+                                    <div>
+                                        <div class="vc-pricing-card panel vstack h-100 rounded-2">
+                                            <div class="vc-pricing-card-top" aria-hidden="true"></div>
+                                            <div class="vc-pricing-card-header vstack items-center gap-1 w-100">
+                                                <span class="vc-pricing-card-badge fs-7 fw-semibold py-narrow px-2 rounded-pill text-uppercase">Starter</span>
+                                            </div>
+                                            <p class="vc-pricing-card-desc fs-7 m-0 vc-pricing-card-desc-wrap">Light bookings &amp; essential workflows.</p>
+                                            <div class="vc-pricing-card-price vc-pricing-card-price-wrap mb-3">
+                                                <div class="pricing-price vc-pricing-price text-gray-900 dark:text-white">MYR 590<span class="fs-6 fw-normal vc-pricing-price-suffix">/year</span></div>
+                                            </div>
+                                            <hr class="vc-pricing-card-divider w-100 m-0 mb-3">
+                                            <p class="vc-pricing-features-title fs-7 fw-bold m-0 mb-2">Standout features</p>
+                                            <ul class="vc-pricing-features-list nav-y gap-2 fs-7 m-0 flex-grow">
+                                                <li class="vc-pricing-feature-item"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Bookings</span><span class="vc-pricing-feature-value">100 lifetime bookings</span></div></li>
+                                                <li class="vc-pricing-feature-item"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Admin seats</span><span class="vc-pricing-feature-value">1 admin</span></div></li>
+                                                <li class="vc-pricing-feature-item"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Sales team access</span><span class="vc-pricing-feature-value">1 user</span></div></li>
+                                                <li class="vc-pricing-feature-item vc-pricing-feature-item--stack vc-pricing-feature-unavailable"><span class="vc-pricing-cross flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-close"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Operations &amp; scheduling</span><span class="vc-pricing-feature-value">Not included</span></div></li>
+                                                <li class="vc-pricing-feature-item vc-pricing-feature-item--stack"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Roles &amp; permissions</span><span class="vc-pricing-feature-value">Essential access controls</span></div></li>
+                                                <li class="vc-pricing-feature-item vc-pricing-feature-item--stack"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Quotes, invoicing &amp; payments</span><span class="vc-pricing-feature-value">Included</span></div></li>
+                                                <li class="vc-pricing-feature-item"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Reporting</span><span class="vc-pricing-feature-value">Essential reports</span></div></li>
+                                                <li class="vc-pricing-feature-item"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Support</span><span class="vc-pricing-feature-value">Standard support</span></div></li>
+                                                <li class="vc-pricing-feature-item vc-pricing-feature-item--stack"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Best for</span><span class="vc-pricing-feature-value">Independent professionals</span></div></li>
+                                            </ul>
+                                            <div class="vc-pricing-card-cta vstack gap-1 mt-4 pt-2">
+                                                <a href="sign-up.html" class="btn btn-md w-100 vc-pricing-btn-outline text-none">Get started</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="vc-pricing-card vc-pricing-card--featured panel vstack h-100 rounded-2 position-relative">
+                                            <div class="vc-pricing-card-top">
+                                                <span class="vc-pricing-badge d-inline-flex rounded-pill text-white text-uppercase fw-bold">Most popular</span>
+                                            </div>
+                                            <div class="vc-pricing-card-header vstack items-center gap-1 w-100">
+                                                <span class="pricing-plan-title vc-pricing-plan-highlight vc-pricing-card-badge fs-7 fw-semibold py-narrow px-2 rounded-pill">Pro</span>
+                                            </div>
+                                            <p class="vc-pricing-card-desc fs-7 m-0 vc-pricing-card-desc-wrap">The sweet spot for growing teams.</p>
+                                            <div class="vc-pricing-card-price vc-pricing-card-price-wrap mb-3">
+                                                <div class="pricing-price vc-pricing-price-featured">MYR 1,290<span class="fs-6 fw-normal vc-pricing-price-suffix">/year</span></div>
+                                            </div>
+                                            <hr class="vc-pricing-card-divider w-100 m-0 mb-3">
+                                            <p class="vc-pricing-features-title fs-7 fw-bold m-0 mb-2">Standout features</p>
+                                            <ul class="vc-pricing-features-list nav-y gap-2 fs-7 m-0 flex-grow">
+                                                <li class="vc-pricing-feature-item"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Bookings</span><span class="vc-pricing-feature-value">1,000 lifetime bookings</span></div></li>
+                                                <li class="vc-pricing-feature-item"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Admin seats</span><span class="vc-pricing-feature-value">3 admins</span></div></li>
+                                                <li class="vc-pricing-feature-item"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Sales team access</span><span class="vc-pricing-feature-value">4 users</span></div></li>
+                                                <li class="vc-pricing-feature-item vc-pricing-feature-item--stack"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Operations &amp; scheduling</span><span class="vc-pricing-feature-value">Up to 8 members</span></div></li>
+                                                <li class="vc-pricing-feature-item vc-pricing-feature-item--stack"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Roles &amp; permissions</span><span class="vc-pricing-feature-value">Team-level permissions</span></div></li>
+                                                <li class="vc-pricing-feature-item vc-pricing-feature-item--stack"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Quotes, invoicing &amp; payments</span><span class="vc-pricing-feature-value">Included</span></div></li>
+                                                <li class="vc-pricing-feature-item"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Reporting</span><span class="vc-pricing-feature-value">Advanced reporting</span></div></li>
+                                                <li class="vc-pricing-feature-item"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Support</span><span class="vc-pricing-feature-value">Priority support</span></div></li>
+                                                <li class="vc-pricing-feature-item vc-pricing-feature-item--stack"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Best for</span><span class="vc-pricing-feature-value">Scaling event teams</span></div></li>
+                                            </ul>
+                                            <div class="vc-pricing-card-cta vstack gap-1 mt-4 pt-2">
+                                                <a href="sign-up.html" class="btn btn-md w-100 vc-pricing-btn-primary text-none">Get started</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="vc-pricing-card panel vstack h-100 rounded-2">
+                                            <div class="vc-pricing-card-top" aria-hidden="true"></div>
+                                            <div class="vc-pricing-card-header vstack items-center gap-1 w-100">
+                                                <span class="vc-pricing-card-badge fs-7 fw-semibold py-narrow px-2 rounded-pill text-uppercase">Business</span>
+                                            </div>
+                                            <p class="vc-pricing-card-desc fs-7 m-0 vc-pricing-card-desc-wrap">Agencies &amp; high-volume operations.</p>
+                                            <div class="vc-pricing-card-price vc-pricing-card-price-wrap mb-3">
+                                                <div class="pricing-price vc-pricing-price text-gray-900 dark:text-white">MYR 2,490<span class="fs-6 fw-normal vc-pricing-price-suffix">/year</span></div>
+                                            </div>
+                                            <hr class="vc-pricing-card-divider w-100 m-0 mb-3">
+                                            <p class="vc-pricing-features-title fs-7 fw-bold m-0 mb-2">Standout features</p>
+                                            <ul class="vc-pricing-features-list nav-y gap-2 fs-7 m-0 flex-grow">
+                                                <li class="vc-pricing-feature-item"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Bookings</span><span class="vc-pricing-feature-value">Unlimited</span></div></li>
+                                                <li class="vc-pricing-feature-item"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Admin seats</span><span class="vc-pricing-feature-value">8 admins</span></div></li>
+                                                <li class="vc-pricing-feature-item"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Sales team access</span><span class="vc-pricing-feature-value">12 users</span></div></li>
+                                                <li class="vc-pricing-feature-item vc-pricing-feature-item--stack"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Operations &amp; scheduling</span><span class="vc-pricing-feature-value">Unlimited members</span></div></li>
+                                                <li class="vc-pricing-feature-item vc-pricing-feature-item--stack"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Roles &amp; permissions</span><span class="vc-pricing-feature-value">Advanced access governance</span></div></li>
+                                                <li class="vc-pricing-feature-item vc-pricing-feature-item--stack"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Quotes, invoicing &amp; payments</span><span class="vc-pricing-feature-value">Included</span></div></li>
+                                                <li class="vc-pricing-feature-item vc-pricing-feature-item--stack"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Reporting</span><span class="vc-pricing-feature-value">Business intelligence &amp; analytics</span></div></li>
+                                                <li class="vc-pricing-feature-item"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Support</span><span class="vc-pricing-feature-value">Dedicated success support</span></div></li>
+                                                <li class="vc-pricing-feature-item vc-pricing-feature-item--stack"><span class="vc-pricing-tick flex-shrink-0" aria-hidden="true"><i class="icon icon-narrow unicon-checkmark"></i></span><div class="vc-pricing-feature-body"><span class="vc-pricing-feature-label">Best for</span><span class="vc-pricing-feature-value">Agencies &amp; high-volume operations</span></div></li>
+                                            </ul>
+                                            <div class="vc-pricing-card-cta vstack gap-1 mt-4 pt-2">
+                                                <a href="/contact" class="btn btn-md w-100 vc-pricing-btn-outline text-none">Talk to us</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1711,72 +1355,59 @@
                                         <ul class="vc-tf-accordion uc-accordion gap-2 w-100 mx-auto"
                                             data-uc-accordion="targets: > li; multiple: false;">
                                             <li class="vc-tf-accordion-item panel p-3 md:p-4 rounded-3 uc-open">
-                                                <a class="uc-accordion-title h6 md:h5 lg:h5 fw-medium ltr:pe-4 rtl:ps-4"
-                                                    href="#">Do I need to know about how to code?</a>
+                                                <a class="uc-accordion-title h6 md:h5 lg:h5 fw-medium ltr:pe-4 rtl:ps-4 hstack align-items-center"
+                                                    href="#"><span class="vc-faq-title-text">Do I need to know how to code?</span></a>
                                                 <div class="uc-accordion-content vc-tf-faq-answer lg:fs-5">
-                                                    <p>Yes, you need to have a fair amount of knowledge in dealing with
-                                                        HTML/CSS as well as JavaScript in order to be able to use
-                                                        Bookloh.</p>
+                                                    <p>No. Bookloh is a web app—you sign in, set up your services and team, and manage bookings from the dashboard. No HTML, CSS, or JavaScript required.</p>
                                                 </div>
                                             </li>
                                             <li class="vc-tf-accordion-item panel p-3 md:p-4 rounded-3">
-                                                <a class="uc-accordion-title h6 md:h5 lg:h5 fw-medium ltr:pe-4 rtl:ps-4"
-                                                    href="#">Can I use it for commercial projects?</a>
+                                                <a class="uc-accordion-title h6 md:h5 lg:h5 fw-medium ltr:pe-4 rtl:ps-4 hstack align-items-center"
+                                                    href="#"><span class="vc-faq-title-text">What do I get with the RM59 trial?</span></a>
                                                 <div class="uc-accordion-content vc-tf-faq-answer lg:fs-5">
-                                                    <p>Feel free to do so. Bookloh does exist to evolve every commercial
-                                                        project. You can also use it to build stunning websites for your
-                                                        own clients (we won’t breathe a word).</p>
+                                                    <p>RM59 gives you 30 days of full access to every feature—bookings, calendar, customers, invoicing, and reports—so you can test the system before choosing a plan.</p>
                                                 </div>
                                             </li>
                                             <li class="vc-tf-accordion-item panel p-3 md:p-4 rounded-3">
-                                                <a class="uc-accordion-title h6 md:h5 lg:h5 fw-medium ltr:pe-4 rtl:ps-4"
-                                                    href="#">Can I use it for multiple projects?</a>
+                                                <a class="uc-accordion-title h6 md:h5 lg:h5 fw-medium ltr:pe-4 rtl:ps-4 hstack align-items-center"
+                                                    href="#"><span class="vc-faq-title-text">What plans are available?</span></a>
                                                 <div class="uc-accordion-content vc-tf-faq-answer lg:fs-5">
-                                                    <p>Definitely! Please use it however you like; we don’t limit it.
-                                                    </p>
+                                                    <p>We offer Starter, Pro, and Business. Starter is for lean teams; Pro adds salesperson tools and basic reports; Business includes e-invoices, advanced reports, and multi-user access. Save up to 20% when you pay yearly.</p>
                                                 </div>
                                             </li>
                                             <li class="vc-tf-accordion-item panel p-3 md:p-4 rounded-3">
-                                                <a class="uc-accordion-title h6 md:h5 lg:h5 fw-medium ltr:pe-4 rtl:ps-4"
-                                                    href="#">Can I use it to create and sell a product?</a>
+                                                <a class="uc-accordion-title h6 md:h5 lg:h5 fw-medium ltr:pe-4 rtl:ps-4 hstack align-items-center"
+                                                    href="#"><span class="vc-faq-title-text">Is there a limit on how many bookings I can create?</span></a>
                                                 <div class="uc-accordion-content vc-tf-faq-answer lg:fs-5">
-                                                    <p>Do not ever consider doing it.</p>
+                                                    <p>Yes—each plan has a booking limit (e.g. 50 on Starter, 200 on Pro, 2000 on Business). You'll see a notice in the app when you're near your limit and can upgrade anytime.</p>
                                                 </div>
                                             </li>
                                             <li class="vc-tf-accordion-item panel p-3 md:p-4 rounded-3">
-                                                <a class="uc-accordion-title h6 md:h5 lg:h5 fw-medium ltr:pe-4 rtl:ps-4"
-                                                    href="#">What is your refund policy?</a>
+                                                <a class="uc-accordion-title h6 md:h5 lg:h5 fw-medium ltr:pe-4 rtl:ps-4 hstack align-items-center"
+                                                    href="#"><span class="vc-faq-title-text">Can my whole team use Bookloh?</span></a>
                                                 <div class="uc-accordion-content vc-tf-faq-answer lg:fs-5">
-                                                    <p>We understand the importance of customer satisfaction and we
-                                                        strive to provide the best products and services. However,
-                                                        please note that due to the nature of our products and services,
-                                                        we do not offer refunds after a purchase has been made.</p>
+                                                    <p>Yes. Add team members, assign them to bookings and the calendar, and control access with role-based permissions so each person only sees what they need.</p>
                                                 </div>
                                             </li>
                                             <li class="vc-tf-accordion-item panel p-3 md:p-4 rounded-3">
-                                                <a class="uc-accordion-title h6 md:h5 lg:h5 fw-medium ltr:pe-4 rtl:ps-4"
-                                                    href="#">Do I need to know about how to code?</a>
+                                                <a class="uc-accordion-title h6 md:h5 lg:h5 fw-medium ltr:pe-4 rtl:ps-4 hstack align-items-center"
+                                                    href="#"><span class="vc-faq-title-text">Does Bookloh support e-invoices and payments?</span></a>
                                                 <div class="uc-accordion-content vc-tf-faq-answer lg:fs-5">
-                                                    <p>Yes, you need to have a fair amount of knowledge in dealing with
-                                                        HTML/CSS as well as JavaScript in order to be able to use
-                                                        Bookloh.</p>
+                                                    <p>On Business (and during your trial), you can create e-invoices, record payments, and use quotation and payment receipt templates. Lower tiers focus on core booking and customer management.</p>
                                                 </div>
                                             </li>
                                             <li class="vc-tf-accordion-item panel p-3 md:p-4 rounded-3">
-                                                <a class="uc-accordion-title h6 md:h5 lg:h5 fw-medium ltr:pe-4 rtl:ps-4"
-                                                    href="#">Can I use it for commercial projects?</a>
+                                                <a class="uc-accordion-title h6 md:h5 lg:h5 fw-medium ltr:pe-4 rtl:ps-4 hstack align-items-center"
+                                                    href="#"><span class="vc-faq-title-text">Can I sync bookings to my phone calendar?</span></a>
                                                 <div class="uc-accordion-content vc-tf-faq-answer lg:fs-5">
-                                                    <p>Feel free to do so. Bookloh does exist to evolve every commercial
-                                                        project. You can also use it to build stunning websites for your
-                                                        own clients (we won’t breathe a word).</p>
+                                                    <p>Yes. Subscribe to your bookings calendar from the app and add it to Google Calendar or Apple Calendar so confirmed appointments stay visible on your phone.</p>
                                                 </div>
                                             </li>
                                             <li class="vc-tf-accordion-item panel p-3 md:p-4 rounded-3">
-                                                <a class="uc-accordion-title h6 md:h5 lg:h5 fw-medium ltr:pe-4 rtl:ps-4"
-                                                    href="#">Can I use it for multiple projects?</a>
+                                                <a class="uc-accordion-title h6 md:h5 lg:h5 fw-medium ltr:pe-4 rtl:ps-4 hstack align-items-center"
+                                                    href="#"><span class="vc-faq-title-text">Can I cancel or change my subscription?</span></a>
                                                 <div class="uc-accordion-content vc-tf-faq-answer lg:fs-5">
-                                                    <p>Definitely! Please use it however you like; we don’t limit it.
-                                                    </p>
+                                                    <p>Yes. You can upgrade, downgrade, or switch between monthly and yearly billing from Billing in the app. There's no long-term contract—cancel before your next billing date if you no longer need the service.</p>
                                                 </div>
                                             </li>
                                         </ul>
@@ -1927,8 +1558,8 @@
             data-anime="onview: -200; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500;">
             <div class="section-outer py-6 lg:py-8 xl:py-10">
                 <div class="container">
-                    <div class="section-inner panel rounded-3 overflow-hidden position-relative border border-opacity-10 shadow-sm"
-                        style="background-color: #fdfbf9; border-color: rgba(0,0,0,0.06); border-radius: 24px;">
+                    <div class="section-inner panel rounded-3 overflow-hidden position-relative border border-opacity-10"
+                        style="background-color: #fdfbf9; border-color: rgba(0,0,0,0.06); border-radius: 24px; box-shadow: none;">
                         <div class="position-absolute rounded-circle d-none lg:d-block"
                             style="width: 260px; height: 260px; top: -100px; left: -90px; background: rgba(200, 0, 255, 0.12);">
                         </div>
@@ -1991,7 +1622,7 @@
                                     <div class="col-12 lg:col-5 xl:col-4">
                                         <div class="vc-footer-brand vstack gap-2 lg:gap-3">
                                             <div class="uc-logo">
-                                                <a class="panel text-none d-inline-block" href="index-8.html"
+                                                <a class="panel text-none d-inline-block" href="/home"
                                                     style="width: 120px;">
                                                     <img class="w-100" src="../assets/icons/logo-white.png"
                                                         alt="Bookloh" width="120" loading="lazy">
@@ -2011,11 +1642,11 @@
                                                     Product</h3>
                                                 <ul class="nav-y gap-narrow m-0 p-0 list-unstyled">
                                                     <li><a class="vc-footer-link text-none"
-                                                            href="page-features.html">Features</a></li>
+                                                            href="/features">Features</a></li>
                                                     <li><a class="vc-footer-link text-none"
-                                                            href="page-pricing.html">Pricing</a></li>
+                                                            href="/pricing">Pricing</a></li>
                                                     <li><a class="vc-footer-link text-none"
-                                                            href="page-features.html">Industries</a></li>
+                                                            href="/features">Industries</a></li>
                                                 </ul>
                                             </div>
                                             <div class="vc-footer-nav-col">
@@ -2024,9 +1655,9 @@
                                                     Company</h3>
                                                 <ul class="nav-y gap-narrow m-0 p-0 list-unstyled">
                                                     <li><a class="vc-footer-link text-none"
-                                                            href="page-about.html">About</a></li>
+                                                            href="/about">About</a></li>
                                                     <li><a class="vc-footer-link text-none"
-                                                            href="page-contact.html">Contact us</a></li>
+                                                            href="/contact">Contact us</a></li>
                                                     <li><a class="vc-footer-link text-none"
                                                             href="request-demo.html">Book a demo</a></li>
                                                 </ul>

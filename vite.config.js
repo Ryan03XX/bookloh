@@ -3,6 +3,27 @@ import compression from 'compression';
 import fs from 'node:fs';
 import path from 'node:path';
 
+const cleanRoutes = new Map([
+  ['/home', 'main/index-8.html'],
+  ['/about', 'main/page-about.html'],
+  ['/features', 'main/page-features.html'],
+  ['/pricing', 'main/page-pricing.html'],
+  ['/contact', 'main/page-contact.html'],
+]);
+
+const legacyRoutes = new Map([
+  ['/index-8.html', '/home'],
+  ['/main/index-8.html', '/home'],
+  ['/page-about.html', '/about'],
+  ['/main/page-about.html', '/about'],
+  ['/page-features.html', '/features'],
+  ['/main/page-features.html', '/features'],
+  ['/page-pricing.html', '/pricing'],
+  ['/main/page-pricing.html', '/pricing'],
+  ['/page-contact.html', '/contact'],
+  ['/main/page-contact.html', '/contact'],
+]);
+
 /**
  *
  * @returns {import('vite').PluginOption}
@@ -12,24 +33,31 @@ const uniPlugin = () => ({
   configureServer(server) {
     const app = server.middlewares;
     app.use(compression());
-    // Redirect so the browser URL stays under /main/ — relative links like page-about.html work.
+    // Keep the public URLs clean while serving the existing template files.
     server.middlewares.use((req, res, next) => {
       try {
         const u = new URL(req.url || '/', 'http://localhost');
         if (u.pathname === '/' || u.pathname === '') {
           res.statusCode = 302;
-          res.setHeader('Location', `/main/index-8.html${u.search}`);
+          res.setHeader('Location', `/home${u.search}`);
           res.end();
           return;
         }
-        const m = /^\/(page-[\w-]+\.html)$/i.exec(u.pathname);
-        if (m) {
-          const filePath = path.join(server.config.root, 'main', m[1]);
+
+        const normalizedPath = u.pathname.toLowerCase();
+        const legacyTarget = legacyRoutes.get(normalizedPath);
+        if (legacyTarget) {
+          res.statusCode = 302;
+          res.setHeader('Location', `${legacyTarget}${u.search}`);
+          res.end();
+          return;
+        }
+
+        const cleanRouteFile = cleanRoutes.get(normalizedPath);
+        if (cleanRouteFile) {
+          const filePath = path.join(server.config.root, cleanRouteFile);
           if (fs.existsSync(filePath)) {
-            res.statusCode = 302;
-            res.setHeader('Location', `/main/${m[1]}${u.search}`);
-            res.end();
-            return;
+            req.url = `/${cleanRouteFile}${u.search}`;
           }
         }
       } catch {
@@ -56,7 +84,7 @@ export default defineConfig({
   },
   server: {
     // auto open this page
-    open: '/main/index-8.html',
+    open: '/home',
     port: 3000,
   }
 });

@@ -2,7 +2,7 @@
 
 import { promises as fs } from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
+import { fileURLToPath, pathToFileURL } from 'url';
 import * as sass from 'sass';
 import * as terser from 'terser';
 import CleanCSS from 'clean-css';
@@ -53,7 +53,7 @@ let buildConfig = defaultConfig;
 try {
     const configPath = path.join(process.cwd(), 'build.config.mjs');
     if (await fs.access(configPath).then(() => true).catch(() => false)) {
-        const userConfig = await import(configPath);
+        const userConfig = await import(pathToFileURL(configPath).href);
         buildConfig = {
             ...defaultConfig,
             ...userConfig.default,
@@ -175,7 +175,7 @@ async function copyAssets() {
         { base: path.join(SRC_FOLDER) }
     );
 
-    // Optional hero still at src root or project root: ../main.jpg (HTML under main/)
+    // Optional hero still/mockup at src root or project root: ../main.* (HTML under main/)
     async function copyFirstFound(fileName) {
         const candidates = [path.join(SRC_FOLDER, fileName), path.join(__dirname, fileName)];
         for (const srcPath of candidates) {
@@ -189,6 +189,9 @@ async function copyAssets() {
         }
         return null;
     }
+
+    const pngFrom = await copyFirstFound('main.png');
+    if (pngFrom) console.log('🖼️  Hero mockup:', pngFrom, '→ dist/main.png');
 
     const jpgFrom = await copyFirstFound('main.jpg');
     if (jpgFrom) console.log('🖼️  Hero image:', jpgFrom, '→ dist/main.jpg');
