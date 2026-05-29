@@ -794,6 +794,78 @@ html.uc-dark .theme-violet-coral .contact-main-form .form-control {
 html.uc-dark .theme-violet-coral .contact-main-form .form-control::placeholder {
   color: rgba(255, 255, 255, 0.45)
 }
+.theme-violet-coral .contact-main-form .uc-link {
+  color: #7e3aed !important;
+  -webkit-text-fill-color: #7e3aed
+}
+.theme-violet-coral .contact-main-form .uc-link:hover,
+.theme-violet-coral .contact-main-form .uc-link:focus {
+  color: #c800ff !important;
+  -webkit-text-fill-color: #c800ff
+}
+.theme-violet-coral .vc-legal-page {
+  background-color: var(--vc-page-bg-soft);
+  background-image: linear-gradient(180deg, #fbf7ff 0%, #f4ecff 52%, #f8f3ff 100%);
+  min-height: 100vh
+}
+.theme-violet-coral .vc-legal-page .section-outer {
+  padding-top: max(var(--vc-header-clearance), 4.5rem) !important
+}
+.theme-violet-coral .vc-legal-content {
+  max-width: 920px;
+  margin-inline: auto
+}
+.theme-violet-coral .vc-legal-header h1 {
+  color: #111827 !important;
+  -webkit-text-fill-color: #111827;
+  letter-spacing: -0.025em
+}
+.theme-violet-coral .vc-legal-updated {
+  color: rgba(15, 23, 42, 0.56) !important
+}
+.theme-violet-coral .vc-legal-body,
+.theme-violet-coral .vc-legal-body p,
+.theme-violet-coral .vc-legal-body li {
+  color: rgba(15, 23, 42, 0.68) !important;
+  line-height: 1.75
+}
+.theme-violet-coral .vc-legal-body h2,
+.theme-violet-coral .vc-legal-body h3,
+.theme-violet-coral .vc-legal-body h4 {
+  color: #111827 !important;
+  -webkit-text-fill-color: #111827;
+  margin-top: 2rem !important
+}
+.theme-violet-coral .vc-legal-body a {
+  color: #6d28d9 !important;
+  -webkit-text-fill-color: #6d28d9;
+  text-decoration: none
+}
+.theme-violet-coral .vc-legal-body a:hover {
+  color: #4c1d95 !important;
+  -webkit-text-fill-color: #4c1d95;
+  text-decoration: underline
+}
+.theme-violet-coral #helpful-links .row.col-match > div > .panel {
+  height: 100%;
+  display: flex;
+  flex-direction: column
+}
+.theme-violet-coral #helpful-links .row.col-match > div > .panel > a {
+  margin-top: auto
+}
+.theme-violet-coral #helpful-links .uc-link,
+.theme-violet-coral #helpful-links .uc-link .icon {
+  color: #7e3aed !important;
+  -webkit-text-fill-color: #7e3aed
+}
+.theme-violet-coral #helpful-links .uc-link:hover,
+.theme-violet-coral #helpful-links .uc-link:focus,
+.theme-violet-coral #helpful-links .uc-link:hover .icon,
+.theme-violet-coral #helpful-links .uc-link:focus .icon {
+  color: #c800ff !important;
+  -webkit-text-fill-color: #c800ff
+}
 .theme-violet-coral .backtotop-wrap .btn.bg-primary {
   background-color: var(--vc-accent) !important;
   border-color: var(--vc-accent) !important;
@@ -875,6 +947,20 @@ html:not(.uc-dark) .theme-violet-coral #main_features.panel {
   color: #0f172a !important;
   border-radius: 1.5rem !important
 }
+.theme-violet-coral #main_features .vc-features-card:not(.vc-features-card--support) {
+  height: 100%;
+  display: flex;
+  flex-direction: column
+}
+.theme-violet-coral #main_features .vc-features-card:not(.vc-features-card--support) > .panel:last-child {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column
+}
+.theme-violet-coral #main_features .vc-features-card:not(.vc-features-card--support) > .panel:last-child > .btn {
+  margin-top: auto !important;
+  align-self: flex-start
+}
 .theme-violet-coral #main_features .vc-features-card--wide {
   border-radius: 1.75rem !important
 }
@@ -929,7 +1015,7 @@ html:not(.uc-dark) .theme-violet-coral #main_features.panel {
   pointer-events: none;
   overflow: hidden;
   border-radius: 0 0 1.75rem 1.75rem;
-  /* Solid brand purple — matches card body */
+  /* Solid brand purple - matches card body */
   background: linear-gradient(
 
         180deg,
@@ -1951,26 +2037,42 @@ html:not(.uc-dark) .theme-violet-coral .vc-tf-faq-answer p {
   padding: 0.125rem 0;
   transition: opacity 0.2s ease,transform 0.2s ease
 }
-.theme-violet-coral #uc-footer .vc-footer-link:hover,
+.theme-violet-coral #uc-footer .vc-footer-link:visited {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff
+}
+.theme-violet-coral #uc-footer .vc-footer-link:hover {
+  color: rgba(255, 255, 255, 0.62) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.62);
+  background-image: none;
+  background-clip: unset;
+  -webkit-background-clip: unset;
+  opacity: 1;
+  transform: translateX(2px);
+  text-decoration: none !important
+}
 .theme-violet-coral #uc-footer .vc-footer-link:focus {
   color: #fff !important;
   -webkit-text-fill-color: #fff;
   background-image: none;
-  background-clip: unset;
-  -webkit-background-clip: unset;
-  opacity: 0.92;
-  transform: translateX(2px);
   text-decoration: none !important
 }
 .theme-violet-coral #uc-footer.uc-dark a.vc-footer-link:hover,
-.theme-violet-coral #uc-footer.uc-dark a.vc-footer-link:focus,
-.theme-violet-coral #uc-footer .nav-y a.vc-footer-link:hover,
-.theme-violet-coral #uc-footer .nav-y a.vc-footer-link:focus {
-  color: #fff !important;
-  -webkit-text-fill-color: #fff
+.theme-violet-coral #uc-footer .nav-y a.vc-footer-link:hover {
+  color: rgba(255, 255, 255, 0.62) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.62)
 }
-[dir="rtl"] .theme-violet-coral #uc-footer .vc-footer-link:hover,
-[dir="rtl"] .theme-violet-coral #uc-footer .vc-footer-link:focus {
+.theme-violet-coral #uc-footer .nav-y:hover li:not(:hover) > a.vc-footer-link {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff;
+  opacity: 1;
+  transform: none
+}
+.theme-violet-coral #uc-footer .nav-y li:hover > a.vc-footer-link {
+  color: rgba(255, 255, 255, 0.62) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.62)
+}
+[dir="rtl"] .theme-violet-coral #uc-footer .vc-footer-link:hover {
   transform: translateX(-2px)
 }
 .theme-violet-coral #uc-footer .vc-footer-bottom {

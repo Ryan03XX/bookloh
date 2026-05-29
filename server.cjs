@@ -13,6 +13,8 @@ const cleanRoutes = new Map([
   ['/features', 'main/page-features.html'],
   ['/pricing', 'main/page-pricing.html'],
   ['/contact', 'main/page-contact.html'],
+  ['/page-privacy.html', 'main/page-privacy.html'],
+  ['/page-terms.html', 'main/page-terms.html'],
 ]);
 
 const legacyRoutes = new Map([
@@ -26,6 +28,8 @@ const legacyRoutes = new Map([
   ['/main/page-pricing.html', '/pricing'],
   ['/page-contact.html', '/contact'],
   ['/main/page-contact.html', '/contact'],
+  ['/main/page-privacy.html', '/page-privacy.html'],
+  ['/main/page-terms.html', '/page-terms.html'],
 ]);
 
 const mimeTypes = {
