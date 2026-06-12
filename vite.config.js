@@ -9,8 +9,8 @@ const cleanRoutes = new Map([
   ['/features', 'main/page-features.html'],
   ['/pricing', 'main/page-pricing.html'],
   ['/contact', 'main/page-contact.html'],
-  ['/page-privacy.html', 'main/page-privacy.html'],
-  ['/page-terms.html', 'main/page-terms.html'],
+  ['/privacy-policy', 'main/page-privacy.html'],
+  ['/terms-of-service', 'main/page-terms.html'],
 ]);
 
 const legacyRoutes = new Map([
@@ -24,8 +24,12 @@ const legacyRoutes = new Map([
   ['/main/page-pricing.html', '/pricing'],
   ['/page-contact.html', '/contact'],
   ['/main/page-contact.html', '/contact'],
-  ['/main/page-privacy.html', '/page-privacy.html'],
-  ['/main/page-terms.html', '/page-terms.html'],
+  ['/page-privacy.html', '/privacy-policy'],
+  ['/main/page-privacy.html', '/privacy-policy'],
+  ['/privacy', '/privacy-policy'],
+  ['/page-terms.html', '/terms-of-service'],
+  ['/main/page-terms.html', '/terms-of-service'],
+  ['/terms', '/terms-of-service'],
 ]);
 
 /**
