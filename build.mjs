@@ -171,10 +171,11 @@ async function copyAssets() {
         { base: path.join(SRC_FOLDER, 'assets/fonts') }
     );
 
-    // Copy favicon
+    // Copy favicon, sitemap, robots
     await copyFiles(
         [
-            path.join(SRC_FOLDER, 'favicon.ico'),
+            globPath(SRC_FOLDER, 'sitemap.xml'),
+            globPath(SRC_FOLDER, 'robots.txt'),
         ],
         'dist',
         { base: path.join(SRC_FOLDER) }
@@ -195,11 +196,17 @@ async function copyAssets() {
         return null;
     }
 
+    const faviconFrom = await copyFirstFound('favicon.ico');
+    if (faviconFrom) console.log('🔖 Favicon:', faviconFrom, '→ dist/favicon.ico');
+
     const pngFrom = await copyFirstFound('main.png');
     if (pngFrom) console.log('🖼️  Hero mockup:', pngFrom, '→ dist/main.png');
 
     const jpgFrom = await copyFirstFound('main.jpg');
     if (jpgFrom) console.log('🖼️  Hero image:', jpgFrom, '→ dist/main.jpg');
+
+    const ogFrom = await copyFirstFound('og-image.jpg');
+    if (ogFrom) console.log('🖼️  OG image:', ogFrom, '→ dist/og-image.jpg');
 
     // Video: HTML uses ../main_compress.mp4 — search src/ then project root (same as your file layout)
     const videoDest = 'main_compress.mp4';
